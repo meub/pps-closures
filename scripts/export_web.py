@@ -1,8 +1,12 @@
 """Export master CSV and column metadata to web/data.json for the static site."""
 import json
 import math
+import numpy as np
 import pandas as pd
 from pathlib import Path
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 ROOT = Path(__file__).resolve().parent.parent
 MASTER = ROOT / "data/pps_schools.csv"
@@ -46,6 +50,9 @@ META = {
     "pct_white": {"label": "% White", "desc": "Share of students identifying as White, 2025-26.", "source": "Oregon ODE", "fmt": "pct_0_1"},
     "pct_multiracial": {"label": "% Multiracial", "desc": "Share identifying as two or more races, 2025-26.", "source": "Oregon ODE", "fmt": "pct_0_1"},
     "pct_bipoc": {"label": "% BIPOC", "desc": "Share of students identifying as any race/ethnicity other than White (1 − % White), 2025-26.", "source": "Derived from Oregon ODE", "fmt": "pct_0_1"},
+    "avg_prof_2425": {"label": "Avg proficiency 24-25", "desc": "Average of % ELA + % Math meeting/exceeding (2024-25). Single number for cross-school performance comparison.", "source": "Derived from Oregon OSAS 2024-25", "fmt": "pct_0_100"},
+    "service_load": {"label": "Service load (weighted)", "desc": "Cost-weighted composite: 1.0×% deep poverty + 2.5×% SPED + 1.5×% English learners. Weights approximate per-pupil cost ratios from weighted-student-funding formulas (Boston, Hawaii). A higher index means heavier per-student support load.", "source": "Derived: NCES CCD + CRDC", "fmt": "ratio"},
+    "prof_residual": {"label": "Proficiency residual", "desc": "Each school's avg proficiency minus what a linear fit on % BIPOC would predict. Positive = outperforms demographics; negative = underperforms.", "source": "Derived: OSAS 2024-25 + ODE", "fmt": "ratio"},
     "affordable_units_within_1mi": {"label": "Afford. units in catchment", "desc": "Total existing affordable housing units inside the school's PPS attendance area (or a 1-mile radius for schools without a published catchment).", "source": "OAHI + Metro RLIS", "fmt": "int"},
     "pipeline_affordable_units_within_1mi": {"label": "Pipeline afford. units", "desc": "Affordable units in projects currently in development inside the school's PPS attendance area (2023–2027).", "source": "OAHI", "fmt": "int"},
     "pipeline_family_units_within_1mi": {"label": "Pipeline family units", "desc": "2+BR pipeline units inside the school's PPS attendance area — proxy for future families with kids.", "source": "OAHI", "fmt": "int"},
@@ -62,7 +69,7 @@ TABLE_COLS = [
     "school_name", "level", "closure_rank",
     "enrollment_2025_26", "enrollment_pct_change", "students_per_sqft",
     "year_built", "square_feet", "pct_ela_prof_2425", "pct_math_prof_2425",
-    "is_urm_building", "seismic_retrofit_status", "is_title_i",
+    "is_urm_building", "seismic_retrofit_status", "is_title_i", "pct_bipoc",
     "pipeline_family_units_within_1mi", "affordable_units_within_1mi",
     "permits_units_within_1mi_since_2022",
 ]
@@ -82,6 +89,14 @@ SCATTERS = [
         "x": "pct_frl",
         "y": "pct_math_prof_2425",
         "subtitle": "Classic income-achievement gradient. Schools above the trend line outperform expectations; below, underperform.",
+        "trendline": True,
+    },
+    {
+        "id": "prof_vs_direct_cert",
+        "title": "Avg proficiency vs. deep poverty (direct certification)",
+        "x": "pct_direct_cert",
+        "y": "avg_prof_2425",
+        "subtitle": "Strongest correlation in the dataset (r = -0.90). Direct certification (SNAP/TANF/foster) predicts test scores more tightly than free/reduced lunch or any race/ethnicity variable.",
         "trendline": True,
     },
     {
@@ -113,7 +128,70 @@ SCATTERS = [
         "subtitle": "URM buildings only. The slope is cost-per-student to save; schools well above the trend are expensive to retrofit per retained seat.",
         "trendline": True,
     },
+    {
+        "id": "service_load_vs_enrollment",
+        "title": "Weighted service load vs. enrollment",
+        "x": "service_load",
+        "y": "enrollment_2025_26",
+        "subtitle": "Cost-weighted index: 1.0×% deep poverty + 2.5×% SPED + 1.5×% English learners (weights from WSF formulas). Top-right schools absorb the most need; closing them concentrates services elsewhere.",
+    },
 ]
+
+# Features used for k-means clustering + PCA projection.
+CLUSTER_FEATURES = [
+    "enrollment_2025_26", "enrollment_pct_change", "students_per_sqft",
+    "year_built", "avg_prof_2425", "pct_direct_cert", "pct_bipoc",
+    "pct_lep", "pct_idea",
+    "permits_units_within_1mi_since_2022", "pipeline_family_units_within_1mi",
+]
+
+# Human-readable archetype labels assigned post-fit, ordered by cluster_id.
+CLUSTER_LABELS = {
+    0: {"name": "High-need urban", "desc": "Mid-poverty, BIPOC-majority elementaries, mostly stable enrollment, lower test scores."},
+    1: {"name": "Large + growing", "desc": "Larger schools with strong nearby housing pipeline; no closure candidates."},
+    2: {"name": "West-side advantaged", "desc": "Higher-performing, lower-poverty, mostly white schools."},
+    3: {"name": "Aging, high-SPED", "desc": "Tiny cluster: very old buildings, very high SPED %, declining enrollment."},
+}
+
+
+def derive_columns(df):
+    """Add computed fields used by the dashboard's analytical charts."""
+    df["pct_bipoc"] = 1 - df["pct_white"]
+    df["avg_prof_2425"] = (df["pct_ela_prof_2425"] + df["pct_math_prof_2425"]) / 2
+
+    # Weighted service load. Weights approximate per-pupil cost multipliers used in
+    # weighted-student-funding (WSF) formulas: 1.0× base for deep poverty, ~2.5× for
+    # SPED (IDEA average across tiers, Hawaii/Boston), ~1.5× for English Learner
+    # (Boston/Hawaii ELL weight). Only valid when all three components are present.
+    sl_mask = df[["pct_direct_cert", "pct_idea", "pct_lep"]].notna().all(axis=1)
+    df["service_load"] = pd.NA
+    df.loc[sl_mask, "service_load"] = (
+        1.0 * df.loc[sl_mask, "pct_direct_cert"]
+        + 2.5 * df.loc[sl_mask, "pct_idea"]
+        + 1.5 * df.loc[sl_mask, "pct_lep"]
+    ).round(4)
+
+    # Proficiency residual from OLS fit of avg_prof_2425 ~ pct_bipoc.
+    pr_mask = df[["avg_prof_2425", "pct_bipoc"]].notna().all(axis=1)
+    x = df.loc[pr_mask, "pct_bipoc"].to_numpy()
+    y = df.loc[pr_mask, "avg_prof_2425"].to_numpy()
+    slope, intercept = np.polyfit(x, y, 1)
+    df["prof_residual"] = pd.NA
+    df.loc[pr_mask, "prof_residual"] = (y - (slope * x + intercept)).round(2)
+
+    # K-means clusters + PCA coords on standardized feature space.
+    cl_mask = df[CLUSTER_FEATURES].notna().all(axis=1)
+    X = StandardScaler().fit_transform(df.loc[cl_mask, CLUSTER_FEATURES])
+    km = KMeans(n_clusters=4, n_init=20, random_state=42)
+    df["cluster_id"] = pd.NA
+    df.loc[cl_mask, "cluster_id"] = km.fit_predict(X)
+    pca = PCA(n_components=2, random_state=42)
+    coords = pca.fit_transform(X)
+    df["pca_x"] = pd.NA
+    df["pca_y"] = pd.NA
+    df.loc[cl_mask, "pca_x"] = coords[:, 0].round(3)
+    df.loc[cl_mask, "pca_y"] = coords[:, 1].round(3)
+    return df
 
 
 def clean_val(v):
@@ -132,7 +210,7 @@ def main():
     # alternative schools (not high schools). Drop high schools from the
     # dashboard so every view reflects the in-scope set.
     df = df[df["level"] != "high"].reset_index(drop=True)
-    df["pct_bipoc"] = 1 - df["pct_white"]
+    df = derive_columns(df)
     schools = []
     for _, row in df.iterrows():
         schools.append({c: clean_val(row[c]) for c in df.columns})
@@ -142,6 +220,7 @@ def main():
         "meta": META,
         "table_cols": TABLE_COLS,
         "scatters": SCATTERS,
+        "cluster_labels": CLUSTER_LABELS,
         "n_schools": len(schools),
         "n_candidates": int(df["is_closure_candidate"].sum()),
     }

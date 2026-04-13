@@ -68,7 +68,7 @@
   .chart-card p.subtitle { margin: 0 0 8px; color: var(--muted); font-size: 12px; }
   .chart-plot { height: 360px; }
 
-  .table-wrap { overflow-x: auto; max-height: 720px; overflow-y: auto; }
+  .table-wrap { overflow-x: auto; max-height: 950px; overflow-y: auto; }
   table.schools { width: 100%; border-collapse: collapse; font-size: 12.5px; }
   table.schools thead { position: sticky; top: 0; background: #1b232c; z-index: 2; }
   table.schools th, table.schools td { padding: 7px 10px; text-align: left;
@@ -159,6 +159,11 @@
   @media (max-width: 720px) { .contribute-grid { grid-template-columns: 1fr; } }
 
   @media (max-width: 1000px) { .charts { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) {
+    main { padding: 16px 10px 60px; }
+    .chart-card { padding: 8px; }
+    #plot-ranking { height: 1700px !important; }
+  }
 </style>
 </head>
 <body>
@@ -234,6 +239,36 @@
       (orange) should cluster at the bottom if the closure list tracks underutilization.
     </p>
     <div class="panel chart-card"><div id="plot-ranking" style="height: 1400px;"></div></div>
+  </section>
+
+  <section>
+    <h2>Building age — closure candidates vs. the rest</h2>
+    <p class="note">
+      Counts of schools by decade built. Low enrollment candidates skew newer on average
+      (mean year built 1955) than the rest of the district (mean 1933).
+    </p>
+    <div class="panel chart-card"><div id="plot-year-hist" style="height: 360px;"></div></div>
+  </section>
+
+  <section style="display:none;">
+    <h2>Outperformers and underperformers</h2>
+    <p class="note">
+      Each bar is the school's gap between its actual average proficiency and what a linear
+      fit on % BIPOC alone would predict. Positive = beating the demographic benchmark;
+      negative = falling below it. Closure candidates highlighted in orange.
+    </p>
+    <div class="panel chart-card"><div id="plot-residuals" style="height: 720px;"></div></div>
+  </section>
+
+  <section style="display:none;">
+    <h2>School archetypes (k-means + PCA)</h2>
+    <p class="note">
+      4 clusters from k-means on 11 standardized features (enrollment, trend, crowding,
+      year, proficiency, deep poverty, BIPOC %, LEP/SPED, nearby permits and pipeline). Plotted
+      on the first two principal components — distance ≈ similarity. Diamond markers are
+      closure candidates; the candidate list spans three of the four clusters.
+    </p>
+    <div class="panel chart-card"><div id="plot-clusters" style="height: 520px;"></div></div>
   </section>
 
   <section>
@@ -325,7 +360,44 @@
     <h3>Closure candidate list</h3>
     <dl>
       <dt><a href="https://www.wweek.com/news/schools/2026/03/18/heres-what-pps-will-consider-as-it-selects-schools-to-close/" target="_blank" rel="noopener">Willamette Week (2026-03-18)</a></dt>
-        <dd>The 15-school ranking. Derived by WW from criteria PPS said it would use (enrollment + building utilization). PPS's own shortlist is expected Nov 2026 with a board vote in Dec 2026.</dd>
+        <dd>The 15-school list from  WW derived from raw enrollment data. PPS's own shortlist is expected Nov 2026 with a board vote in Dec 2026.</dd>
+    </dl>
+
+    <h3>Derived metrics</h3>
+    <dl>
+      <dt>Service load (weighted)</dt>
+        <dd>
+          A cost-weighted composite of three federally-tracked high-need shares:
+          <code>1.0 × pct_direct_cert + 2.5 × pct_idea + 1.5 × pct_lep</code>.
+          The components are
+          students directly certified for free meals via SNAP/TANF/foster (deep poverty,
+          NCES CCD 2022),
+          students on IEPs under IDEA (CRDC 2020),
+          and students classified as English Learners (CRDC 2020).
+          The weights approximate the per-pupil cost multipliers commonly used in
+          weighted-student-funding (WSF) formulas, anchored on the
+          <a href="https://hawaiipublicschools.org/about/budget/weighted-student-formula/" target="_blank" rel="noopener">Hawaiʻi DOE Weighted Student Formula</a>
+          (one of the few statewide WSF systems with published weights) and the
+          <a href="https://reason.org/commentary/hawaiis-successful-experience-with-weighted-student-formula-has-improved-funding-equity/" target="_blank" rel="noopener">Reason Foundation review</a>
+          of WSF implementations: roughly ~1.0× base allocation for low-income students
+          (Hawaii's economically-disadvantaged weight has historically added 30–38%),
+          ~2.5× for the average SPED student (Hawaii's SPED weights vary by service
+          intensity and run from ~1.5× to 6×+ for the most intensive tiers), and ~1.5× for
+          English Learners (heavier as proficiency drops). These are conventional magnitudes,
+          not PPS-specific policy weights — PPS does not publish a WSF.
+        </dd>
+        <dd>
+          <strong>This is a quick composite, not a recognized standard.</strong> Established
+          frameworks differ in two ways: (1) <em>unduplicated counts</em> (e.g., California's
+          LCFF) count each student once even if they fall in multiple categories — public PPS
+          data doesn't include the overlap matrix needed to do that here, so this index
+          double-counts students who are e.g. low-income SPED English Learners; (2) <em>true
+          WSF dollar formulas</em> apply district-specific weights and base amounts. The
+          weights used here are reasonable district averages, not PPS-specific. The resulting
+          index is best interpreted as a relative ranking, not an absolute funding figure.
+          A value of 1.5, for instance, doesn't mean "1.5× base cost per student" — it means
+          this school is roughly 1.5× more service-heavy than a school whose composite is 1.0.
+        </dd>
     </dl>
 
     <h3>Caveats</h3>
@@ -382,7 +454,7 @@
 <script>
 (async function () {
   const data = await fetch("./data.json").then(r => r.json());
-  const { schools, meta, table_cols: TABLE_COLS, scatters: SCATTERS } = data;
+  const { schools, meta, table_cols: TABLE_COLS, scatters: SCATTERS, cluster_labels: CLUSTER_LABELS } = data;
 
   // ---------- formatters ----------
   function fmt(val, type) {
@@ -538,47 +610,203 @@
     const withVal = schools.filter(s => s.students_per_sqft != null);
     withVal.sort((a, b) => a.students_per_sqft - b.students_per_sqft);
     const isCand = s => s.is_closure_candidate === true || s.is_closure_candidate === "True";
-    Plotly.newPlot("plot-ranking", [{
-      type: "bar",
-      orientation: "h",
-      x: withVal.map(s => s.students_per_sqft),
-      y: withVal.map(s => s.school_name + (isCand(s) ? `  (#${s.closure_rank})` : "")),
-      marker: {
-        color: withVal.map(s => isCand(s) ? "#f97e60" : "#58a6ff"),
-        line: { width: 0.5, color: "#0e1115" },
-      },
-      text: withVal.map(s =>
-        `${s.enrollment_2025_26} students · ${(s.square_feet || 0).toLocaleString()} sqft`),
-      textposition: "outside",
-      textfont: { size: 10, color: "#e6edf3" },
-      hovertemplate: "<b>%{y}</b><br>Students/sqft: %{x:.4f}<br>%{text}<extra></extra>",
-    }], {
-      paper_bgcolor: "#161b22", plot_bgcolor: "#161b22",
-      font: { color: "#e6edf3", size: 11 },
-      margin: { l: 280, r: 140, t: 20, b: 40 },
-      xaxis: { title: "Students per square foot (2025-26 enrollment ÷ 2009 sqft)",
-        gridcolor: "#30363d", zerolinecolor: "#30363d" },
-      yaxis: { automargin: false, tickfont: { size: 10 } },
-      showlegend: false,
-      shapes: [{  // district median line
-        type: "line",
-        x0: median(withVal.map(s => s.students_per_sqft)),
-        x1: median(withVal.map(s => s.students_per_sqft)),
-        y0: -0.5, y1: withVal.length - 0.5,
-        line: { color: "#7d8590", width: 1, dash: "dash" },
-      }],
-      annotations: [{
-        x: median(withVal.map(s => s.students_per_sqft)), y: withVal.length - 0.5,
-        text: "district median", showarrow: false, yanchor: "bottom",
-        font: { size: 10, color: "#7d8590" },
-      }],
-    }, { displayModeBar: false, responsive: true });
+    const med = median(withVal.map(s => s.students_per_sqft));
+
+    function renderRanking() {
+      const mobile = window.innerWidth < 700;
+      const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
+      const labels = withVal.map(s => {
+        const base = mobile ? truncate(s.school_name, 16) : s.school_name;
+        return base + (isCand(s) ? `  (#${s.closure_rank})` : "");
+      });
+      const trace = {
+        type: "bar",
+        orientation: "h",
+        x: withVal.map(s => s.students_per_sqft),
+        y: labels,
+        marker: {
+          color: withVal.map(s => isCand(s) ? "#f97e60" : "#58a6ff"),
+          line: { width: 0.5, color: "#0e1115" },
+        },
+        text: withVal.map(s => mobile
+          ? `${s.enrollment_2025_26}`
+          : `${s.enrollment_2025_26} students · ${(s.square_feet || 0).toLocaleString()} sqft`),
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata: withVal.map(s => [s.school_name, s.enrollment_2025_26, (s.square_feet || 0).toLocaleString()]),
+        hovertemplate: "<b>%{customdata[0]}</b><br>Students/sqft: %{x:.4f}<br>%{customdata[1]} students · %{customdata[2]} sqft<extra></extra>",
+      };
+      Plotly.react("plot-ranking", [trace], {
+        paper_bgcolor: "#161b22", plot_bgcolor: "#161b22",
+        font: { color: "#e6edf3", size: 11 },
+        margin: mobile
+          ? { l: 130, r: 50, t: 20, b: 40 }
+          : { l: 280, r: 140, t: 20, b: 40 },
+        xaxis: {
+          title: mobile ? "Students per sqft" : "Students per square foot (2025-26 enrollment ÷ 2009 sqft)",
+          gridcolor: "#30363d", zerolinecolor: "#30363d",
+        },
+        yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
+        showlegend: false,
+        shapes: [{
+          type: "line",
+          x0: med, x1: med,
+          y0: -0.5, y1: withVal.length - 0.5,
+          line: { color: "#7d8590", width: 1, dash: "dash" },
+        }],
+        annotations: [{
+          x: med, y: withVal.length - 0.5,
+          text: "district median", showarrow: false, yanchor: "bottom",
+          font: { size: 10, color: "#7d8590" },
+        }],
+      }, { displayModeBar: false, responsive: true });
+    }
+
+    renderRanking();
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(renderRanking, 150);
+    });
   })();
 
   function median(a) {
     const s = [...a].sort((x, y) => x - y);
     return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
   }
+
+  const isCand = s => s.is_closure_candidate === true || s.is_closure_candidate === "True";
+  const COLOR_CAND = "#f97e60";
+  const COLOR_OTHER = "#58a6ff";
+  const baseLayout = () => ({
+    paper_bgcolor: "#161b22", plot_bgcolor: "#161b22",
+    font: { color: "#e6edf3", size: 11 },
+    xaxis: { gridcolor: "#30363d", zerolinecolor: "#30363d" },
+    yaxis: { gridcolor: "#30363d", zerolinecolor: "#30363d" },
+  });
+
+  // ---------- YEAR-BUILT HISTOGRAM ----------
+  (function () {
+    const withYear = schools.filter(s => s.year_built != null);
+    const cand = withYear.filter(isCand).map(s => s.year_built);
+    const other = withYear.filter(s => !isCand(s)).map(s => s.year_built);
+    const allYears = withYear.map(s => s.year_built);
+    const minY = Math.floor(Math.min(...allYears) / 10) * 10;
+    const maxY = Math.ceil((Math.max(...allYears) + 1) / 10) * 10;
+    const binsCfg = { start: minY, end: maxY, size: 10 };
+    const candMean = cand.reduce((a, v) => a + v, 0) / cand.length;
+    const otherMean = other.reduce((a, v) => a + v, 0) / other.length;
+    const layout = Object.assign(baseLayout(), {
+      margin: { l: 50, r: 20, t: 10, b: 50 },
+      barmode: "stack",
+      xaxis: { title: "Decade built", gridcolor: "#30363d", zerolinecolor: "#30363d", dtick: 10 },
+      yaxis: { title: "Number of schools", gridcolor: "#30363d", zerolinecolor: "#30363d" },
+      legend: { x: 0.02, y: 0.98, bgcolor: "rgba(22,27,34,0.92)", bordercolor: "#30363d", borderwidth: 1 },
+      shapes: [
+        { type: "line", x0: candMean, x1: candMean, yref: "paper", y0: 0, y1: 1,
+          line: { color: COLOR_CAND, width: 1.5, dash: "dash" } },
+        { type: "line", x0: otherMean, x1: otherMean, yref: "paper", y0: 0, y1: 1,
+          line: { color: COLOR_OTHER, width: 1.5, dash: "dash" } },
+      ],
+      annotations: [
+        { x: candMean, y: 1.02, yref: "paper", text: `cand. mean ${candMean.toFixed(0)}`,
+          showarrow: false, font: { size: 10, color: COLOR_CAND }, xanchor: "left" },
+        { x: otherMean, y: 1.02, yref: "paper", text: `others mean ${otherMean.toFixed(0)}`,
+          showarrow: false, font: { size: 10, color: COLOR_OTHER }, xanchor: "right" },
+      ],
+    });
+    Plotly.newPlot("plot-year-hist", [
+      { x: other, type: "histogram", name: "Other schools", marker: { color: COLOR_OTHER },
+        xbins: binsCfg, hovertemplate: "Decade %{x}<br>%{y} schools<extra></extra>" },
+      { x: cand, type: "histogram", name: "Closure candidate", marker: { color: COLOR_CAND },
+        xbins: binsCfg, hovertemplate: "Decade %{x}<br>%{y} schools<extra></extra>" },
+    ], layout, { displayModeBar: false, responsive: true });
+  })();
+
+  // ---------- OUTPERFORMER / UNDERPERFORMER BARS ----------
+  (function () {
+    const withRes = schools.filter(s => s.prof_residual != null);
+    withRes.sort((a, b) => a.prof_residual - b.prof_residual);  // ascending
+    const colors = withRes.map(s => isCand(s) ? COLOR_CAND : (s.prof_residual >= 0 ? "#3fb950" : "#bd566b"));
+    const labels = withRes.map(s => s.school_name + (isCand(s) ? `  (#${s.closure_rank})` : ""));
+    const layout = Object.assign(baseLayout(), {
+      margin: { l: 240, r: 80, t: 20, b: 50 },
+      xaxis: { title: "Proficiency residual (actual − predicted from % BIPOC)",
+        gridcolor: "#30363d", zerolinecolor: "#7d8590" },
+      yaxis: { automargin: false, tickfont: { size: 10 } },
+      showlegend: false,
+    });
+    const customData = withRes.map(s => [s.avg_prof_2425, s.pct_bipoc]);
+    Plotly.newPlot("plot-residuals", [{
+      type: "bar", orientation: "h",
+      x: withRes.map(s => s.prof_residual),
+      y: labels,
+      marker: { color: colors, line: { width: 0.5, color: "#0e1115" } },
+      text: withRes.map(s => (s.prof_residual > 0 ? "+" : "") + s.prof_residual.toFixed(1)),
+      textposition: "outside",
+      textfont: { size: 10, color: "#e6edf3" },
+      cliponaxis: false,
+      customdata: customData,
+      hovertemplate: "<b>%{y}</b><br>Residual: %{x:.1f}<br>Avg prof: %{customdata[0]:.1f}<br>% BIPOC: %{customdata[1]:.0%}<extra></extra>",
+    }], layout, { displayModeBar: false, responsive: true });
+
+    function resizeRes() {
+      const mobile = window.innerWidth < 700;
+      Plotly.relayout("plot-residuals", {
+        "margin.l": mobile ? 130 : 240,
+        "margin.r": mobile ? 50 : 80,
+        "yaxis.tickfont.size": mobile ? 9 : 10,
+      });
+    }
+    resizeRes();
+    let t;
+    window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(resizeRes, 150); });
+  })();
+
+  // ---------- CLUSTER PCA SCATTER ----------
+  (function () {
+    const withPca = schools.filter(s => s.pca_x != null && s.cluster_id != null);
+    const palette = ["#f0883e", "#3fb950", "#58a6ff", "#a371f7"];
+    const labels = CLUSTER_LABELS || {};
+    const traces = [];
+    [0, 1, 2, 3].forEach(cid => {
+      const group = withPca.filter(s => s.cluster_id === cid);
+      const others = group.filter(s => !isCand(s));
+      const cands = group.filter(s => isCand(s));
+      const labelInfo = labels[cid] || { name: `Cluster ${cid}` };
+      const legend = `${labelInfo.name} (n=${group.length})`;
+      if (others.length) {
+        traces.push({
+          x: others.map(s => s.pca_x), y: others.map(s => s.pca_y),
+          text: others.map(s => s.school_name),
+          mode: "markers", type: "scatter", name: legend, legendgroup: `c${cid}`,
+          marker: { size: 10, color: palette[cid], symbol: "circle",
+            line: { width: 0.5, color: "#0e1115" }, opacity: 0.85 },
+          hovertemplate: `<b>%{text}</b><br>${labelInfo.name}<extra></extra>`,
+        });
+      }
+      if (cands.length) {
+        traces.push({
+          x: cands.map(s => s.pca_x), y: cands.map(s => s.pca_y),
+          text: cands.map(s => s.school_name + ` (#${s.closure_rank})`),
+          mode: "markers", type: "scatter", name: legend + " · candidate",
+          legendgroup: `c${cid}`, showlegend: others.length === 0,
+          marker: { size: 14, color: palette[cid], symbol: "diamond",
+            line: { width: 1.5, color: "#f97e60" }, opacity: 0.95 },
+          hovertemplate: `<b>%{text}</b><br>${labelInfo.name} · closure candidate<extra></extra>`,
+        });
+      }
+    });
+    const layout = Object.assign(baseLayout(), {
+      margin: { l: 55, r: 10, t: 10, b: 50 },
+      xaxis: { title: "PC1 (size + nearby development → )", gridcolor: "#30363d", zerolinecolor: "#30363d" },
+      yaxis: { title: "PC2 (need / proficiency axis → )", gridcolor: "#30363d", zerolinecolor: "#30363d" },
+      legend: { x: 1, xanchor: "right", y: 1,
+        bgcolor: "rgba(22,27,34,0.92)", bordercolor: "#30363d", borderwidth: 1 },
+    });
+    Plotly.newPlot("plot-clusters", traces, layout, { displayModeBar: false, responsive: true });
+  })();
 
   // ---------- TABLE ----------
   const table = document.getElementById("schools-table");
