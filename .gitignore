@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Claude Code / dev scratch
+.claude/
+.scratch/
+
+# Large source files over GitHub's 100MB limit (or that inflate the repo)
+data/raw/LRFP_Vol2_2021.pdf
+data/raw/metro/
+
+# Unrelated files that live in this directory
+plotpdx-s2-b.png
+PlotPDX-season-2.png

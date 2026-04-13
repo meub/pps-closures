@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PPS Closure Candidates — Data Explorer</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+<style>
+  :root {
+    --bg: #0e1115; --panel: #161b22; --border: #30363d; --fg: #e6edf3;
+    --muted: #7d8590; --candidate: #f97e60; --other: #58a6ff;
+    --accent: #2f81f7; --urm: #d63b3b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.5 -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif; }
+  header { padding: 24px 32px; border-bottom: 1px solid var(--border);
+    max-width: 1600px; margin: 0 auto; }
+  header h1 { margin: 0 0 6px; font-size: 22px; font-weight: 600; }
+  header p { margin: 0 0 10px; color: var(--muted); max-width: 820px; }
+  header p:last-of-type { margin-bottom: 0; }
+  header p a { color: var(--accent); text-decoration: underline; }
+  header p a:hover { color: var(--fg); }
+  .hero { display: flex; gap: 32px; align-items: flex-start; }
+  .hero-text { flex: 1 1 auto; min-width: 0; }
+  .hero-timeline { flex: 0 0 260px; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px 18px; font-size: 12.5px; }
+  .hero-timeline h3 { margin: 0 0 12px; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); }
+  .hero-timeline ol { list-style: none; margin: 0; padding: 0; position: relative; }
+  .hero-timeline ol::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px;
+    width: 1px; background: var(--border); }
+  .hero-timeline li { position: relative; padding: 0 0 12px 22px; }
+  .hero-timeline li:last-child { padding-bottom: 0; }
+  .hero-timeline li::before { content: ""; position: absolute; left: 0; top: 4px; width: 11px;
+    height: 11px; border-radius: 50%; background: var(--panel);
+    border: 2px solid var(--muted); box-sizing: border-box; }
+  .hero-timeline li.past::before { background: var(--accent); border-color: var(--accent); }
+  .hero-timeline li.next::before { border-color: var(--candidate); box-shadow: 0 0 0 3px rgba(249,126,96,0.18); }
+  .hero-timeline .date { display: block; color: var(--fg); font-weight: 500; }
+  .hero-timeline .what { display: block; color: var(--muted); margin-top: 1px; }
+  @media (max-width: 900px) { .hero { flex-direction: column; } .hero-timeline { flex-basis: auto; width: 100%; } }
+  header .legend { margin-top: 12px; display: flex; gap: 20px; font-size: 12px; color: var(--muted); }
+  header .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  header .legend .candidate::before { background: var(--candidate); }
+  header .legend .other::before { background: var(--other); }
+  header .legend .urm::before { background: var(--urm); }
+  main { padding: 24px 32px 80px; max-width: 1600px; margin: 0 auto; }
+  section { margin-bottom: 40px; }
+  section > h2 { margin: 0 0 14px; font-size: 16px; font-weight: 600;
+    border-left: 3px solid var(--accent); padding-left: 10px; }
+  section > p.note { color: var(--muted); margin: 0 0 14px; font-size: 12.5px; }
+  .panel { background: var(--panel); border: 1px solid var(--border);
+    border-radius: 6px; overflow: hidden; }
+
+  #map { height: 550px; }
+  .map-popup b { display: block; font-size: 13px; margin-bottom: 4px; }
+  .map-popup .meta { color: #57606a; font-size: 11.5px; }
+  .map-popup .row { font-size: 12px; margin: 2px 0; }
+
+  .charts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .chart-card { padding: 14px; }
+  .chart-card h3 { margin: 0 0 4px; font-size: 14px; font-weight: 600; }
+  .chart-card p.subtitle { margin: 0 0 8px; color: var(--muted); font-size: 12px; }
+  .chart-plot { height: 360px; }
+
+  .table-wrap { overflow-x: auto; max-height: 720px; overflow-y: auto; }
+  table.schools { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.schools thead { position: sticky; top: 0; background: #1b232c; z-index: 2; }
+  table.schools th, table.schools td { padding: 7px 10px; text-align: left;
+    border-bottom: 1px solid var(--border); white-space: nowrap; }
+  table.schools th { font-weight: 600; cursor: pointer; user-select: none;
+    border-bottom: 2px solid var(--border); position: relative; }
+  table.schools th:hover { background: #252d37; }
+  table.schools th .sort-arrow { color: var(--accent); margin-left: 4px; }
+  table.schools th .tooltip-trigger { color: var(--muted); margin-left: 4px;
+    cursor: help; font-size: 11px; }
+  table.schools tr.candidate td:first-child { border-left: 3px solid var(--candidate); }
+  table.schools tr:hover { background: #1b222b; }
+  table.schools td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+  .badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; }
+  .badge.yes { background: #293229; color: #7ee787; }
+  .badge.no { color: var(--muted); }
+  .badge.cand { background: #3a2621; color: #f97e60; }
+
+  .table-controls { padding: 10px 14px; border-bottom: 1px solid var(--border);
+    display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 12.5px; }
+  .table-controls input[type="search"] { background: #0d1117; color: var(--fg);
+    border: 1px solid var(--border); border-radius: 4px; padding: 5px 9px; width: 240px; }
+  .table-controls label { color: var(--muted); cursor: pointer; }
+  .table-controls .count { margin-left: auto; color: var(--muted); }
+
+  /* Tooltip */
+  .tt { position: fixed; background: #1b232c; color: var(--fg);
+    border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px;
+    font-size: 12px; max-width: 320px; z-index: 9999; pointer-events: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4); display: none; }
+  .tt b { display: block; margin-bottom: 4px; }
+  .tt .src { color: var(--muted); font-size: 11px; margin-top: 4px;
+    border-top: 1px dashed var(--border); padding-top: 4px; }
+
+  /* Methodology */
+  .methodology { font-size: 16px; color: var(--fg); line-height: 1.55; }
+  .methodology h3 { font-size: 17px; margin: 22px 0 8px; color: var(--fg); }
+  .methodology p { color: var(--muted); margin: 0 0 10px; max-width: 820px; }
+  .methodology dl { max-width: 820px; margin: 0; }
+  .methodology dt { color: var(--fg); font-weight: 500; margin-top: 10px; }
+  .methodology dd { margin: 2px 0 0; color: var(--muted); }
+  .methodology a, footer a { color: var(--accent); text-decoration: underline; }
+  .methodology a:hover, footer a:hover { color: var(--fg); }
+  .method-layout { display: flex; gap: 40px; align-items: flex-start; }
+  .method-body { flex: 1 1 auto; min-width: 0; }
+  .method-sidebar { flex: 0 0 300px; position: sticky; top: 16px; }
+  .vintage-card { background: var(--panel); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px 18px; font-size: 13.5px; }
+  .vintage-card h3 { font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.6px; color: var(--muted); margin: 0 0 12px; }
+  .vintage-card table { width: 100%; border-collapse: collapse; }
+  .vintage-card td { padding: 5px 0; vertical-align: top; }
+  .vintage-card td.src { color: var(--fg); }
+  .vintage-card td.year { color: var(--muted); text-align: right;
+    font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 12px; }
+  .vintage-card .stale { color: #e3b341; }
+  .vintage-card .legend { margin-top: 14px; padding-top: 12px;
+    border-top: 1px dashed var(--border); color: var(--muted); font-size: 12px; }
+  @media (max-width: 1100px) { .method-layout { flex-direction: column; }
+    .method-sidebar { flex-basis: auto; width: 100%; position: static; } }
+  footer { padding: 24px 32px 40px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 12.5px; text-align: center; }
+
+  @media (max-width: 1000px) { .charts { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Portland Public Schools — Closure Candidate Data Explorer</h1>
+  <div class="hero">
+    <div class="hero-text">
+      <p>
+        On <a href="https://www.wweek.com/news/schools/2026/03/10/pps-plans-to-close-several-schools-by-fall-2027/" target="_blank" rel="noopener">March 10, 2026</a>,
+        Superintendent Kimberlee Armstrong announced PPS will close 5–10 of its 74 elementary, K-8,
+        middle, and alternative schools by fall 2027. The driver is a decade of declining enrollment
+        (projected to fall another 13% by 2034-35) and a structural budget gap.
+      </p>
+      <p>
+        No formal criteria have been published, but PPS and school board members have pointed to
+        current enrollment, building utilization (students/sq ft), seismic risk and building
+        condition, recent or planned bond investments, and equity considerations such as Title I
+        status and neighborhood demographics. The official shortlist is expected Nov 2026, with a
+        board vote in Dec 2026.
+      </p>
+      <p>
+        This explorer gathers data to visualize these factors side-by-side for every PPS school,
+        with an emphasis on the 15 lowest-enrollment schools that <a href="https://www.wweek.com/news/schools/2026/03/18/heres-what-pps-will-consider-as-it-selects-schools-to-close/" target="_blank" rel="noopener">media has listed</a>
+        as potential candidates. Academic performance is included for context, though it is
+        notably absent from the criteria PPS has discussed publicly.
+      </p>
+    </div>
+    <aside class="hero-timeline" aria-label="Closure-decision timeline">
+      <h3>Timeline</h3>
+      <ol>
+        <li class="past">
+          <span class="date">Mar 10, 2026</span>
+          <span class="what">Armstrong announces 5–10 closures</span>
+        </li>
+        <li class="next">
+          <span class="date">Nov 2026</span>
+          <span class="what">PPS releases official shortlist</span>
+        </li>
+        <li>
+          <span class="date">Dec 2026</span>
+          <span class="what">School board votes</span>
+        </li>
+        <li>
+          <span class="date">Fall 2027</span>
+          <span class="what">Closures take effect</span>
+        </li>
+      </ol>
+    </aside>
+  </div>
+  <div class="legend">
+    <span class="candidate">Closure candidate (15)</span>
+    <span class="other">Other PPS school (59)</span>
+    <span class="urm">URM building</span>
+    <span>Hover any column header or data point for details + sources.</span>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>Map — all 74 in-scope PPS schools</h2>
+    <p class="note">
+      Each marker sized by 2025-26 enrollment. Red = closure candidate, blue = other.
+      A red ring indicates an unreinforced masonry (URM) building.
+    </p>
+    <div class="panel"><div id="map"></div></div>
+  </section>
+
+  <section>
+    <h2>Scatter plots</h2>
+    <p class="note">Closure candidates highlighted in orange. Click &amp; drag to zoom.</p>
+    <div class="charts" id="charts"></div>
+  </section>
+
+  <section>
+    <h2>All schools ranked by building utilization</h2>
+    <p class="note">
+      Students per square foot — lower bars mean emptier buildings. Closure candidates
+      (orange) should cluster at the bottom if the closure list tracks underutilization.
+    </p>
+    <div class="panel chart-card"><div id="plot-ranking" style="height: 1400px;"></div></div>
+  </section>
+
+  <section>
+    <h2>All schools — sortable table</h2>
+    <p class="note">Click a column header to sort. Hover the <span style="color: var(--muted);">i</span> next to each header for a definition and source.</p>
+    <div class="panel">
+      <div class="table-controls">
+        <input id="search" type="search" placeholder="Filter by school name…">
+        <label><input id="filter-cand" type="checkbox"> Closure candidates only</label>
+        <label><input id="filter-urm" type="checkbox"> URM buildings only</label>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="table-wrap">
+        <table class="schools" id="schools-table"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="methodology">
+    <h2>Methodology &amp; sources</h2>
+    <div class="method-layout">
+    <div class="method-body">
+    <p>
+      Each of the 74 rows is one PPS school in the closure-announcement scope
+      (elementary, K-8, middle, and alternative — PPS's 9 high schools are excluded per
+      the March 10 announcement). Columns are pulled from the sources below
+      and joined on a mix of NCES school ID, Oregon ODE School Institution ID, and manual
+      name mapping for recent renamings (e.g., Madison → McDaniel, Wilson → Wells-Barnett,
+      Fernwood → Beverly Cleary). Geographic signals (affordable housing, permits) are
+      aggregated to each school using its actual PPS attendance boundary, with a
+      1-mile haversine radius as a fallback for focus-option / alternative /
+      embedded programs that don't have a published catchment.
+    </p>
+
+    <h3>Enrollment &amp; demographics</h3>
+    <dl>
+      <dt><a href="https://www.oregon.gov/ode/reports-and-data/students/Pages/Student-Enrollment-Reports.aspx" target="_blank" rel="noopener">Oregon ODE Fall Membership</a></dt>
+        <dd>2025-26 and 2024-25 school-level enrollment, race/ethnicity shares, grade-band.</dd>
+      <dt><a href="https://educationdata.urban.org/documentation/" target="_blank" rel="noopener">NCES CCD (via Urban Institute Education Data API)</a></dt>
+        <dd>School addresses, lat/lon, 2022 enrollment baseline, free/reduced meal counts, direct-certification counts.</dd>
+      <dt><a href="https://civilrightsdata.ed.gov/" target="_blank" rel="noopener">US Dept of Education Civil Rights Data Collection (CRDC, 2020)</a></dt>
+        <dd>Chronic absenteeism, English Learner (LEP), and IDEA/SPED counts. Note: 2020 COVID year may suppress some metrics.</dd>
+    </dl>
+
+    <h3>Academic performance</h3>
+    <dl>
+      <dt><a href="https://www.oregon.gov/ode/educator-resources/assessment/Pages/Assessment-Group-Reports.aspx" target="_blank" rel="noopener">Oregon OSAS state assessments (2024-25, 2023-24)</a></dt>
+        <dd>School-level ELA and Math proficiency rates (meets/exceeds, all grades, all students).</dd>
+    </dl>
+
+    <h3>Buildings &amp; seismic</h3>
+    <dl>
+      <dt><a href="https://www.pps.net/Page/1846" target="_blank" rel="noopener">KPFF Seismic Report (2009)</a></dt>
+        <dd>Year built, square footage, and construction type for every building in the district. Note: square footage predates recent bond expansions.</dd>
+      <dt><a href="https://www.wweek.com/news/schools/2025/05/10/pps-buildings-include-18-unreinforced-masonry-structures-that-would-cost-240m-to-retrofit/" target="_blank" rel="noopener">Holmes Engineering URM Assessment (2024, via WW)</a></dt>
+        <dd>Unreinforced masonry classification and retrofit cost estimates for 18 PPS buildings.</dd>
+      <dt><a href="https://bond.pps.net/" target="_blank" rel="noopener">PPS Bond — Seismic &amp; modernization</a></dt>
+        <dd>Retrofit and modernization status (full, targeted, planned under 2025 bond).</dd>
+    </dl>
+
+    <h3>Title I &amp; federal programs</h3>
+    <dl>
+      <dt><a href="https://www.pps.net/Domain/219" target="_blank" rel="noopener">PPS Funded Programs</a></dt>
+        <dd>Title I-A schoolwide designations, 2025-26.</dd>
+    </dl>
+
+    <h3>Housing &amp; neighborhood growth</h3>
+    <dl>
+      <dt><a href="https://www.oregon.gov/ohcs/development/Pages/affordable-housing-inventory.aspx" target="_blank" rel="noopener">Oregon Affordable Housing Inventory (OAHI)</a></dt>
+        <dd>Existing and pipeline affordable housing projects with unit counts, bedroom mix, and status. Aggregated to each school using the school's PPS attendance boundary (point-in-polygon) rather than a fixed radius; schools without a published catchment (alternative, embedded, or focus-option programs) fall back to a 1-mile haversine radius.</dd>
+      <dt><a href="https://gis-pdx.opendata.arcgis.com/datasets/PDX::residential-building-permits/about" target="_blank" rel="noopener">Portland BDS Residential Building Permits (via PortlandMaps)</a></dt>
+        <dd>4,144 permits issued 2022 – 2026-04 that created new residential units; 12,401 units total. Single-family, ADUs, and multifamily — market-rate and affordable combined. Attributed to each school by point-in-polygon against the PPS attendance boundary, with the same 1-mile fallback noted above.</dd>
+      <dt><a href="https://hub.arcgis.com/datasets/Portland::school-boundaries" target="_blank" rel="noopener">City of Portland School Attendance Areas</a></dt>
+        <dd>PPS attendance-area polygons (elementary/K-8, middle, high), dissolved from the City of Portland <code>School_Boundaries</code> FeatureServer layer and saved to <code>data/raw/pps_boundaries_*.geojson</code>.</dd>
+    </dl>
+
+    <h3>Regional context (not attached per-school)</h3>
+    <p>
+      <a href="https://www.oregonmetro.gov/sites/default/files/2023/08/29/2045-regional-population-housing-forecast-by-city-county.pdf" target="_blank" rel="noopener">Metro Council's 2045 Distributed Forecast</a>
+      (Ord. 21-1457, adopted Feb 2021) projects City of Portland growing from 668,429 to 774,219 residents
+      (+16%) by 2045, and unincorporated Multnomah County from 19,328 to 40,490 (+110%).
+      Metro only publishes this forecast at city/county level (no tract or TAZ breakdown, and no
+      age bands), so it is not attached to individual schools here — it is background only. PSU
+      Population Research Center explicitly does not forecast Multnomah County, so Metro is the
+      only public long-horizon population forecast for the PPS footprint.
+    </p>
+
+    <h3>Closure candidate list</h3>
+    <dl>
+      <dt><a href="https://www.wweek.com/news/schools/2026/03/18/heres-what-pps-will-consider-as-it-selects-schools-to-close/" target="_blank" rel="noopener">Willamette Week (2026-03-18)</a></dt>
+        <dd>The 15-school ranking. Derived by WW from criteria PPS said it would use (enrollment + building utilization). PPS's own shortlist is expected Nov 2026 with a board vote in Dec 2026.</dd>
+    </dl>
+
+    <h3>Caveats</h3>
+    <p>
+      Building square footage is from 2009 and may understate capacity at schools expanded under recent bonds.
+      CRDC LEP/IDEA counts are from 2020 (COVID year) and are divided by 2025-26 enrollment to derive shares — treat as approximate.
+      Free/reduced meal shares use 2022 counts over 2022 enrollment; post-2022 trends are not reflected.
+      Permits represent approvals, not completions — a permit may be issued but not built.
+    </p>
+    </div>
+    <aside class="method-sidebar" aria-label="Data vintage">
+      <div class="vintage-card">
+        <h3>Data vintage</h3>
+        <table>
+          <tbody>
+            <tr><td class="src">Enrollment (ODE)</td><td class="year">Fall 2025-26</td></tr>
+            <tr><td class="src">OSAS proficiency</td><td class="year">2024-25</td></tr>
+            <tr><td class="src">Race/ethnicity (ODE)</td><td class="year">2025-26</td></tr>
+            <tr><td class="src">Free/reduced meals (NCES)</td><td class="year stale">2022</td></tr>
+            <tr><td class="src">LEP &amp; SPED (CRDC)</td><td class="year stale">2020</td></tr>
+            <tr><td class="src">URM assessment (Holmes)</td><td class="year">2024</td></tr>
+            <tr><td class="src">Building square footage (KPFF)</td><td class="year stale">2009</td></tr>
+            <tr><td class="src">Residential permits (BDS)</td><td class="year">2022 – 2026-04</td></tr>
+            <tr><td class="src">Affordable housing (OAHI)</td><td class="year">2025</td></tr>
+            <tr><td class="src">Metro pop. forecast</td><td class="year">2021</td></tr>
+            <tr><td class="src">WW candidate ranking</td><td class="year">2026-03-18</td></tr>
+            <tr><td class="src">Attendance boundaries</td><td class="year">~2023-24</td></tr>
+          </tbody>
+        </table>
+        <div class="legend"><span class="stale">Amber</span> = older than 3 years; read with caution.</div>
+      </div>
+    </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Made by <a href="https://alexmeub.com" target="_blank" rel="noopener">Alex Meub</a> with help from Claude Code.
+</footer>
+
+<div class="tt" id="tt"></div>
+
+<script>
+(async function () {
+  const data = await fetch("./data.json").then(r => r.json());
+  const { schools, meta, table_cols: TABLE_COLS, scatters: SCATTERS } = data;
+
+  // ---------- formatters ----------
+  function fmt(val, type) {
+    if (val === null || val === undefined || Number.isNaN(val) || val === "") return "—";
+    switch (type) {
+      case "int": return Number(val).toLocaleString();
+      case "pct_0_100": return Number(val).toFixed(1) + "%";
+      case "pct_0_1": return (Number(val) * 100).toFixed(1) + "%";
+      case "usd": return "$" + Number(val).toLocaleString();
+      case "ratio": return Number(val).toFixed(4);
+      case "year": return Number(val).toFixed(0);
+      case "bool": return val === true || val === "True" || val === 1
+        ? '<span class="badge yes">yes</span>'
+        : '<span class="badge no">no</span>';
+      default: return String(val);
+    }
+  }
+  function raw(val) {
+    if (val === null || val === undefined || val === "") return null;
+    if (val === "True" || val === true) return 1;
+    if (val === "False" || val === false) return 0;
+    const n = Number(val);
+    return Number.isNaN(n) ? String(val) : n;
+  }
+
+  // ---------- tooltip ----------
+  const tt = document.getElementById("tt");
+  function showTT(e, html) {
+    tt.innerHTML = html;
+    tt.style.display = "block";
+    const x = Math.min(e.clientX + 14, window.innerWidth - 340);
+    const y = Math.min(e.clientY + 14, window.innerHeight - 120);
+    tt.style.left = x + "px"; tt.style.top = y + "px";
+  }
+  function hideTT() { tt.style.display = "none"; }
+
+  // ---------- MAP ----------
+  const map = L.map("map").setView([45.535, -122.65], 12);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19, attribution: "© OpenStreetMap",
+  }).addTo(map);
+
+  schools.forEach(s => {
+    if (s.latitude == null || s.longitude == null) return;
+    const cand = s.is_closure_candidate === true || s.is_closure_candidate === "True";
+    const urm = s.is_urm_building === true || s.is_urm_building === "True";
+    const r = Math.max(5, Math.min(22, Math.sqrt(s.enrollment_2025_26 || 100) / 2));
+    const marker = L.circleMarker([s.latitude, s.longitude], {
+      radius: r,
+      color: urm ? "#d63b3b" : (cand ? "#f97e60" : "#58a6ff"),
+      weight: urm ? 2.5 : 1,
+      fillColor: cand ? "#f97e60" : "#58a6ff",
+      fillOpacity: 0.72,
+    }).addTo(map);
+    const fields = [
+      ["Level", s.level],
+      ["Enrollment 25-26", fmt(s.enrollment_2025_26, "int")],
+      ["Year built", fmt(s.year_built, "year")],
+      ["Square feet", fmt(s.square_feet, "int")],
+      ["ELA proficiency", fmt(s.pct_ela_prof_2425, "pct_0_100")],
+      ["Math proficiency", fmt(s.pct_math_prof_2425, "pct_0_100")],
+      ["Title I", fmt(s.is_title_i, "bool")],
+      ["URM", fmt(s.is_urm_building, "bool")],
+      ["Seismic retrofit", s.seismic_retrofit_status || "—"],
+      ["Pipeline family units (1mi)", fmt(s.pipeline_family_units_within_1mi, "int")],
+    ];
+    const rankBadge = cand ? ` <span class="badge cand">candidate #${s.closure_rank}</span>` : "";
+    marker.bindPopup(
+      `<div class="map-popup"><b>${s.school_name}${rankBadge}</b>` +
+      `<div class="meta">${s.street_address || ""}</div>` +
+      fields.map(([k, v]) => `<div class="row"><b style="display:inline">${k}:</b> ${v}</div>`).join("") +
+      `</div>`
+    );
+  });
+
+  // ---------- SCATTERS ----------
+  const chartsEl = document.getElementById("charts");
+  SCATTERS.forEach(cfg => {
+    const card = document.createElement("div");
+    card.className = "panel chart-card";
+    card.innerHTML = `
+      <h3>${cfg.title}</h3>
+      <p class="subtitle">x = ${meta[cfg.x].label} · y = ${meta[cfg.y].label} — ${cfg.subtitle}</p>
+      <div class="chart-plot" id="plot-${cfg.id}"></div>
+    `;
+    chartsEl.appendChild(card);
+
+    const cand = schools.filter(s => s.is_closure_candidate === true || s.is_closure_candidate === "True");
+    const other = schools.filter(s => !(s.is_closure_candidate === true || s.is_closure_candidate === "True"));
+
+    function trace(subset, name, color) {
+      return {
+        x: subset.map(s => s[cfg.x]),
+        y: subset.map(s => s[cfg.y]),
+        text: subset.map(s => s.school_name + (s.closure_rank ? ` (#${s.closure_rank})` : "")),
+        mode: "markers",
+        type: "scatter",
+        name,
+        marker: { size: 10, color, line: { width: 0.5, color: "#0e1115" }, opacity: 0.85 },
+        hovertemplate: "<b>%{text}</b><br>" + meta[cfg.x].label + ": %{x}<br>" + meta[cfg.y].label + ": %{y}<extra></extra>",
+      };
+    }
+
+    const layout = {
+      paper_bgcolor: "#161b22", plot_bgcolor: "#161b22",
+      font: { color: "#e6edf3", size: 11 },
+      margin: { l: 55, r: 10, t: 10, b: 45 },
+      xaxis: { title: meta[cfg.x].label, gridcolor: "#30363d", zerolinecolor: "#30363d" },
+      yaxis: { title: meta[cfg.y].label, gridcolor: "#30363d", zerolinecolor: "#30363d" },
+      showlegend: true,
+      legend: { x: 1, xanchor: "right", y: 1,
+        bgcolor: "rgba(22,27,34,0.92)", bordercolor: "#30363d", borderwidth: 1 },
+    };
+    const traces = [
+      trace(other, "Other schools", "#58a6ff"),
+      trace(cand, "Closure candidate", "#f97e60"),
+    ];
+    if (cfg.trendline) {
+      const pts = schools.filter(s =>
+        s[cfg.x] != null && s[cfg.y] != null &&
+        !Number.isNaN(Number(s[cfg.x])) && !Number.isNaN(Number(s[cfg.y]))
+      );
+      const n = pts.length;
+      if (n >= 2) {
+        const xs = pts.map(s => Number(s[cfg.x]));
+        const ys = pts.map(s => Number(s[cfg.y]));
+        const sumX = xs.reduce((a, v) => a + v, 0);
+        const sumY = ys.reduce((a, v) => a + v, 0);
+        const sumXY = xs.reduce((a, v, i) => a + v * ys[i], 0);
+        const sumXX = xs.reduce((a, v) => a + v * v, 0);
+        const m = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+        const b = (sumY - m * sumX) / n;
+        const xMin = Math.min(...xs);
+        const xMax = Math.max(...xs);
+        traces.push({
+          x: [xMin, xMax],
+          y: [m * xMin + b, m * xMax + b],
+          mode: "lines",
+          type: "scatter",
+          name: "Linear trend",
+          line: { color: "#7d8590", width: 1.5, dash: "dash" },
+          hoverinfo: "skip",
+        });
+      }
+    }
+    Plotly.newPlot(`plot-${cfg.id}`, traces, layout, { displayModeBar: false, responsive: true });
+  });
+
+  // ---------- RANKING BAR CHART ----------
+  (function () {
+    const withVal = schools.filter(s => s.students_per_sqft != null);
+    withVal.sort((a, b) => a.students_per_sqft - b.students_per_sqft);
+    const isCand = s => s.is_closure_candidate === true || s.is_closure_candidate === "True";
+    Plotly.newPlot("plot-ranking", [{
+      type: "bar",
+      orientation: "h",
+      x: withVal.map(s => s.students_per_sqft),
+      y: withVal.map(s => s.school_name + (isCand(s) ? `  (#${s.closure_rank})` : "")),
+      marker: {
+        color: withVal.map(s => isCand(s) ? "#f97e60" : "#58a6ff"),
+        line: { width: 0.5, color: "#0e1115" },
+      },
+      text: withVal.map(s =>
+        `${s.enrollment_2025_26} students · ${(s.square_feet || 0).toLocaleString()} sqft`),
+      textposition: "outside",
+      textfont: { size: 10, color: "#e6edf3" },
+      hovertemplate: "<b>%{y}</b><br>Students/sqft: %{x:.4f}<br>%{text}<extra></extra>",
+    }], {
+      paper_bgcolor: "#161b22", plot_bgcolor: "#161b22",
+      font: { color: "#e6edf3", size: 11 },
+      margin: { l: 280, r: 140, t: 20, b: 40 },
+      xaxis: { title: "Students per square foot (2025-26 enrollment ÷ 2009 sqft)",
+        gridcolor: "#30363d", zerolinecolor: "#30363d" },
+      yaxis: { automargin: false, tickfont: { size: 10 } },
+      showlegend: false,
+      shapes: [{  // district median line
+        type: "line",
+        x0: median(withVal.map(s => s.students_per_sqft)),
+        x1: median(withVal.map(s => s.students_per_sqft)),
+        y0: -0.5, y1: withVal.length - 0.5,
+        line: { color: "#7d8590", width: 1, dash: "dash" },
+      }],
+      annotations: [{
+        x: median(withVal.map(s => s.students_per_sqft)), y: withVal.length - 0.5,
+        text: "district median", showarrow: false, yanchor: "bottom",
+        font: { size: 10, color: "#7d8590" },
+      }],
+    }, { displayModeBar: false, responsive: true });
+  })();
+
+  function median(a) {
+    const s = [...a].sort((x, y) => x - y);
+    return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
+  }
+
+  // ---------- TABLE ----------
+  const table = document.getElementById("schools-table");
+  const thead = table.querySelector("thead");
+  const tbody = table.querySelector("tbody");
+  const searchEl = document.getElementById("search");
+  const filterCandEl = document.getElementById("filter-cand");
+  const filterUrmEl = document.getElementById("filter-urm");
+  const countEl = document.getElementById("count");
+
+  let sortCol = "closure_rank";
+  let sortDir = 1;  // 1 = asc, -1 = desc
+
+  function renderHeader() {
+    const trh = document.createElement("tr");
+    TABLE_COLS.forEach(col => {
+      const th = document.createElement("th");
+      const m = meta[col];
+      const arrow = sortCol === col ? `<span class="sort-arrow">${sortDir > 0 ? "▲" : "▼"}</span>` : "";
+      th.innerHTML = `${m.label}<span class="tooltip-trigger">ⓘ</span>${arrow}`;
+      th.onclick = () => {
+        if (sortCol === col) sortDir = -sortDir;
+        else { sortCol = col; sortDir = 1; }
+        render();
+      };
+      const trigger = th.querySelector(".tooltip-trigger");
+      trigger.onmouseenter = (e) => showTT(e,
+        `<b>${m.label}</b>${m.desc}<div class="src">Source: ${m.source}</div>`);
+      trigger.onmousemove = (e) => showTT(e,
+        `<b>${m.label}</b>${m.desc}<div class="src">Source: ${m.source}</div>`);
+      trigger.onmouseleave = hideTT;
+      trh.appendChild(th);
+    });
+    thead.innerHTML = "";
+    thead.appendChild(trh);
+  }
+
+  function renderRows() {
+    const q = searchEl.value.toLowerCase().trim();
+    const onlyCand = filterCandEl.checked;
+    const onlyUrm = filterUrmEl.checked;
+
+    let rows = schools.filter(s => {
+      if (q && !(s.school_name || "").toLowerCase().includes(q)) return false;
+      if (onlyCand && !(s.is_closure_candidate === true || s.is_closure_candidate === "True")) return false;
+      if (onlyUrm && !(s.is_urm_building === true || s.is_urm_building === "True")) return false;
+      return true;
+    });
+
+    rows.sort((a, b) => {
+      let va = raw(a[sortCol]), vb = raw(b[sortCol]);
+      if (va === null && vb === null) return 0;
+      if (va === null) return 1;
+      if (vb === null) return -1;
+      if (typeof va === "number" && typeof vb === "number") return (va - vb) * sortDir;
+      return String(va).localeCompare(String(vb)) * sortDir;
+    });
+
+    tbody.innerHTML = "";
+    rows.forEach(s => {
+      const tr = document.createElement("tr");
+      const cand = s.is_closure_candidate === true || s.is_closure_candidate === "True";
+      if (cand) tr.classList.add("candidate");
+      TABLE_COLS.forEach(col => {
+        const td = document.createElement("td");
+        const m = meta[col];
+        const v = s[col];
+        if (col === "school_name") {
+          const rankBadge = cand ? ` <span class="badge cand">#${s.closure_rank}</span>` : "";
+          td.innerHTML = `${v}${rankBadge}`;
+        } else {
+          td.innerHTML = fmt(v, m.fmt);
+          if (["int", "usd", "ratio", "pct_0_1", "pct_0_100", "year"].includes(m.fmt)) {
+            td.classList.add("numeric");
+          }
+        }
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    countEl.textContent = `${rows.length} of ${schools.length} schools`;
+  }
+
+  function render() { renderHeader(); renderRows(); }
+
+  searchEl.addEventListener("input", renderRows);
+  filterCandEl.addEventListener("change", renderRows);
+  filterUrmEl.addEventListener("change", renderRows);
+  render();
+})();
+</script>
+</body>
+</html>

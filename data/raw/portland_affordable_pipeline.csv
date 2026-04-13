@@ -1,0 +1,1215 @@
+project_name,address,city,zip,latitude,longitude,total_units,affordable_units,family_units_estimate,status,expected_year,source
+MUSEUM PLACE SOUTH,1030 SW JEFFERSON ST,Portland,97201,45.51552,-122.68519,140.0,140.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+TAGGART MANOR,8018 SE TAGGART ST,Portland,97206,45.50215,-122.58022,24.0,24.0,,in_service,2002.0,OAHI (data.oregon.gov p9yn-ftai)
+NORTH WILLIAMS APTS,2124 N WILLIAMS AVE,Portland,97227,45.53854,-122.66671,61.0,61.0,51.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ROSE CITY CONDOS,(UNKNOWN),Portland,97266,,,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+915 SE MALL ST,915 SE MALL ST,Portland,97202,45.49141,-122.65481,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+9121 N BURR AVE,9121 N BURR AVE,Portland,97203,45.59121,-122.74028,107.0,107.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Our House,2727 SE Alder,Portland,97214,45.51786,-122.63739,30.0,14.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+550 NE FARGO,550 NE FARGO ST,Portland,97212,45.54637,-122.65948,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1712 SE STARK ST,1712 SE STARK ST,Portland,97214,45.51933,-122.64814,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+JUBILEE REDWOODS I,1249 N PRESCOTT ST,Portland,97217,45.55548,-122.67979,8.0,8.0,,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+FESSENDEN COURT,7936 N FESSENDEN ST,Portland,97203,45.59574,-122.74476,9.0,9.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+2425 SE YAMHILL ST,2425 SE YAMHILL ST,Portland,97214,45.51574,-122.64085,2.0,2.0,,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+"Vera, The",2095 SW RIVER PARKWAY,Portland,97201,45.5071,-122.67387,375.0,201.0,52.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+HOLGATE PROJECT,12012 SE HOLGATE BLVD,Portland,97266,45.48966,-122.5396,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1638 SE ANKENY ST,1638 SE ANKENY ST,Portland,97214,45.52219,-122.64875,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Blackburn Building,12015 E Burnside Street,Portland,97230,45.52258,-122.53894,123.0,124.0,,in_service,2017.0,OAHI (data.oregon.gov p9yn-ftai)
+Ridgecrest Timbers,8870 N Columbia Boulevard,Portland,97203,45.60456,-122.75152,97.0,97.0,76.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Powell Boulevard Apartments,2101 SE POWELL BLVD,Portland,97202,45.49929,-122.64442,20.0,19.0,2.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+McCuller Crossing,236 N Killingsworth,Portland,97217,45.5627,-122.66937,40.0,40.0,32.0,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+St Anthony Village,3560 SE 79th Street,Portland,97206,45.49622,-122.58253,127.0,100.0,7.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+1455 NE GOING ST,1455 NE GOING ST,Portland,97211,45.55635,-122.6505,8.0,8.0,,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Trenton Terrace,4720 N Trenton Street,Portland,97203,45.58866,-122.71626,66.0,66.0,,in_service,2007.0,OAHI (data.oregon.gov p9yn-ftai)
+Upshur House,2650 NW Upshur Street,Portland,97210,45.53583,-122.70651,30.0,30.0,22.0,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+Waterleaf (fka RiverPlace Phase 2),2065 S River Parkway,Portland,97201,45.50717,-122.67413,178.0,178.0,50.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+ROSELAWN COTTAGE & LODGE,913 NE ROSELAWN ST,Portland,97211,45.56123,-122.65605,8.0,8.0,,in_service,2002.0,OAHI (data.oregon.gov p9yn-ftai)
+CARITAS PLAZA,2830 N WILLIAMS AVE,Portland,97227,45.54315,-122.66667,30.0,30.0,2.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+New Columbia Trouton,9147 N Woolesy Ct,Portland,97203,45.58889,-122.71341,250.0,250.0,180.0,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+FREMONT MANOR,233 N FREMONT ST,Portland,97227,45.54824,-122.6687,28.0,28.0,10.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+FIR ACRES,19401 SE YAMHILL ST,Portland,97233,45.51547,-122.46319,32.0,32.0,,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+Harvey Rice Heritage,5734-5778 NE 72nd Avenue,Portland,97218,45.56438,-122.58891,12.0,41.0,23.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+GENERATIONS FOSTER ELEMENTRY SCHOOL,5205 SE 86TH AVE,Portland,97266,45.48491,-122.57493,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+426 NE TILLAMOOK ST,426 NE TILLAMOOK ST,Portland,97212,45.53789,-122.66102,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Peter Paulson Apartments,1530 SW 13th Avenue,Portland,97201,45.51498,-122.68829,92.0,92.0,,in_service,1995.0,OAHI (data.oregon.gov p9yn-ftai)
+RAMONA APTS,1350 NW RALEIGH ST,Portland,97209,45.53433,-122.68507,138.0,138.0,130.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+CHATEAU APTS,1910 SE STARK ST,Portland,97214,45.51931,-122.64621,10.0,10.0,10.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+NEW COLUMBIA WOOLSEY II,9340 N NEWMAN ST,Portland,97203,45.59034,-122.716,47.0,47.0,,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+8 NW 8th Building (aka Richard L Harris Building),8 NW 8TH AVE,Portland,97209,45.52329,-122.67847,180.0,180.0,,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+ST. FRANCIS APTS,1024 SW MAIN ST,Portland,97205,45.51753,-122.68423,132.0,132.0,10.0,in_service,2003.0,OAHI (data.oregon.gov p9yn-ftai)
+Enclave 54,5434 SE Milwaukie Ave,Portland,97202,45.48336,-122.64962,28.0,14.0,,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+DAHLKE MANOR,915 NE SCHUYLER ST,Portland,97212,45.53611,-122.65599,113.0,113.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+302 NE SHAVER ST,302 NE SHAVER ST,Portland,97212,45.55206,-122.66233,2.0,2.0,,in_service,1981.0,OAHI (data.oregon.gov p9yn-ftai)
+Columbia Knoll Heights (Elderly),8212 NE SANDY BLVD,Portland,97220,45.55203,-122.57723,208.0,208.0,72.0,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+ELDERPLACE IN CULLY,5119 NE 57TH AVE,Portland,97218,45.55992,-122.60473,42.0,42.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+WOODSTOCK HOUSE,7001 SE WOODSTOCK BLVD,Portland,97206,45.47951,-122.59104,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+MAGNOLIA APTS PHASE II,3250 NE MARTIN LUTHER KING JR BLVD,Portland,97212,45.54695,-122.6616,50.0,50.0,33.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Plaza Townhomes,5802 N Michigan Avenue,Portland,97217-2257,45.56518,-122.67695,68.0,68.0,68.0,in_service,1975.0,OAHI (data.oregon.gov p9yn-ftai)
+The Katherine Gray (fka Martha Washington),1115 SW 11th Avenue,Portland,97205,45.51739,-122.68468,108.0,108.0,,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+Gray's Landing,650 SW Lowell St,Portland,97239,45.49395,-122.67133,209.0,209.0,30.0,in_service,2012.0,OAHI (data.oregon.gov p9yn-ftai)
+Hotel Alder,415 SW ALDER ST,Portland,97204,45.51927,-122.67653,99.0,99.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+Findley Commons,3440 SE 54th Avenue,Portland,97206,45.49835,-122.6071,35.0,35.0,,in_service,2021.0,OAHI (data.oregon.gov p9yn-ftai)
+Maggie Gibson Plaza,1700 NE Alberta,Portland,97211,45.55908,-122.6475,9.0,9.0,7.0,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+The Bria Apartments (fka146th East West),20 NE 146th Avenue,Portland,97230,45.52263,-122.51325,116.0,116.0,24.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+Garlington Place,3024 NE MLK Blvd,Portland,97214,45.54497,-122.6616,52.0,51.0,6.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+Relay Huckleberry and Juniper Apartments,14708 NE GLISAN ST,Portland,97233,45.52646,-122.51167,60.0,104.0,54.0,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+JOHNSON CREEK COMMONS II,7940 SE 72ND AVE,Portland,97206,45.46583,-122.58889,15.0,15.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Pier Park Apartments,8660 Columbia Boulevard,Portland,97203,45.60349,-122.74913,164.0,164.0,120.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+MARION STREET,2020 SE MARION ST,Portland,97202,45.46003,-122.64356,24.0,24.0,6.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+HOLGATE HOUSE,4601 SE CESAR E CHAVEZ BLVD,Portland,97202,45.48957,-122.62284,80.0,80.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Vermont Springs,1825 SW Vermont Street,Portland,97219-1952,45.47605,-122.69735,15.0,14.0,,in_service,1989.0,OAHI (data.oregon.gov p9yn-ftai)
+Wy'East Plaza,12370 SE Ash Street,Portland,97233,45.52124,-122.53578,175.0,175.0,15.0,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+Center Village Apartments,5845 NE Hoyt,Portland,97213,45.52722,-122.60333,60.0,58.0,60.0,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+1223 SE YAMHILL ST,1225 SE YAMHILL ST,Portland,97214,45.51578,-122.65306,8.0,8.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Uptown Tower,712 SW St Clair,Portland,97205,45.52319,-122.6968,72.0,71.0,,in_service,2011.0,OAHI (data.oregon.gov p9yn-ftai)
+Pisgah Home Colony,7511 SE Henry Street,Portland,97206,45.47719,-122.58566,18.0,16.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+85 Stories Group 7 (4 Scattered-Sites),915 NE Schuyler Street,Portland,97212,45.53611,-122.65599,115.0,115.0,94.0,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+Stephens Creek Crossing North,6775 SW 26th Street,Portland,97219,45.47563,-122.70388,75.0,75.0,103.0,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+Powellhurst Apartments,SE 122nd & Harold,Portland,97266,,,65.0,65.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+"Abigail, The",1650 NW 13TH AVE,Portland,97209,45.53481,-122.68462,155.0,127.0,71.0,in_service,2016.0,OAHI (data.oregon.gov p9yn-ftai)
+Tryon Mews Apartments,8455 SW 30TH AVE,Portland,97219,45.46353,-122.70778,20.0,19.0,,in_service,2007.0,OAHI (data.oregon.gov p9yn-ftai)
+KRAMER APTS,303 N BEECH ST,Portland,97227,45.54952,-122.66938,4.0,4.0,,in_service,1929.0,OAHI (data.oregon.gov p9yn-ftai)
+333 Oak Apartments,333 SW Oak St,Portland,97204-2712,45.5211,-122.67481,90.0,90.0,,in_service,1978.0,OAHI (data.oregon.gov p9yn-ftai)
+SACRED HEART VILLA,3911 SE MILWAUKIE AVE,Portland,97202,45.49438,-122.65293,68.0,68.0,,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+ALBINA PLAZA,3965 N ALBINA AVE,Portland,97227,45.55184,-122.67446,8.0,8.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Pearl Court Apartments,920 NW Kearney Street,Portland,97209,45.52938,-122.68078,199.0,199.0,28.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+CEDAR MILL CROSSING,12450 NW BARNES RD,Portland,97229,45.52267,-122.80575,608.0,608.0,,in_service,1969.0,OAHI (data.oregon.gov p9yn-ftai)
+Market Street Home,13541 SE Market Street,Portland,97233,45.51125,-122.52402,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Jeffrey Apartments, The",1201 SW 11TH AVE,Portland,97205,45.51694,-122.68495,80.0,80.0,,in_service,2008.0,OAHI (data.oregon.gov p9yn-ftai)
+Ankeny Woods,11908 SE Ankeny Street,Portland,97236,45.52177,-122.54014,42.0,18.0,26.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+LINCOLN PARK,2409 SE 139TH AVE,Portland,97233,45.50483,-122.52097,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Pioneer Place Apts,220 SE 106th Avenue,Portland,97216,45.52071,-122.5539,10.0,10.0,4.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+927 SE MALL ST,927 SE MALL ST,Portland,97202,45.49141,-122.65494,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+KIRKLAND UNION MANOR I,3530 SE 84TH AVE,Portland,97266,45.49669,-122.57617,151.0,151.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+EASTWOOD COURT,18208 SE YAMHILL ST,Portland,97233,45.51554,-122.47538,31.0,31.0,31.0,in_service,1992.0,OAHI (data.oregon.gov p9yn-ftai)
+Crescent Court (fka 115th Street Housing),11560 SE Division Street,Portland,97266,45.50415,-122.54445,138.0,138.0,69.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+FANNO CREEK,4105 SW BEAVERTON HILLSDALE HWY,Portland,97221,45.48544,-122.71965,24.0,24.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+LOU BURGES PLACE,12715 NE GLISAN ST,Portland,97230,45.52634,-122.53222,16.0,16.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+85 Stories Group 6 (9 Scattered Sites),17225 SE ALDER ST,Portland,97233,45.51762,-122.48551,20.0,315.0,20.0,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+PUB,4938 NE 15TH AVE,Portland,97211,45.55887,-122.64972,11.0,11.0,,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Henry Building,309 SW 4TH AVE,Portland,97204,45.52097,-122.67525,173.0,173.0,,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+Maya Angelou,4012 N Borthwick,Portland,97227,45.55225,-122.67343,42.0,43.0,20.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+LENTS COMMONS,5859 SE 92ND AVE,Portland,97266,45.48061,-122.56914,54.0,54.0,15.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Watershed at Hillsdale, The (aka Bertha Station)",6388 SW Capitol Hwy,Portland,97239,45.47798,-122.69751,51.0,51.0,3.0,in_service,2007.0,OAHI (data.oregon.gov p9yn-ftai)
+SKY3,1101 SW JEFFERSON ST,Portland,97201,45.51636,-122.68559,196.0,196.0,,in_service,2015.0,OAHI (data.oregon.gov p9yn-ftai)
+Rockwood Landing,19045 SE Yamhill St,Portland,97233,45.51646,-122.4671,36.0,36.0,36.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+"Beatrice Morrow, The",3368 NE MARTIN LUTHER KING JR BLVD,Portland,97212,45.54753,-122.66159,80.0,79.0,44.0,in_service,2017.0,OAHI (data.oregon.gov p9yn-ftai)
+KIRKLAND UNION MANOR II,3535 SE 86TH AVE,Portland,97266,45.49649,-122.57452,75.0,75.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ALDER ROYAL,16124 SE ALDER ST,Portland,97233,45.51735,-122.49738,75.0,75.0,,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+HAMILTON PARK,1973 SE 122ND AVE,Portland,97233,45.50853,-122.53885,76.0,76.0,,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Hazel Heights,12621 SE Stark Street,Portland,97233,45.51906,-122.53331,153.0,153.0,61.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+PROGRESS HOUSE,3510 SE 118TH AVE,Portland,97266,45.4967,-122.54198,5.0,5.0,,in_service,1980.0,OAHI (data.oregon.gov p9yn-ftai)
+BEACON MANOR,3123 SE 8TH AVE,Portland,97202,45.50013,-122.6578,20.0,20.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Country Squire Apts,6720-6732 SE 72nd Ave,Portland,97205,45.4737,-122.58932,32.0,32.0,24.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Broadway Vantage,8340 NE Broadway,Portland,97220,45.53467,-122.57691,58.0,58.0,46.0,in_service,2008.0,OAHI (data.oregon.gov p9yn-ftai)
+L Roy Gardens,735 N Fremont Street,Portland,97227-1162,45.54786,-122.67417,92.0,18.0,11.0,in_service,1974.0,OAHI (data.oregon.gov p9yn-ftai)
+BRIDGEVIEW,6816 N TRUMBULL AVE,Portland,97203,45.59214,-122.7623,14.0,14.0,,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+Tistilal Village,7651 N Hereford Ave,Portland,97209,45.58248,-122.72208,57.0,57.0,31.0,in_service,1973.0,OAHI (data.oregon.gov p9yn-ftai)
+3612 NE 8TH AVE,3612 NE 8TH AVE,Portland,97212,45.54904,-122.65766,2.0,2.0,,in_service,1890.0,OAHI (data.oregon.gov p9yn-ftai)
+WILMORE,4327 N WILLIAMS AVE,Portland,97217,45.5548,-122.66675,75.0,75.0,,in_service,2015.0,OAHI (data.oregon.gov p9yn-ftai)
+SCATTERED - 2 SITES,37 NE 127TH AVE,Portland,97230,45.52308,-122.53255,10.0,10.0,,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Candalaria Plaza,901-963 SE 162nd Avenue,Portland,97233-3220,45.51609,-122.49653,32.0,31.0,24.0,in_service,1970.0,OAHI (data.oregon.gov p9yn-ftai)
+HALSEY TERRACE,12428 NE HALSEY ST,Portland,97230,45.53323,-122.53468,16.0,16.0,3.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Villas de Mariposas,5000 NE KILLINGSWORTH ST,Portland,97218,45.56276,-122.61069,71.0,71.0,71.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+5310 NE CULLY BLVD,5320 NE CULLY BLVD,Portland,97218,45.56163,-122.59527,20.0,20.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Schiller Way fka Schiller Liebe Family Housing,9348 SE Liebe Street,Portland,97226,45.48674,-122.56749,26.0,24.0,24.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+NAYA Generations,8510 SE Steele Street,Portland,97226,45.48492,-122.57555,40.0,40.0,16.0,in_service,2016.0,OAHI (data.oregon.gov p9yn-ftai)
+Alder House,523 SW 13TH AVE,Portland,97205,45.52179,-122.68464,132.0,130.0,,in_service,1992.0,OAHI (data.oregon.gov p9yn-ftai)
+Housing Authority Units: Portland,Scattered Sites,Portland,97219,,,11.0,11.0,,in_service,1980.0,OAHI (data.oregon.gov p9yn-ftai)
+MADRONA PLACE,17810 E BURNSIDE ST,Portland,97233,45.52194,-122.47998,45.0,45.0,42.0,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+Dresden Apartments,2545 E BURNSIDE ST,Portland,97214,45.52286,-122.63949,30.0,30.0,3.0,in_service,1993.0,OAHI (data.oregon.gov p9yn-ftai)
+Portsmouth Commons,4775 N Lombard St,Portland,,45.58018,-122.71784,20.0,20.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Sitka Apartments,1230 NW 12th Avenue,Portland,97212,45.53193,-122.68349,209.0,209.0,47.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+2334 SE MORRISON ST,2334 SE MORRISON ST,Portland,97214,45.51698,-122.64172,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+WESTMORELANDS UNION MANOR II,6404 SE 23RD AVE,Portland,97202,45.47688,-122.64226,50.0,50.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Bronaugh Apartments,1434 SW Morrison Street,Portland,97205-1842,45.52132,-122.687,50.0,50.0,,in_service,1983.0,OAHI (data.oregon.gov p9yn-ftai)
+SANDY,11401 NE SANDY BLVD,Portland,97220,45.55809,-122.54487,15.0,15.0,,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+"Commons, The",5800 NE CENTER COMMONS WAY,Portland,97213,45.52766,-122.60318,172.0,172.0,24.0,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+14655 E BURNSIDE ST,14655 E BURNSIDE ST,Portland,97233,45.52239,-122.51196,16.0,16.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+9929 NE GLISAN ST,9929 NE GLISAN ST,Portland,97220,45.5263,-122.56141,120.0,120.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+WALNUT PARK,5272 NE 6TH AVE,Portland,97211,45.56148,-122.65962,38.0,38.0,,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+BUD CLARK COMMONS,655 NW HOYT ST,Portland,97209,45.52734,-122.67724,130.0,130.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ALBERTA STREET APTS,5010 NE 19TH AVE,Portland,97211,45.55925,-122.64581,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+2225 NE COUCH ST,2225 NE COUCH ST,Portland,97232,45.52355,-122.64292,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Rose City Center Apartments,6819 NE Sandy Boulevard,Portland,97213,45.54689,-122.59264,55.0,55.0,,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+IRISH MOSS,14050 E BURNSIDE ST,Portland,97233,45.52227,-122.5189,27.0,27.0,,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+Tiller Terrace (fka Goose Hollow),610 SW 17th Ave,Portland,,45.52239,-122.68887,214.0,213.0,11.0,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+93RD AVENUE COMMONS,6119 SE 93RD AVE,Portland,97266,45.47829,-122.56761,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Tenino Terrace,2405 SE UMATILLA ST,Portland,97202,45.46318,-122.64026,94.0,94.0,64.0,in_service,1976.0,OAHI (data.oregon.gov p9yn-ftai)
+LAURELHURST,804 SE CESAR E CHAVEZ BLVD,Portland,97214,45.51686,-122.62264,23.0,23.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Spruce Park Apartments (fka Springtree Apartments),650 SE 162ND AVE,Portland,97233,45.51791,-122.49652,72.0,72.0,52.0,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+Family Scattered Site,4716 N MISSISSIPPI AVE,Portland,97217,45.55727,-122.67594,13.0,13.0,,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+5323 NE CULLY BLVD,5323 NE CULLY BLVD,Portland,97218,45.56153,-122.59536,18.0,18.0,,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+Hamilton West Apartments,1212 SW Clay Street,Portland,97201,45.51536,-122.68748,152.0,152.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Grand Oak Trio Wilshire Apartments,420 SE Grande Avenue,Portland,97214,45.51959,-122.66075,42.0,144.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ROSE,9750 NE EVERETT CT,Portland,97220,45.52526,-122.56247,90.0,90.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Clinton Street Apartments (aka Dual Diagnoisis),9268 SE Clinton Street,Portland,97266,45.50259,-122.56753,16.0,16.0,,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+MEDFORD HOTEL,506 NW 5TH AVE,Portland,97209,45.52687,-122.67556,60.0,60.0,,in_service,1907.0,OAHI (data.oregon.gov p9yn-ftai)
+EAST BURNSIDE APTS,10506 E BURNSIDE ST,Portland,97216,45.52256,-122.55482,51.0,51.0,24.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+TOWNHOUSE TERRACE,3001 SE 136TH AVE,Portland,97236,45.49975,-122.52354,32.0,32.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Park Avenue Apartments (Portland),"2055-2057, 2061 SW Park Ave",Portland,97201,45.50892,-122.68668,91.0,91.0,,in_development,2025.0,OAHI (data.oregon.gov p9yn-ftai)
+New Columbia Haven 9,8920 N Woolsey Avenue,Portland,97203,45.58738,-122.71344,44.0,42.0,32.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+1304 SE PINE ST,1310 SE PINE ST,Portland,97214,45.52076,-122.6523,6.0,6.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Dekum Phase 2,7003 NE 27th Ave (Parcel 2),Portland,97211,45.57335,-122.63812,93.0,93.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+Prescott Terrace,5725 NE PRESCOTT ST,Portland,97218,45.55548,-122.60357,50.0,50.0,,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+Wynne Watts Commons (fka Albertina Kerr Workforce and Inclusive Housing),928 NE 162nd Ave,Portland,97230,45.52955,-122.4956,150.0,150.0,31.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+VILLA DE CLARA VISTA,6706 NE KILLINGSWORTH ST,Portland,97218,45.56272,-122.59398,133.0,133.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Garden Park Estates,3140 SE 136th,Portland,97227,45.49932,-122.52353,63.0,62.0,63.0,in_service,1978.0,OAHI (data.oregon.gov p9yn-ftai)
+Plaza de Cedro,10809 NE FREMONT ST,Portland,97220,45.54832,-122.55145,6.0,6.0,6.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+UNTHANK PLAZA,2500 N WILLIAMS AVE,Portland,97227,45.54045,-122.66669,80.0,80.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+MLK-Wygant Housing,4710 NE MLK Boulevard,Portland,97211,45.55687,-122.66154,38.0,8.0,27.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Grand Oak Trio Rex Arms Apartments,1230 SE Moody Avenue,Portland,97214,,,62.0,144.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Bukas Place,2705 - 2711 N Killingsworth,Portland,97217,45.56274,-122.69492,7.0,7.0,7.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+INSTAR PLACE,5417 NE 25TH AVE,Portland,97211,45.56224,-122.63987,5.0,5.0,,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+NATHANIELS WAY,11106 E BURNSIDE ST,Portland,97216,45.52251,-122.54887,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Marwood Plaza,7200 SE Woodstock Blvd,Portland,97206-5803,45.47956,-122.58866,40.0,39.0,,in_service,1970.0,OAHI (data.oregon.gov p9yn-ftai)
+PCRI - SCATTERED 1-4 UNITS,9632 N CLARENDON AVE,Portland,97203,45.59244,-122.72412,230.0,230.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Cedar Commons (fka Division Street Apartments),11332 SE Division Street,Portland,97266,45.50416,-122.54597,60.0,60.0,,in_service,2021.0,OAHI (data.oregon.gov p9yn-ftai)
+Scattered Multiplexes,219 NE Shaver Street,Portland,97210,45.55206,-122.66306,14.0,14.0,14.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Studio Pointe Apts (fka Ellis Apts),5603 SE Milwaukie Ave,Portland,97202,45.48219,-122.64966,30.0,15.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Humboldt Gardens,5033 N Vancouver Ave,Portland,97217,45.55946,-122.66853,130.0,130.0,68.0,in_service,2008.0,OAHI (data.oregon.gov p9yn-ftai)
+Columbia View,4629 NE 118TH AVE,Portland,97220,45.55675,-122.54137,7.0,7.0,7.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Fenwick Avenue Housing,8428 N Fenwick Avenue,Portland,97217,45.58404,-122.68474,27.0,27.0,19.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+McCoy Village (fka Gladys McCoy Village),4430 NE MLK Jr Boulevard,Portland,97211,45.55503,-122.66155,55.0,55.0,44.0,in_service,2011.0,OAHI (data.oregon.gov p9yn-ftai)
+West Gresham Apartments,17257 E Burnside Street,Portland,97207,45.52216,-122.48557,27.0,26.0,3.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+URBAN LEAGUE,10 N RUSSELL ST,Portland,97227,45.54104,-122.66738,24.0,24.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+New Columbia Woolsey 1,8913 N Woolsey Ave,Portland,97203,45.58736,-122.71345,42.0,42.0,31.0,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+Station Place Tower,1020 NW 9th Avenue,Portland,97208,45.53044,-122.68039,176.0,176.0,15.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+4931-4937 NE 20TH AVE,4933 NE 20TH AVE,Portland,97211,45.55878,-122.64484,4.0,4.0,,in_service,1915.0,OAHI (data.oregon.gov p9yn-ftai)
+Patton Park Apartments,5204 N Interstate Ave,Portland,97217,45.56052,-122.68216,54.0,54.0,16.0,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+Floyd Light Apartments,1005 SE 106th Avenue,Portland,97216,45.51626,-122.55443,51.0,23.0,24.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+OUTSIDE IN,1132 SW 13TH AVE,Portland,97205,45.5177,-122.68685,30.0,30.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+SCATTERED EAST A UNITS,2503 SE 76TH AVE,Portland,97206,45.50417,-122.5847,7.0,7.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+EASTPORT,3709 SE 91ST AVE,Portland,97266,45.49515,-122.56995,7.0,7.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Scott Crest Plaza,13223 SE Powell Blvd,Portland,97236-3345,45.49749,-122.52657,42.0,39.0,38.0,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+Peaceful Villa,2835 SE 47th Ave,Portland,97206,45.50271,-122.61408,166.0,166.0,,in_development,2027.0,OAHI (data.oregon.gov p9yn-ftai)
+DAWSON PARK PLAZA,101 N MORRIS ST,Portland,97227,45.54503,-122.66738,67.0,67.0,8.0,in_service,1995.0,OAHI (data.oregon.gov p9yn-ftai)
+Irvington Village,420 NE Mason Street,Portland,97211,45.55331,-122.66104,104.0,73.0,,in_service,2002.0,OAHI (data.oregon.gov p9yn-ftai)
+Villa de Suenos,6444 - 6808 NE Killingsworth,Portland,97218,45.56274,-122.59615,28.0,28.0,28.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Sequoia Square,247 SE 160th Avenue,Portland,97233,45.52101,-122.49971,62.0,61.0,52.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+ALBERT,3532 N WILLIAMS AVE,Portland,97227,45.54911,-122.66671,72.0,72.0,,in_service,1909.0,OAHI (data.oregon.gov p9yn-ftai)
+Johnson Creek Duplex,7940 SE 72ND AVE,Portland,97206,45.46583,-122.58889,2.0,2.0,,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+EMERSON - SABIN,1309 NE EMERSON ST,Portland,97211,45.5618,-122.65178,2.0,2.0,,in_service,1965.0,OAHI (data.oregon.gov p9yn-ftai)
+St James,1312 SW 10th Avenue,Portland,97201,45.51567,-122.68448,122.0,122.0,8.0,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+Ritzdorf Court,1225 SE BELMONT ST,Portland,97214,45.5165,-122.65314,90.0,90.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Park Terrace,315 N Alberta Street,Portland,97217,45.55968,-122.66984,88.0,88.0,,in_service,1944.0,OAHI (data.oregon.gov p9yn-ftai)
+Clara Vista Townhomes,5335 NE Culley,Portland,97218,45.56184,-122.59506,44.0,44.0,44.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+BARBARA ROBERTS,5009 NE KILLINGSWORTH ST,Portland,97218,45.56277,-122.61119,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+85 Stories Group 1,335 NW 19TH AVE,Portland,97209,45.52519,-122.69086,174.0,259.0,30.0,in_service,2016.0,OAHI (data.oregon.gov p9yn-ftai)
+Interstate Crossing,6847 N Interstate Avenue,Portland,97217,45.57248,-122.68221,12.0,6.0,12.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Kateri Park,CONFIDENTIAL,Portland,97242,,,50.0,50.0,42.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+181ST AND NE COUCH,(UNKNOWN),Portland,97230,,,90.0,90.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Linc245 (fka Village at Lovejoy Fountain),245 SW LINCOLN ST,Portland,97201,45.508,-122.68007,198.0,40.0,44.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+ELLINGTON APARTMENTS,1610 NE 66TH AVE,Portland,97213,45.53457,-122.5938,263.0,263.0,251.0,in_service,1940.0,OAHI (data.oregon.gov p9yn-ftai)
+Collins Circle,1701 SW Columbia Street,Portland,97205,45.51729,-122.69186,124.0,52.0,18.0,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+Pine Point Apartments,12031 SE Pine Street,Portland,97216,45.52039,-122.53901,24.0,24.0,2.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Orchards of 82nd,8118 SE Division Street,Portland,97206,45.5049,-122.57935,48.0,47.0,15.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+"Village at the Headwaters, The",3131 SW Marigold,Portland,97219,45.46093,-122.70907,56.0,56.0,21.0,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+Eastgate Station,134 NE 120th Avenue,Portland,97220,45.52357,-122.53919,61.0,60.0,45.0,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+Station 162,304 SE 162nd Ave,Portland,97233,45.52076,-122.49558,44.0,44.0,3.0,in_service,2017.0,OAHI (data.oregon.gov p9yn-ftai)
+"Joyce, The",322 SW 11TH AVE,Portland,97205,45.52247,-122.6821,66.0,66.0,,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+Midland Commons,2830 SE 127th Avenue,Portland,97266,45.5015,-122.53249,46.0,46.0,5.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Portsmouth Commons,4785 N Lombard Street,Portland,97203,45.58026,-122.71804,20.0,20.0,12.0,in_service,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+Roselyn Villa,4721 NE Killingsworth St,Portland,97218,45.56278,-122.61365,4.0,4.0,4.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+GOOD SHEPHERD I,2843 NE LIBERTY ST,Portland,97211,45.57051,-122.63621,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+525 NE MORRIS ST,525 NE MORRIS ST,Portland,97212,45.54466,-122.65999,3.0,3.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+Saltzman Road Apartments,1035 NW Saltzman Road,Portland,97229,45.52704,-122.8066,53.0,53.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+KAH SAN CHAKO HAWS,9707 SE HOLGATE BLVD,Portland,97266,45.48994,-122.56404,10.0,10.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+Stephens Creek Crossing South (Hillsdale Terrace),6775 SW 26th Avenue,Portland,97219,45.47563,-122.70388,50.0,47.0,37.0,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+MAYBELLE CLARK MACDONALD CENTER,605 NW COUCH ST,Portland,97209,45.52377,-122.67664,54.0,54.0,,in_service,1976.0,OAHI (data.oregon.gov p9yn-ftai)
+ST STEPHENS CHURCH,1432 SW 13TH AVE,Portland,97201,45.5157,-122.68793,195.0,195.0,,in_service,1930.0,OAHI (data.oregon.gov p9yn-ftai)
+"Susan Emmons, The",NW 18TH AVE AND NW HOYT ST,Portland,97209,45.52713,-122.68939,146.0,144.0,,in_service,1918.0,OAHI (data.oregon.gov p9yn-ftai)
+Crescent Court fka 115th at Division,11514 & 11518 SE Division St,Portland,97266,45.50415,-122.54453,138.0,138.0,70.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+CRANE BUILDING,710 NW 14TH AVE,Portland,97209,45.52806,-122.68534,30.0,30.0,,in_service,1909.0,OAHI (data.oregon.gov p9yn-ftai)
+2203 SE MADISON ST,2203 SE MADISON ST,Portland,97214,45.51288,-122.64335,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Minerva Plaza,6633 N Oberlin Street,Portland,97203,45.58472,-122.73567,15.0,15.0,,in_service,1969.0,OAHI (data.oregon.gov p9yn-ftai)
+CENTER VILLAGE II,5815 NE GLISAN ST,Portland,97213,45.52626,-122.6037,60.0,60.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Clifford Apartments,527 SE Morrison Street,Portland,97214,45.51723,-122.66006,88.0,88.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+2016 NE M L KING BLVD,2016 NE MARTIN LUTHER KING JR BLVD,Portland,97212,45.53752,-122.66162,43.0,43.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+3832 SE CENTER ST,3832 SE CENTER ST,Portland,97202,45.49405,-122.62305,5.0,5.0,,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+2532 SE 17TH AVE,2532 SE 17TH AVE,Portland,97202,45.50429,-122.64866,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+217 SE 15TH AVE,217 SE 15TH AVE,Portland,97214,45.52116,-122.65059,6.0,6.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Cathedral Gardens,8652 N Swift Way,Portland,97203,45.6016,-122.74891,124.0,124.0,98.0,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+SILVERCREST RESIDENCE,1865 NE DAVIS ST,Portland,97232,45.52428,-122.64711,76.0,76.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+85 Stories - Group 2 (2 scattered sites),4400 NE BROADWAY ST,Portland,97213,45.53485,-122.61789,286.0,396.0,4.0,in_service,2016.0,OAHI (data.oregon.gov p9yn-ftai)
+Los Jardines De La Paz,5530 NE 60th Avenue,Portland,97218,45.56315,-122.6008,43.0,42.0,43.0,in_service,1940.0,OAHI (data.oregon.gov p9yn-ftai)
+St Francis Place,4943 NE 10th Avenue,Portland,97211,45.55886,-122.6556,3.0,3.0,3.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Dekum Court 2021 Redevelopment,2513 NE Saratoga,Portland,97211,45.57283,-122.63994,47.0,47.0,42.0,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+3546 NE 6TH AVE,3546 NE 6TH AVE,Portland,97212,45.54862,-122.65962,2.0,2.0,,in_service,1922.0,OAHI (data.oregon.gov p9yn-ftai)
+Village Garden Apartments,15230 NE Sandy Boulevard,Portland,97205-2724,45.55163,-122.50587,35.0,59.0,35.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+"Nick Fish, The (AKA Halsey 106)",10520 NE Halsey Street,Portland,97220,45.53352,-122.5542,75.0,52.0,10.0,in_service,2021.0,OAHI (data.oregon.gov p9yn-ftai)
+CEEL-OCKS MANOR,9021 N CENTRAL ST,Portland,97203,45.59385,-122.75527,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Powell Plaza I,13320-1 SE Powell Boulevard,Portland,97236,45.49687,-122.52655,47.0,46.0,,in_service,1968.0,OAHI (data.oregon.gov p9yn-ftai)
+KENILWORTH PARK PLAZA,3214 SE HOLGATE BLVD,Portland,97202,45.49012,-122.63266,77.0,77.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+TILLAMOOK,4110 NE TILLAMOOK ST,Portland,97212,45.53778,-122.62061,47.0,47.0,,in_service,2012.0,OAHI (data.oregon.gov p9yn-ftai)
+PRESCOTT BLOCK,4312 N INTERSTATE AVE,Portland,97217,45.55498,-122.68218,155.0,155.0,,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+CORNETTA SMITH COURTYARDS,5416 NE 27TH AVE,Portland,97211,45.56225,-122.63787,5.0,5.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+Erickson Fritz Apartments,9 NW Second Avenue,Portland,97209,45.5235,-122.67239,62.0,62.0,,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+Gilman Court (aka Glisan Commons Phase II),610 NE 99th Avenue,Portland,97220,45.52706,-122.56198,60.0,60.0,,in_service,2015.0,OAHI (data.oregon.gov p9yn-ftai)
+HOLLYWOOD,4111 NE BROADWAY ST,Portland,97232,45.53513,-122.62095,47.0,47.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+Rose Schnitzer Tower,1430 SW 12TH AVE,Portland,97201,45.51547,-122.68689,235.0,233.0,,in_service,1979.0,OAHI (data.oregon.gov p9yn-ftai)
+Chaucer Court Apartments,1019 SW 10TH AVE,Portland,97205,45.51781,-122.68331,83.0,83.0,,in_service,1981.0,OAHI (data.oregon.gov p9yn-ftai)
+Holgate Plaza,4333 SE 104th Avenue,Portland,97266-2400,45.49104,-122.55575,48.0,47.0,,in_service,1972.0,OAHI (data.oregon.gov p9yn-ftai)
+GARDEN PROJECT - A PHILLIPS SQUARE,606 NE SACRAMENTO ST,Portland,97212,45.53954,-122.65944,18.0,18.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Betty Campbell Building,3987 N Mississippi Avenue,Portland,97227,45.55195,-122.67551,9.0,7.0,6.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Kehillah Housing,6125 SW Boundary St,Portland,97221,45.48601,-122.73982,15.0,15.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+Lents Village Apartments,10325 SE Holgate Boulevard,Portland,97266,45.49018,-122.5564,63.0,63.0,11.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+STADIUM STATION,737 SW 17TH AVE,Portland,97205,45.52147,-122.68937,115.0,115.0,4.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Canopy Apts at Powell (fka USA Powell),12439-12529 SE Powell Boulevard,Portland,97236,45.49719,-122.5344,166.0,165.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+MARSHALL UNION MANOR I,2020 NW NORTHRUP ST,Portland,97209,45.53133,-122.69306,200.0,200.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Gateway Hermiston Buri Building and Juniper Apartments (fka Gateway Workforce and Hermiston Housing),9745 NE GLISAN,Portland,97220,45.52631,-122.56313,159.0,207.0,5.0,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+KING DISHMAN COURT,101 NE KNOTT ST,Portland,97212,45.54191,-122.66386,14.0,14.0,10.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+New Columbia Cecelia,4605 N Trenton,Portland,97203,45.58865,-122.71506,131.0,130.0,118.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+CHASE HOUSE,9126 N CHASE AVE,Portland,97217,45.58909,-122.7043,5.0,5.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Martin Luther King Manor,6620 NE 6th Avenue,Portland,97211-3065,45.57159,-122.65935,16.0,15.0,,in_service,1989.0,OAHI (data.oregon.gov p9yn-ftai)
+Firland,8036 SE Raymond Street,Portland,97206,45.48639,-122.58046,19.0,19.0,17.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Westshore, The",222 Pine Street,Portland,97204,45.52144,-122.67322,113.0,113.0,,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+Pacific Tower,333 NW 4th Ave,Portland,97209,45.52583,-122.67451,156.0,156.0,11.0,in_service,2003.0,OAHI (data.oregon.gov p9yn-ftai)
+JIM & SALLES PLACE,7531 SE STEELE ST,Portland,97206,45.48441,-122.58483,17.0,17.0,,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+3429 SE 69TH AVE,3429 SE 69TH AVE,Portland,97206,45.49771,-122.5923,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+SUMMER RUN,7810 SE FOSTER RD,Portland,97206,45.48405,-122.58361,50.0,50.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ROSENBAUM PLAZA,1218 SW WASHINGTON ST,Portland,97205,45.52193,-122.68363,76.0,76.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Magnolia, The (aka Eliot MLK Project)",3250 NE Martin Luther King Jr Blvd,Portland,97212,45.54695,-122.6616,50.0,49.0,9.0,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+Gateway Park Apartments,510 NE 100th Avenue,Portland,97204,45.52656,-122.5607,144.0,144.0,85.0,in_service,1967.0,OAHI (data.oregon.gov p9yn-ftai)
+St Francis Park Apts,1177 SE Stark Street,Portland,97214,45.51935,-122.65386,106.0,106.0,1.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+EVERETT STATION LOFTS,625 NW EVERETT ST,Portland,97209,45.5252,-122.67713,47.0,47.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+LONE PINE,111 NE 162ND AVE,Portland,97230,45.52332,-122.49647,18.0,18.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+IRVINGTON GARDENS,1516 NE HANCOCK ST,Portland,97212,45.53646,-122.65025,50.0,50.0,,in_service,2011.0,OAHI (data.oregon.gov p9yn-ftai)
+85 Stories Group 5 (7 Scattered Sites),1001 N BLANDENA ST,Portland,97217,45.55687,-122.6773,10.0,350.0,126.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+Harvey Rice Heritage,1420 NE Killingsworth,Portland,97211,45.56272,-122.65048,29.0,41.0,23.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+Douglas Fir Apartments,6485 SE 128th Ave,Portland,97236,45.47584,-122.53212,15.0,15.0,,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+KEARNEY HOUSE,824 NW 20TH AVE,Portland,97209,45.52899,-122.69253,32.0,32.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Turning Point,CONFIDENTIAL,Portland,97201,,,24.0,24.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+317 SE 16TH AVE,317 SE 16TH AVE,Portland,97214,45.52046,-122.64956,7.0,7.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+EAST COUNTY PROJECT,17527 SE PINE ST,Portland,97233,45.52061,-122.48266,7.0,7.0,4.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+3208 SE 136TH AVE,3208 SE 136TH AVE,Portland,97236,45.49928,-122.52406,63.0,63.0,,in_service,1977.0,OAHI (data.oregon.gov p9yn-ftai)
+Rosemont Court (fka Villa St Rose),597 N Dekum Street,Portland,97217,45.57172,-122.67279,100.0,99.0,4.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+DEKUM COURT,CONFIDENTIAL,Portland,97211,,,187.0,187.0,118.0,in_service,2002.0,OAHI (data.oregon.gov p9yn-ftai)
+939 N ALBERTA ST,939 N ALBERTA ST,Portland,97217,45.55902,-122.67672,8.0,8.0,,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+RAVEN,332 SE 148TH AVE,Portland,97233,45.52027,-122.51072,36.0,36.0,,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Charlotte B Rutherford Place,6905 N Interstate Avenue,Portland,97217,45.57294,-122.68221,51.0,51.0,17.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+BURLWOOD,14992 SE DIVISION ST,Portland,97236,45.50423,-122.50938,35.0,35.0,25.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+BARBARA MAHER BUILDING,2322 N WILLIAMS AVE,Portland,97227,45.5398,-122.6667,32.0,32.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+432 NE TILLAMOOK ST,432 NE TILLAMOOK ST,Portland,97212,45.53789,-122.66087,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Andrea Place,7621 N Portsmouth,Portland,97203,45.58321,-122.72353,15.0,15.0,15.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ASHCREEK COMMONS,11230 SW 62ND AVE,Portland,97219,45.44424,-122.7405,21.0,21.0,,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Powell Plaza II,13320-3 SE Powell Boulevard,Portland,97236,45.49687,-122.52655,20.0,20.0,,in_service,1968.0,OAHI (data.oregon.gov p9yn-ftai)
+Miracles Club,4206 NE MARTIN LUTHER KING JR BLVD,Portland,97211,45.55395,-122.66155,40.0,39.0,8.0,in_service,2011.0,OAHI (data.oregon.gov p9yn-ftai)
+Springwater Commons,6430 SE 128th Avenue,Portland,97236,45.47631,-122.5317,36.0,35.0,36.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Weidler Commons,1529 NE 21ST AVE,Portland,97232,45.53411,-122.64484,51.0,51.0,1.0,in_service,1991.0,OAHI (data.oregon.gov p9yn-ftai)
+Bethany Meadows II,15817 NW Athens Drive,Portland,97229,45.55609,-122.83976,132.0,132.0,66.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+GOING 42,4636 NE 42ND AVE,Portland,97218,45.55715,-122.62039,55.0,35.0,17.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Allen Fremont Plaza,221 NE Fremont Street,Portland,97212,45.54826,-122.66317,64.0,64.0,,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+8510 N SAINT LOUIS AVE,8510 N SAINT LOUIS AVE,Portland,97203,45.59411,-122.75522,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Vibrant!,1620 NW 14th Avenue,Portland,97209,45.53447,-122.68561,93.0,92.0,61.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+2714 SE 15TH AVE,2714 SE 15TH AVE,Portland,97202,45.5032,-122.65069,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+PRESCOTT PLACE,5802 NE PRESCOTT ST,Portland,97218,45.55499,-122.60287,20.0,20.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Breitung Building (aka Garfield Veterans Apartments),6710 GARFIELD AVE,Portland,97211,45.57134,-122.66237,28.0,28.0,,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+BOOKMARK,2034 NE 40TH AVE,Portland,97212,45.53735,-122.62145,47.0,47.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+YARDS AT UNION STATION S,701 NW NAITO PKWY,Portland,97209,45.52961,-122.67503,56.0,56.0,39.0,in_service,2002.0,OAHI (data.oregon.gov p9yn-ftai)
+Hattie Redmond Apartments fka Baldwin Project,7656-7688 N Interstate Ave,Portland,97217,45.57876,-122.68199,60.0,60.0,,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+SNOWBERRY,5312 SE 148TH,Portland,97215,45.56133,-122.50997,27.0,27.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Miraflores,8917 N Newell Avenue,Portland,97203,45.5873,-122.73269,32.0,32.0,32.0,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+41 NE 127TH AVE,41 NE 127TH AVE,Portland,97230,45.52308,-122.53255,8.0,8.0,,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Hazelwood Community Apartments,11939 NE Davis Street,Portland,97220,45.52417,-122.53952,120.0,24.0,24.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+BURNSIDE STATION,248 SE 160TH AVE,Portland,97233,45.52053,-122.49902,21.0,21.0,5.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Minnesota Places,1208 N Jessup St.,Portland,97217,45.56407,-122.67948,71.0,71.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+Grace Peck Terrace,1839 NE 14th Avenue,Portland,97212-4331,45.53595,-122.65149,95.0,95.0,,in_development,1979.0,OAHI (data.oregon.gov p9yn-ftai)
+Macdonald West Apts,127 NW 6th Avenue,Portland,97209,45.52419,-122.67647,42.0,42.0,,in_service,2012.0,OAHI (data.oregon.gov p9yn-ftai)
+3328 SE WASHINGTON ST,3328 SE WASHINGTON ST,Portland,97214,45.51859,-122.63023,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+TILLICUM COURT,5135 SE 73RD AVE,Portland,97206,45.48582,-122.58814,16.0,15.0,,in_service,1985.0,OAHI (data.oregon.gov p9yn-ftai)
+Douglas Meadows,2645 SE 127th  Avenue,Portland,97236,45.50309,-122.53302,8.0,8.0,8.0,in_service,2003.0,OAHI (data.oregon.gov p9yn-ftai)
+Bellrose Station,7901 SE 92nd,Portland,97266,45.46585,-122.56864,40.0,40.0,40.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+75TH AVE ADULT FOSTER CARE,4729 SE 75TH AVE,Portland,97206,45.48828,-122.58608,5.0,5.0,,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+YARDS AT UNION STATION B,945 NW NAITO PKWY,Portland,97209,45.53015,-122.67557,321.0,321.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1531 SE TAGGART ST,1531 SE TAGGART ST,Portland,97202,45.50276,-122.65001,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Francis + Clare,1131 SE Oak Street,Portland,97214,45.52006,-122.65436,61.0,61.0,,in_development,2025.0,OAHI (data.oregon.gov p9yn-ftai)
+Centennial Place Apts,3800 SE 164th Avenue,Portland,97236,45.49504,-122.49449,71.0,71.0,24.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+Meridian Gardens,11312- 11320 & 11250 SE Division St.,Portland,97266,45.50416,-122.54685,85.0,85.0,,in_development,2025.0,OAHI (data.oregon.gov p9yn-ftai)
+Alder 9,820 SE Alder St,Portland,97214,45.51793,-122.65698,20.0,20.0,,in_development,2025.0,OAHI (data.oregon.gov p9yn-ftai)
+Patton Home,4619 N MICHIGAN AVE,Portland,97217,45.5565,-122.67704,63.0,68.0,,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+336 NW 20TH AVE,336 NW 20TH AVE,Portland,97209,45.52534,-122.69234,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Helen Ann Swindells Bldg,10 NW Broadway,Portland,97209,45.52333,-122.67746,105.0,105.0,,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+Fountain Place,929 SW Salmon Street,Portland,97205,45.51792,-122.68287,80.0,74.0,3.0,in_service,1914.0,OAHI (data.oregon.gov p9yn-ftai)
+814 N WEBSTER ST,814 N WEBSTER ST,Portland,97217,45.55973,-122.6754,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+PURCELL PLACE,4071 N MISSISSIPPI AVE,Portland,97227,45.55321,-122.6755,5.0,5.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+MYERS COURT,2600 N WILLIAMS AVE,Portland,97227,45.5416,-122.66631,20.0,20.0,,in_service,2002.0,OAHI (data.oregon.gov p9yn-ftai)
+Magnolia Apartments Phase II,415 NE Fargo Street,Portland,97212,45.54638,-122.66137,50.0,50.0,33.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+5020 N Interstate,5020 N Interstate Ave,Portland,97217,45.55933,-122.68218,63.0,63.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+Cedar Commons fka Division St Apts,11450 SE Division Street,Portland,97266,45.50416,-122.54599,60.0,60.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+The Bria Phase II (146th Apartments II),51 NE 146th Avenue,Portland,97230,45.5232,-122.51324,29.0,29.0,,in_development,2026.0,OAHI (data.oregon.gov p9yn-ftai)
+RUTH HAEFNER PLAZA,6005 SW BEAVERTON HILLSDALE HWY,Portland,97221,45.48739,-122.73865,73.0,73.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+CARLTON COURT,5241 NE KILLINGSWORTH AVE,Portland,97218,45.56276,-122.60858,24.0,24.0,24.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+SLAVIN COURT,4702 SW SLAVIN RD,Portland,97239,45.48859,-122.68063,24.0,24.0,24.0,in_service,2008.0,OAHI (data.oregon.gov p9yn-ftai)
+Fremont Manor,221 N Fremont Street,Portland,97227-1453,45.54824,-122.66845,28.0,28.0,10.0,in_service,1968.0,OAHI (data.oregon.gov p9yn-ftai)
+NEW COLUMBIA WOOLSEY III,9209 N DWIGHT ST,Portland,97203,45.58969,-122.71469,42.0,42.0,32.0,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+SCATTERED SITES,5317 NE 24TH AVE,Portland,97211,45.56182,-122.6409,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+REEDWAY PLACE,8940 SE REEDWAY ST,Portland,97266,45.48135,-122.57024,24.0,24.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Greenview Terrace,620 SE 148th Avenue,Portland,97233,45.51815,-122.51073,31.0,31.0,11.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Anna Mann,1021 NE 33rd Ave,Portland,97212,45.52982,-122.63132,129.0,128.0,63.0,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+ASH STREET COURTYARD,12012 SE ASH ST,Portland,97216,45.52109,-122.53912,47.0,47.0,,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+JUBILEE REDWOODS II,1249 N PRESCOTT ST,Portland,97217,45.55548,-122.67979,8.0,8.0,,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+BRIARWOOD HOME,3302 SE 122ND AVE,Portland,97236,45.49792,-122.53664,22.0,22.0,,in_service,2011.0,OAHI (data.oregon.gov p9yn-ftai)
+Cascade Crossing,10535 E Burnside,Portland,97216,45.52268,-122.55437,74.0,74.0,58.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+CELILO COURT,4605 NE 95TH AVE,Portland,97220,45.55662,-122.56496,27.0,27.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+4066 NE GRAND AVE,4066 NE GRAND AVE,Portland,97212,45.5531,-122.66054,5.0,5.0,,in_service,1950.0,OAHI (data.oregon.gov p9yn-ftai)
+YARDS AT UNION STATION C,615 NW NAITO PKWY,Portland,97209,45.52799,-122.6731,80.0,79.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+Hill Park Apartments,110 SW Arthur Street,Portland,97201,45.50371,-122.67911,39.0,39.0,,in_service,2017.0,OAHI (data.oregon.gov p9yn-ftai)
+Strong Family Project,TBD,Portland,,,,75.0,75.0,,in_development,2026.0,OAHI (data.oregon.gov p9yn-ftai)
+NELSON COURT,9815 N TAFT AVE,Portland,97203,45.59364,-122.72838,7.0,7.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Louisa Flowers, The (fka NE Grand)",515 NE Holladay Street,Portland,97232,45.53001,-122.66051,240.0,240.0,43.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+Fairfield,1103-1121 SW Harvey Milk Street,Portland,97205,45.5224,-122.68252,75.0,75.0,,in_development,2025.0,OAHI (data.oregon.gov p9yn-ftai)
+LYNDON MUSOLF MANOR,216 NW 3RD AVE,Portland,97209,45.5246,-122.67345,95.0,95.0,,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+4960 NE 6TH AVE,4960 NE 6TH AVE,Portland,97211,45.55893,-122.65948,8.0,8.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+HALSEY 106,10520 NE HALSEY ST,Portland,97220,45.53352,-122.5542,52.0,52.0,10.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Traditions at Hazelwood (fka Polaris at Hazelwood),"10413, 10425, 10439 E Burnside St",Portland,97216,45.5227,-122.55532,211.0,221.0,79.0,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+"AURORA, THE (FKA STARK STREET HOUSING)",16015 SE STARK ST,Portland,97233,45.51915,-122.49864,93.0,93.0,46.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+MIRACLES-CENTRAL,1306 NE 2ND AVE,Portland,97232,45.53237,-122.66369,47.0,47.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+TAYLOR STREET,1330 SE TAYLOR ST,Portland,97214,45.51506,-122.65193,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Westmorelands Union Manor,6404 SE 23RD AVE,Portland,97202,45.47688,-122.64226,301.0,116.0,,in_service,1966.0,OAHI (data.oregon.gov p9yn-ftai)
+MARK O HATFIELD BUILDING,726 W BURNSIDE ST,Portland,97209,45.52302,-122.67801,106.0,106.0,,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+1200 BUILDING,1220 SW 12TH AVE,Portland,97205,45.51702,-122.68602,89.0,89.0,,in_service,1983.0,OAHI (data.oregon.gov p9yn-ftai)
+4030 SE MAIN ST,4030 SE MAIN ST,Portland,97214,45.51358,-122.62087,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Lovejoy Station,1040 NW 10TH AVE,Portland,97209,45.5307,-122.68138,181.0,181.0,39.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Cherry Blossom,10570 Cherry Blossom Drive,Portland,97216,45.51542,-122.55521,120.0,120.0,96.0,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+GARFIELD GARDENS,4525 NE GRAND AVE,Portland,97211,45.5559,-122.66054,11.0,11.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+EMILIE HOUSE,5520 NE GLISAN ST,Portland,97213,45.5265,-122.60703,41.0,41.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ESTATES PLAZA,5421 NE 14TH PL,Portland,97211,45.56239,-122.65066,9.0,9.0,2.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+HOLMAN HOUSE,2615 N HOLMAN ST,Portland,97217,45.56818,-122.69385,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+645 N SARATOGA ST,645 N SARATOGA ST,Portland,97217,45.5726,-122.67344,18.0,18.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Cathedral Village,8614 N CRAWFORD,Portland,97203,45.586,-122.75822,110.0,110.0,56.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+CAMBRIDGE COURT,5224 N VANCOUVER AVE,Portland,97217,45.56061,-122.66841,20.0,20.0,,in_service,2008.0,OAHI (data.oregon.gov p9yn-ftai)
+Roselyn Apartments,424 NW 21st Avenue,Portland,97209,45.52581,-122.69412,31.0,31.0,,in_service,2010.0,OAHI (data.oregon.gov p9yn-ftai)
+Hopewell Apartments,1252 SW Cheltenham Street,Portland,97219,45.48037,-122.6926,12.0,12.0,3.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+FIFTH AVENUE PLACE APTS,314 NW 5TH AVE,Portland,97209,45.52544,-122.6755,70.0,70.0,5.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Alberta Alive,4957 NE 8th,Portland,97211,45.55895,-122.65753,52.0,52.0,,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+Oliver Station,5931 SE 92ND AVE,Portland,97266,45.47954,-122.56861,145.0,125.0,78.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+ME RE CENTER,12309 SE BUSH ST,Portland,97236,45.49483,-122.53674,10.0,10.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Milepost 5,850 NE 81ST AVE,Portland,97213,45.5292,-122.57982,95.0,95.0,2.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+HOWARD HOUSE,2644 SE POWELL BLVD,Portland,97202,45.49786,-122.63859,8.0,8.0,,in_service,2007.0,OAHI (data.oregon.gov p9yn-ftai)
+HAVEN HOUSE,3423 SE 69TH AVE,Portland,97206,45.49771,-122.5923,3.0,3.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+GLENDOVEER WOODS,333 NE 146TH AVE,Portland,97230,45.5243,-122.51322,112.0,112.0,,in_service,2015.0,OAHI (data.oregon.gov p9yn-ftai)
+Gresham Recovery Center,CONFIDENTIAL,Portland,97233,,,18.0,7.0,1.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+7920 SE 72ND AVE,7920 SE 72ND AVE,Portland,97206,45.46603,-122.58758,33.0,33.0,,in_service,1970.0,OAHI (data.oregon.gov p9yn-ftai)
+HARRIET COURT,7505 SE HENRY,Portland,97206,45.47688,-122.58542,16.0,16.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+146th East & West,14603 & 14525 E Burnside St,Portland,,45.5224,-122.51347,116.0,116.0,24.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Buckman Heights,430 NE 16th Avenue,Portland,97232,45.52563,-122.64903,144.0,118.0,20.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Killingsworth Housing,4317 NE Killingsworth St,Portland,97218-1403,45.5628,-122.61873,84.0,84.0,60.0,in_development,2026.0,OAHI (data.oregon.gov p9yn-ftai)
+MCCARTHY PLACE,959 NE 165TH AVE,Portland,97230,45.52986,-122.49356,10.0,10.0,,in_service,2003.0,OAHI (data.oregon.gov p9yn-ftai)
+2522 SE 18TH AVE,2528 SE 18TH AVE,Portland,97202,45.50467,-122.64764,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+CSP Park Tower Apartments,731 SW Salmon Street,Portland,97205-3041,45.51753,-122.6814,162.0,162.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+1925 SE ALDER ST,1925 SE ALDER ST,Portland,97214,45.5179,-122.64593,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1803 SE WOODWARD ST,1809 SE WOODWARD ST,Portland,97202,45.50205,-122.64737,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Belmont Dairy,3340 SE Morrison Street,Portland,97209-4125,45.51716,-122.63023,85.0,65.0,19.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+Bridge Meadows Senior,4221 N Willis Blvd,Portland,97203,45.58403,-122.7108,27.0,27.0,4.0,in_service,2011.0,OAHI (data.oregon.gov p9yn-ftai)
+BUTTE HOTEL,610 NW DAVIS ST,Portland,97209,45.52449,-122.67678,38.0,38.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+LAURELHURST ASSISTED LIVING FACILITY,15 SE 55TH AVE,Portland,97215,45.52276,-122.60751,37.0,37.0,,in_service,1954.0,OAHI (data.oregon.gov p9yn-ftai)
+James Hawthorne (fka University Place),CONFIDENTIAL,Portland,97201,,,48.0,48.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+2643 SE 48TH AVE,2643 SE 48TH AVE,Portland,97206,45.50364,-122.61301,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Park Vista,10918 SE Stark,Portland,97216,45.51899,-122.55039,59.0,59.0,35.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+RUSSET & MORRIS GREEN PLEXES,76 NE RUSSET ST,Portland,97211,45.57795,-122.66523,5.0,5.0,4.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+MARSHALL UNION MANOR II,2020 NW NORTHRUP ST,Portland,97209,45.53133,-122.69306,42.0,42.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Admiral Apartments,910 SW Park Avenue,Portland,97205-3039,45.51805,-122.6814,37.0,37.0,,in_service,1980.0,OAHI (data.oregon.gov p9yn-ftai)
+STARK STREET VILLA,12727 SE STARK ST,Portland,97233,45.51944,-122.5319,60.0,60.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+FAULKNER PLACE,13319 SE POWELL BLVD,Portland,97236,45.49757,-122.52547,16.0,16.0,,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+4 SCATTERED SITES - SABIN,3958 NE GARFIELD AVE,Portland,97212,45.55164,-122.66263,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Fifth Avenue Court,221 NW Fifth  Avenue,Portland,97209-4125,45.52485,-122.67547,96.0,78.0,9.0,in_service,1999.0,OAHI (data.oregon.gov p9yn-ftai)
+Shaver Green Apartments,375 NE Shaver Street,Portland,97212,45.55206,-122.66191,85.0,84.0,26.0,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+1724 NE ALBERTA ST,1724 NE ALBERTA ST,Portland,97211,45.55908,-122.64718,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+EMERSON PLAZA,5314 NE 13TH AVE,Portland,97211,45.56204,-122.65207,16.0,16.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Gladstone Square - Multnomah Manor,9110 NE HASSALO ST,Portland,97220,45.53095,-122.56919,54.0,102.0,18.0,in_service,1964.0,OAHI (data.oregon.gov p9yn-ftai)
+Nesika Illahee (fka Holman 42),6300 NE 42ND AVE,Portland,97218,45.56908,-122.62026,59.0,59.0,16.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+WOODY GUTHRIE PLACE,5800 SE 91ST AVE,Portland,97266,45.48062,-122.56977,65.0,65.0,12.0,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+ALBERTA SIMMONS PLAZA,6611 NE MARTIN LUTHER KING JR BLVD,Portland,97211,45.57127,-122.66137,74.0,74.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+The Terrace at Columbia Knoll,8200 NE Sandy Blvd,Portland,97201,45.55203,-122.57723,118.0,118.0,71.0,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+FAB 4 SCATTERED SITE,4006 NE 8TH AVE,Portland,97212,45.55219,-122.65764,5.0,5.0,,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+MARLA MANOR,644 SE 148TH AVE,Portland,97233,45.51778,-122.51074,25.0,25.0,6.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+COLUMBIA TERRACE RETIREMENT COMMUNITY,16932 SE DIVISION ST,Portland,97236,45.50396,-122.48864,61.0,61.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1725 SE MORRISON ST,1725 SE MORRISON ST,Portland,97214,45.5172,-122.64796,7.0,7.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+LETTY OWINGS CENTER,2545 NE FLANDERS ST,Portland,97232,45.52568,-122.63948,56.0,56.0,,in_service,1915.0,OAHI (data.oregon.gov p9yn-ftai)
+Argyle Gardens (fka LISAH),2310 N HUNT ST & 2250-2344 N COLUMBIA BLVD,Portland,97217,45.58635,-122.68943,72.0,71.0,,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+124TH & ASH,12373 SE ASH ST,Portland,97233,45.52125,-122.53562,175.0,175.0,15.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Grand Oak Trio Grand Oaks Apartments,418 SE Grand Avenue,Portland,97214,45.51973,-122.66074,42.0,144.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+CENTRAL CHALET,9020 N CENTRAL ST,Portland,97203,45.59347,-122.75562,20.0,20.0,,in_service,1973.0,OAHI (data.oregon.gov p9yn-ftai)
+PROVIDENCE HOUSE,5921 E BURNSIDE ST,Portland,97215,45.52287,-122.60281,40.0,40.0,,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+3909 NE 10TH AVE / FAILING ST,935 NE FAILING ST,Portland,97212,45.55083,-122.65588,2.0,2.0,,in_service,1906.0,OAHI (data.oregon.gov p9yn-ftai)
+11TH/SHAVER DUPLEX,3971 NE 11TH AVE,Portland,97212,45.5519,-122.65471,2.0,2.0,,in_service,1995.0,OAHI (data.oregon.gov p9yn-ftai)
+Kafoury Commons,1240 SW Columbia Street,Portland,97201,45.51609,-122.68738,129.0,92.0,5.0,in_service,2000.0,OAHI (data.oregon.gov p9yn-ftai)
+Bethany Meadows I,16050 NW LAIDLAW RD,Portland,97229,45.55634,-122.84173,208.0,208.0,104.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+Lents 2000,7704-16 SE Raymond,Portland,97206,45.48658,-122.58406,36.0,36.0,31.0,in_service,2003.0,OAHI (data.oregon.gov p9yn-ftai)
+Wygant Street,4808 NE 8TH AVE,Portland,97211,45.55743,-122.65759,5.0,5.0,5.0,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+CARRIAGE HILL,8010 SW 45TH AVE,Portland,97219,45.46639,-122.72319,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Leander Court,4600 SE 122nd Avenue,Portland,97236,45.48878,-122.53776,37.0,37.0,37.0,in_service,2007.0,OAHI (data.oregon.gov p9yn-ftai)
+CSP Lexington Apartments,1125 SW 12th Avenue,Portland,97205-2048,45.5175,-122.68579,54.0,54.0,,in_service,2013.0,OAHI (data.oregon.gov p9yn-ftai)
+WOODMERE COMMONS,8002 SE DUKE ST,Portland,97206,45.47588,-122.58138,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1705 SE MORRISON ST,1705 SE MORRISON ST,Portland,97214,45.5172,-122.64834,4.0,4.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+PINES II,110 SE 188TH AVE,Portland,97233,45.52143,-122.4701,13.0,13.0,47.0,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+5020 NE 25TH AVE,5020 NE 25TH AVE,Portland,97211,45.5594,-122.63989,2.0,2.0,,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+604 SE 20TH AVE,604 SE 20TH AVE,Portland,97214,45.51842,-122.64554,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+5604 SE DUKE ST,5604 SE DUKE ST,Portland,97206,45.47583,-122.60568,2.0,2.0,,in_service,1928.0,OAHI (data.oregon.gov p9yn-ftai)
+KIRKLAND UNION MANOR III,8447 SE LAFAYETTE ST,Portland,97266,45.49618,-122.57477,56.0,56.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Glisan - PSH,7450 NE Glisan Street,Portland,97213,45.52644,-122.58643,41.0,41.0,,in_development,2025.0,OAHI (data.oregon.gov p9yn-ftai)
+MORRISON PARK,623 SW PARK AVE,Portland,97205,45.52006,-122.68032,60.0,60.0,6.0,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+Albina Corner,409 NE San Rafael,Portland,97212,45.53706,-122.66129,48.0,48.0,19.0,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+Beech Street,3650 NE MALLORY AVE,Portland,97212,45.54891,-122.66322,32.0,31.0,31.0,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+Kafoury Court Apartments,4080 NE Grand,Portland,97212,45.55311,-122.66054,40.0,40.0,,in_development,2026.0,OAHI (data.oregon.gov p9yn-ftai)
+King + Parks Apts,6431-6445 NE MLK JR BLVD,Portland,97211,45.56924,-122.66137,70.0,70.0,50.0,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+CARITAS VILLA,16050 E BURNSIDE ST,Portland,97233,45.5221,-122.49832,30.0,30.0,3.0,in_service,1991.0,OAHI (data.oregon.gov p9yn-ftai)
+IVON COURT,2627 SE 125TH AVE,Portland,97236,45.50278,-122.53474,8.0,8.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+2235 SE UMATILLA ST,2235 SE UMATILLA ST,Portland,97202,45.46288,-122.64179,94.0,94.0,,in_service,1969.0,OAHI (data.oregon.gov p9yn-ftai)
+Yards at Union Station A,945 NW Naito Parkway,Portland,97209,45.53015,-122.67557,158.0,158.0,37.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Coburn Woods Apartments,17308 NE COUCH ST,Portland,97230,45.52263,-122.48461,10.0,10.0,1.0,in_service,1997.0,OAHI (data.oregon.gov p9yn-ftai)
+M Carter Commons,TBD,Portland,,,,62.0,62.0,,in_development,2027.0,OAHI (data.oregon.gov p9yn-ftai)
+Rosemont Town Homes,597 N Dekum Street,Portland,97217,45.57172,-122.67279,18.0,18.0,18.0,in_service,2001.0,OAHI (data.oregon.gov p9yn-ftai)
+Cascadian Terrace,5700 N KERBY AVE,Portland,97217,45.56447,-122.6729,103.0,103.0,1.0,in_service,1968.0,OAHI (data.oregon.gov p9yn-ftai)
+CARRIAGE HILL,8008 SW 45TH AVE,Portland,97219,45.46641,-122.72319,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+4548 SE 122ND AVE,4548 SE 122ND AVE,Portland,97236,45.48884,-122.53775,37.0,37.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Morrison, The",1959 SW Morrison,Portland,97205,45.52247,-122.69135,140.0,140.0,21.0,in_service,2007.0,OAHI (data.oregon.gov p9yn-ftai)
+PCRI Scattered Site Project,5319 NE 24th,Portland,97230,45.56189,-122.64089,10.0,8.0,10.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+GOOD SHEPHERD II,5717 NE SIMPSON ST,Portland,97218,45.56509,-122.60407,5.0,5.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+HALSEY STREET PROJECT,18940 NE HALSEY ST,Portland,97230,45.53368,-122.46803,6.0,6.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Glisan Commons,555 NE 100th Avenue,Portland,97220,45.52696,-122.56102,67.0,67.0,,in_service,2014.0,OAHI (data.oregon.gov p9yn-ftai)
+Hazel Ling Yee Apartments (fka Powell),3000 SE Powell Blvd,Portland,97202,45.49705,-122.63419,80.0,80.0,,in_development,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+PINES I,110 SE 188TH AVE,Portland,97233,45.52143,-122.4701,47.0,47.0,47.0,in_service,1996.0,OAHI (data.oregon.gov p9yn-ftai)
+Esperanza Court,3611 SE 28th Avenue,Portland,97202,45.4969,-122.63813,70.0,70.0,42.0,in_service,2008.0,OAHI (data.oregon.gov p9yn-ftai)
+FIR GROVE,4820 SE 122ND AVE,Portland,97236,45.48705,-122.53784,31.0,31.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+DEMAR DOWNS,2700 SE 148TH AVE,Portland,97236,45.50226,-122.51046,18.0,18.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+S & P,6923 N FESSENDEN ST,Portland,97203,45.59333,-122.73466,5.0,5.0,,in_service,1995.0,OAHI (data.oregon.gov p9yn-ftai)
+4616 NE GARFIELD AVE,4616 NE GARFIELD AVE,Portland,97211,45.55669,-122.66259,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Las Adelitas,6723 NE Killingsworth Street,Portland,97218,45.5627,-122.593,142.0,141.0,98.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+622 SE 19TH AVE,622 SE 19TH AVE,Portland,97214,45.51818,-122.64654,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+ST. MARYS ETHIOPIAN ORTHODOX,7715 SE 92ND AVE,Portland,97266,45.46707,-122.5691,5.0,5.0,,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+"Rose, The",631 SE TAYLOR ST,Portland,97214,45.51508,-122.65908,58.0,58.0,,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+2735 SE CLINTON ST,2735 SE CLINTON ST,Portland,97202,45.50353,-122.63795,3.0,3.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+1110 N FAILING ST,1110 N FAILING ST,Portland,97227,45.55085,-122.67801,3.0,3.0,,in_service,1913.0,OAHI (data.oregon.gov p9yn-ftai)
+New Meadows,4353 N Hunt Street,Portland,97203,45.58536,-122.71208,15.0,14.0,,in_service,2018.0,OAHI (data.oregon.gov p9yn-ftai)
+Endelea Court,5513 NE 27TH AVE,Portland,97211,45.56285,-122.63813,6.0,6.0,6.0,in_service,1998.0,OAHI (data.oregon.gov p9yn-ftai)
+Hazelwood Station,14719 E BURNSIDE ST,Portland,97233,45.52239,-122.51152,60.0,60.0,42.0,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+1230 SE IVON ST,1230 SE IVON ST,Portland,97202,45.50417,-122.65304,2.0,2.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+LA HACIENDA,7906 SE 72ND AVE,Portland,97206,45.46606,-122.58891,7.0,7.0,,in_service,1970.0,OAHI (data.oregon.gov p9yn-ftai)
+Lafayette Court Apartments,8714 SE Lafayette Street,Portland,97266,45.49645,-122.57254,32.0,7.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Amanda Court,4537 & 4541 SE 122nd Ave,Portland,97236,45.48891,-122.53775,38.0,38.0,13.0,in_service,2023.0,OAHI (data.oregon.gov p9yn-ftai)
+72 Foster,5005 SE 72nd Avenue,Portland,97206,45.4864,-122.58915,101.0,101.0,21.0,in_service,2019.0,OAHI (data.oregon.gov p9yn-ftai)
+ARBOR GLEN,2609 SE 145TH AVE,Portland,97236,45.50254,-122.51383,97.0,97.0,93.0,in_service,2009.0,OAHI (data.oregon.gov p9yn-ftai)
+AVENUE PLAZA,5025 NE 8TH AVE,Portland,97211,45.55971,-122.65751,22.0,22.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Nawikka Court Apartments,5110 SE 76th Avenue,Portland,97206,45.48586,-122.58534,16.0,15.0,,in_service,1988.0,OAHI (data.oregon.gov p9yn-ftai)
+WOODLAND HEIGHTS RETIREMENT COMMUNITY,11625 SE BOISE ST,Portland,97266,45.4921,-122.54242,58.0,58.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+PARK 132,13130 SE POWELL BLVD,Portland,97236,45.49699,-122.52796,20.0,20.0,,in_service,1971.0,OAHI (data.oregon.gov p9yn-ftai)
+Starlight fka CCC Westwind Apartments,323-327 NW 6th Avenue,Portland,97209,45.52569,-122.67652,100.0,100.0,,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+Mamook Tokatee fka Going 42,4610 NE 42nd Avenue,Portland,97218,45.55684,-122.6204,56.0,56.0,17.0,in_service,2021.0,OAHI (data.oregon.gov p9yn-ftai)
+KILLINGSWORTH COURT,606 NE KILLINGSWORTH CT,Portland,97211,45.56228,-122.65933,6.0,6.0,,in_service,2005.0,OAHI (data.oregon.gov p9yn-ftai)
+29 NE 148TH AVE,29 NE 148TH AVE,Portland,97230,45.52292,-122.51066,12.0,12.0,,in_service,2004.0,OAHI (data.oregon.gov p9yn-ftai)
+Kentonwood Dimensions,1603 N Willis Blvd,Portland,97217,45.58382,-122.6835,44.0,44.0,,in_development,2024.0,OAHI (data.oregon.gov p9yn-ftai)
+Clinton Ridge Apartments,2730 SE 92nd Avenue,Portland,97266,45.5018,-122.56808,29.0,28.0,1.0,in_service,2003.0,OAHI (data.oregon.gov p9yn-ftai)
+Ainsworth Court,1515 N Ainsworth,Portland,97217,45.56631,-122.68335,88.0,88.0,24.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Beyer Court,9305 SE Harold Street,Portland,97266,45.48292,-122.56769,14.0,14.0,14.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+"Lawrence, the fka 148th Apartments",208 SE 148th Ave,Portland,,45.52092,-122.51024,96.0,96.0,80.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+Hayu Tilixam,5827 NE Prescott,Portland,97218,45.55548,-122.60267,50.0,50.0,20.0,in_service,2022.0,OAHI (data.oregon.gov p9yn-ftai)
+CORA PARK APTS,4207 SE 37TH AVE,Portland,97202,45.49226,-122.62462,10.0,10.0,10.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Lincoln Woods,2333 SE 130th Avenue,Portland,97233,45.50486,-122.53038,70.0,70.0,52.0,in_service,2006.0,OAHI (data.oregon.gov p9yn-ftai)
+ROCKWOOD STATION,19100 E BURNSIDE ST,Portland,97233,45.51858,-122.46641,195.0,195.0,117.0,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+Twelfth Avenue Terrace,1529 SW 12th Avenue,Portland,97201,45.51488,-122.68721,119.0,119.0,,in_service,1994.0,OAHI (data.oregon.gov p9yn-ftai)
+Hawthorne East,1420 SE 16th,Portland,97214,45.51236,-122.6496,71.0,70.0,,in_service,2016.0,OAHI (data.oregon.gov p9yn-ftai)
+Renaissance Commons fka REACH Argyle,2133 N ARGYLE ST,Portland,97217,45.58454,-122.6876,189.0,189.0,65.0,in_service,2020.0,OAHI (data.oregon.gov p9yn-ftai)
+LEXINGTON COURT,7860 SE 72ND AVE,Portland,97206,45.46652,-122.58934,19.0,19.0,,in_service,,OAHI (data.oregon.gov p9yn-ftai)
+MULTNOMAH MANOR,9110 NE HASSALO ST,Portland,97220,45.530460254779,-122.569136450093,53.0,53.0,18.0,in_service,1965.0,Metro RLIS Affordable Housing
+PLAZA TOWNHOMES,5802 N MICHIGAN AVE,Portland,97217,45.564808808666,-122.676448552042,68.0,0.0,,in_service,1974.0,Metro RLIS Affordable Housing
+UNTHANK PLAZA APARTMENTS,2500 N WILLIAMS AVE,Portland,97227,45.5404340989969,-122.665390542321,80.0,80.0,,in_service,1978.0,Metro RLIS Affordable Housing
+AINSWORTH COURT,1515 N AINSWORTH ST,Portland,97217,45.5667967557994,-122.68333252983,88.0,88.0,,in_service,1943.0,Metro RLIS Affordable Housing
+JAMES HAWTHORNE APARTMENTS,1510 SW 13TH AVE,Portland,97201,45.5152282139426,-122.687925612252,48.0,48.0,,in_service,1908.0,Metro RLIS Affordable Housing
+ASH CREEK COMMONS,11230 SW 62ND AVE,Portland,97219,45.4439218652106,-122.741029741202,21.0,21.0,21.0,in_service,2004.0,Metro RLIS Affordable Housing
+HELEN M. SWINDELLS,10 NW BROADWAY,Portland,97209,45.5233186931229,-122.677101196445,105.0,105.0,,in_service,1913.0,Metro RLIS Affordable Housing
+PETER PAULSON,1530 SW 13TH AVE,Portland,97201,45.5149225820293,-122.688060262926,93.0,92.0,,in_service,1995.0,Metro RLIS Affordable Housing
+GATEWAY PARK APARTMENTS,510 NE 100TH AVE,Portland,97220,45.5265286895367,-122.560480568151,144.0,144.0,84.0,in_service,1967.0,Metro RLIS Affordable Housing
+HAVEN LIMITED PARTNERSHIP,4625 N TRENTON ST,Portland,97203,45.5888276166689,-122.715031068666,44.0,44.0,15.0,in_service,2007.0,Metro RLIS Affordable Housing
+CECELIA LIMITED PARTNERSHIP,4605 N TRENTON ST,Portland,97203,45.5888276166689,-122.715031068666,60.0,60.0,46.0,in_service,2007.0,Metro RLIS Affordable Housing
+TROUTON LIMITED PARTNERSHIP,4625 N TRENTON ST,Portland,97203,45.5888276166689,-122.715031068666,113.0,113.0,91.0,in_service,2007.0,Metro RLIS Affordable Housing
+WOOLSEY LIMITED PARTNERSHIP,4625 N TRENTON ST,Portland,97203,45.5888276166689,-122.715031068666,56.0,55.0,5.0,in_service,2007.0,Metro RLIS Affordable Housing
+2425-2429 SE YAMHILL ST,2425 SE YAMHILL ST,Portland,97214,45.5159244604536,-122.640833810961,2.0,2.0,2.0,in_service,1909.0,Metro RLIS Affordable Housing
+1732 N ALBERTA ST,1732 N ALBERTA ST,Portland,97217,45.5588924503495,-122.685637522137,1.0,1.0,,in_service,1896.0,Metro RLIS Affordable Housing
+8508 N DRUMMOND AVE,8508 N DRUMMOND AVE,Portland,97217,45.5846962127678,-122.699180615473,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+4722 N MISSISSIPPI AVE,4722 N MISSISSIPPI AVE,Portland,97217,45.5572896655181,-122.675618257201,1.0,1.0,,in_service,1922.0,Metro RLIS Affordable Housing
+4921 NE CLEVELAND AVE,4921 NE CLEVELAND AVE,Portland,97211,45.5586739227597,-122.665940979667,4.0,4.0,4.0,in_service,1941.0,Metro RLIS Affordable Housing
+813 N WEBSTER ST,813 N WEBSTER ST,Portland,97217,45.5599359409562,-122.675340914786,1.0,1.0,1.0,in_service,1905.0,Metro RLIS Affordable Housing
+4618 NE 11TH AVE,4618 NE 11TH AVE,Portland,97211,45.5567348817343,-122.654347860468,1.0,1.0,,in_service,1913.0,Metro RLIS Affordable Housing
+114 SE 22ND AVE,114 SE 22ND AVE,Portland,97214,45.52193483261,-122.64317602087,1.0,1.0,,in_service,1910.0,Metro RLIS Affordable Housing
+1227 NE ROSELAWN ST,1227 NE ROSELAWN ST,Portland,97211,45.5613977839401,-122.65294698762,1.0,1.0,1.0,in_service,2006.0,Metro RLIS Affordable Housing
+GRAND AVENUE DUPLEXES,4916 NE 10TH AVE,Portland,97211,45.5586478995221,-122.655290690257,6.0,6.0,,in_service,2001.0,Metro RLIS Affordable Housing
+KING DISHMAN COURT,1942 NE 6TH AVE,Portland,97212,45.5421367696749,-122.663881624503,14.0,14.0,10.0,in_service,1974.0,Metro RLIS Affordable Housing
+527 SE MORRISON ST,527 SE MORRISON ST,Portland,97214,45.5174546173716,-122.660023709488,84.0,84.0,,in_service,1911.0,Metro RLIS Affordable Housing
+TYRON MEWS APARTMENTS,8455 SW 30TH AVE,Portland,97219,45.4635291440659,-122.707789677001,20.0,19.0,,in_service,1992.0,Metro RLIS Affordable Housing
+4849 SE 86TH AVE,4849 SE 86TH AVE,Portland,97266,45.4870616226373,-122.575186368112,1.0,1.0,,in_service,1963.0,Metro RLIS Affordable Housing
+10408 SE YUKON ST,10408 SE YUKON ST,Portland,97266,45.4788251929178,-122.555672050234,1.0,1.0,,in_service,,Metro RLIS Affordable Housing
+6637 SE 56TH AVE,6637 SE 56TH AVE,Portland,97206,45.4745022551225,-122.606213257445,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+10418 SE SCHILLER ST,10418 SE SCHILLER ST,Portland,97266,45.4869451042516,-122.555222911195,1.0,1.0,,in_service,1916.0,Metro RLIS Affordable Housing
+LA HACIENDA APARTMENTS,7906 SE 72ND AVE,Portland,97206,45.4662056865875,-122.588893781563,38.0,38.0,,in_service,1970.0,Metro RLIS Affordable Housing
+TRENTON TERRACE,4720 N TRENTON ST,Portland,97203,45.5883551455152,-122.716255491424,66.0,65.0,,in_service,2007.0,Metro RLIS Affordable Housing
+4618 NE 26TH AVE,4618 NE 26TH AVE,Portland,97211,45.5566625786235,-122.63861335364,1.0,1.0,,in_service,2007.0,Metro RLIS Affordable Housing
+8240 N INTERSTATE AVE,8240 N INTERSTATE AVE,Portland,97217,45.582665691386,-122.681935789003,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+4006 NE 11TH AVE,4006 NE 11TH AVE,Portland,97211,45.5521821776239,-122.654395545277,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+515 NE MORGAN ST,515 NE MORGAN ST,Portland,97211,45.5746326408366,-122.659932713507,1.0,1.0,,in_service,1928.0,Metro RLIS Affordable Housing
+2644 SE POWELL BLVD,2644 SE POWELL BLVD,Portland,97202,45.4975902356319,-122.638623486059,8.0,8.0,,in_service,1890.0,Metro RLIS Affordable Housing
+6705 SE 56TH AVE,6705 SE 56TH AVE,Portland,97206,45.4742844139372,-122.606165252638,1.0,1.0,,in_service,2009.0,Metro RLIS Affordable Housing
+353 NE HOLMAN ST,353 NE HOLMAN ST,Portland,97211,45.5678437207999,-122.66177284436,1.0,1.0,1.0,in_service,1929.0,Metro RLIS Affordable Housing
+4523 NE 96TH AVE,4523 NE 96TH AVE,Portland,97220,45.5558063819831,-122.564155335853,1.0,1.0,1.0,in_service,1924.0,Metro RLIS Affordable Housing
+5311 NE 26TH AVE,5311 NE 26TH AVE,Portland,97211,45.5617580381769,-122.639074714252,1.0,1.0,,in_service,1929.0,Metro RLIS Affordable Housing
+5535 NE 23RD AVE,5535 NE 23RD AVE,Portland,97211,45.5632428173721,-122.642717711433,1.0,1.0,,in_service,1973.0,Metro RLIS Affordable Housing
+3717 NE 11TH AVE,3717 NE 11TH AVE,Portland,97212,45.5497816038668,-122.654939123124,1.0,1.0,,in_service,1989.0,Metro RLIS Affordable Housing
+5620 SE DUKE ST,5620 SE DUKE ST,Portland,97206,45.4755741386621,-122.605461058194,1.0,1.0,,in_service,1993.0,Metro RLIS Affordable Housing
+VISTA DE ROSAS,6939 NE KILLINGSWORTH ST,Portland,97218,45.5621924703803,-122.591381951078,26.0,26.0,,in_service,1978.0,Metro RLIS Affordable Housing
+6766 NE KILLINGSWORTH ST,6736 NE KILLINGSWORTH ST,Portland,97218,45.5624337328896,-122.593244428393,12.0,12.0,,in_service,2000.0,Metro RLIS Affordable Housing
+5429 SE DUKE ST,5429 SE DUKE ST,Portland,97206,45.4760424123,-122.606860034725,1.0,1.0,,in_service,1937.0,Metro RLIS Affordable Housing
+5419 SE DUKE ST,5419 SE DUKE ST,Portland,97206,45.4760423547535,-122.607115822512,1.0,1.0,,in_service,1928.0,Metro RLIS Affordable Housing
+5411 SE DUKE ST,5411 SE DUKE ST,Portland,97206,45.4760422776292,-122.607398048519,1.0,1.0,,in_service,1992.0,Metro RLIS Affordable Housing
+5317 SE DUKE ST,5317 SE DUKE ST,Portland,97206,45.4760243335589,-122.607705976577,1.0,1.0,,in_service,2014.0,Metro RLIS Affordable Housing
+6520 SE 52ND AVE,6520 SE 52ND AVE,Portland,97206,45.4754164403005,-122.608594182341,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+5526 SE DUKE ST,5526 SE DUKE ST,Portland,97206,45.4746784604804,-122.607631567674,1.0,1.0,,in_service,1927.0,Metro RLIS Affordable Housing
+APOSTOLIC FAITH CHURCH,6539 SE 56TH AVE,Portland,97206,45.4750872913653,-122.606097592469,1.0,1.0,,in_service,2003.0,Metro RLIS Affordable Housing
+6607 SE 56TH AVE,6607 SE 56TH AVE,Portland,97206,45.4748375369293,-122.606096175351,1.0,1.0,,in_service,2004.0,Metro RLIS Affordable Housing
+ROSEMONT TOWNHOMES,645 N SARATOGA ST,Portland,97217,45.5728336344537,-122.673263942103,18.0,18.0,,in_service,2001.0,Metro RLIS Affordable Housing
+PARK 132 APARTMENTS,13130 SE POWELL BLVD,Portland,97236,45.4970133848818,-122.527769261146,20.0,19.0,19.0,in_service,1971.0,Metro RLIS Affordable Housing
+POWELL PLAZA,13320 SE POWELL BLVD,Portland,97236,45.4968802136082,-122.526272123262,67.0,67.0,,in_service,1969.0,Metro RLIS Affordable Housing
+2130 NE 88TH AVE,2130 NE 88TH AVE,Portland,97220,45.5376963798032,-122.572124475325,1.0,1.0,,in_service,1911.0,Metro RLIS Affordable Housing
+2005 NE DEKUM ST,2005 NE DEKUM ST,Portland,97211,45.5720732693443,-122.645057848032,1.0,1.0,,in_service,1942.0,Metro RLIS Affordable Housing
+1313 NE KILLINGSWORTH ST,1313 NE KILLINGSWORTH ST,Portland,97211,45.5629406608911,-122.651674577722,1.0,1.0,,in_service,1923.0,Metro RLIS Affordable Housing
+1522 NE BRYANT ST BIG11,1522 NE BRYANT ST,Portland,97211,45.5730230420892,-122.649501935581,1.0,1.0,,in_service,1963.0,Metro RLIS Affordable Housing
+6344 NE 10TH AVE,6344 NE 10TH AVE,Portland,97211,45.568960691666,-122.65455724682,1.0,1.0,,in_service,1950.0,Metro RLIS Affordable Housing
+1114 NE LENORE ST,1114 NE LENORE ST,Portland,97211,45.5696914120488,-122.65357072592,1.0,1.0,,in_service,1950.0,Metro RLIS Affordable Housing
+7246 NE 9TH AVE,7246 NE 9TH AVE,Portland,97211,45.5757773307856,-122.655279034706,1.0,1.0,,in_service,1910.0,Metro RLIS Affordable Housing
+6941 NE 13TH AVE,6941 NE 13TH AVE,Portland,97211,45.5730011167954,-122.652314398983,1.0,1.0,,in_service,1980.0,Metro RLIS Affordable Housing
+12748 NE HALSEY ST,12748 NE HALSEY ST,Portland,97230,45.5332750002097,-122.531426458066,1.0,1.0,,in_service,1952.0,Metro RLIS Affordable Housing
+5026 N TRENTON ST,5026 N TRENTON ST,Portland,97203,45.5884585438506,-122.719051223904,1.0,1.0,1.0,in_service,1929.0,Metro RLIS Affordable Housing
+5835 N KERBY AVE,5835 N KERBY AVE,Portland,97217,45.5653849826045,-122.673199929967,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+727 NE EMERSON ST,727 NE EMERSON ST,Portland,97211,45.5619437313216,-122.658232074729,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+629 NE EMERSON ST,629 NE EMERSON ST,Portland,97211,45.5619449919542,-122.659012654677,1.0,1.0,,in_service,1912.0,Metro RLIS Affordable Housing
+3170 N ARLINGTON PL,3170 N ARLINGTON PL,Portland,97217,45.5831133712462,-122.699450735059,1.0,1.0,,in_service,1946.0,Metro RLIS Affordable Housing
+4415 NE 20TH AVE,4415 NE 20TH AVE,Portland,97211,45.5552384457263,-122.645062947859,1.0,1.0,1.0,in_service,1908.0,Metro RLIS Affordable Housing
+4531 NE 19TH AVE,4531 NE 19TH AVE,Portland,97211,45.55592224317,-122.646113796377,1.0,1.0,,in_service,1904.0,Metro RLIS Affordable Housing
+4744 NE 14TH PL,4744 NE 14TH PL,Portland,97211,45.5575669042257,-122.65039414346,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+4914 NE 18TH AVE,4914 NE 18TH AVE,Portland,97211,45.5585114830463,-122.646483709568,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+5116 NE 21ST AVE,5116 NE 21ST AVE,Portland,97211,45.5598982670424,-122.64354543662,1.0,1.0,,in_service,1911.0,Metro RLIS Affordable Housing
+5116 NE 20TH AVE,5116 NE 20TH AVE,Portland,97211,45.5599020210386,-122.644521204901,1.0,1.0,,in_service,1908.0,Metro RLIS Affordable Housing
+5027 NE 20TH AVE,5027 NE 20TH AVE,Portland,97211,45.5594931069526,-122.645109907102,1.0,1.0,1.0,in_service,1917.0,Metro RLIS Affordable Housing
+5125 NE 14TH PL,5125 NE 14TH PL,Portland,97211,45.5600635688076,-122.650970605758,1.0,1.0,,in_service,1911.0,Metro RLIS Affordable Housing
+5214 NE 16TH AVE,5214 NE 16TH AVE,Portland,97211,45.560602215466,-122.648419016898,1.0,1.0,,in_service,1922.0,Metro RLIS Affordable Housing
+5224 NE 17TH AVE,5224 NE 17TH AVE,Portland,97211,45.5607355852186,-122.64744217549,1.0,1.0,,in_service,1923.0,Metro RLIS Affordable Housing
+5305 NE 19TH AVE,5305 NE 19TH AVE,Portland,97211,45.5617141302652,-122.645970691646,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+8724 N WAYLAND AVE,8724 N WAYLAND AVE,Portland,97203,45.5857689355498,-122.710995121746,1.0,1.0,,in_service,1944.0,Metro RLIS Affordable Housing
+4414 N WILLIS BLVD,4414 N WILLIS BLVD,Portland,97203,45.5838239093474,-122.712794163977,1.0,1.0,,in_service,1943.0,Metro RLIS Affordable Housing
+711 N STAFFORD ST,711 N STAFFORD ST,Portland,97217,45.576693578774,-122.673961168443,1.0,1.0,,in_service,1912.0,Metro RLIS Affordable Housing
+725 N LOMBARD ST,725 N LOMBARD ST,Portland,97217,45.5774613663103,-122.674189923848,1.0,1.0,,in_service,1923.0,Metro RLIS Affordable Housing
+1014 NE EMERSON ST BIG 11,1014 NE EMERSON ST,Portland,97211,45.5616343040961,-122.654700705215,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+5262 NE 8TH AVE,5262 NE 8TH AVE,Portland,97211,45.561578329721,-122.657698787511,1.0,1.0,,in_service,1907.0,Metro RLIS Affordable Housing
+7724 N FESSENDEN ST,7724 N FESSENDEN ST,Portland,97203,45.5950366804864,-122.742823195899,1.0,1.0,,in_service,1923.0,Metro RLIS Affordable Housing
+6908 NE GARFIELD AVE,6908 NE GARFIELD AVE,Portland,97211,45.572660173549,-122.662061673459,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+3119 NE 111TH DR,3119 NE 111TH DR,Portland,97220,45.5449369115044,-122.547940374334,1.0,1.0,,in_service,1949.0,Metro RLIS Affordable Housing
+5807 NE 15TH AVE,5807 NE 15TH AVE,Portland,97211,45.5646774159759,-122.650353476228,1.0,1.0,,in_service,1940.0,Metro RLIS Affordable Housing
+5600 NE 17TH AVE,5600 NE 17TH AVE,Portland,97211,45.563402479566,-122.64771138049,1.0,1.0,,in_service,1908.0,Metro RLIS Affordable Housing
+5714 NE 16TH AVE,5714 NE 16TH AVE,Portland,97211,45.5640932249519,-122.648719516291,1.0,1.0,,in_service,1924.0,Metro RLIS Affordable Housing
+5707 NE 16TH AVE,5707 NE 16TH AVE,Portland,97211,45.5639592417219,-122.649345598123,1.0,1.0,,in_service,1913.0,Metro RLIS Affordable Housing
+8826 N HARTMAN ST,8826 N HARTMAN ST,Portland,97203,45.5980392561721,-122.750326160905,1.0,1.0,,in_service,1954.0,Metro RLIS Affordable Housing
+9120 N WINDLE ST,9120 N WINDLE ST,Portland,97203,45.5956369494751,-122.753027471841,1.0,1.0,,in_service,1907.0,Metro RLIS Affordable Housing
+4315 NE 13TH AVE,4315 NE 13TH AVE,Portland,97211,45.5547831201277,-122.653009306924,1.0,1.0,,in_service,1914.0,Metro RLIS Affordable Housing
+4027 NE 12TH AVE,4027 NE 12TH AVE,Portland,97212,45.5524701246784,-122.653934151152,1.0,1.0,,in_service,1903.0,Metro RLIS Affordable Housing
+3927 NE 13TH AVE,3927 NE 13TH AVE,Portland,97212,45.5512271498337,-122.652949959363,1.0,1.0,,in_service,1904.0,Metro RLIS Affordable Housing
+3946 NE 10TH AVE,3946 NE 10TH AVE,Portland,97212,45.5514801973872,-122.655378939463,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+3935 NE 7TH AVE,3935 NE 7TH AVE,Portland,97212,45.551351864162,-122.658893380219,1.0,1.0,1.0,in_service,1941.0,Metro RLIS Affordable Housing
+5903 N MICHIGAN AVE,5903 N MICHIGAN AVE,Portland,97217,45.5656479282333,-122.677127979327,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+5817 N MICHIGAN AVE,5817 N MICHIGAN AVE,Portland,97217,45.5650942062534,-122.677230942047,1.0,1.0,1.0,in_service,1911.0,Metro RLIS Affordable Housing
+6717 NE CLEVELAND AVE,6717 NE CLEVELAND AVE,Portland,97211,45.5714717869788,-122.66608092251,1.0,1.0,1.0,in_service,1919.0,Metro RLIS Affordable Housing
+6623 NE CLEVELAND AVE,6623 NE CLEVELAND AVE,Portland,97211,45.5710684577909,-122.666027903584,1.0,1.0,1.0,in_service,1928.0,Metro RLIS Affordable Housing
+102 N GOING ST,102 N GOING ST,Portland,97217,45.5561709244325,-122.667451183581,1.0,1.0,1.0,in_service,1885.0,Metro RLIS Affordable Housing
+4840 N WILLIAMS AVE,4840 N WILLIAMS AVE,Portland,97217,45.558302734198,-122.666357553428,1.0,1.0,1.0,in_service,1905.0,Metro RLIS Affordable Housing
+4838 N WILLIAMS AVE,4838 N WILLIAMS AVE,Portland,97217,45.5582341755167,-122.666358762009,1.0,1.0,1.0,in_service,1903.0,Metro RLIS Affordable Housing
+614 N ALBERTA ST,614 N ALBERTA ST,Portland,97217,45.5587941036643,-122.673341102092,1.0,1.0,1.0,in_service,1929.0,Metro RLIS Affordable Housing
+916 N WEBSTER ST,916 N WEBSTER ST,Portland,97217,45.5594933740416,-122.676408933806,1.0,1.0,1.0,in_service,1925.0,Metro RLIS Affordable Housing
+1035 N ALBERTA ST,1035 N ALBERTA ST,Portland,97217,45.5592139688349,-122.677817012234,1.0,1.0,,in_service,1895.0,Metro RLIS Affordable Housing
+4816 NE 7TH AVE,4816 NE 7TH AVE,Portland,97211,45.5575864182199,-122.658236465141,1.0,1.0,1.0,in_service,1912.0,Metro RLIS Affordable Housing
+1525 NE BRYANT ST,1525 NE BRYANT ST,Portland,97211,45.5734686763719,-122.64950096916,1.0,1.0,1.0,in_service,1955.0,Metro RLIS Affordable Housing
+1513 NE BRYANT ST,1513 NE BRYANT ST,Portland,97211,45.5734685388665,-122.649684494475,1.0,1.0,1.0,in_service,1915.0,Metro RLIS Affordable Housing
+163 NE LOMBARD ST,163 NE LOMBARD ST,Portland,97211,45.577456352744,-122.663718466999,1.0,1.0,1.0,in_service,1954.0,Metro RLIS Affordable Housing
+7055 NE CLEVELAND AVE,7055 NE CLEVELAND AVE,Portland,97211,45.5741526451536,-122.666096330541,1.0,1.0,1.0,in_service,1923.0,Metro RLIS Affordable Housing
+4027 NE 10TH AVE,4027 NE 10TH AVE,Portland,97212,45.5524609325382,-122.655954160871,1.0,1.0,1.0,in_service,1902.0,Metro RLIS Affordable Housing
+KAFOURY COURT,4066 NE GRAND AVE,Portland,97212,45.5531584042078,-122.660228558911,5.0,5.0,,in_service,1950.0,Metro RLIS Affordable Housing
+4207 NE 10TH AVE,4207 NE 10TH AVE,Portland,97211,45.5539853679386,-122.65586961563,1.0,1.0,1.0,in_service,1909.0,Metro RLIS Affordable Housing
+3523 NE 6TH AVE,3523 NE 6TH AVE,Portland,97212,45.5486691266068,-122.659891680499,1.0,1.0,,in_service,1890.0,Metro RLIS Affordable Housing
+836 NE BEECH ST,836 NE BEECH ST,Portland,97212,45.5493423129429,-122.656851705378,1.0,1.0,,in_service,1927.0,Metro RLIS Affordable Housing
+3824 NE 7TH AVE,3824 NE 7TH AVE,Portland,97212,45.5504479348337,-122.658315415492,1.0,1.0,1.0,in_service,1901.0,Metro RLIS Affordable Housing
+3810 SE 62ND AVE,3810 SE 62ND AVE,Portland,97206,45.4949328656232,-122.599099997687,1.0,1.0,,in_service,2014.0,Metro RLIS Affordable Housing
+6602 N HAIGHT AVE,6602 N HAIGHT AVE,Portland,97217,45.5707711783863,-122.669523021362,1.0,1.0,,in_service,1947.0,Metro RLIS Affordable Housing
+5731 NE SIMPSON ST,5731 NE SIMPSON ST,Portland,97218,45.5654544472055,-122.603330622471,1.0,1.0,1.0,in_service,1942.0,Metro RLIS Affordable Housing
+2311 N WATTS ST,2311 N WATTS ST,Portland,97217,45.5811915788517,-122.690430458455,1.0,1.0,,in_service,1912.0,Metro RLIS Affordable Housing
+2230 N SCHOFIELD ST,2230 N SCHOFIELD ST,Portland,97217,45.5814652304979,-122.689721403504,1.0,1.0,,in_service,1928.0,Metro RLIS Affordable Housing
+8242 NE EUGENE ST,8242 NE EUGENE ST,Portland,97220,45.5377826790638,-122.577942542217,1.0,1.0,,in_service,1913.0,Metro RLIS Affordable Housing
+5622 NE 32ND AVE,5622 NE 32ND AVE,Portland,97211,45.5636794020116,-122.632467950253,1.0,1.0,,in_service,1915.0,Metro RLIS Affordable Housing
+4326 NE 15TH AVE,4326 NE 15TH AVE,Portland,97211,45.5547917006725,-122.650020294223,1.0,1.0,,in_service,1907.0,Metro RLIS Affordable Housing
+5123 NE 28TH AVE,5123 NE 28TH AVE,Portland,97211,45.5599998180585,-122.637117170624,3.0,3.0,,in_service,1973.0,Metro RLIS Affordable Housing
+5028 NE 26TH AVE,5028 NE 26TH AVE,Portland,97211,45.5595086778394,-122.638590295662,1.0,1.0,1.0,in_service,1906.0,Metro RLIS Affordable Housing
+5315 NE 27TH AVE,5315 NE 27TH AVE,Portland,97211,45.5617810525665,-122.638142694632,1.0,1.0,,in_service,1922.0,Metro RLIS Affordable Housing
+329 NE HOLMAN ST,329 NE HOLMAN ST,Portland,97211,45.5678437207999,-122.66177284436,1.0,1.0,,in_service,1929.0,Metro RLIS Affordable Housing
+9131 N LOMBARD ST,9131 N LOMBARD ST,Portland,97203,45.5934240632924,-122.757672470418,1.0,1.0,,in_service,1980.0,Metro RLIS Affordable Housing
+5634 NE 13TH AVE,5634 NE 13TH AVE,Portland,97211,45.5638596001592,-122.651764383393,1.0,1.0,,in_service,1922.0,Metro RLIS Affordable Housing
+5732 NE 11TH AVE,5732 NE 11TH AVE,Portland,97211,45.5644114210719,-122.653778127438,1.0,1.0,,in_service,1927.0,Metro RLIS Affordable Housing
+1204 NE AINSWORTH ST,1204 NE AINSWORTH ST,Portland,97211,45.566094905706,-122.652853491176,1.0,1.0,,in_service,1927.0,Metro RLIS Affordable Housing
+1134 NE AINSWORTH ST,1134 NE AINSWORTH ST,Portland,97211,45.5660956160029,-122.653281505228,1.0,1.0,,in_service,1930.0,Metro RLIS Affordable Housing
+6226 NE 18TH AVE,6226 NE 18TH AVE,Portland,97211,45.5678922955843,-122.646691177083,1.0,1.0,,in_service,1912.0,Metro RLIS Affordable Housing
+6126 NE 16TH AVE,6126 NE 16TH AVE,Portland,97211,45.5673556866541,-122.648582657486,1.0,1.0,,in_service,1916.0,Metro RLIS Affordable Housing
+6216 NE 10TH AVE BIG 11,6216 NE 10TH AVE,Portland,97211,45.567775781634,-122.654658142901,1.0,1.0,,in_service,2007.0,Metro RLIS Affordable Housing
+4623 NE 10TH AVE,4623 NE 10TH AVE,Portland,97211,45.5567404601735,-122.655907742027,1.0,1.0,,in_service,1982.0,Metro RLIS Affordable Housing
+723 NE GOING ST,723 NE GOING ST,Portland,97211,45.5565900509691,-122.657962719882,1.0,1.0,1.0,in_service,1941.0,Metro RLIS Affordable Housing
+735 NE 79TH AVE,735 NE 79TH AVE,Portland,97213,45.5282383141747,-122.582598071938,1.0,1.0,,in_service,1910.0,Metro RLIS Affordable Housing
+3426 NE 73RD AVE,3426 NE 73RD AVE,Portland,97213,45.5476387776306,-122.587564393783,1.0,1.0,,in_service,1914.0,Metro RLIS Affordable Housing
+6345 NE 36TH AVE,6345 NE 36TH AVE,Portland,97211,45.5690160189078,-122.626890324652,1.0,1.0,1.0,in_service,1947.0,Metro RLIS Affordable Housing
+4804 N KERBY AVE,4804 N KERBY AVE,Portland,97217,45.5577455117087,-122.672577598343,1.0,1.0,,in_service,1923.0,Metro RLIS Affordable Housing
+415 N MORGAN ST,415 N MORGAN ST,Portland,97217,45.5746368192184,-122.670130253126,1.0,1.0,,in_service,1929.0,Metro RLIS Affordable Housing
+5215 NE 32ND AVE,5215 NE 32ND AVE,Portland,97211,45.5605517586563,-122.633066739004,1.0,1.0,,in_service,1918.0,Metro RLIS Affordable Housing
+5234 NE 30TH AVE,5234 NE 30TH AVE,Portland,97211,45.5608169249803,-122.634549771984,1.0,1.0,1.0,in_service,1937.0,Metro RLIS Affordable Housing
+1415 N WINCHELL ST,1415 N WINCHELL ST,Portland,97217,45.5808893817018,-122.681361717659,1.0,1.0,1.0,in_service,1948.0,Metro RLIS Affordable Housing
+7828 N MISSISSIPPI AVE,7828 N MISSISSIPPI AVE,Portland,97217,45.5804093196824,-122.676014383484,1.0,1.0,1.0,in_service,1912.0,Metro RLIS Affordable Housing
+2824 N FARRAGUT ST,2824 N FARRAGUT ST,Portland,97217,45.5789412689793,-122.696112674826,1.0,1.0,1.0,in_service,1911.0,Metro RLIS Affordable Housing
+4619 NE 28TH AVE,4619 NE 28TH AVE,Portland,97211,45.5566565385244,-122.637167582334,1.0,1.0,1.0,in_service,1914.0,Metro RLIS Affordable Housing
+4719 NE 33RD AVE,4719 NE 33RD AVE,Portland,97211,45.5572855301488,-122.630962690177,1.0,1.0,1.0,in_service,1914.0,Metro RLIS Affordable Housing
+7041 NE GRAND AVE,7041 NE GRAND AVE,Portland,97211,45.5738787907851,-122.660634663489,1.0,1.0,1.0,in_service,1919.0,Metro RLIS Affordable Housing
+7027 NE GRAND AVE,7027 NE GRAND AVE,Portland,97211,45.573707356655,-122.660635361221,1.0,1.0,1.0,in_service,1924.0,Metro RLIS Affordable Housing
+7028 NE 6TH AVE,7028 NE 6TH AVE,Portland,97211,45.5736723564414,-122.659016188741,1.0,1.0,1.0,in_service,1950.0,Metro RLIS Affordable Housing
+7017 NE 7TH PL,7017 NE 7TH PL,Portland,97211,45.5735578996323,-122.657711758445,1.0,1.0,1.0,in_service,1953.0,Metro RLIS Affordable Housing
+7074 NE 7TH AVE,7074 NE 7TH AVE,Portland,97211,45.5742477635941,-122.658049008499,1.0,1.0,1.0,in_service,1925.0,Metro RLIS Affordable Housing
+723 NE BUFFALO ST,723 NE BUFFALO ST,Portland,97211,45.5753170371272,-122.657550015581,1.0,1.0,1.0,in_service,1919.0,Metro RLIS Affordable Housing
+6934 N ALBINA AVE,6934 N ALBINA AVE,Portland,97217,45.5731274296703,-122.674469711607,1.0,1.0,1.0,in_service,1924.0,Metro RLIS Affordable Housing
+6822 N ALBINA AVE,6822 N ALBINA AVE,Portland,97217,45.5721332244479,-122.674481135635,1.0,1.0,1.0,in_service,1913.0,Metro RLIS Affordable Housing
+1415 NE JUNIOR ST,1415 NE JUNIOR ST,Portland,97211,45.5713369172761,-122.650616535341,1.0,1.0,1.0,in_service,1917.0,Metro RLIS Affordable Housing
+1334 NE JUNIOR ST,1334 NE JUNIOR ST,Portland,97211,45.5709651159362,-122.651014917613,1.0,1.0,1.0,in_service,1914.0,Metro RLIS Affordable Housing
+1505 NE HIGHLAND ST,1505 NE HIGHLAND ST,Portland,97211,45.5693205165008,-122.649852745642,1.0,1.0,1.0,in_service,1924.0,Metro RLIS Affordable Housing
+1714 NE HIGHLAND ST,1714 NE HIGHLAND ST,Portland,97211,45.5689105463087,-122.647970098604,1.0,1.0,1.0,in_service,2015.0,Metro RLIS Affordable Housing
+1744 NE HIGHLAND ST,1744 NE HIGHLAND ST,Portland,97211,45.5689109490281,-122.647396129332,1.0,1.0,1.0,in_service,1928.0,Metro RLIS Affordable Housing
+1756 NE HIGHLAND ST,1756 NE HIGHLAND ST,Portland,97211,45.5689110820557,-122.647200899967,1.0,1.0,1.0,in_service,1953.0,Metro RLIS Affordable Housing
+1805 NE DEKUM ST,1805-1819 NE DEKUM ST,Portland,97211,45.5720733916603,-122.646326243333,4.0,4.0,4.0,in_service,1945.0,Metro RLIS Affordable Housing
+9632 N CLARENDON AVE,9632 N CLARENDON AVE,Portland,97203,45.5924984254246,-122.72380489533,1.0,1.0,1.0,in_service,1912.0,Metro RLIS Affordable Housing
+827 NE KILLINGSWORTH ST,827 NE KILLINGSWORTH ST,Portland,97211,45.5629125519666,-122.657323086251,1.0,1.0,1.0,in_service,1908.0,Metro RLIS Affordable Housing
+5503 NE 9TH AVE,5503 NE 9TH AVE,Portland,97211,45.5628731272734,-122.656427889905,1.0,1.0,1.0,in_service,1903.0,Metro RLIS Affordable Housing
+834 NE AINSWORTH ST,834 NE AINSWORTH ST,Portland,97211,45.5660754915958,-122.657060564311,1.0,1.0,1.0,in_service,1924.0,Metro RLIS Affordable Housing
+4745 N BORTHWICK AVE,4745 N BORTHWICK AVE,Portland,97217,45.5575887485722,-122.674218665129,1.0,1.0,1.0,in_service,1923.0,Metro RLIS Affordable Housing
+4715 N KERBY AVE,4715 N KERBY AVE,Portland,97217,45.5571673197447,-122.673207440504,1.0,1.0,1.0,in_service,1924.0,Metro RLIS Affordable Housing
+417 N BLANDENA ST,417 N BLANDENA ST,Portland,97217,45.5570222348325,-122.670492896753,1.0,1.0,,in_service,1907.0,Metro RLIS Affordable Housing
+3534 N BORTHWICK AVE,3534 N BORTHWICK AVE,Portland,97227,45.5486976068282,-122.673090143069,1.0,1.0,1.0,in_service,1904.0,Metro RLIS Affordable Housing
+3825 N BORTHWICK AVE,3825 N BORTHWICK AVE,Portland,97227,45.5505099656955,-122.673722022083,1.0,1.0,1.0,in_service,1972.0,Metro RLIS Affordable Housing
+3933 N VANCOUVER AVE,3933 N VANCOUVER AVE,Portland,97227,45.5513171836774,-122.668143774687,1.0,1.0,1.0,in_service,1900.0,Metro RLIS Affordable Housing
+4426 N BORTHWICK AVE,4426 N BORTHWICK AVE,Portland,97217,45.5554005381958,-122.673048587179,1.0,1.0,,in_service,1900.0,Metro RLIS Affordable Housing
+4414 N BORTHWICK AVE,4414 N BORTHWICK AVE,Portland,97217,45.5552798977644,-122.673050176325,1.0,1.0,1.0,in_service,1972.0,Metro RLIS Affordable Housing
+5334 NE 9TH AVE,5334 NE 9TH AVE,Portland,97211,45.5623031594579,-122.655810866968,1.0,1.0,,in_service,1912.0,Metro RLIS Affordable Housing
+7225 N CURTIS AVE,7225 N CURTIS AVE,Portland,97217,45.5756955468207,-122.698388472772,1.0,1.0,1.0,in_service,1951.0,Metro RLIS Affordable Housing
+4066 NE CLEVELAND AVE,4066 NE CLEVELAND AVE,Portland,97212,45.5530266627705,-122.665370567642,1.0,1.0,1.0,in_service,1925.0,Metro RLIS Affordable Housing
+58 NE SKIDMORE ST,58 NE SKIDMORE ST,Portland,97211,45.5543980308879,-122.665470190468,1.0,1.0,1.0,in_service,1907.0,Metro RLIS Affordable Housing
+3956 NE MALLORY AVE,3956 NE MALLORY AVE,Portland,97212,45.5516320096488,-122.663329235554,1.0,1.0,1.0,in_service,1926.0,Metro RLIS Affordable Housing
+4307 NE MALLORY AVE,4307 NE MALLORY AVE,Portland,97211,45.5547299128777,-122.663891447818,1.0,1.0,,in_service,1911.0,Metro RLIS Affordable Housing
+128 NE MORRIS ST,128 NE MORRIS ST,Portland,97212,45.5443465227749,-122.663504351536,1.0,1.0,1.0,in_service,1885.0,Metro RLIS Affordable Housing
+518 NE BRAZEE ST,518 NE BRAZEE ST,Portland,97212,45.5402177203061,-122.66015232504,1.0,1.0,1.0,in_service,1903.0,Metro RLIS Affordable Housing
+6005 NE 6TH AVE,6005 NE 6TH AVE,Portland,97211,45.5666267958093,-122.659539795361,3.0,3.0,,in_service,2017.0,Metro RLIS Affordable Housing
+"93RD AVENUE COMMONS
+93RD AVENUE COMMONS",6119 SE 93RD AVE,Portland,97266,45.478285059349,-122.567902572006,3.0,3.0,3.0,in_service,2005.0,Metro RLIS Affordable Housing
+7736 SE HENRY PL,7736 SE HENRY PL,Portland,97206,45.476035447561,-122.583200028804,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+HENRY,309 SW 4TH AVE,Portland,97204,45.5210699348623,-122.675539169897,172.0,171.0,,in_service,1909.0,Metro RLIS Affordable Housing
+MARK O. HATFIELD,726 W BURNSIDE ST,Portland,97205,45.5228511690525,-122.677987349497,106.0,106.0,,in_service,1910.0,Metro RLIS Affordable Housing
+GOLDEN WEST BUILDING,707 NW EVERETT ST,Portland,97209,45.5252657448792,-122.677832001136,68.0,68.0,,in_service,1900.0,Metro RLIS Affordable Housing
+SALLY MCCRACKEN,532 NW EVERETT ST,Portland,97209,45.525112055385,-122.676016742202,95.0,95.0,,in_service,1912.0,Metro RLIS Affordable Housing
+THE MODERN RICH APARTMENTS,205 NW COUCH ST,Portland,97209,45.5240641398466,-122.672709443628,34.0,34.0,,in_service,1905.0,Metro RLIS Affordable Housing
+CORNERSTONE CONDOS,1134 SW JEFFERSON ST,Portland,97201,45.5163194216689,-122.685961561302,46.0,6.0,,in_service,2000.0,Metro RLIS Affordable Housing
+5825 NE CENTER COMMONS WAY,5825 NE CENTER COMMONS WAY,Portland,97213,45.5270014763244,-122.603234645676,172.0,172.0,,in_service,1999.0,Metro RLIS Affordable Housing
+ARBOR GLEN APARTMENTS,2609 SE 145TH AVE,Portland,97236,45.5025366661032,-122.515053312133,97.0,96.0,24.0,in_service,1972.0,Metro RLIS Affordable Housing
+4629 NE 16TH AVE,4629 NE 16TH AVE,Portland,97211,45.5568249737483,-122.649033926414,1.0,1.0,,in_service,1949.0,Metro RLIS Affordable Housing
+4304 NE 12TH AVE,4304 NE 12TH AVE,Portland,97211,45.5546468345752,-122.653469840397,2.0,2.0,2.0,in_service,1914.0,Metro RLIS Affordable Housing
+4825 NE CLEVELAND AVE,4825 NE CLEVELAND AVE,Portland,97211,45.5581343924794,-122.665953816345,4.0,4.0,4.0,in_service,2001.0,Metro RLIS Affordable Housing
+4025 NE 9TH AVE,4025 NE 9TH AVE,Portland,97212,45.5524645738064,-122.656930151594,1.0,1.0,,in_service,1904.0,Metro RLIS Affordable Housing
+3546 NE 6TH AVE,3544 NE 6TH AVE,Portland,97212,45.5489076655452,-122.659304169072,2.0,2.0,,in_service,1922.0,Metro RLIS Affordable Housing
+4820 NE 26TH AVE,4820 NE 26TH AVE,Portland,97211,45.5580064342401,-122.63860253036,1.0,1.0,,in_service,1913.0,Metro RLIS Affordable Housing
+5115 NE 28TH AVE,5115 NE 28TH AVE,Portland,97211,45.5598247307312,-122.637100499321,1.0,1.0,,in_service,1922.0,Metro RLIS Affordable Housing
+4714 NE 13TH AVE,4714 NE 13TH AVE,Portland,97211,45.5570021170548,-122.652391890504,1.0,1.0,,in_service,1950.0,Metro RLIS Affordable Housing
+219 NE SHAVER ST,219 NE SHAVER ST,Portland,97212,45.5522772570915,-122.663053685788,3.0,3.0,3.0,in_service,2001.0,Metro RLIS Affordable Housing
+3958 NE GARFIELD AVE,3958 NE GARFIELD AVE,Portland,97212,45.5516242564864,-122.66227273193,4.0,4.0,,in_service,2001.0,Metro RLIS Affordable Housing
+TAYLOR APARTMENTS,1330 SE TAYLOR ST,Portland,97214,45.514832169953,-122.651861106248,10.0,10.0,,in_service,1969.0,Metro RLIS Affordable Housing
+BEACON MANOR APARTMENTS,3123 SE 8TH AVE,Portland,97202,45.5001268427825,-122.658242449969,20.0,20.0,,in_service,1970.0,Metro RLIS Affordable Housing
+926 SE MALL ST,926 SE MALL ST,Portland,97202,45.4912263548116,-122.65456820714,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+2418 SE CORA ST,2418 SE CORA ST,Portland,97202,45.4919297485263,-122.641114493141,1.0,1.0,,in_service,1910.0,Metro RLIS Affordable Housing
+2936 SE 17TH AVE,2936 SE 17TH AVE,Portland,97202,45.5014927945082,-122.648359960842,1.0,1.0,,in_service,1900.0,Metro RLIS Affordable Housing
+2542 SE 18TH AVE,2542 SE 18TH AVE,Portland,97202,45.5041226977886,-122.647325770778,1.0,1.0,,in_service,1903.0,Metro RLIS Affordable Housing
+648 SE 20TH AVE,648 SE 20TH AVE,Portland,97214,45.517841373599,-122.645285574337,1.0,1.0,,in_service,1930.0,Metro RLIS Affordable Housing
+3862 SE IVON ST,3862 SE IVON ST,Portland,97202,45.5039166086297,-122.622850312504,1.0,1.0,,in_service,1993.0,Metro RLIS Affordable Housing
+2617 SE 39TH AVE,2617 SE 39TH AVE,Portland,97202,45.503779314579,-122.622832616876,1.0,1.0,,in_service,1993.0,Metro RLIS Affordable Housing
+1527 SE CLINTON ST,1527 SE CLINTON ST,Portland,97202,45.5036549011723,-122.649969011448,1.0,1.0,,in_service,1895.0,Metro RLIS Affordable Housing
+3735 SE CLINTON ST,3735 SE CLINTON ST,Portland,97202,45.5035741669089,-122.62440752929,1.0,1.0,,in_service,1927.0,Metro RLIS Affordable Housing
+3134 SE 21ST AVE,3134 SE 21ST AVE,Portland,97202,45.5000624413107,-122.644309109589,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+2727 SE 16TH AVE,2727 SE 16TH AVE,Portland,97202,45.5030589572539,-122.649986211711,1.0,1.0,,in_service,1911.0,Metro RLIS Affordable Housing
+2205 SE STARK ST,2205 SE STARK ST,Portland,97214,45.5194807188421,-122.643283840624,1.0,1.0,,in_service,1900.0,Metro RLIS Affordable Housing
+1922 SE WASHINGTON ST,1922 SE WASHINGTON ST,Portland,97214,45.5183785611286,-122.645965360347,1.0,1.0,,in_service,1895.0,Metro RLIS Affordable Housing
+1829 SE WASHINGTON ST,1829 SE WASHINGTON ST,Portland,97214,45.5187652476958,-122.646752767467,1.0,1.0,,in_service,1940.0,Metro RLIS Affordable Housing
+2203-2205 SE MADISON ST,2203 SE MADISON ST,Portland,97214,45.5130840798958,-122.643339510535,2.0,2.0,2.0,in_service,1906.0,Metro RLIS Affordable Housing
+1421 SE PINE ST,1421 SE PINE ST,Portland,97214,45.5209052198831,-122.650983138677,1.0,1.0,,in_service,1890.0,Metro RLIS Affordable Housing
+805 SE 30TH AVE,805 SE 30TH AVE,Portland,97214,45.517001283333,-122.635023098455,1.0,1.0,,in_service,1907.0,Metro RLIS Affordable Housing
+314 SE 13TH AVE,314 SE 13TH AVE,Portland,97214,45.5204570615652,-122.652281837399,1.0,1.0,,in_service,1941.0,Metro RLIS Affordable Housing
+1419 SE OAK ST,1419 SE OAK ST,Portland,97214,45.5202611153784,-122.65111231824,1.0,1.0,,in_service,1904.0,Metro RLIS Affordable Housing
+1304-1318 SE PINE ST,1310 SE PINE ST,Portland,97214,45.5205890513014,-122.652280673692,6.0,5.0,,in_service,1926.0,Metro RLIS Affordable Housing
+1827 SE OAK ST,1827 SE OAK ST,Portland,97214,45.5202468602469,-122.646917830985,1.0,1.0,,in_service,1888.0,Metro RLIS Affordable Housing
+617 SE 20TH AVE,617 SE 20TH AVE,Portland,97214,45.518286280707,-122.645722165032,1.0,1.0,,in_service,1905.0,Metro RLIS Affordable Housing
+1926 SE WASHINGTON ST,1926 SE WASHINGTON ST,Portland,97214,45.5183782432908,-122.645867817392,1.0,1.0,,in_service,1895.0,Metro RLIS Affordable Housing
+612 SE 19TH AVE,612 SE 19TH AVE,Portland,97214,45.5183108123916,-122.646209650135,1.0,1.0,,in_service,1892.0,Metro RLIS Affordable Housing
+316 SE 31ST AVE,316 SE 31ST AVE,Portland,97214,45.520393458123,-122.632684562749,1.0,1.0,,in_service,1910.0,Metro RLIS Affordable Housing
+2037 SE 41ST AVE,2037 SE 41ST AVE,Portland,97214,45.508176056803,-122.620517486704,1.0,1.0,,in_service,1914.0,Metro RLIS Affordable Housing
+2522-2534 SE 18TH AVE,2528 SE 18TH AVE,Portland,97202,45.5043294584565,-122.647258321776,3.0,2.0,,in_service,1905.0,Metro RLIS Affordable Housing
+1803-1815 SE WOODWARD ST,1809 SE WOODWARD ST,Portland,97202,45.5021907458772,-122.6473436018,3.0,3.0,,in_service,1912.0,Metro RLIS Affordable Housing
+MARION STREET APARTMENTS,2020 SE MARION ST,Portland,97202,45.459492406193,-122.643553906158,24.0,5.0,1.0,in_service,1971.0,Metro RLIS Affordable Housing
+1225 SE YAMHILL ST,1225 SE YAMHILL ST,Portland,97214,45.5159204469423,-122.653033754844,8.0,8.0,,in_service,1908.0,Metro RLIS Affordable Housing
+WESTSHORE APARTMENTS,222 SW PINE ST,Portland,97204,45.521257295044,-122.673306686201,113.0,113.0,,in_service,1996.0,Metro RLIS Affordable Housing
+PACIFIC TOWER APARTMENTS,323 NW 4TH AVE,Portland,97209,45.5257294084485,-122.674690635661,156.0,156.0,11.0,in_service,2003.0,Metro RLIS Affordable Housing
+RITA MAE MANOR,13541 SE MARKET ST,Portland,97233,45.5114162753941,-122.523964828605,5.0,5.0,,in_service,1972.0,Metro RLIS Affordable Housing
+ALLEN FREMONT PLAZA,221 NE FREMONT ST,Portland,97212,45.5485470583959,-122.663126902118,64.0,63.0,1.0,in_service,1997.0,Metro RLIS Affordable Housing
+COUNTRY SQUIRE APARTMENTS,6720 SE 72ND AVE,Portland,97206,45.4737045319655,-122.588158949892,32.0,31.0,24.0,in_service,1973.0,Metro RLIS Affordable Housing
+LENTS TOWN CENTER PLAZA - RENTAL SCATTERED,9222 SE WOODSTOCK BLVD,Portland,97266,45.4789195152028,-122.568364251048,36.0,35.0,32.0,in_service,2003.0,Metro RLIS Affordable Housing
+COLLINS CIRCLE,1701 SW COLUMBIA ST,Portland,97201,45.5171521898747,-122.691920446547,124.0,52.0,4.0,in_service,2000.0,Metro RLIS Affordable Housing
+BOOKMARK APARTMENTS,2034 NE 40TH AVE,Portland,97212,45.5375341580347,-122.621431741362,47.0,19.0,11.0,in_service,2002.0,Metro RLIS Affordable Housing
+PEARL COURT APARTMENTS,920 NW KEARNEY ST,Portland,97209,45.5291873389755,-122.68081154505,199.0,199.0,28.0,in_service,1997.0,Metro RLIS Affordable Housing
+CAROLYN GARDENS APARTMENTS,13907 SE DIVISION ST,Portland,97236,45.5044777850338,-122.520276153924,12.0,12.0,12.0,in_service,2001.0,Metro RLIS Affordable Housing
+"COLUMBIA KNOLL, THE TERRACE, THE HEIGHTS",8200 NE SANDY BLVD,Portland,97220,45.5519283275879,-122.577188293679,326.0,323.0,143.0,in_service,2005.0,Metro RLIS Affordable Housing
+PINE POINT APARTMENTS,12025 SE PINE ST,Portland,97216,45.5206023298474,-122.538986438001,24.0,24.0,2.0,in_service,2001.0,Metro RLIS Affordable Housing
+NADINE PLACE,2270 SE CESAR E CHAVEZ BLVD,Portland,97214,45.5064412698435,-122.622362041659,6.0,6.0,,in_service,1910.0,Metro RLIS Affordable Housing
+INTERSTATE CROSSING & HEADSTART,6847 N INTERSTATE AVE,Portland,97217,45.5724922332223,-122.682507988224,12.0,12.0,12.0,in_service,2002.0,Metro RLIS Affordable Housing
+PUB GROUP LLC,4938 NE 15TH AVE,Portland,97211,45.5588652633711,-122.649408259249,11.0,9.0,6.0,in_service,1911.0,Metro RLIS Affordable Housing
+MCCULLER CROSSING,236 N KILLINGSWORTH ST,Portland,97217,45.5624294838681,-122.669361222141,40.0,40.0,32.0,in_service,2001.0,Metro RLIS Affordable Housing
+YWCA OF GREATER PORTLAND,1111 SW 10TH AVE,Portland,97205,45.5170546749122,-122.684057191913,36.0,36.0,,in_service,1987.0,Metro RLIS Affordable Housing
+FAMILY SCATTERED SITE PROJECT,4716 N MISSISSIPPI AVE,Portland,97217,45.5572896655181,-122.675618257201,13.0,13.0,13.0,in_service,2005.0,Metro RLIS Affordable Housing
+PARK VISTA,10918 SE STARK ST,Portland,97216,45.5184804705412,-122.550548663732,59.0,59.0,35.0,in_service,2001.0,Metro RLIS Affordable Housing
+SAFE HAVEN SHELTER,4610 N MARYLAND AVE,Portland,97217,45.5563933238742,-122.68079088306,10.0,10.0,,in_service,2018.0,Metro RLIS Affordable Housing
+PCRI - SCATTERED SITES (8),1455 NE GOING ST,Portland,97211,45.5565612597683,-122.650499636031,8.0,8.0,8.0,in_service,2001.0,Metro RLIS Affordable Housing
+BEYER COURT,9305 SE HAROLD ST,Portland,97266,45.4831710578323,-122.567474762055,14.0,14.0,14.0,in_service,1969.0,Metro RLIS Affordable Housing
+TISTILAL VILLAGE,7622 N GLOUCESTER AVE,Portland,97203,45.5826524788542,-122.72252805525,34.0,33.0,33.0,in_service,1999.0,Metro RLIS Affordable Housing
+3832-3840 SE CENTER ST,3832 SE CENTER ST,Portland,97202,45.4938053287833,-122.623033240551,5.0,5.0,1.0,in_service,1969.0,Metro RLIS Affordable Housing
+JOHNSON CREEK COMMONS,7940 SE 72ND AVE,Portland,97206,45.4657478600665,-122.588569394175,15.0,15.0,5.0,in_service,1973.0,Metro RLIS Affordable Housing
+GRETCHEN KAFOURY COMMONS,1240 SW COLUMBIA ST,Portland,97201,45.5159111859366,-122.687443645746,129.0,129.0,5.0,in_service,2002.0,Metro RLIS Affordable Housing
+LAURELHURST APARTMENTS,804 SE CESAR E CHAVEZ BLVD,Portland,97214,45.5170282095146,-122.622512769422,23.0,23.0,,in_service,1917.0,Metro RLIS Affordable Housing
+REX ARMS APARMENTS,1230 SE MORRISON ST,Portland,97214,45.5169823040331,-122.652823970512,62.0,62.0,,in_service,1913.0,Metro RLIS Affordable Housing
+TAFT HOME,1337 SW WASHINGTON ST,Portland,97205,45.5225469931911,-122.685009977448,85.0,85.0,,in_service,1906.0,Metro RLIS Affordable Housing
+ALBINA PLAZA,4012 N BORTHWICK AVE,Portland,97227,45.5524846492275,-122.673708976587,8.0,8.0,4.0,in_service,1972.0,Metro RLIS Affordable Housing
+RUSSET HOUSE,432 NE RUSSET ST,Portland,97211,45.5777318268702,-122.66051556682,1.0,1.0,1.0,in_service,1920.0,Metro RLIS Affordable Housing
+VILLA DE SUENOS,6518 NE KILLINSWORTH ST,Portland,97218,45.5622667129408,-122.596029906972,28.0,28.0,28.0,in_service,1999.0,Metro RLIS Affordable Housing
+MLK/WYGANT,4606 NE MARTIN LUTHER KING JR BLVD,Portland,97211,45.5568619728778,-122.66117911318,46.0,33.0,35.0,in_service,1998.0,Metro RLIS Affordable Housing
+WOODSTOCK HOUSE,7003 SE WOODSTOCK BLVD,Portland,97206,45.4797412786403,-122.591026274368,2.0,2.0,2.0,in_service,1999.0,Metro RLIS Affordable Housing
+ST FRANCIS PLACE,4943 NE 10TH AVE,Portland,97211,45.5588693285615,-122.655872164243,3.0,3.0,3.0,in_service,2006.0,Metro RLIS Affordable Housing
+4812-4818 N COMMERCIAL AVE,4812 N COMMERCIAL AVE,Portland,97217,45.5577765379216,-122.670842003761,2.0,2.0,2.0,in_service,2005.0,Metro RLIS Affordable Housing
+FREMONT MANOR APARTMENTS,233 N FREMONT ST,Portland,97227,45.5485878520672,-122.668508051417,28.0,28.0,10.0,in_service,1969.0,Metro RLIS Affordable Housing
+COLUMBIA VIEW APARTMENTS,4631 NE 118TH AVE,Portland,97220,45.5567703180523,-122.541967811904,7.0,7.0,7.0,in_service,2000.0,Metro RLIS Affordable Housing
+SCHILLER-LIEBE FAMILY HOUSING,9326 SE SCHILLER WAY,Portland,97266,45.4872429161736,-122.567366671654,26.0,26.0,26.0,in_service,1999.0,Metro RLIS Affordable Housing
+THE ROSE APARTMENTS,631 SE TAYLOR ST,Portland,97214,45.5152080481021,-122.659021266874,58.0,58.0,,in_service,1910.0,Metro RLIS Affordable Housing
+WILSHIRE APARTMENTS,420 SE GRAND AVE,Portland,97214,45.5195789496097,-122.660363750389,42.0,42.0,,in_service,1999.0,Metro RLIS Affordable Housing
+ANKENY WOODS,11930 SE ANKENY ST,Portland,97216,45.5215601369081,-122.539423568658,42.0,42.0,26.0,in_service,1997.0,Metro RLIS Affordable Housing
+UNION STATION B,815 NW NAITO PKWY,Portland,97209,45.5289306589985,-122.674767630663,321.0,128.0,,in_service,2003.0,Metro RLIS Affordable Housing
+MACDONALD RESIDENCE,605 NW COUCH ST,Portland,97209,45.5238905505403,-122.676632258126,54.0,54.0,,in_service,1999.0,Metro RLIS Affordable Housing
+HAMILTON PARK APARTMENTS,1973 SE 122ND AVE,Portland,97233,45.5081136239984,-122.539304298949,76.0,15.0,53.0,in_service,1969.0,Metro RLIS Affordable Housing
+GLADSTONE SQUARE APARTMENTS,12020 SE GLADSTONE ST,Portland,97266,45.4928630051871,-122.539577123446,48.0,48.0,32.0,in_service,1998.0,Metro RLIS Affordable Housing
+HAMILTON WEST,1212 SW CLAY ST,Portland,97201,45.5151547525307,-122.687563196516,152.0,152.0,,in_service,1999.0,Metro RLIS Affordable Housing
+FESSENDEN COURT APARTMENTS,7936 N FESSENDEN ST,Portland,97203,45.5955228310647,-122.74483635523,9.0,9.0,9.0,in_service,1998.0,Metro RLIS Affordable Housing
+FARGO COURT,430 NE FARGO ST,Portland,97212,45.5460705034027,-122.660767084812,2.0,2.0,2.0,in_service,2005.0,Metro RLIS Affordable Housing
+CEDAR PLACE,130 NE LOMBARD ST,Portland,97211,45.5769630023407,-122.664206715138,5.0,5.0,5.0,in_service,1998.0,Metro RLIS Affordable Housing
+GRAND OAKS,418 SE GRAND AVE,Portland,97214,45.5197220142971,-122.660481363151,42.0,42.0,,in_service,1911.0,Metro RLIS Affordable Housing
+CASCADE CROSSING,10535 E BURNSIDE ST,Portland,97216,45.5231135752758,-122.553846841406,74.0,74.0,58.0,in_service,1999.0,Metro RLIS Affordable Housing
+IVON COURT,"2627 SE 125TH AVE
+2627 SE 125TH AVE",Portland,97236,45.5027757924872,-122.535066377305,8.0,8.0,8.0,in_service,1999.0,Metro RLIS Affordable Housing
+SEQUOIA SQUARE,247 SE 160TH AVE,Portland,97233,45.5208636934005,-122.499692298112,62.0,61.0,52.0,in_service,2001.0,Metro RLIS Affordable Housing
+MAGGIE GIBSON PLAZA,1700 NE ALBERTA ST,Portland,97211,45.5589011767076,-122.647478942264,9.0,9.0,6.0,in_service,1908.0,Metro RLIS Affordable Housing
+CENTER VILLAGE - PHASE II,5815 NE GLISAN ST,Portland,97213,45.5266615079608,-122.60358888254,60.0,60.0,60.0,in_service,2000.0,Metro RLIS Affordable Housing
+THE COMMONS,5800 NE CENTER COMMONS WAY,Portland,97213,45.5272044789793,-122.603129516398,172.0,172.0,24.0,in_service,2000.0,Metro RLIS Affordable Housing
+BUCKMAN HEIGHTS APARTMENTS,430 NE 16TH AVE,Portland,97232,45.525807966687,-122.649007008716,144.0,144.0,20.0,in_service,1998.0,Metro RLIS Affordable Housing
+FIFTH AVE PLACE APARTMENTS,314 NW 5TH AVE,Portland,97209,45.5254472331139,-122.675168402862,70.0,70.0,5.0,in_service,1999.0,Metro RLIS Affordable Housing
+RODNEY RECEIVERSHIP,4135 NE RODNEY AVE,Portland,97211,45.5538774926574,-122.664978614934,1.0,1.0,1.0,in_service,1982.0,Metro RLIS Affordable Housing
+FIFTH AVENUE COURT APARTMENTS,234 NW 5TH AVE,Portland,97209,45.5250097728834,-122.675148677114,96.0,39.0,21.0,in_service,1999.0,Metro RLIS Affordable Housing
+OTESHA PLACE,4933 NE 15TH AVE,Portland,97211,45.558781531548,-122.649909997322,11.0,11.0,7.0,in_service,1998.0,Metro RLIS Affordable Housing
+VILLAGE AT LOVEJOY FOUNTAIN,245 SW LINCOLN ST,Portland,97201,45.5086273390374,-122.680005415797,198.0,40.0,44.0,in_service,1999.0,Metro RLIS Affordable Housing
+SABIN - 5017-5020 NE 6TH,5017 NE 6TH AVE,Portland,97211,45.5594548781346,-122.659763588255,2.0,2.0,2.0,in_service,1916.0,Metro RLIS Affordable Housing
+734 NE SHAVER ST,734 NE SHAVER ST,Portland,97212,45.5518849623045,-122.657783605206,1.0,1.0,1.0,in_service,1913.0,Metro RLIS Affordable Housing
+632 N WEBSTER ST,632 N WEBSTER ST,Portland,97217,45.559530470036,-122.673740226489,2.0,1.0,2.0,in_service,1912.0,Metro RLIS Affordable Housing
+5036 NE 23RD AVE,5036 NE 23RD AVE,Portland,97211,45.5596166334528,-122.641596171251,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+5330 NE 17TH AVE,5330 NE 17TH AVE,Portland,97211,45.5620459337932,-122.647431973576,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+5029 - 5031 NE 7TH AVE,5029 NE 7TH AVE,Portland,97211,45.5596521850704,-122.65874305812,2.0,1.0,2.0,in_service,1923.0,Metro RLIS Affordable Housing
+4629 NE 22ND AVE,4629 NE 22ND AVE,Portland,97211,45.5568542270595,-122.643179130917,1.0,1.0,1.0,in_service,1908.0,Metro RLIS Affordable Housing
+ELDERPLACE AT CULLY,5119 NE 57TH AVE,Portland,97218,45.5595880554436,-122.604770093534,42.0,6.0,,in_service,1996.0,Metro RLIS Affordable Housing
+4616 NE MALLORY AVE,4616 NE MALLORY AVE,Portland,97211,45.5566886060069,-122.66336865064,1.0,1.0,1.0,in_service,1907.0,Metro RLIS Affordable Housing
+ROYAL PALM HOTEL,310 NW FLANDERS ST,Portland,97209,45.5258071861875,-122.673787537163,50.0,50.0,,in_service,1997.0,Metro RLIS Affordable Housing
+3513 NE CLEVELAND AVE,3513 NE CLEVELAND AVE,Portland,97212,45.5485488230193,-122.665908137979,2.0,1.0,2.0,in_service,1965.0,Metro RLIS Affordable Housing
+4918 NE 9TH AVE,4918 NE 9TH AVE,Portland,97211,45.5584319458947,-122.656269807734,1.0,1.0,1.0,in_service,1901.0,Metro RLIS Affordable Housing
+7864 SE 64TH AVE,7864 SE 64TH AVE,Portland,97206,45.4664051611493,-122.597528036864,1.0,1.0,1.0,in_service,1951.0,Metro RLIS Affordable Housing
+6046 SE FLAVEL ST - SFR,6046 SE FLAVEL ST,Portland,97206,45.4684391148518,-122.601114604637,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+6040 SE FLAVEL ST - SFR,6040 SE FLAVEL ST,Portland,97206,45.4683841994283,-122.601340291167,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+4922 SE TENINO DR - SFR,4922 SE TENINO DR,Portland,97206,45.4657964847687,-122.612244997499,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+1202 NE MASON ST,1202 NE MASON ST,Portland,97211,45.5531392653247,-122.653510963111,1.0,1.0,1.0,in_service,1888.0,Metro RLIS Affordable Housing
+4918 SE TENINO DR - SFR,4918 SE TENINO DR,Portland,97206,45.4657963567554,-122.61243979148,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+7419 SE BYBEE BLVD,7419 SE BYBEE BLVD,Portland,97206,45.4725388604649,-122.587089989585,1.0,1.0,1.0,in_service,1995.0,Metro RLIS Affordable Housing
+1514 NE LIBERTY ST,1514 NE LIBERTY ST,Portland,97211,45.5703297736903,-122.649682862975,1.0,1.0,1.0,in_service,1907.0,Metro RLIS Affordable Housing
+4911 SE TENINO DR - SFR,4911 SE TENINO DR,Portland,97206,45.4662037736314,-122.612536037157,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+6122 SE TOLMAN ST,6122 SE TOLMAN ST,Portland,97206,45.4771776579611,-122.600432635351,1.0,1.0,1.0,in_service,1995.0,Metro RLIS Affordable Housing
+TABOR HOUSE,326 SE 76TH AVE,Portland,97215,45.5198258288681,-122.584363586712,1.0,1.0,1.0,in_service,1884.0,Metro RLIS Affordable Housing
+LAFAYETTE APARTMENTS,8714 SE LAFAYETTE ST,Portland,97266,45.496179588295,-122.572531287473,32.0,10.0,1.0,in_service,1994.0,Metro RLIS Affordable Housing
+10014 SE INSLEY ST,10014 SE INSLEY ST,Portland,97266,45.4831644541941,-122.560356678031,1.0,1.0,,in_service,1996.0,Metro RLIS Affordable Housing
+PISGAH HOME COLONY,7511 SE HENRY ST,Portland,97206,45.4771880600307,-122.585410141712,31.0,31.0,,in_service,1961.0,Metro RLIS Affordable Housing
+1345 NE 59TH AVE,1345 NE 59TH AVE,Portland,97213,45.5329069125573,-122.603396290379,1.0,1.0,1.0,in_service,1926.0,Metro RLIS Affordable Housing
+10146 N POLK AVE,10146 N POLK AVE,Portland,97203,45.5976886629882,-122.74057545983,1.0,1.0,1.0,in_service,1926.0,Metro RLIS Affordable Housing
+THE VICTORIAN,2255 W BURNSIDE ST,Portland,97210,45.5236032813707,-122.697558484131,62.0,61.0,,in_service,1908.0,Metro RLIS Affordable Housing
+525 NE JESSUP ST,525 NE JESSUP ST,Portland,97211,45.5641883185915,-122.659815933339,1.0,1.0,1.0,in_service,1909.0,Metro RLIS Affordable Housing
+CEEL-OCKS MANOR,7602 N GLOUCESTER AVE,Portland,97203,45.5826524788542,-122.72252805525,44.0,43.0,,in_service,1973.0,Metro RLIS Affordable Housing
+4831 NE 13TH AVE,4831 NE 13TH AVE,Portland,97211,45.5577893353824,-122.652963873436,1.0,1.0,1.0,in_service,1910.0,Metro RLIS Affordable Housing
+BETTY CAMPBELL BUILDING,3987 N MISSISSIPPI AVE,Portland,97227,45.5519479700209,-122.675829127029,9.0,6.0,5.0,in_service,2004.0,Metro RLIS Affordable Housing
+FAULKNER PLACE,13317 SE POWELL BLVD,Portland,97236,45.4980317009451,-122.525840328891,9.0,9.0,,in_service,1994.0,Metro RLIS Affordable Housing
+3610 N MISSISSIPPI AVE,3610 N MISSISSIPPI AVE,Portland,97227,45.5489833126334,-122.675226489459,1.0,1.0,1.0,in_service,1904.0,Metro RLIS Affordable Housing
+GLISAN STREET HOUSE,2375 NW GLISAN ST,Portland,97210,45.5263836152165,-122.70009405356,10.0,10.0,,in_service,1904.0,Metro RLIS Affordable Housing
+846 N WEBSTER ST,846 NE WEBSTER ST,Portland,97211,45.5594959405533,-122.675997963544,1.0,1.0,1.0,in_service,1908.0,Metro RLIS Affordable Housing
+3904 NE 6TH AVE,3904 NE 6TH AVE,Portland,97212,45.5509414293466,-122.659287208857,2.0,2.0,2.0,in_service,1916.0,Metro RLIS Affordable Housing
+4525 NE 11TH AVE,4525 NE 11TH AVE,Portland,97211,45.5558868038234,-122.654947940726,1.0,1.0,1.0,in_service,1940.0,Metro RLIS Affordable Housing
+HAZELWOOD RETIREMENT COMMUNITY,11939 NE DAVIS ST,Portland,97220,45.5243973235792,-122.539528641643,120.0,96.0,24.0,in_service,1997.0,Metro RLIS Affordable Housing
+854 NE KILLINGSWORTH ST,854 NE KILLINGSWORTH ST,Portland,97211,45.5624965714774,-122.656816697922,1.0,1.0,1.0,in_service,1926.0,Metro RLIS Affordable Housing
+5049 NE 14TH AVE,5049 NE 14TH AVE,Portland,97211,45.5598752606471,-122.651958154756,1.0,1.0,1.0,in_service,1911.0,Metro RLIS Affordable Housing
+4411-4413 NE 7TH AVE,4411 NE 7TH AVE,Portland,97211,45.5551881860801,-122.658764048286,2.0,2.0,2.0,in_service,1914.0,Metro RLIS Affordable Housing
+744 NE ROSELAWN ST,744 NE ROSELAWN ST,Portland,97211,45.5610054721604,-122.657965829929,1.0,1.0,1.0,in_service,1914.0,Metro RLIS Affordable Housing
+738 NE EMERSON ST,738 NE EMERSON ST,Portland,97211,45.5616271808989,-122.658146878788,1.0,1.0,1.0,in_service,1922.0,Metro RLIS Affordable Housing
+921 NE ROSELAWN ST,921 NE ROSELAWN ST,Portland,97211,45.5614032460077,-122.655777531644,1.0,1.0,1.0,in_service,1909.0,Metro RLIS Affordable Housing
+904 NE SUMNER ST,904 NE SUMNER ST,Portland,97211,45.5604267961541,-122.656109441997,1.0,1.0,1.0,in_service,1926.0,Metro RLIS Affordable Housing
+VESIA LOVING,4531 N MISSISSIPPI AVE,Portland,97217,45.5559700864346,-122.676263175182,4.0,4.0,,in_service,1993.0,Metro RLIS Affordable Housing
+6813 SE 67TH AVE,6813 SE 67TH AVE,Portland,97206,45.4732749069981,-122.594391465605,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+4533 NE 9TH AVE,4533 NE 9TH AVE,Portland,97211,45.5560309069651,-122.656896416081,1.0,1.0,1.0,in_service,1906.0,Metro RLIS Affordable Housing
+730 NE EMERSON ST,730 NE EMERSON ST,Portland,97211,45.5616676683123,-122.658322732876,1.0,1.0,,in_service,1923.0,Metro RLIS Affordable Housing
+878 NE EMERSON ST,878 NE EMERSON ST,Portland,97211,45.5616237758632,-122.656450711483,1.0,1.0,1.0,in_service,1922.0,Metro RLIS Affordable Housing
+914 NE SUMNER ST,914 NE SUMNER ST,Portland,97211,45.5604263951792,-122.655937653777,1.0,1.0,1.0,in_service,1922.0,Metro RLIS Affordable Housing
+4619 SE FLAVEL DR,4619 SE FLAVEL DR,Portland,97206,45.4693849138309,-122.614542865477,1.0,1.0,1.0,in_service,1996.0,Metro RLIS Affordable Housing
+5259 NE 9TH AVE,5259 NE 9TH AVE,Portland,97211,45.5614389080976,-122.656541523767,1.0,1.0,1.0,in_service,1925.0,Metro RLIS Affordable Housing
+866 NE EMERSON ST,866 NE EMERSON ST,Portland,97211,45.5616242423403,-122.656636487402,1.0,1.0,1.0,in_service,1922.0,Metro RLIS Affordable Housing
+821 NE SUMNER ST,821 NE SUMNER ST,Portland,97211,45.5608000407131,-122.656992839568,1.0,1.0,1.0,in_service,1945.0,Metro RLIS Affordable Housing
+4945 NE GRAND AVE,4945 NE GRAND AVE,Portland,97211,45.5588263985803,-122.660750584611,3.0,3.0,1.0,in_service,1923.0,Metro RLIS Affordable Housing
+703 NE WEBSTER ST,703 NE WEBSTER ST,Portland,97211,45.5601987418011,-122.658271074861,1.0,1.0,1.0,in_service,1925.0,Metro RLIS Affordable Housing
+CLINTON STREET APARTMENTS,9268 SE CLINTON ST,Portland,97266,45.5022512246066,-122.567488753196,16.0,8.0,,in_service,1996.0,Metro RLIS Affordable Housing
+5033 NE 26TH AVE,5033 NE 26TH AVE,Portland,97211,45.5596208518594,-122.639175012782,1.0,1.0,1.0,in_service,1906.0,Metro RLIS Affordable Housing
+WYGANT STREET APARTMENTS,4808 NE 8TH AVE,Portland,97211,45.5574261401712,-122.657382490091,5.0,5.0,2.0,in_service,1910.0,Metro RLIS Affordable Housing
+5528 NE 17TH AVE,5528 NE 17TH AVE,Portland,97211,45.5631282025312,-122.647714200831,1.0,1.0,1.0,in_service,1923.0,Metro RLIS Affordable Housing
+HOPEWELL APARTMENTS,1264 SW CHELTENHAM ST,Portland,97239,45.4800610530298,-122.692228398248,12.0,11.0,4.0,in_service,1996.0,Metro RLIS Affordable Housing
+26 NE IVY ST,26 NE IVY ST,Portland,97212,45.5472342146822,-122.665849532812,1.0,1.0,1.0,in_service,1906.0,Metro RLIS Affordable Housing
+1214 NE EMERSON ST,1214 NE EMERSON ST,Portland,97211,45.5616304790984,-122.65282786525,1.0,1.0,1.0,in_service,1916.0,Metro RLIS Affordable Housing
+9718 N CHARLESTON AVE,9718 N CHARLESTON AVE,Portland,97203,45.5973057482118,-122.747185229606,6.0,6.0,,in_service,1995.0,Metro RLIS Affordable Housing
+VILLA DE CLARA VISTA,5300 NE CULLY BLVD,Portland,97218,45.5624020722946,-122.593916530695,133.0,118.0,,in_service,2016.0,Metro RLIS Affordable Housing
+RODNEY STREET GROUP HOME,3033 NE RODNEY AVE,Portland,97212,45.5450561948483,-122.664409283977,6.0,6.0,,in_service,1996.0,Metro RLIS Affordable Housing
+305 N SHAVER ST,305 N SHAVER ST,Portland,97227,45.5521947867926,-122.669226145872,1.0,1.0,1.0,in_service,2005.0,Metro RLIS Affordable Housing
+ALBINA CORNER,409 NE SAN RAFAEL ST,Portland,97212,45.5371945256966,-122.661276198359,48.0,47.0,16.0,in_service,1996.0,Metro RLIS Affordable Housing
+ST JAMES APARTMENTS,1312 SW 10TH AVE,Portland,97201,45.5155868291876,-122.684110752042,122.0,122.0,4.0,in_service,1994.0,Metro RLIS Affordable Housing
+BARBARA ROBERTS HOUSE,5009 NE KILLINGSWORTH ST,Portland,97218,45.563000704971,-122.611069485292,10.0,10.0,,in_service,1995.0,Metro RLIS Affordable Housing
+BELMONT DAIRY,3342 SE MORRISON ST,Portland,97214,45.5166597175118,-122.630213911225,85.0,66.0,18.0,in_service,1996.0,Metro RLIS Affordable Housing
+MAYA ANGELOU APARTMENTS,4069 N KERBY AVE,Portland,97227,45.5526872186984,-122.672840727773,43.0,41.0,18.0,in_service,1994.0,Metro RLIS Affordable Housing
+BRIDGEVIEW APARTMENTS,6816 N TRUMBULL AVE,Portland,97203,45.5917651122873,-122.761916331355,14.0,13.0,,in_service,1971.0,Metro RLIS Affordable Housing
+URBAN LEAGUE/ENTERPRISE PRE-DEV,10 N RUSSELL ST,Portland,97227,45.5407661944041,-122.666868002625,24.0,24.0,,in_service,2007.0,Metro RLIS Affordable Housing
+CLARK CENTER ANNEX,323 SE HAWTHORNE BLVD,Portland,97214,45.5124605789589,-122.662126913707,22.0,22.0,,in_service,1923.0,Metro RLIS Affordable Housing
+VILLAGE AT THE HEADWATERS,3131 SW MARIGOLD ST,Portland,97219,45.4610389765233,-122.709054574255,56.0,55.0,13.0,in_service,2006.0,Metro RLIS Affordable Housing
+THE MORRISON,635 SW 19TH AVE,Portland,97205,45.5223270954251,-122.69027670922,140.0,140.0,,in_service,2007.0,Metro RLIS Affordable Housing
+OUR HOUSE,2727 SE ALDER ST,Portland,97214,45.5182128497928,-122.63738544126,14.0,14.0,,in_service,1959.0,Metro RLIS Affordable Housing
+ESTATE HOTEL,225 NW COUCH ST,Portland,97209,45.5240567779772,-122.673081332219,194.0,194.0,,in_service,1914.0,Metro RLIS Affordable Housing
+CLARA VISTA TOWNHOMES,6706 NE KILLINGSWORTH ST,Portland,97218,45.5624020722946,-122.593916530695,44.0,44.0,44.0,in_service,2006.0,Metro RLIS Affordable Housing
+FIR GROVE APARTMENTS,4820 SE 122ND AVE,Portland,97236,45.4870111066972,-122.536921213936,31.0,30.0,1.0,in_service,2006.0,Metro RLIS Affordable Housing
+THE JEFFREY,1201 SW 11TH AVE,Portland,97205,45.5169810438844,-122.685208125694,80.0,79.0,,in_service,2008.0,Metro RLIS Affordable Housing
+HAZELWOOD STATION APARTMENTS,14719 E BURNSIDE ST,Portland,97233,45.5226259250122,-122.511511665451,60.0,60.0,42.0,in_service,2005.0,Metro RLIS Affordable Housing
+839 NE SUMNER ST,839 NE SUMNER ST,Portland,97211,45.5607992419852,-122.656602471874,1.0,1.0,1.0,in_service,1922.0,Metro RLIS Affordable Housing
+4725 NE 9TH AVE,4725 NE 9TH AVE,Portland,97211,45.5571552963857,-122.656877566913,2.0,2.0,1.0,in_service,1922.0,Metro RLIS Affordable Housing
+5111 NE 29TH AVE,5111 NE 29TH AVE,Portland,97211,45.559827390911,-122.636127554824,1.0,1.0,1.0,in_service,1908.0,Metro RLIS Affordable Housing
+BILTMORE HOTEL,310 NW 6TH AVE,Portland,97209,45.5254268797073,-122.676184002979,76.0,76.0,,in_service,1905.0,Metro RLIS Affordable Housing
+FLOYD LIGHT APARTMENTS,1005 SE 106TH AVE,Portland,97216,45.5159609825675,-122.554478226177,51.0,50.0,23.0,in_service,1997.0,Metro RLIS Affordable Housing
+LEANDER COURT,4620 SE 122ND AVE,Portland,97206,45.4889056632693,-122.537087629149,37.0,37.0,37.0,in_service,2017.0,Metro RLIS Affordable Housing
+SPRINGWATER COMMONS,6430 SE 128TH AVE,Portland,97236,45.4764882468661,-122.531675408936,36.0,35.0,31.0,in_service,2004.0,Metro RLIS Affordable Housing
+KATERI PARK,3600 SE 28TH AVE,Portland,97202,45.4964881461229,-122.637119528178,50.0,49.0,42.0,in_service,2005.0,Metro RLIS Affordable Housing
+MADRONA STUDIOS,10 N WEIDLER ST,Portland,97227,45.533867885064,-122.667133108804,176.0,175.0,,in_service,1997.0,Metro RLIS Affordable Housing
+SITKA APARTMENTS,1115 NW NORTHRUP ST,Portland,97209,45.5318337144099,-122.682697648693,209.0,203.0,47.0,in_service,2005.0,Metro RLIS Affordable Housing
+FOUNTAIN PLACE APARTMENTS,929 SW SALMON ST,Portland,97205,45.5180945193056,-122.682602376078,80.0,80.0,3.0,in_service,1914.0,Metro RLIS Affordable Housing
+VILLAS DE MARIPOSAS,5020 NE KILLINGSWORTH ST,Portland,97218,45.5621307458393,-122.611067893644,71.0,70.0,71.0,in_service,2004.0,Metro RLIS Affordable Housing
+PCRI - FAB 4 SCATTERED SITE,4006 NE 8TH AVE,Portland,97212,45.5521917650743,-122.657322595931,5.0,5.0,4.0,in_service,1904.0,Metro RLIS Affordable Housing
+RICHARD L. HARRIS BUILDING,8 NW 8TH AVE,Portland,97209,45.523202090226,-122.678228754458,180.0,180.0,,in_service,2004.0,Metro RLIS Affordable Housing
+LENTS VILLAGE APARTMENTS,10325 SE HOLGATE BLVD,Portland,97266,45.4904155544341,-122.556290991886,63.0,63.0,7.0,in_service,1997.0,Metro RLIS Affordable Housing
+MIDLAND COMMONS APARTMENTS,2830 SE 127TH AVE,Portland,97236,45.5022673886462,-122.532211635215,46.0,44.0,5.0,in_service,2004.0,Metro RLIS Affordable Housing
+HALSEY STREET ARMS,12428 NE HALSEY ST,Portland,97230,45.5330441660238,-122.534664504587,55.0,55.0,,in_service,1967.0,Metro RLIS Affordable Housing
+LINCOLN WOODS,2333 SE 130TH AVE,Portland,97233,45.5051950971742,-122.530636657465,70.0,70.0,51.0,in_service,2007.0,Metro RLIS Affordable Housing
+THE WATERSHED AT HILLSDALE,6388 SW CAPITOL HWY,Portland,97239,45.4776327060666,-122.697455070062,51.0,50.0,,in_service,2008.0,Metro RLIS Affordable Housing
+ST FRANCIS,1024 SW MAIN ST,Portland,97205,45.5172806021745,-122.684353827269,132.0,131.0,25.0,in_service,2003.0,Metro RLIS Affordable Housing
+MCCOY VILLAGE,4430 NE MARTIN LUTHER KING JR BLVD,Portland,97211,45.555017494693,-122.661185916666,55.0,54.0,44.0,in_service,2001.0,Metro RLIS Affordable Housing
+ANDREA PLACE,7621 N PORTSMOUTH AVE,Portland,97203,45.5833379887239,-122.723901936992,15.0,15.0,,in_service,1997.0,Metro RLIS Affordable Housing
+FENWICK AVENUE APARTMENTS,8428 N FENWICK AVE,Portland,97217,45.5840360255042,-122.684364326882,27.0,27.0,19.0,in_service,2004.0,Metro RLIS Affordable Housing
+BUKAS PLACE,2705 N KILLINGSWORTH ST,Portland,97217,45.5629179761491,-122.694784706842,7.0,7.0,7.0,in_service,2003.0,Metro RLIS Affordable Housing
+EMERSON CORNER DUPLEXES,1031 NE EMERSON ST,Portland,97211,45.561918460449,-122.65440348569,4.0,4.0,,in_service,2005.0,Metro RLIS Affordable Housing
+74 NE RUSSET ST,74 NE RUSSET ST,Portland,97211,45.5777308104884,-122.665203431531,5.0,5.0,4.0,in_service,2005.0,Metro RLIS Affordable Housing
+PARK TERRACE,315 N ALBERTA ST,Portland,97217,45.5596816267365,-122.670236441339,88.0,86.0,,in_service,1944.0,Metro RLIS Affordable Housing
+CLINTON RIDGE APARTMENTS,2730 SE 92ND AVE,Portland,97266,45.5019294503648,-122.567534824159,29.0,28.0,1.0,in_service,2003.0,Metro RLIS Affordable Housing
+PLAZA DE CEDRO,10801 NE FREMONT ST,Portland,97220,45.5488113823773,-122.551446076523,6.0,6.0,6.0,in_service,2004.0,Metro RLIS Affordable Housing
+1773 NE JUNIOR ST,1773 NE JUNIOR ST,Portland,97211,45.5713795668745,-122.646813999532,1.0,1.0,1.0,in_service,1915.0,Metro RLIS Affordable Housing
+SW 45TH AVENUE/CARRIAGE HILL APARTMENTS,8010 SW 45TH AVE,Portland,97219,45.4663984157915,-122.722583077262,3.0,3.0,3.0,in_service,2002.0,Metro RLIS Affordable Housing
+DOUGLAS MEADOWS,2645 SE 127TH AVE,Portland,97236,45.5027785518215,-122.533009493665,8.0,8.0,,in_service,2003.0,Metro RLIS Affordable Housing
+STADIUM STATION APARTMENTS,737 SW 17TH AVE,Portland,97205,45.521563706255,-122.689752042279,115.0,115.0,,in_service,1998.0,Metro RLIS Affordable Housing
+LOS JARDINES,5530 NE 60TH AVE,Portland,97218,45.5633495555199,-122.600286362468,43.0,42.0,43.0,in_service,2002.0,Metro RLIS Affordable Housing
+ROSELAWN COTTAGE AND LODGE,907 NE ROSELAWN ST,Portland,97211,45.5614031732287,-122.656022848929,8.0,3.0,4.0,in_service,2002.0,Metro RLIS Affordable Housing
+STATION PLACE TOWER,1020 NW 9TH AVE,Portland,97209,45.5303359176683,-122.679744456814,176.0,176.0,15.0,in_service,2005.0,Metro RLIS Affordable Housing
+YARDS AT UNION STATION,945 NW NAITO PKWY,Portland,97209,45.5299654102439,-122.675776106488,158.0,158.0,,in_service,2002.0,Metro RLIS Affordable Housing
+EMERSON TRIPLEX,1309 NE EMERSON ST,Portland,97211,45.5619149368496,-122.651744689969,3.0,3.0,3.0,in_service,2005.0,Metro RLIS Affordable Housing
+ROSEMONT COURT,597 N DEKUM ST,Portland,97217,45.572040977138,-122.672749676533,100.0,100.0,4.0,in_service,1916.0,Metro RLIS Affordable Housing
+7011 NE EMERSON STREET,7011 NE EMERSON ST,Portland,97218,45.5617431508095,-122.5910263365,2.0,2.0,1.0,in_service,1941.0,Metro RLIS Affordable Housing
+JUBILEE REDWOODS,1249 N PRESCOTT ST,Portland,97217,45.5557020357435,-122.6797925383,8.0,8.0,,in_service,1927.0,Metro RLIS Affordable Housing
+CARITAS VILLA,16060 E BURNSIDE ST,Portland,97233,45.5217076808095,-122.49802679378,30.0,30.0,,in_service,1991.0,Metro RLIS Affordable Housing
+M. CARTER PLAZA,626 NE BRAZEE ST,Portland,97212,45.5400037042403,-122.65901834278,56.0,56.0,12.0,in_service,1973.0,Metro RLIS Affordable Housing
+A PHILLIPS SQUARE,606 NE SACRAMENTO ST,Portland,97212,45.5391978377526,-122.659433356906,18.0,18.0,,in_service,1970.0,Metro RLIS Affordable Housing
+MARTIN LUTHER KING MANOR,6620 NE 6TH AVE,Portland,97211,45.5715877363733,-122.658802507213,16.0,15.0,1.0,in_service,1990.0,Metro RLIS Affordable Housing
+L ROY GARDENS,735 N FREMONT ST,Portland,97227,45.5481657402111,-122.674030996304,18.0,18.0,11.0,in_service,1974.0,Metro RLIS Affordable Housing
+BURLWOOD APARTMENTS,14992 SE DIVISION ST,Portland,97236,45.5036535021595,-122.509338626994,35.0,32.0,8.0,in_service,1970.0,Metro RLIS Affordable Housing
+GRACE PECK TERRACE,1839 NE 14TH AVE,Portland,97212,45.5359552791689,-122.65179067642,95.0,95.0,,in_service,1980.0,Metro RLIS Affordable Housing
+VERMONT SPRINGS,1825 SW VERMONT ST,Portland,97219,45.4762814124323,-122.697349461377,15.0,14.0,,in_service,1989.0,Metro RLIS Affordable Housing
+SUMMER RUN APARTMENTS,7810 SE FOSTER RD,Portland,97206,45.4838962740524,-122.583576465277,50.0,50.0,,in_service,1984.0,Metro RLIS Affordable Housing
+HOLGATE PLAZA,4333 SE 104TH AVE,Portland,97266,45.4910498490873,-122.556249354337,48.0,48.0,,in_service,1973.0,Metro RLIS Affordable Housing
+WESTMORELAND'S UNION MANOR 1,6404 SE 23RD AVE,Portland,97202,45.4768878978113,-122.641951305629,167.0,167.0,,in_service,1966.0,Metro RLIS Affordable Housing
+ALBERTA STREET APARTMENTS,5010 NE 19TH AVE,Portland,97211,45.5592489480845,-122.645268967807,10.0,10.0,,in_service,1970.0,Metro RLIS Affordable Housing
+MARSHALL UNION MANOR,2020 NW NORTHRUP ST,Portland,97209,45.5309918365822,-122.693016903066,200.0,200.0,,in_service,1974.0,Metro RLIS Affordable Housing
+WESTMORELAND'S UNION MANOR 2,6404 SE 23RD AVE,Portland,97202,45.4768878978113,-122.641951305629,50.0,50.0,,in_service,1966.0,Metro RLIS Affordable Housing
+MINERVA PLAZA,6633 N OBERLIN ST,Portland,97203,45.5850103566382,-122.735651624534,15.0,15.0,,in_service,1969.0,Metro RLIS Affordable Housing
+MERE CENTER,12309 SE BUSH ST,Portland,97236,45.4948309452604,-122.536447536648,10.0,10.0,,in_service,1982.0,Metro RLIS Affordable Housing
+TILLICUM COURT APARTMENTS,5135 SE 73RD AVE,Portland,97206,45.4855001879364,-122.588288976427,16.0,15.0,1.0,in_service,1985.0,Metro RLIS Affordable Housing
+CHAUCER COURT,1019 SW 10TH AVE,Portland,97205,45.5178943396417,-122.683598752205,84.0,83.0,,in_service,1924.0,Metro RLIS Affordable Housing
+ROSELYN APARTMENTS,424 NW 21ST AVE,Portland,97209,45.5260021976993,-122.694083821393,31.0,30.0,,in_service,1912.0,Metro RLIS Affordable Housing
+HAWTHORNE EAST,1420 SE 16TH AVE,Portland,97214,45.5123559683021,-122.649293176487,71.0,70.0,,in_service,1982.0,Metro RLIS Affordable Housing
+PARK TOWER APARTMENTS,731 SW SALMON ST,Portland,97205,45.5177324800245,-122.681272326832,162.0,162.0,,in_service,1926.0,Metro RLIS Affordable Housing
+ADMIRAL APARTMENTS,910 SW PARK AVE,Portland,97205,45.5180941042317,-122.681277749603,37.0,37.0,,in_service,1909.0,Metro RLIS Affordable Housing
+BRONAUGH APARTMENTS,1434 SW MORRISON ST,Portland,97205,45.5211031842632,-122.687102594703,51.0,50.0,,in_service,1905.0,Metro RLIS Affordable Housing
+UPSHUR HOUSE,2650 NW UPSHUR ST,Portland,97210,45.535805424686,-122.706300267824,30.0,29.0,,in_service,1980.0,Metro RLIS Affordable Housing
+UPTOWN TOWER,712 SW ST CLAIR AVE,Portland,97205,45.5231055459808,-122.696472366851,72.0,71.0,,in_service,1982.0,Metro RLIS Affordable Housing
+LEXINGTON APARTMENTS,1125 SW 12TH AVE,Portland,97205,45.5176014480146,-122.686066176405,54.0,54.0,,in_service,1980.0,Metro RLIS Affordable Housing
+WALNUT PARK APARTMENTS,5272 NE 6TH AVE,Portland,97211,45.5614751424337,-122.659258258127,38.0,38.0,,in_service,1981.0,Metro RLIS Affordable Housing
+VOA RECOVERY HOMES,6529 NE MASON ST,Portland,97218,45.5526081908917,-122.59557293676,2.0,2.0,,in_service,1954.0,Metro RLIS Affordable Housing
+LIMITED EQUITY/LEASE PURCHASE PROGRAM,501 NE ALBERTA ST,Portland,97211,45.5592439509183,-122.660157759772,4.0,4.0,,in_service,1994.0,Metro RLIS Affordable Housing
+CEEL-OCKS / NELSON COURT,8516 N SAINT LOUIS AVE,Portland,97203,45.5939187282769,-122.755154157086,10.0,10.0,,in_service,1995.0,Metro RLIS Affordable Housing
+TEA LINK,8028 SE 7TH AVE,Portland,97202,45.465321469224,-122.658672314888,5.0,5.0,,in_service,1995.0,Metro RLIS Affordable Housing
+BRADLEY-ANGLE HOUSE,2408 N FARRAGUT ST,Portland,97217,45.5789060088902,-122.691401888882,15.0,15.0,,in_service,1947.0,Metro RLIS Affordable Housing
+GARLINGTON PLAZA,509 NE ALBERTA ST,Portland,97211,45.5593185282916,-122.659763123959,52.0,52.0,,in_service,1994.0,Metro RLIS Affordable Housing
+GAZELLE HOUSE,5269 NE 25TH AVE,Portland,97211,45.5612980889553,-122.640176674837,5.0,5.0,,in_service,1997.0,Metro RLIS Affordable Housing
+JEANS PLACE,18 NE 11TH AVE,Portland,97204,45.5233054533439,-122.654348164247,50.0,50.0,,in_service,,Metro RLIS Affordable Housing
+WOODSTOCK COURT,6428 SE 97TH AVE,Portland,97266,45.4759137611662,-122.563142890426,9.0,9.0,,in_service,1993.0,Metro RLIS Affordable Housing
+TURNING POINT,6552 SW 19TH AVE,Portland,97239,45.4769644369652,-122.697967151834,24.0,24.0,,in_service,1996.0,Metro RLIS Affordable Housing
+SUNRISE PLACE,5724 NE PRESCOTT ST,Portland,97218,45.5549733298097,-122.603707283292,10.0,10.0,,in_service,1996.0,Metro RLIS Affordable Housing
+CAMAR APARTMENTS,2164 NW LOVEJOY ST,Portland,97210,45.5296144022843,-122.695855878752,32.0,32.0,,in_service,,Metro RLIS Affordable Housing
+CANDALARIA APARTMENTS,1009 SE 162ND AVE,Portland,97233,45.5155020192198,-122.496572832941,32.0,32.0,24.0,in_service,1971.0,Metro RLIS Affordable Housing
+CENTER VILLAGE,5845 NE HOYT ST,Portland,97213,45.5273927670338,-122.602761030566,116.0,60.0,60.0,in_service,2000.0,Metro RLIS Affordable Housing
+CHERRY BLOSSOM,10570 SE CHERRY BLOSSOM DR,Portland,97216,45.5147355243646,-122.555712359138,120.0,120.0,96.0,in_service,1972.0,Metro RLIS Affordable Housing
+SISTER HOUSE,2434 NE 15TH AVE,Portland,97212,45.5402282988745,-122.650123745023,6.0,6.0,,in_service,1924.0,Metro RLIS Affordable Housing
+RIDGECREST TIMBERS,8870 N COLUMBIA BLVD,Portland,97203,45.6038508813658,-122.751982492046,97.0,97.0,76.0,in_service,1999.0,Metro RLIS Affordable Housing
+SPRINGTREE APARTMENTS,650 SE 162ND AVE,Portland,97233,45.5178807711551,-122.495308569507,72.0,72.0,52.0,in_service,1968.0,Metro RLIS Affordable Housing
+VILLAGE GARDEN APARTMENTS,15298 NE SANDY BLVD,Portland,97230,45.5509272432241,-122.505450070035,59.0,59.0,35.0,in_service,1977.0,Metro RLIS Affordable Housing
+ROSE WOOD APARTMENTS,4810 NE SANDY BLVD,Portland,97213,45.5384979305399,-122.613747712604,36.0,36.0,,in_service,1955.0,Metro RLIS Affordable Housing
+ROSE HOMES,7429 SE BYBEE BLVD,Portland,97206,45.4725391507206,-122.586776670958,10.0,10.0,10.0,in_service,1922.0,Metro RLIS Affordable Housing
+RICHMOND PLACE,4147 SE DIVISION ST,Portland,97214,45.5049832321596,-122.61999452095,21.0,20.0,,in_service,1997.0,Metro RLIS Affordable Housing
+PROJECT NETWORK CENTER,2631 N MISSISSIPPI AVE,Portland,97227,45.5414305876656,-122.676125301902,19.0,19.0,,in_service,1926.0,Metro RLIS Affordable Housing
+PCRI SCATTERED SITE PROJECT,5323 NE 24TH AVE,Portland,97211,45.5618943804992,-122.641187871465,11.0,10.0,6.0,in_service,1922.0,Metro RLIS Affordable Housing
+NORTH OSWEGO AVENUE,10032 N OSWEGO AVE,Portland,97203,45.5977363703433,-122.74484492404,5.0,5.0,,in_service,2000.0,Metro RLIS Affordable Housing
+MORRISON PARK APARTMENTS,623 SW PARK AVE,Portland,97205,45.5201092947907,-122.680505066084,60.0,60.0,6.0,in_service,1904.0,Metro RLIS Affordable Housing
+LYDIA ROY,3940 N HAIGHT AVE,Portland,97201,45.5514836300497,-122.669783240289,92.0,92.0,23.0,in_service,1970.0,Metro RLIS Affordable Housing
+EVERETT HOUSE,521 SW 11TH AVE,Portland,97205,45.521300656127,-122.682929592006,5.0,5.0,,in_service,1909.0,Metro RLIS Affordable Housing
+LAURELHURST HOUSE ASSISTED LIVING COMMUNITY,15 SE 55TH AVE,Portland,97215,45.5226667901513,-122.607897856142,38.0,37.0,,in_service,2000.0,Metro RLIS Affordable Housing
+LOU BURGE'S PLACE,12715 NE GLISAN ST,Portland,97230,45.5266301314397,-122.532188195138,10.0,10.0,,in_service,1967.0,Metro RLIS Affordable Housing
+ROSE CITY CENTER APARTMENTS,6819 NE SANDY BLVD,Portland,97213,45.5471109917844,-122.592812703712,55.0,52.0,,in_service,1994.0,Metro RLIS Affordable Housing
+TWELVTH AVENUE TERRACE,1515 SW 12TH AVE,Portland,97201,45.5148020829045,-122.687635038457,120.0,119.0,,in_service,1993.0,Metro RLIS Affordable Housing
+MARYSVILLE COMMONS,7704 SE RAYMOND ST,Portland,97206,45.4863659531,-122.584048932565,5.0,5.0,5.0,in_service,2004.0,Metro RLIS Affordable Housing
+LENTS COURT,6102 SE 86TH AVE,Portland,97266,45.4786211673236,-122.574150119579,5.0,5.0,,in_service,1907.0,Metro RLIS Affordable Housing
+2827 NE LIBERTY ST,2827 NE LIBERTY ST,Portland,97211,45.5707069641915,-122.636169202184,5.0,5.0,,in_service,1989.0,Metro RLIS Affordable Housing
+NE SIMPSON,5719 NE SIMPSON ST,Portland,97218,45.5651499326138,-122.604067281867,5.0,5.0,,in_service,1989.0,Metro RLIS Affordable Housing
+MUSOLF MANOR,216 NW 3RD AVE,Portland,97209,45.5247750196947,-122.672915688818,96.0,95.0,,in_service,1910.0,Metro RLIS Affordable Housing
+FAIRFIELD HOTEL,1117 SW STARK ST,Portland,97205,45.5225081619437,-122.682433446653,82.0,80.0,,in_service,1911.0,Metro RLIS Affordable Housing
+IRVINGTON VILLAGE,420 NE MASON ST,Portland,97211,45.5531655643043,-122.661012562926,104.0,104.0,,in_service,2001.0,Metro RLIS Affordable Housing
+RAINBOW HOUSE,2633 NE 21ST AVE,Portland,97212,45.5417346822712,-122.644569822246,5.0,5.0,,in_service,1911.0,Metro RLIS Affordable Housing
+GARDEN PARK ESTATES,3140 SE 136TH AVE,Portland,97236,45.4995768022168,-122.523455113746,63.0,63.0,1.0,in_service,1978.0,Metro RLIS Affordable Housing
+PIER PARK APARTMENTS,8660 N COLUMBIA BLVD,Portland,97203,45.6026297630499,-122.749292990464,164.0,164.0,32.0,in_service,1997.0,Metro RLIS Affordable Housing
+SHORELINE BUILDING,123 W BURNSIDE ST,Portland,97209,45.5233263297167,-122.672039570698,62.0,62.0,,in_service,1912.0,Metro RLIS Affordable Housing
+ST ANTHONY VILLAGE,3560 SE 79TH AVE,Portland,97206,45.496004325177,-122.582136275435,127.0,106.0,4.0,in_service,2000.0,Metro RLIS Affordable Housing
+KERNLODGE HOMES,6102 SE 86TH AVE,Portland,97266,45.4786211673236,-122.574150119579,10.0,10.0,,in_service,1994.0,Metro RLIS Affordable Housing
+NE 15TH AND ALBERTA PROJECT,1488 NE ALBERTA ST,Portland,97211,45.5589360057279,-122.64999314032,11.0,10.0,,in_service,1936.0,Metro RLIS Affordable Housing
+RUSSET AND MORRIS GREENPLEXES,523 NE MORRIS ST,Portland,97212,45.5450904460029,-122.660943822441,5.0,5.0,3.0,in_service,2005.0,Metro RLIS Affordable Housing
+NAWIKKA COURT APARTMENTS,5110 SE 76TH AVE,Portland,97206,45.4858519473884,-122.584909865864,16.0,15.0,1.0,in_service,1988.0,Metro RLIS Affordable Housing
+CENTRAL CHALET APARTMENTS,9020 N CENTRAL ST,Portland,97203,45.5935747519678,-122.755715357793,20.0,20.0,9.0,in_service,1973.0,Metro RLIS Affordable Housing
+NORTHWEST TOWER,335 NW 19TH AVE,Portland,97209,45.5252731216163,-122.690843887805,164.0,164.0,24.0,in_service,1963.0,Metro RLIS Affordable Housing
+STEPHENS CREEK CROSSING,6715 SW 26TH AVE,Portland,97219,45.4750695296098,-122.704267187759,122.0,122.0,122.0,in_service,2014.0,Metro RLIS Affordable Housing
+HOLLYWOOD EAST,4400 NE BROADWAY ST,Portland,97213,45.53484857444,-122.617722988491,286.0,286.0,4.0,in_service,1969.0,Metro RLIS Affordable Housing
+PEACEFUL VILLA,4626 SE CLINTON ST,Portland,97206,45.5028396323135,-122.614694271312,70.0,70.0,8.0,in_service,1948.0,Metro RLIS Affordable Housing
+DEKUM COURT,7003 NE 27TH AVE,Portland,97211,45.5733425303649,-122.639464317442,38.0,38.0,38.0,in_service,1971.0,Metro RLIS Affordable Housing
+TAMARACK,4021 N ALASKA ST,Portland,97203,45.5894547791069,-122.708364128637,117.0,117.0,69.0,in_service,1968.0,Metro RLIS Affordable Housing
+SELLWOOD CENTER,1724 SE TENINO ST,Portland,97202,45.4634068043878,-122.646438473118,110.0,109.0,,in_service,1971.0,Metro RLIS Affordable Housing
+SCHRUNK RIVERVIEW TOWER,8820 N SYRACUSE ST,Portland,97203,45.5904950382882,-122.758049893422,116.0,116.0,,in_service,1971.0,Metro RLIS Affordable Housing
+WILLIAMS PLAZA,2041 NW EVERETT ST,Portland,97209,45.5251062312997,-122.693345979205,100.0,100.0,,in_service,1972.0,Metro RLIS Affordable Housing
+CARLTON COURT,5249 NE KILLINGSWORTH ST,Portland,97218,45.5631622078545,-122.608475711469,24.0,24.0,24.0,in_service,1974.0,Metro RLIS Affordable Housing
+GALLAGHER PLAZA,2140 NW KEARNEY ST,Portland,97210,45.5289073238386,-122.695517258954,85.0,84.0,,in_service,1981.0,Metro RLIS Affordable Housing
+ELIOT SQUARE,2500 N WILLIAMS AVE,Portland,97212,45.5404340989969,-122.665390542321,29.0,29.0,29.0,in_service,1978.0,Metro RLIS Affordable Housing
+MEDALLION APARTMENTS,1969 NW JOHNSON ST,Portland,97209,45.528698789683,-122.691937801002,88.0,88.0,2.0,in_service,1965.0,Metro RLIS Affordable Housing
+HAROLD LEE VILLAGE,4023 SE 112TH AVE,Portland,97266,45.4929809539848,-122.548860629813,10.0,10.0,10.0,in_service,1994.0,Metro RLIS Affordable Housing
+FLORESTA,12530 SE FOSTER RD,Portland,97236,45.4770993546198,-122.533737750445,20.0,20.0,20.0,in_service,2006.0,Metro RLIS Affordable Housing
+MAPLE MALLORY,3723 NE GARFIELD AVE,Portland,97212,45.5501648825025,-122.663135032374,47.0,47.0,24.0,in_service,1949.0,Metro RLIS Affordable Housing
+BEL PARK,1001 N BLANDENA ST,Portland,97217,45.5570666236227,-122.677287106507,10.0,10.0,,in_service,1955.0,Metro RLIS Affordable Housing
+WINCHELL COURT,7850 N INTERSTATE AVE,Portland,97217,45.5804701305121,-122.681558257098,10.0,10.0,2.0,in_service,1964.0,Metro RLIS Affordable Housing
+POWELLHURST WOODS,11200 SE HOLGATE BLVD,Portland,97266,45.488541543583,-122.547894395777,32.0,32.0,32.0,in_service,1981.0,Metro RLIS Affordable Housing
+HUNTERS RUN,12745 SE POWELL BLVD,Portland,97236,45.4978771608434,-122.53183075955,10.0,10.0,10.0,in_service,1994.0,Metro RLIS Affordable Housing
+CAMELIA COURT,2601 N LOMBARD ST,Portland,97217,45.5772489687358,-122.693600659249,14.0,14.0,,in_service,1943.0,Metro RLIS Affordable Housing
+CORA PARK APARTMENTS,4207 SE 37TH AVE,Portland,97217,45.4922528929569,-122.625522114662,10.0,10.0,10.0,in_service,1967.0,Metro RLIS Affordable Housing
+ALDERWOOD,17225 SE ALDER ST,Portland,97233,45.5181180656793,-122.485620714365,20.0,20.0,20.0,in_service,1981.0,Metro RLIS Affordable Housing
+CHATEAU APARTMENTS,1910 SE STARK ST,Portland,97214,45.5190183558283,-122.646200174579,10.0,10.0,10.0,in_service,1980.0,Metro RLIS Affordable Housing
+NEAHKAHNIE HOUSE,8501 SE STEPHENS ST,Portland,97206,45.5094712132436,-122.575924944087,8.0,8.0,,in_service,1995.0,Metro RLIS Affordable Housing
+PIONEER ABODES,220 SE 106TH AVE,Portland,97216,45.5207069261949,-122.553495061672,10.0,9.0,4.0,in_service,2006.0,Metro RLIS Affordable Housing
+EASTGATE STATION,134 NE 120TH AVE,Portland,97220,45.5235603886991,-122.538773517285,61.0,60.0,,in_service,2010.0,Metro RLIS Affordable Housing
+CLIFFORD APARTMENTS,527 SE MORRISON,Portland,97214,45.5174546173716,-122.660023709488,88.0,88.0,,in_service,1911.0,Metro RLIS Affordable Housing
+MIRAFLORES,8901 N NEWELL AVE,Portland,97203,45.5873695539082,-122.732924097449,32.0,31.0,,in_service,2009.0,Metro RLIS Affordable Housing
+BROADWAY VANTAGE APARTMENTS,8340 NE BROADWAY ST,Portland,97220,45.5346412210853,-122.577481984625,58.0,57.0,,in_service,2008.0,Metro RLIS Affordable Housing
+ESPERANZA COURT,3601 SE 27TH AVE,Portland,97214,45.49695839175,-122.638881722453,70.0,69.0,,in_service,2008.0,Metro RLIS Affordable Housing
+SHAVER GREEN,375 NE SHAVER ST,Portland,97212,45.5523798451402,-122.661901207706,85.0,84.0,,in_service,2009.0,Metro RLIS Affordable Housing
+PATTON PARK APARTMENTS,5272 N INTERSTATE AVE,Portland,97217,45.5605162873274,-122.681989482143,54.0,54.0,,in_service,2009.0,Metro RLIS Affordable Housing
+RAMONA APARTMENTS,1550 NW 14TH AVE,Portland,97209,45.5337849214852,-122.685041415842,138.0,138.0,,in_service,2011.0,Metro RLIS Affordable Housing
+SANDY APARTMENTS,11401 NE SANDY BLVD,Portland,97220,45.5583976056907,-122.545090939197,15.0,14.0,,in_service,1949.0,Metro RLIS Affordable Housing
+JIM AND SALLES PLACE,7531 SE STEELE ST,Portland,97206,45.4846034551533,-122.584810656683,17.0,17.0,,in_service,1973.0,Metro RLIS Affordable Housing
+BRIDGE MEADOWS NORTH PORTLAND,4221 N WILLIS BLVD,Portland,97203,45.5847244276462,-122.710776652515,36.0,27.0,,in_service,2011.0,Metro RLIS Affordable Housing
+BELLROSE STATION,7901 SE 92ND AVE,Portland,97266,45.4658446824206,-122.569681740639,40.0,39.0,,in_service,1971.0,Metro RLIS Affordable Housing
+BRIARWOOD EAST APARTMENTS,3302 SE 122ND AVE,Portland,97236,45.4982143746441,-122.53723138318,22.0,22.0,,in_service,1974.0,Metro RLIS Affordable Housing
+CAMELIA,13145 SE DIVISION ST,Portland,97227,45.504971983991,-122.527637943811,29.0,29.0,,in_service,1972.0,Metro RLIS Affordable Housing
+COUNTRY VIEW APARTMENTS,15810 NE SANDY BLVD,Portland,97230,45.5491173691345,-122.498908789588,24.0,24.0,,in_service,1990.0,Metro RLIS Affordable Housing
+HOLMAN HOUSE,2619 N HOLMAN ST,Portland,97227,45.5683209106328,-122.693828685467,5.0,5.0,,in_service,2000.0,Metro RLIS Affordable Housing
+NATHANIEL'S WAY,11106 E BURNSIDE ST,Portland,97215,45.5222858205865,-122.548947339842,4.0,4.0,,in_service,1999.0,Metro RLIS Affordable Housing
+PERRY'S HOUSE,5903 N MARYLAND AVE,Portland,97217,45.5656527306456,-122.68147682783,20.0,20.0,,in_service,1992.0,Metro RLIS Affordable Housing
+QUEAHPAMA HEIGHTS,6244 N COLUMBIA WAY,Portland,97203,45.5935655537416,-122.729406966295,26.0,26.0,,in_service,1973.0,Metro RLIS Affordable Housing
+HUMBOLDT GARDEN APARTMENTS,444 N SUMNER ST,Portland,97217,45.5600396961572,-122.669287153658,130.0,129.0,,in_service,2008.0,Metro RLIS Affordable Housing
+YWCA TRANSITIONAL HOUSING EXPANSION,1111 SW 10TH AVE,Portland,97205,45.5170546749122,-122.684057191913,8.0,8.0,,in_service,1958.0,Metro RLIS Affordable Housing
+MARTHA WASHINGTON,1115 SW 11TH AVE,Portland,97205,45.5174179517913,-122.685030501869,108.0,107.0,,in_service,1923.0,Metro RLIS Affordable Housing
+MADRONA STUDIOS - CONDO B,10 N WEIDLER ST,Portland,97227,45.533867885064,-122.667133108804,44.0,44.0,,in_service,1997.0,Metro RLIS Affordable Housing
+GROUP HOME BURNSIDE,55 NE 148TH AVE,Portland,97230,45.5231749611257,-122.510977095004,1.0,1.0,,in_service,1955.0,Metro RLIS Affordable Housing
+ASH STREET COURTYARD,12026 SE ASH ST,Portland,97216,45.5208765659833,-122.538988519742,47.0,47.0,,in_service,2010.0,Metro RLIS Affordable Housing
+SE HOLGATE,10922 SE HOLGATE BLVD,Portland,97266,45.4894645558411,-122.550348966251,3.0,3.0,,in_service,1960.0,Metro RLIS Affordable Housing
+SNOWBERRY,117 SE 151ST AVE,Portland,97233,45.5213929802289,-122.508390815806,27.0,27.0,,in_service,2013.0,Metro RLIS Affordable Housing
+GLISAN COMMONS PHASE I,555 NE 100TH AVE,Portland,97220,45.5267971596377,-122.56100155854,67.0,67.0,,in_service,2014.0,Metro RLIS Affordable Housing
+D STREET SALAL APARTMENTS,17199 SE DIVISION ST,Portland,97236,45.5051124620997,-122.486169046377,84.0,84.0,,in_service,2015.0,Metro RLIS Affordable Housing
+BEECH STREET APARTMENTS,3650 NE MALLORY AVE,Portland,97212,45.5491488013078,-122.66313519476,47.0,47.0,,in_service,2014.0,Metro RLIS Affordable Housing
+FIRLAND APARTMENTS,8012 SE RAYMOND AVE,Portland,97206,45.4862282956074,-122.58045453915,20.0,19.0,,in_service,1973.0,Metro RLIS Affordable Housing
+GREENVIEW TERRACE,620 SE 148TH AVE,Portland,97233,45.5182271023281,-122.509728460365,32.0,31.0,,in_service,1963.0,Metro RLIS Affordable Housing
+THE ABIGAIL,1616 NW 13TH AVE,Portland,97209,45.5346769172276,-122.684095897948,155.0,127.0,,in_service,2015.0,Metro RLIS Affordable Housing
+HOLLYWOOD APARTMENTS,4111 NE BROADWAY ST,Portland,97232,45.535337685949,-122.621068652019,47.0,10.0,,in_service,2013.0,Metro RLIS Affordable Housing
+BURNSIDE STATION APARTMENTS,10610 E BURNSIDE ST,Portland,97216,45.5222149566708,-122.554111897133,21.0,5.0,,in_service,2004.0,Metro RLIS Affordable Housing
+GLISAN COMMONS PHASE II,610 NE 99TH AVE,Portland,97220,45.5267971596377,-122.56100155854,60.0,60.0,,in_service,2015.0,Metro RLIS Affordable Housing
+WILMORE APARTMENTS,4357 N WILLIAMS AVE,Portland,97217,45.555132608916,-122.667092456506,75.0,14.0,,in_service,2015.0,Metro RLIS Affordable Housing
+GRAYS LANDING,0650 SW LOWELL ST,Portland,97216,45.4935497143173,-122.671249342135,209.0,209.0,,in_service,2012.0,Metro RLIS Affordable Housing
+8923 SE ELLIS BIG 11,8923 SE ELLIS ST,Portland,97266,45.4824728665007,-122.570261293422,1.0,1.0,,in_service,1941.0,Metro RLIS Affordable Housing
+ALDER ROYAL APARTMENTS,16124 SE ALDER ST,Portland,97233,45.5170211056414,-122.497355739064,75.0,35.0,,in_service,1971.0,Metro RLIS Affordable Housing
+THE ALBERT,3532 N WILLIAMS AVE,Portland,97227,45.5491039826703,-122.666380732576,72.0,18.0,,in_service,2011.0,Metro RLIS Affordable Housing
+LETTING OWINGS CENTER,2545 NE FLANDERS ST,Portland,97232,45.5260688594453,-122.63946301004,56.0,56.0,,in_service,1915.0,Metro RLIS Affordable Housing
+RAVEN APARTMENTS,340 SE 148TH AVE,Portland,97233,45.5201858949552,-122.509940396058,36.0,8.0,,in_service,2004.0,Metro RLIS Affordable Housing
+THE MAGNOLIA,3250 NE MARTIN LUTHER KING BLVD,Portland,97212,45.5469468742584,-122.661298424037,50.0,49.0,,in_service,2013.0,Metro RLIS Affordable Housing
+LIFEWORKS,200 NE BEECH ST,Portland,97212,45.5494780622901,-122.663613605805,57.0,57.0,,in_service,2014.0,Metro RLIS Affordable Housing
+S & P APARTMENTS,6923 N FESSENDEN ST,Portland,97203,45.5935505544617,-122.734538752383,6.0,6.0,,in_service,2014.0,Metro RLIS Affordable Housing
+41 AT TILLAMOOK APARTMENTS,4110 NE TILLAMOOK ST,Portland,97212,45.537550752466,-122.620612743268,47.0,10.0,,in_service,2013.0,Metro RLIS Affordable Housing
+BLANCHET HOUSE,314 NW GLISAN ST,Portland,97209,45.5264613059657,-122.673806258626,42.0,42.0,,in_service,2012.0,Metro RLIS Affordable Housing
+JOHNSON CREEK DUPLEX - P# 044,7940 SE 72ND AVE,Portland,97206,45.4657478600665,-122.588569394175,2.0,2.0,,in_service,2001.0,Metro RLIS Affordable Housing
+INTERSTATE GROUP BIG 11,8240 N INTERSTATE AVE,Portland,97217,45.582665691386,-122.681935789003,1.0,1.0,,in_service,1926.0,Metro RLIS Affordable Housing
+ERICKSON FRITZ APARTMENTS,9 NW 2ND AVE,Portland,97209,45.5234900219335,-122.672685091774,62.0,52.0,,in_service,1912.0,Metro RLIS Affordable Housing
+KEHILLAH HOUSING,6000 SW BEAVERTON HILLSDALE HWY,Portland,97221,45.4866750918887,-122.738659596163,14.0,14.0,,in_service,2013.0,Metro RLIS Affordable Housing
+PRESCOTT BLOCK APARTMENTS,4312 N INTERSTATE AVE,Portland,97217,45.5549865446395,-122.681606575973,155.0,31.0,,in_service,2014.0,Metro RLIS Affordable Housing
+THE LOUISA,123 NW 12TH AVE,Portland,97209,45.5239940983447,-122.68366152847,242.0,24.0,,in_service,2002.0,Metro RLIS Affordable Housing
+SKY3 APARTMENTS,1101 SW JEFFERSON ST,Portland,97201,45.5165036033625,-122.685497283119,196.0,39.0,,in_service,2015.0,Metro RLIS Affordable Housing
+ST MARY ETHIOPIAN ORTHODOX,7715 SE 92ND AVE,Portland,97266,45.4673022891717,-122.569011794881,,,,in_service,1971.0,Metro RLIS Affordable Housing
+MACDONALD CENTER WEST,121 NW 6TH AVE,Portland,97209,45.5241891178858,-122.676762519247,42.0,42.0,,in_service,2012.0,Metro RLIS Affordable Housing
+5403 N MISSISSIPPI AVE,5403 N MISSISSIPPI AVE,Portland,97217,45.561998904001,-122.676186603079,2.0,2.0,,in_service,1909.0,Metro RLIS Affordable Housing
+GLENDOVEER WOODS APARTMENTS,333 NE 146TH AVE,Portland,97230,45.5245405866544,-122.513531872695,112.0,20.0,,in_service,2014.0,Metro RLIS Affordable Housing
+8735 N WOOLSEY AVE,8735 N WOOLSEY AVE,Portland,97203,45.5859248430232,-122.71376771561,1.0,1.0,,in_service,1909.0,Metro RLIS Affordable Housing
+THE YARDS AT UNION STATION PHASE S,701 NW NAITO PKWY,Portland,97209,45.5292612091294,-122.675608667633,56.0,18.0,,in_service,2002.0,Metro RLIS Affordable Housing
+THE YARDS AT UNION STATION PHASE C,615 NW NAITO PKWY,Portland,97209,45.5278685485395,-122.673285981707,80.0,80.0,,in_service,2013.0,Metro RLIS Affordable Housing
+4302 NE 12TH AVE,4302 NE 12TH AVE,Portland,97211,45.5546685746826,-122.653456098784,2.0,2.0,,in_service,1914.0,Metro RLIS Affordable Housing
+GRANT STREET,11819 SE GRANT ST,Portland,97216,45.5067229771696,-122.541390624559,5.0,5.0,,in_service,1962.0,Metro RLIS Affordable Housing
+RUSSELL HOUSE,16122 NE RUSSELL ST,Portland,97230,45.541384773805,-122.496196368793,5.0,5.0,,in_service,1990.0,Metro RLIS Affordable Housing
+171ST DRIVE,3010 SE 171ST DR,Portland,97236,45.5007380266687,-122.486959281999,4.0,4.0,,in_service,1960.0,Metro RLIS Affordable Housing
+KRAMER APARTMENTS,303 N BEECH ST,Portland,97227,45.5496770350153,-122.669339251797,4.0,4.0,,in_service,1929.0,Metro RLIS Affordable Housing
+KERNLODGE I,3820 SE 26TH AVE,Portland,97202,45.4952136007258,-122.639247925984,5.0,5.0,,in_service,1994.0,Metro RLIS Affordable Housing
+KERNLODGE II,3923 SE 69TH AVE,Portland,97206,45.4940598945153,-122.592497024324,5.0,5.0,,in_service,1994.0,Metro RLIS Affordable Housing
+CHASE STREET,9126 N CHASE AVE,Portland,97217,45.5890975300581,-122.704039184178,5.0,5.0,,in_service,1999.0,Metro RLIS Affordable Housing
+MADISON HOUSE,9352 SE MADISON ST,Portland,97216,45.5127981204674,-122.566469620138,5.0,5.0,,in_service,1999.0,Metro RLIS Affordable Housing
+HAWTHORNE HOUSE,9355 SE HAWTHORNE BLVD,Portland,97216,45.5124853284259,-122.56649687296,5.0,5.0,,in_service,1999.0,Metro RLIS Affordable Housing
+TAYLOR HOUSE,9350 SE TAYLOR ST,Portland,97216,45.5149831158951,-122.566379065758,5.0,5.0,,in_service,1999.0,Metro RLIS Affordable Housing
+VINE MAPLE,177 SE 146TH AVE,Portland,97233,45.5212275922473,-122.513922924916,148.0,148.0,,in_service,2017.0,Metro RLIS Affordable Housing
+FERN GROVE APARTMENTS,14232 E BURNSIDE,Portland,97233,45.522123156924,-122.516638849176,33.0,33.0,,in_service,2015.0,Metro RLIS Affordable Housing
+CHARLOTTE B. RUTHERFORD PLACE,6905 N INTERSTATE,Portland,97217,45.5728932065655,-122.682508454216,51.0,51.0,,in_service,2018.0,Metro RLIS Affordable Housing
+STARK STREET APARTMENTS,12613 SE STARK ST,Portland,97233,45.5194231675632,-122.532123490161,155.0,153.0,,in_service,2017.0,Metro RLIS Affordable Housing
+WOODY GUTHRIE PLACE,5728 SE 91ST ST,Portland,97266,45.4811286209195,-122.56954835796,64.0,63.0,,in_service,2019.0,Metro RLIS Affordable Housing
+OLIVER STATION,9202 SE FOSTER AVE,Portland,97266,45.4791929645783,-122.56768375107,145.0,126.0,,in_service,2018.0,Metro RLIS Affordable Housing
+HELENSVIEW,5406 NE 64TH AVE,Portland,97218,45.5622202087,-122.597410052576,21.0,0.0,,in_service,2016.0,Metro RLIS Affordable Housing
+ARGYLE APARTMENTS,2133 N ARGYLE ST,Portland,97217,45.5848889017325,-122.687431389701,189.0,189.0,,in_service,2019.0,Metro RLIS Affordable Housing
+72FOSTER,7150 SE FOSTER RD,Portland,97206,45.4863063489936,-122.589703440694,101.0,101.0,,in_service,2018.0,Metro RLIS Affordable Housing
+BLOCK 45,1029 NE GRAND AVE,Portland,97232,45.5304346612375,-122.660319590081,240.0,240.0,,in_service,2019.0,Metro RLIS Affordable Housing
+124TH AND ASH,12350 E BURNSIDE ST,Portland,97207,45.5219961388767,-122.535544772341,175.0,175.0,,in_service,2019.0,Metro RLIS Affordable Housing
+GENERATIONS,8510 SE STEELE ST,Portland,97266,45.4847862500965,-122.575660937837,40.0,40.0,,in_service,2016.0,Metro RLIS Affordable Housing
+NEW MEADOWS,8710 N DANA AVE,Portland,97203,45.5856485744572,-122.712206517113,15.0,14.0,,in_service,2018.0,Metro RLIS Affordable Housing
+GREEN TREE COURT,2405 SE 142ND AVE,Portland,97233,45.504625298851,-122.517796230765,11.0,11.0,,in_service,1974.0,Metro RLIS Affordable Housing
+NEW COLUMBIA,4605 N TRENTON ST,Portland,97203,45.5903118937737,-122.715695576122,554.0,554.0,,in_service,2007.0,Metro RLIS Affordable Housing
+VANCOUVER AVENUE APARTMENTS,3956 N VANCOUVER AVE,Portland,97227,45.5516209639332,-122.667612457116,87.0,17.0,,in_service,2018.0,Metro RLIS Affordable Housing
+THE ROSE APARTMENTS,9700 NE EVERETT CT,Portland,97220,45.5250066802728,-122.562880788538,90.0,36.0,,in_service,2015.0,Metro RLIS Affordable Housing
+ST FRANCIS PARK,1177 SE STARK ST,Portland,97214,45.5196621235407,-122.654086640308,106.0,105.0,,in_service,2017.0,Metro RLIS Affordable Housing
+HAZELWOOD PLAZA,252 NE 102ND AVE,Portland,97220,45.5247124908385,-122.557866324352,61.0,25.0,,in_service,2018.0,Metro RLIS Affordable Housing
+HILL PARK APARTMENTS,110 SW ARTHUR ST,Portland,97201,45.5034664302235,-122.679099268265,39.0,39.0,,in_service,2017.0,Metro RLIS Affordable Housing
+MIRACLES CENTRAL,1306 NE 2ND AVE,Portland,97232,45.5324405653442,-122.663366686211,47.0,46.0,,in_service,2016.0,Metro RLIS Affordable Housing
+YARD/BLOCK 57,33 NE 3RD AVE,Portland,97232,45.5233344924385,-122.663214876959,284.0,57.0,,in_service,2015.0,Metro RLIS Affordable Housing
+NORTH HOLLOW APARTMENTS,1511 SW TAYLOR ST,Portland,97205,45.5203584712087,-122.688236485511,121.0,24.0,,in_service,2018.0,Metro RLIS Affordable Housing
+105 BURNSIDE APARTMENTS,10506 E BURNSIDE ST,Portland,97216,45.52221969746,-122.554891714724,51.0,51.0,,in_service,2018.0,Metro RLIS Affordable Housing
+ARRIS APARTMENTS,878 N FREMONT ST,Portland,97227,45.547614018712,-122.675085523056,152.0,30.0,,in_service,2017.0,Metro RLIS Affordable Housing
+BLOCK 8L (AKA 38 DAVIS),38 NW DAVIS ST,Portland,97209,45.5242752009888,-122.67079952037,65.0,18.0,,in_service,2017.0,Metro RLIS Affordable Housing
+JUNIPER APARTMENTS,420 NE 147TH AVE,Portland,97233,45.5259584589458,-122.511514669561,44.0,44.0,,in_service,2020.0,Metro RLIS Affordable Housing
+HUCKLEBERRY APARTMENTS,220 SE 143RD AVE,Portland,97233,45.5206672808005,-122.515054368501,60.0,,,in_service,2020.0,Metro RLIS Affordable Housing
+PORTSMOUTH UNION CHURCH,4775 N LOMBARD,Portland,97203,45.5803430578297,-122.717462880437,20.0,20.0,,in_service,2021.0,Metro RLIS Affordable Housing
+DOUGLAS FIR APARTMENTS,6485 SW 128TH AVE,Portland,97236,45.4758319419579,-122.532658850669,15.0,15.0,,in_service,2021.0,Metro RLIS Affordable Housing
+115TH AT DIVISION ST,11514 SE DIVISION ST,Portland,97266,45.5037585936965,-122.545956220116,138.0,138.0,,in_service,2022.0,Metro RLIS Affordable Housing
+THE VERA,2065 S RIVER PKWY,Portland,97201,45.5068105943179,-122.674486626507,203.0,176.0,,in_service,2021.0,Metro RLIS Affordable Housing
+LOUSA FLOWERS,515 NE HOLLADAY ST,Portland,97232,45.5304346612375,-122.660319590081,,,,in_service,2019.0,Metro RLIS Affordable Housing
+KING AND PARK APARTMENTS,6445 NE MARTIN LUTHER KING BLVD,Portland,97211,45.5694413061087,-122.661758097523,,,,in_service,2020.0,Metro RLIS Affordable Housing
+OLIN TOWNHOMES,7513 N OLIN AVE,Portland,97203,45.5799885628888,-122.716495687565,12.0,12.0,,in_service,2020.0,Metro RLIS Affordable Housing
+RENAISSANCE COMMONS,2133 N ARGYLE ST,Portland,97217,45.5848941703218,-122.687979567937,189.0,189.0,,in_service,2020.0,Metro RLIS Affordable Housing
+SONGBIRD APARTMENTS,2156 N WILLIAMS AVE,Portland,97227,45.5385078744532,-122.666221541364,61.0,60.0,,in_service,2020.0,Metro RLIS Affordable Housing
+HollywoodHUB,1827 NE 42nd Ave,Portland,97213,45.5362762,-122.6200321,222.0,222.0,100.0,in_development,2027.0,PHB construction page; BRIDGE Housing groundbreaking 2025-01
+Barbur Apartments,SW Barbur Blvd & SW Capitol Hill Rd,Portland,97219,45.4555,-122.7091,150.0,149.0,103.0,in_development,2027.0,PHB/Metro Bond Q1 2025; groundbreaking Dec 2025
+Broadway Corridor Affordable Housing,751 NW Hoyt St,Portland,97209,45.527362,-122.6795774,230.0,230.0,62.0,funded,2028.0,PHB 2024-08; Home Forward/Urban League; $37.5M Metro Bond + $4.5M RDTIF
+Williams & Russell Affordable Apartments,N Russell St & N Williams Ave,Portland,97227,45.5447,-122.6758,85.0,85.0,40.0,in_development,2028.0,Prosper Portland; groundbreaking 2025-02; 30-60% AMI
+Williams & Russell Townhomes,N Russell St & N Williams Ave,Portland,97227,45.5447,-122.6758,20.0,20.0,20.0,in_development,2027.0,Williams & Russell CDC; PHB news 2026-03 (20 affordable ownership townhomes)
+chaku kumtuks haws (PCC Killingsworth),4317 NE Killingsworth St,Portland,97211,45.5628736,-122.6190255,84.0,84.0,60.0,in_development,2025.0,PHB construction page; Home Forward/PCC; 45 2BR + 15 3BR
+Glisan Landing / Aldea at Glisan Landing,7450 NE Glisan St,Portland,97213,45.5262385,-122.5864849,137.0,137.0,70.0,in_development,2025.0,PHB; BRIDGE/Our Just Future; Aldea opened 2025-03
+Julia West House,1115 SW 11th Ave,Portland,97205,45.5174662,-122.6849371,90.0,90.0,0.0,in_development,2025.0,PHB; Community Development Partners; 90u PSH BIPOC/elders
+Paramount Apartments,253 N Broadway,Portland,97227,45.5353648,-122.6689536,66.0,65.0,0.0,in_development,2025.0,PHB news 2025-06; PHB acquisition (TIF)
+Acqua Apartments,2615 S Water Ave,Portland,97201,45.5042473,-122.6769018,100.0,100.0,0.0,in_development,2025.0,PHB news 2025-06; College Housing NW acquisition (TIF)
+Kenton Commons,N Interstate Ave & N Kilpatrick St,Portland,97217,45.5858,-122.6819,30.0,30.0,30.0,in_development,2026.0,Habitat Portland Region; PHB N/NE Preference; affordable ownership
+True North Townhomes,NE 148th Ave & NE Carey Blvd,Portland,97230,45.5473,-122.5012,50.0,50.0,50.0,funded,2028.0,PHB construction page; Habitat; 50 2-4BR ownership
+Hazel Ying Lee Apartments,3000 SE Powell Blvd,Portland,97202,45.4964172,-122.634278,206.0,206.0,100.0,in_development,2025.0,Home Forward; Metro Bond; Creston-Kenilworth; opened Spring 2024
+Mississippi Avenue PSH (OHCS 2025),N Mississippi Ave (TBD),Portland,97227,45.5447,-122.6758,50.0,50.0,0.0,funded,2028.0,OHCS 2025 award: $4.6M PSH Dev Cap + $2M 9% LIHTC
+Path Home Family Village Housing,6220 SE 92nd Ave,Portland,97266,45.4779191,-122.5684992,30.0,30.0,30.0,funded,2028.0,OHCS 2025 award: $6.634M PSH Dev Cap + $2M 9% LIHTC
+Garfield Street,N Garfield Ave (TBD),Portland,97217,45.5858,-122.6819,50.0,50.0,25.0,funded,2028.0,OHCS Oct 2025 HSC packet: $10.74M LIFT + OAHTC
+Shortstack Mississippi,3325 N Michigan Ave,Portland,97227,45.5470664,-122.676751,36.0,36.0,28.0,in_development,2026.0,OHCS July 2025 HSC packet; Shortstack Housing; 20 3BR + 8 2BR + 8 1BR
+Gooseberry Trails,SW Capitol Hill Rd (ex Greater Portland Bible Church),Portland,97219,45.4555,-122.7091,52.0,52.0,52.0,proposed,2029.0,Habitat Portland Region; 52 affordable homes 2029
+Killingsworth & Rodney Habitat Homes,NE Killingsworth St & NE Rodney Ave,Portland,97211,45.5692,-122.6413,4.0,4.0,4.0,proposed,2027.0,Habitat Portland Region; construction fall 2026
+Legin Commons,12220 SE Division St,Portland,97236,45.5040061,-122.5373307,80.0,80.0,50.0,in_development,2026.0,Our Just Future (Human Solutions); SE Portland family
+Modera Morrison (IH-restricted units),1130 SE Morrison St,Portland,97214,45.516844,-122.6544305,247.0,11.0,10.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024)
+73Foster,7330 SE Foster Rd,Portland,97206,45.4855889,-122.5874714,64.0,64.0,29.0,in_development,2026.0,PHB news 2025-06 fin close; REACH CDC; 29 family + 22 PSH
+Jamii Court,10450 SW Barbur Blvd,Portland,97219,45.449905,-122.7276304,96.0,96.0,47.0,in_development,2027.0,PHB news 2025-11 fin close; CPAH; 47 family + 15 PSH
+OMSI District Affordable (1701 SW Water),1701 SW Water Ave,Portland,97201,45.4901706,-122.6770327,100.0,100.0,40.0,proposed,2029.0,Prosper Portland OMSI District; Edlen & Co. / Hacienda CDC filing 2025-06
+Related NW / Centro Cultural Central Eastside,Central Eastside URA (TBD),Portland,97214,45.5163,-122.6416,159.0,159.0,80.0,proposed,2029.0,Related Northwest; design 2026; construction Apr 2027; 159u family/senior
+The Clifford,2230 SE 11th Ave,Portland,97214,45.5069523,-122.6546089,88.0,88.0,0.0,in_development,2026.0,PHB construction page; IHI; 88 studios; 67 PSH total
+Splash Apartments (IH-restricted),875 NE 27th Ave,Portland,97232,45.5290349,-122.6384703,219.0,22.0,5.0,in_development,2025.0,Portland Inclusionary Housing; Security Properties; Oct 2024 opening
+Russell Street Apartments (IH-restricted),2605 NE 7th Ave,Portland,97212,45.5413978,-122.6587128,154.0,16.0,4.0,permitted,2026.0,Portland Inclusionary Housing; Deacon Development
+NAYA Portsmouth,8325 N Hereford Ave,Portland,97203,45.5842037,-122.7209441,58.0,58.0,30.0,in_development,2026.0,Housing Development Center; NAYA Family Center; Portsmouth redevelopment
+Modera Belmont (IH-restricted units),3336 SE Belmont St,Portland,97214,45.5163361,-122.630119,171.0,17.0,5.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024); Mill Creek
+The Eleanor (IH-restricted units),2135 NW 24th Ave,Portland,97210,45.5378707,-122.7010569,139.0,14.0,3.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024); Slabtown
+The Burnside 26 (IH-restricted),2525 E Burnside St,Portland,97214,45.5230748,-122.6398659,108.0,11.0,3.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024)
+Lloyd East (IH-restricted),1239 NE Halsey St,Portland,97232,45.5336894,-122.6531728,241.0,24.0,5.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024)
+Powell Five (IH-restricted),5030 SE Powell Blvd,Portland,97206,45.4974157,-122.6110428,138.0,14.0,4.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024)
+Vestal Court (IH-restricted),2920 NE Oregon St,Portland,97232,45.5285202,-122.635488,110.0,11.0,2.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024)
+Dr. Darrell Millner Building,5050 N Interstate Ave,Portland,97217,45.5593539,-122.6819273,63.0,63.0,48.0,in_development,2025.0,"PCRI N/NE Preference; 15x1BR + 23x2BR + 25x3BR; 17 @30% AMI, 45 @60% AMI"
+PCRI Pathway 1000 - NE Williams rowhomes,N Williams Ave (scattered),Portland,97227,45.5447,-122.6758,12.0,12.0,12.0,funded,2027.0,PCRI Pathway 1000 Implementation Plan; scattered-site ownership; N/NE Preference
+Byline / Press Blocks (IH-restricted),1621 SW Alder St,Portland,97205,45.5224439,-122.6880465,341.0,34.0,10.0,in_development,2025.0,Portland Inclusionary Housing Unit List (Oct 2024); Press Blocks mixed-use
+11 West Apartments (IH-restricted),1075 SW 11th Ave,Portland,97205,45.5220818,-122.6821629,100.0,10.0,3.0,permitted,2026.0,Portland Inclusionary Housing Unit List; Sawtooth; Goose Hollow
+Park Avenue West Lofts (IH-restricted),728 SW Park Ave,Portland,97205,45.5226154,-122.6790815,200.0,20.0,4.0,in_development,2026.0,Portland Inclusionary Housing Unit List; downtown residential tower
+N Williams Center (IH-restricted),3534 N Williams Ave,Portland,97227,45.5485562,-122.6665736,140.0,14.0,4.0,in_development,2026.0,Portland Inclusionary Housing Unit List; Albina / Eliot
+Division 50 (IH-restricted),5020 SE Division St,Portland,97206,45.5051642,-122.6106763,135.0,14.0,4.0,in_development,2026.0,Portland Inclusionary Housing Unit List; Richmond / Division Midway
+Belmont 33 (IH-restricted),3300 SE Belmont St,Portland,97214,45.5163518,-122.630826,95.0,10.0,3.0,permitted,2026.0,Portland Inclusionary Housing Unit List; Sunnyside corridor
+Sellwood Gateway (IH-restricted),1601 SE Tacoma St,Portland,97202,45.464397,-122.648845,102.0,10.0,3.0,in_development,2026.0,Portland Inclusionary Housing Unit List; Sellwood
+Montavilla 80 (IH-restricted),8025 SE Stark St,Portland,97215,45.519226,-122.5811416,78.0,8.0,2.0,permitted,2026.0,Portland Inclusionary Housing Unit List; Montavilla
+City Acquisition: Jade District Building,8145 SE Division St,Portland,97266,45.5049934,-122.579243,60.0,60.0,20.0,funded,2026.0,PHB 2025-06 $26M acquisition / conversion to affordable; Jade District
+City Acquisition: Old Town Building,SW 4th Ave & W Burnside (TBD),Portland,97204,45.5211,-122.6747,100.0,100.0,10.0,funded,2026.0,PHB 2025-06 $26M acquisition / conversion to affordable; Old Town
+City Acquisition: East Portland Building,SE 102nd Ave & SE Stark St (TBD),Portland,97216,45.5162,-122.5491,70.0,70.0,25.0,funded,2026.0,PHB 2025-06 $26M acquisition / conversion to affordable; East Portland
+Our Just Future Rockwood Site,18710 E Burnside St,Portland,97233,45.5227473,-122.5619482,80.0,80.0,40.0,funded,2028.0,OHCS HSC Dec 2025 award; Our Just Future; Rockwood / East Portland
+CPAH SW Barbur Phase II,10000 SW Barbur Blvd,Portland,97219,45.452929,-122.7217567,75.0,75.0,35.0,proposed,2029.0,CPAH pipeline; companion to Jamii Court; West Portland Park
+PCEF High-Performance Housing Award A,TBD (East Portland),Portland,97236,45.4788,-122.5286,50.0,50.0,20.0,funded,2027.0,PCEF 2025 $15M award for carbon-reducing affordable construction; est. 580 units
+PCEF High-Performance Housing Award B,TBD (North Portland),Portland,97217,45.5858,-122.6819,60.0,60.0,25.0,funded,2027.0,PCEF 2025 $15M award for carbon-reducing affordable construction; est. 580 units
