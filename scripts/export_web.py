@@ -45,6 +45,7 @@ META = {
     "pct_hispanic": {"label": "% Hispanic", "desc": "Share of students identifying as Hispanic/Latino, 2025-26.", "source": "Oregon ODE", "fmt": "pct_0_1"},
     "pct_white": {"label": "% White", "desc": "Share of students identifying as White, 2025-26.", "source": "Oregon ODE", "fmt": "pct_0_1"},
     "pct_multiracial": {"label": "% Multiracial", "desc": "Share identifying as two or more races, 2025-26.", "source": "Oregon ODE", "fmt": "pct_0_1"},
+    "pct_bipoc": {"label": "% BIPOC", "desc": "Share of students identifying as any race/ethnicity other than White (1 − % White), 2025-26.", "source": "Derived from Oregon ODE", "fmt": "pct_0_1"},
     "affordable_units_within_1mi": {"label": "Afford. units in catchment", "desc": "Total existing affordable housing units inside the school's PPS attendance area (or a 1-mile radius for schools without a published catchment).", "source": "OAHI + Metro RLIS", "fmt": "int"},
     "pipeline_affordable_units_within_1mi": {"label": "Pipeline afford. units", "desc": "Affordable units in projects currently in development inside the school's PPS attendance area (2023–2027).", "source": "OAHI", "fmt": "int"},
     "pipeline_family_units_within_1mi": {"label": "Pipeline family units", "desc": "2+BR pipeline units inside the school's PPS attendance area — proxy for future families with kids.", "source": "OAHI", "fmt": "int"},
@@ -97,6 +98,21 @@ SCATTERS = [
         "y": "enrollment_2025_26",
         "subtitle": "Many candidates are mid-century buildings with low current enrollment.",
     },
+    {
+        "id": "enrollment_vs_bipoc",
+        "title": "Enrollment vs. % BIPOC students",
+        "x": "enrollment_2025_26",
+        "y": "pct_bipoc",
+        "subtitle": "Do the 15 smallest-enrollment schools serve a disproportionately BIPOC student body compared with the rest of PPS?",
+    },
+    {
+        "id": "urm_cost_vs_enrollment",
+        "title": "URM retrofit cost vs. enrollment",
+        "x": "enrollment_2025_26",
+        "y": "urm_retrofit_cost_usd",
+        "subtitle": "URM buildings only. The slope is cost-per-student to save; schools well above the trend are expensive to retrofit per retained seat.",
+        "trendline": True,
+    },
 ]
 
 
@@ -116,6 +132,7 @@ def main():
     # alternative schools (not high schools). Drop high schools from the
     # dashboard so every view reflects the in-scope set.
     df = df[df["level"] != "high"].reset_index(drop=True)
+    df["pct_bipoc"] = 1 - df["pct_white"]
     schools = []
     for _, row in df.iterrows():
         schools.append({c: clean_val(row[c]) for c in df.columns})

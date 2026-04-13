@@ -54,7 +54,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 21,
-      "n_permits_within_1mi_since_2022": 21
+      "n_permits_within_1mi_since_2022": 21,
+      "pct_bipoc": 0.8625
     },
     {
       "school_name": "Whitman Elementary School",
@@ -110,7 +111,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 135,
-      "n_permits_within_1mi_since_2022": 130
+      "n_permits_within_1mi_since_2022": 130,
+      "pct_bipoc": 0.63731
     },
     {
       "school_name": "Skyline Elementary School",
@@ -166,7 +168,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 17,
-      "n_permits_within_1mi_since_2022": 15
+      "n_permits_within_1mi_since_2022": 15,
+      "pct_bipoc": 0.33816
     },
     {
       "school_name": "Creston Elementary School",
@@ -222,7 +225,8 @@
       "pipeline_family_units_within_1mi": 4,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 325,
-      "n_permits_within_1mi_since_2022": 97
+      "n_permits_within_1mi_since_2022": 97,
+      "pct_bipoc": 0.3379
     },
     {
       "school_name": "Odyssey Program (K-8)",
@@ -278,7 +282,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 222,
-      "n_permits_within_1mi_since_2022": 100
+      "n_permits_within_1mi_since_2022": 100,
+      "pct_bipoc": null
     },
     {
       "school_name": "Woodmere Elementary School",
@@ -334,7 +339,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 113,
-      "n_permits_within_1mi_since_2022": 90
+      "n_permits_within_1mi_since_2022": 90,
+      "pct_bipoc": 0.6548700000000001
     },
     {
       "school_name": "Arleta Elementary School",
@@ -390,7 +396,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 110,
-      "n_permits_within_1mi_since_2022": 108
+      "n_permits_within_1mi_since_2022": 108,
+      "pct_bipoc": 0.38261
     },
     {
       "school_name": "Peninsula Elementary School",
@@ -446,7 +453,8 @@
       "pipeline_family_units_within_1mi": 80,
       "n_pipeline_projects_within_1mi": 4,
       "permits_units_within_1mi_since_2022": 236,
-      "n_permits_within_1mi_since_2022": 131
+      "n_permits_within_1mi_since_2022": 131,
+      "pct_bipoc": 0.5481199999999999
     },
     {
       "school_name": "Chief Joseph Elementary School",
@@ -502,7 +510,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 254,
-      "n_permits_within_1mi_since_2022": 90
+      "n_permits_within_1mi_since_2022": 90,
+      "pct_bipoc": 0.31174
     },
     {
       "school_name": "Lee Elementary School",
@@ -558,7 +567,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 40,
-      "n_permits_within_1mi_since_2022": 39
+      "n_permits_within_1mi_since_2022": 39,
+      "pct_bipoc": 0.56574
     },
     {
       "school_name": "Lent Elementary School",
@@ -614,7 +624,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 74,
-      "n_permits_within_1mi_since_2022": 27
+      "n_permits_within_1mi_since_2022": 27,
+      "pct_bipoc": 0.75781
     },
     {
       "school_name": "Irvington Elementary School",
@@ -670,7 +681,8 @@
       "pipeline_family_units_within_1mi": 98,
       "n_pipeline_projects_within_1mi": 3,
       "permits_units_within_1mi_since_2022": 28,
-      "n_permits_within_1mi_since_2022": 22
+      "n_permits_within_1mi_since_2022": 22,
+      "pct_bipoc": 0.37838000000000005
     },
     {
       "school_name": "Lewis Elementary School",
@@ -726,7 +738,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 396,
-      "n_permits_within_1mi_since_2022": 101
+      "n_permits_within_1mi_since_2022": 101,
+      "pct_bipoc": 0.35114999999999996
     },
     {
       "school_name": "Forest Park Elementary School",
@@ -782,7 +795,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 15,
-      "n_permits_within_1mi_since_2022": 15
+      "n_permits_within_1mi_since_2022": 15,
+      "pct_bipoc": 0.45455
     },
     {
       "school_name": "Rieke Elementary School",
@@ -838,7 +852,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 147,
-      "n_permits_within_1mi_since_2022": 55
+      "n_permits_within_1mi_since_2022": 55,
+      "pct_bipoc": 0.27444
     },
     {
       "school_name": "Abernethy Elementary School",
@@ -894,7 +909,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 191,
-      "n_permits_within_1mi_since_2022": 92
+      "n_permits_within_1mi_since_2022": 92,
+      "pct_bipoc": 0.24163999999999997
     },
     {
       "school_name": "Ainsworth Elementary School",
@@ -950,7 +966,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 220,
-      "n_permits_within_1mi_since_2022": 14
+      "n_permits_within_1mi_since_2022": 14,
+      "pct_bipoc": 0.46902999999999995
     },
     {
       "school_name": "Alameda Elementary School",
@@ -1006,7 +1023,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 50,
-      "n_permits_within_1mi_since_2022": 47
+      "n_permits_within_1mi_since_2022": 47,
+      "pct_bipoc": 0.24853999999999998
     },
     {
       "school_name": "Alliance High School",
@@ -1062,7 +1080,8 @@
       "pipeline_family_units_within_1mi": 120,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 436,
-      "n_permits_within_1mi_since_2022": 264
+      "n_permits_within_1mi_since_2022": 264,
+      "pct_bipoc": 0.52093
     },
     {
       "school_name": "Astor Elementary School",
@@ -1118,7 +1137,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 177,
-      "n_permits_within_1mi_since_2022": 114
+      "n_permits_within_1mi_since_2022": 114,
+      "pct_bipoc": 0.40647999999999995
     },
     {
       "school_name": "Atkinson Elementary School",
@@ -1174,7 +1194,8 @@
       "pipeline_family_units_within_1mi": 4,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 52,
-      "n_permits_within_1mi_since_2022": 50
+      "n_permits_within_1mi_since_2022": 50,
+      "pct_bipoc": 0.46995
     },
     {
       "school_name": "Beach Elementary School",
@@ -1230,7 +1251,8 @@
       "pipeline_family_units_within_1mi": 48,
       "n_pipeline_projects_within_1mi": 3,
       "permits_units_within_1mi_since_2022": 411,
-      "n_permits_within_1mi_since_2022": 79
+      "n_permits_within_1mi_since_2022": 79,
+      "pct_bipoc": 0.54167
     },
     {
       "school_name": "Beaumont Middle School",
@@ -1286,7 +1308,8 @@
       "pipeline_family_units_within_1mi": 60,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 220,
-      "n_permits_within_1mi_since_2022": 118
+      "n_permits_within_1mi_since_2022": 118,
+      "pct_bipoc": 0.41346000000000005
     },
     {
       "school_name": "Beverly Cleary School ",
@@ -1342,7 +1365,8 @@
       "pipeline_family_units_within_1mi": 100,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 47,
-      "n_permits_within_1mi_since_2022": 10
+      "n_permits_within_1mi_since_2022": 10,
+      "pct_bipoc": 0.28957999999999995
     },
     {
       "school_name": "Boise-Eliot Elementary School",
@@ -1398,7 +1422,8 @@
       "pipeline_family_units_within_1mi": 104,
       "n_pipeline_projects_within_1mi": 7,
       "permits_units_within_1mi_since_2022": 763,
-      "n_permits_within_1mi_since_2022": 157
+      "n_permits_within_1mi_since_2022": 157,
+      "pct_bipoc": 0.7661
     },
     {
       "school_name": "Bridger Creative Science School",
@@ -1454,7 +1479,8 @@
       "pipeline_family_units_within_1mi": 20,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 140,
-      "n_permits_within_1mi_since_2022": 17
+      "n_permits_within_1mi_since_2022": 17,
+      "pct_bipoc": 0.30493000000000003
     },
     {
       "school_name": "Bridlemile Elementary School",
@@ -1510,7 +1536,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 23,
-      "n_permits_within_1mi_since_2022": 23
+      "n_permits_within_1mi_since_2022": 23,
+      "pct_bipoc": 0.29078000000000004
     },
     {
       "school_name": "Buckman Elementary School",
@@ -1566,7 +1593,8 @@
       "pipeline_family_units_within_1mi": 25,
       "n_pipeline_projects_within_1mi": 7,
       "permits_units_within_1mi_since_2022": 869,
-      "n_permits_within_1mi_since_2022": 37
+      "n_permits_within_1mi_since_2022": 37,
+      "pct_bipoc": 0.37456
     },
     {
       "school_name": "Capitol Hill Elementary School",
@@ -1622,7 +1650,8 @@
       "pipeline_family_units_within_1mi": 40,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 120,
-      "n_permits_within_1mi_since_2022": 94
+      "n_permits_within_1mi_since_2022": 94,
+      "pct_bipoc": 0.29786999999999997
     },
     {
       "school_name": "Chapman Elementary School",
@@ -1678,7 +1707,8 @@
       "pipeline_family_units_within_1mi": 103,
       "n_pipeline_projects_within_1mi": 10,
       "permits_units_within_1mi_since_2022": 1693,
-      "n_permits_within_1mi_since_2022": 44
+      "n_permits_within_1mi_since_2022": 44,
+      "pct_bipoc": 0.53453
     },
     {
       "school_name": "Clark Elementary School",
@@ -1734,7 +1764,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 157,
-      "n_permits_within_1mi_since_2022": 66
+      "n_permits_within_1mi_since_2022": 66,
+      "pct_bipoc": 0.78237
     },
     {
       "school_name": "C\u00e9sar Ch\u00e1vez K-8 School",
@@ -1790,7 +1821,8 @@
       "pipeline_family_units_within_1mi": 30,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 65,
-      "n_permits_within_1mi_since_2022": 41
+      "n_permits_within_1mi_since_2022": 41,
+      "pct_bipoc": 0.84424
     },
     {
       "school_name": "Dr. Martin Luther King Jr. School",
@@ -1846,7 +1878,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 63,
-      "n_permits_within_1mi_since_2022": 47
+      "n_permits_within_1mi_since_2022": 47,
+      "pct_bipoc": 0.75862
     },
     {
       "school_name": "Duniway Elementary School",
@@ -1902,7 +1935,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 99,
-      "n_permits_within_1mi_since_2022": 66
+      "n_permits_within_1mi_since_2022": 66,
+      "pct_bipoc": 0.22375999999999996
     },
     {
       "school_name": "Faubion Elementary School",
@@ -1958,7 +1992,8 @@
       "pipeline_family_units_within_1mi": 4,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 516,
-      "n_permits_within_1mi_since_2022": 50
+      "n_permits_within_1mi_since_2022": 50,
+      "pct_bipoc": 0.7283299999999999
     },
     {
       "school_name": "George Middle School",
@@ -2014,7 +2049,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 275,
-      "n_permits_within_1mi_since_2022": 247
+      "n_permits_within_1mi_since_2022": 247,
+      "pct_bipoc": 0.80337
     },
     {
       "school_name": "Glencoe Elementary School",
@@ -2070,7 +2106,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 245,
-      "n_permits_within_1mi_since_2022": 78
+      "n_permits_within_1mi_since_2022": 78,
+      "pct_bipoc": 0.25805999999999996
     },
     {
       "school_name": "Gray Middle School",
@@ -2126,7 +2163,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 214,
-      "n_permits_within_1mi_since_2022": 112
+      "n_permits_within_1mi_since_2022": 112,
+      "pct_bipoc": 0.30093000000000003
     },
     {
       "school_name": "Grout Elementary School",
@@ -2182,7 +2220,8 @@
       "pipeline_family_units_within_1mi": 100,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 249,
-      "n_permits_within_1mi_since_2022": 112
+      "n_permits_within_1mi_since_2022": 112,
+      "pct_bipoc": 0.50153
     },
     {
       "school_name": "Harriet Tubman Middle School",
@@ -2238,7 +2277,8 @@
       "pipeline_family_units_within_1mi": 202,
       "n_pipeline_projects_within_1mi": 12,
       "permits_units_within_1mi_since_2022": 941,
-      "n_permits_within_1mi_since_2022": 273
+      "n_permits_within_1mi_since_2022": 273,
+      "pct_bipoc": 0.5682400000000001
     },
     {
       "school_name": "Harrison Park School",
@@ -2294,7 +2334,8 @@
       "pipeline_family_units_within_1mi": 76,
       "n_pipeline_projects_within_1mi": 4,
       "permits_units_within_1mi_since_2022": 539,
-      "n_permits_within_1mi_since_2022": 251
+      "n_permits_within_1mi_since_2022": 251,
+      "pct_bipoc": 0.64286
     },
     {
       "school_name": "Hayhurst Elementary School",
@@ -2350,7 +2391,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 52,
-      "n_permits_within_1mi_since_2022": 42
+      "n_permits_within_1mi_since_2022": 42,
+      "pct_bipoc": 0.33070999999999995
     },
     {
       "school_name": "Hosford Middle School",
@@ -2406,7 +2448,8 @@
       "pipeline_family_units_within_1mi": 129,
       "n_pipeline_projects_within_1mi": 12,
       "permits_units_within_1mi_since_2022": 1634,
-      "n_permits_within_1mi_since_2022": 338
+      "n_permits_within_1mi_since_2022": 338,
+      "pct_bipoc": 0.30303
     },
     {
       "school_name": "Jackson Middle School",
@@ -2462,7 +2505,8 @@
       "pipeline_family_units_within_1mi": 277,
       "n_pipeline_projects_within_1mi": 5,
       "permits_units_within_1mi_since_2022": 560,
-      "n_permits_within_1mi_since_2022": 268
+      "n_permits_within_1mi_since_2022": 268,
+      "pct_bipoc": 0.34302
     },
     {
       "school_name": "James John Elementary School",
@@ -2518,7 +2562,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 185,
-      "n_permits_within_1mi_since_2022": 161
+      "n_permits_within_1mi_since_2022": 161,
+      "pct_bipoc": 0.6813199999999999
     },
     {
       "school_name": "Kellogg Middle School",
@@ -2574,7 +2619,8 @@
       "pipeline_family_units_within_1mi": 29,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 295,
-      "n_permits_within_1mi_since_2022": 174
+      "n_permits_within_1mi_since_2022": 174,
+      "pct_bipoc": 0.58161
     },
     {
       "school_name": "Kelly Elementary School",
@@ -2630,7 +2676,8 @@
       "pipeline_family_units_within_1mi": 30,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 70,
-      "n_permits_within_1mi_since_2022": 31
+      "n_permits_within_1mi_since_2022": 31,
+      "pct_bipoc": 0.52555
     },
     {
       "school_name": "Lane Middle School",
@@ -2686,7 +2733,8 @@
       "pipeline_family_units_within_1mi": 30,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 509,
-      "n_permits_within_1mi_since_2022": 329
+      "n_permits_within_1mi_since_2022": 329,
+      "pct_bipoc": 0.60444
     },
     {
       "school_name": "Laurelhurst Elementary School",
@@ -2742,7 +2790,8 @@
       "pipeline_family_units_within_1mi": 63,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 260,
-      "n_permits_within_1mi_since_2022": 34
+      "n_permits_within_1mi_since_2022": 34,
+      "pct_bipoc": 0.26221000000000005
     },
     {
       "school_name": "Llewellyn Elementary School",
@@ -2798,7 +2847,8 @@
       "pipeline_family_units_within_1mi": 3,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 136,
-      "n_permits_within_1mi_since_2022": 124
+      "n_permits_within_1mi_since_2022": 124,
+      "pct_bipoc": 0.22319
     },
     {
       "school_name": "Maplewood Elementary School",
@@ -2854,7 +2904,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 246,
-      "n_permits_within_1mi_since_2022": 80
+      "n_permits_within_1mi_since_2022": 80,
+      "pct_bipoc": 0.32638999999999996
     },
     {
       "school_name": "Markham Elementary School",
@@ -2910,7 +2961,8 @@
       "pipeline_family_units_within_1mi": 82,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 171,
-      "n_permits_within_1mi_since_2022": 72
+      "n_permits_within_1mi_since_2022": 72,
+      "pct_bipoc": 0.50737
     },
     {
       "school_name": "Marysville Elementary School",
@@ -2966,7 +3018,8 @@
       "pipeline_family_units_within_1mi": 29,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 111,
-      "n_permits_within_1mi_since_2022": 39
+      "n_permits_within_1mi_since_2022": 39,
+      "pct_bipoc": 0.64474
     },
     {
       "school_name": "Metropolitan Learning Center",
@@ -3022,7 +3075,8 @@
       "pipeline_family_units_within_1mi": 103,
       "n_pipeline_projects_within_1mi": 10,
       "permits_units_within_1mi_since_2022": 1706,
-      "n_permits_within_1mi_since_2022": 39
+      "n_permits_within_1mi_since_2022": 39,
+      "pct_bipoc": 0.26544999999999996
     },
     {
       "school_name": "Mt Tabor Middle School",
@@ -3078,7 +3132,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 245,
-      "n_permits_within_1mi_since_2022": 78
+      "n_permits_within_1mi_since_2022": 78,
+      "pct_bipoc": 0.44186000000000003
     },
     {
       "school_name": "Ockley Green Middle School",
@@ -3134,7 +3189,8 @@
       "pipeline_family_units_within_1mi": 128,
       "n_pipeline_projects_within_1mi": 7,
       "permits_units_within_1mi_since_2022": 973,
-      "n_permits_within_1mi_since_2022": 371
+      "n_permits_within_1mi_since_2022": 371,
+      "pct_bipoc": 0.53043
     },
     {
       "school_name": "Richmond Elementary School",
@@ -3190,7 +3246,8 @@
       "pipeline_family_units_within_1mi": 116,
       "n_pipeline_projects_within_1mi": 7,
       "permits_units_within_1mi_since_2022": 615,
-      "n_permits_within_1mi_since_2022": 217
+      "n_permits_within_1mi_since_2022": 217,
+      "pct_bipoc": 0.5800799999999999
     },
     {
       "school_name": "Rigler Elementary School",
@@ -3246,7 +3303,8 @@
       "pipeline_family_units_within_1mi": 60,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 170,
-      "n_permits_within_1mi_since_2022": 71
+      "n_permits_within_1mi_since_2022": 71,
+      "pct_bipoc": 0.69416
     },
     {
       "school_name": "Rose City Park",
@@ -3302,7 +3360,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 78,
-      "n_permits_within_1mi_since_2022": 55
+      "n_permits_within_1mi_since_2022": 55,
+      "pct_bipoc": 0.5419700000000001
     },
     {
       "school_name": "Roseway Heights School",
@@ -3358,7 +3417,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 213,
-      "n_permits_within_1mi_since_2022": 188
+      "n_permits_within_1mi_since_2022": 188,
+      "pct_bipoc": 0.57343
     },
     {
       "school_name": "Sabin Elementary School",
@@ -3414,7 +3474,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 87,
-      "n_permits_within_1mi_since_2022": 47
+      "n_permits_within_1mi_since_2022": 47,
+      "pct_bipoc": 0.37407
     },
     {
       "school_name": "Scott Elementary School",
@@ -3470,7 +3531,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 95,
-      "n_permits_within_1mi_since_2022": 94
+      "n_permits_within_1mi_since_2022": 94,
+      "pct_bipoc": 0.6184499999999999
     },
     {
       "school_name": "Sellwood Middle School",
@@ -3526,7 +3588,8 @@
       "pipeline_family_units_within_1mi": 3,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 631,
-      "n_permits_within_1mi_since_2022": 291
+      "n_permits_within_1mi_since_2022": 291,
+      "pct_bipoc": 0.20494999999999997
     },
     {
       "school_name": "Sitton Elementary School",
@@ -3582,7 +3645,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 69,
-      "n_permits_within_1mi_since_2022": 65
+      "n_permits_within_1mi_since_2022": 65,
+      "pct_bipoc": 0.67052
     },
     {
       "school_name": "Stephenson Elementary School",
@@ -3638,7 +3702,8 @@
       "pipeline_family_units_within_1mi": 155,
       "n_pipeline_projects_within_1mi": 2,
       "permits_units_within_1mi_since_2022": 23,
-      "n_permits_within_1mi_since_2022": 22
+      "n_permits_within_1mi_since_2022": 22,
+      "pct_bipoc": 0.31672999999999996
     },
     {
       "school_name": "Sunnyside Environmental School",
@@ -3694,7 +3759,8 @@
       "pipeline_family_units_within_1mi": 88,
       "n_pipeline_projects_within_1mi": 3,
       "permits_units_within_1mi_since_2022": 128,
-      "n_permits_within_1mi_since_2022": 21
+      "n_permits_within_1mi_since_2022": 21,
+      "pct_bipoc": 0.25773
     },
     {
       "school_name": "Vernon Elementary School",
@@ -3750,7 +3816,8 @@
       "pipeline_family_units_within_1mi": 60,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 291,
-      "n_permits_within_1mi_since_2022": 180
+      "n_permits_within_1mi_since_2022": 180,
+      "pct_bipoc": 0.44898000000000005
     },
     {
       "school_name": "Vestal Elementary School",
@@ -3806,7 +3873,8 @@
       "pipeline_family_units_within_1mi": 72,
       "n_pipeline_projects_within_1mi": 3,
       "permits_units_within_1mi_since_2022": 330,
-      "n_permits_within_1mi_since_2022": 135
+      "n_permits_within_1mi_since_2022": 135,
+      "pct_bipoc": 0.54196
     },
     {
       "school_name": "West Sylvan Middle School",
@@ -3862,7 +3930,8 @@
       "pipeline_family_units_within_1mi": 103,
       "n_pipeline_projects_within_1mi": 12,
       "permits_units_within_1mi_since_2022": 1936,
-      "n_permits_within_1mi_since_2022": 81
+      "n_permits_within_1mi_since_2022": 81,
+      "pct_bipoc": 0.41606
     },
     {
       "school_name": "Winterhaven School",
@@ -3918,7 +3987,8 @@
       "pipeline_family_units_within_1mi": 100,
       "n_pipeline_projects_within_1mi": 3,
       "permits_units_within_1mi_since_2022": 353,
-      "n_permits_within_1mi_since_2022": 164
+      "n_permits_within_1mi_since_2022": 164,
+      "pct_bipoc": 0.29747
     },
     {
       "school_name": "Woodlawn Elementary School",
@@ -3974,7 +4044,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 72,
-      "n_permits_within_1mi_since_2022": 71
+      "n_permits_within_1mi_since_2022": 71,
+      "pct_bipoc": 0.6284799999999999
     },
     {
       "school_name": "Woodstock Elementary School",
@@ -4030,7 +4101,8 @@
       "pipeline_family_units_within_1mi": 0,
       "n_pipeline_projects_within_1mi": 0,
       "permits_units_within_1mi_since_2022": 191,
-      "n_permits_within_1mi_since_2022": 78
+      "n_permits_within_1mi_since_2022": 78,
+      "pct_bipoc": 0.53825
     },
     {
       "school_name": "da Vinci Middle School",
@@ -4086,7 +4158,8 @@
       "pipeline_family_units_within_1mi": 176,
       "n_pipeline_projects_within_1mi": 12,
       "permits_units_within_1mi_since_2022": 900,
-      "n_permits_within_1mi_since_2022": 71
+      "n_permits_within_1mi_since_2022": 71,
+      "pct_bipoc": 0.35897
     },
     {
       "school_name": "ACCESS Academy",
@@ -4142,7 +4215,8 @@
       "pipeline_family_units_within_1mi": 40,
       "n_pipeline_projects_within_1mi": 1,
       "permits_units_within_1mi_since_2022": 52,
-      "n_permits_within_1mi_since_2022": 48
+      "n_permits_within_1mi_since_2022": 48,
+      "pct_bipoc": null
     }
   ],
   "meta": {
@@ -4350,6 +4424,12 @@
       "source": "Oregon ODE",
       "fmt": "pct_0_1"
     },
+    "pct_bipoc": {
+      "label": "% BIPOC",
+      "desc": "Share of students identifying as any race/ethnicity other than White (1 \u2212 % White), 2025-26.",
+      "source": "Derived from Oregon ODE",
+      "fmt": "pct_0_1"
+    },
     "affordable_units_within_1mi": {
       "label": "Afford. units in catchment",
       "desc": "Total existing affordable housing units inside the school's PPS attendance area (or a 1-mile radius for schools without a published catchment).",
@@ -4452,6 +4532,21 @@
       "x": "year_built",
       "y": "enrollment_2025_26",
       "subtitle": "Many candidates are mid-century buildings with low current enrollment."
+    },
+    {
+      "id": "enrollment_vs_bipoc",
+      "title": "Enrollment vs. % BIPOC students",
+      "x": "enrollment_2025_26",
+      "y": "pct_bipoc",
+      "subtitle": "Do the 15 smallest-enrollment schools serve a disproportionately BIPOC student body compared with the rest of PPS?"
+    },
+    {
+      "id": "urm_cost_vs_enrollment",
+      "title": "URM retrofit cost vs. enrollment",
+      "x": "enrollment_2025_26",
+      "y": "urm_retrofit_cost_usd",
+      "subtitle": "URM buildings only. The slope is cost-per-student to save; schools well above the trend are expensive to retrofit per retained seat.",
+      "trendline": true
     }
   ],
   "n_schools": 74,
