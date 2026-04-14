@@ -23,7 +23,7 @@
   :root {
     --bg: #0e1115; --panel: #161b22; --border: #30363d; --fg: #e6edf3;
     --muted: #7d8590; --candidate: #f97e60; --other: #58a6ff;
-    --accent: #2f81f7; --urm: #d63b3b;
+    --accent: #2f81f7; --urm: #a371f7;
     /* Typographic scale */
     --fs-h1: 32px;
     --fs-h2: 22px;
@@ -52,9 +52,11 @@
   .topnav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
     height: var(--nav-h); display: flex; align-items: center; gap: 18px; }
   .topnav .brand { font-weight: 600; font-size: 14px; letter-spacing: 0.2px;
-    color: var(--fg); text-decoration: none; white-space: nowrap; }
-  .topnav .brand .dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px;
-    border-radius: 50%; background: var(--accent); vertical-align: middle; }
+    color: var(--fg); text-decoration: none; white-space: nowrap;
+    display: inline-flex; align-items: center; }
+  .topnav .brand .dot { width: 8px; height: 8px; margin-right: 8px;
+    border-radius: 50%; background: var(--accent); flex-shrink: 0;
+    transform: translateY(-2px); }
   .topnav nav { margin-left: auto; display: flex; gap: 4px; }
   .topnav nav a { color: var(--muted); text-decoration: none; font-size: 13px;
     padding: 6px 10px; border-radius: 6px; white-space: nowrap; transition: color 0.15s, background 0.15s; }
@@ -299,7 +301,7 @@
         programs, transportation, and long-term sustainability.
       </p>
       <p>
-        This explorer gathers data to visualize these factors for every PPS school.
+        This explorer gathers data to visualize these factors for every in-scope PPS school.
         Academic performance is included for context, though it is notably absent from the
         criteria PPS has discussed publicly.
       </p>
@@ -332,7 +334,7 @@
   <section id="section-map">
     <h2>Map — all 74 in-scope PPS schools</h2>
     <p class="note">
-      Each marker sized by 2025-26 enrollment. A red ring indicates an unreinforced masonry (URM) building.
+      Each marker sized by 2025-26 enrollment. A purple ring indicates an unreinforced masonry (URM) building.
     </p>
     <div class="panel"><div id="map"></div></div>
   </section>
@@ -346,6 +348,13 @@
       schools and check one or more to isolate them on the chart; hover a line to identify
       it. Shows 70 of the 74 in-scope schools — 4 schools without complete 2018–2025
       history are omitted. Source: NCES CCD (2018–2023) + Oregon ODE (2024–2025).
+    </p>
+    <p class="note" style="margin-top: -6px;">
+      <strong>Caveat:</strong> 19 schools had their attendance boundary or grade
+      configuration redrawn inside this window — via <em>DBRAC</em> (2018) or the
+      <em>Southeast Guiding Coalition</em> (SEGC, 2023). For those rows, some of the
+      apparent enrollment change reflects catchment redraws rather than pure demand
+      change. See the "Recent boundary change" column in the table below.
     </p>
     <div class="panel chart-card">
       <div class="trends-controls">
@@ -385,6 +394,20 @@
       reassignment may differ. Bars are labeled with the nearest alternative school.
     </p>
     <div class="panel chart-card"><div id="plot-transport" style="height: 460px;"></div></div>
+  </section>
+
+  <section id="section-dli">
+    <h2>DLI vs. neighborhood enrollment at shared-building schools</h2>
+    <p class="note">
+      Every Dual Language Immersion program is a strand hosted inside a
+      neighborhood school — its students come from a district-wide lottery, not
+      the catchment. This chart splits each host school's October 2025 headcount
+      into mainstream/neighborhood (left) and DLI strand (right). Schools range
+      from single-strand hosts (Jefferson 4% DLI) to whole-school immersion
+      programs (Lent, Rigler, Richmond — 100%). Source: PPS Language Immersion
+      Enrollment Report 2025-26.
+    </p>
+    <div class="panel chart-card"><div id="plot-dli" style="height: 700px;"></div></div>
   </section>
 
   <section id="section-scatters">
@@ -461,6 +484,8 @@
     <dl>
       <dt><a href="https://www.oregon.gov/ode/educator-resources/assessment/Pages/Assessment-Group-Reports.aspx" target="_blank" rel="noopener">Oregon OSAS state assessments (2024-25, 2023-24)</a></dt>
         <dd>School-level ELA and Math proficiency rates (meets/exceeds, all grades, all students).</dd>
+      <dt><a href="https://www.oregon.gov/ode/schools-and-districts/reportcards/reportcards/Pages/default.aspx" target="_blank" rel="noopener">Oregon ODE At-A-Glance Source File (2024-25)</a></dt>
+        <dd>The statewide CSV that backs every school's At-A-Glance profile. Source for regular-attenders %, experienced-teacher %, teacher retention %, and median class size.</dd>
     </dl>
 
     <h3>Buildings &amp; seismic</h3>
@@ -485,6 +510,8 @@
         <dd>Per-language host schools for Spanish, Chinese, Japanese, Russian, and Vietnamese DLI tracks (elementary, middle, high). Captured 2026-04 — re-verify annually.</dd>
       <dt><a href="https://www.pps.net/departments/enrollment-transfer/enroll/explore-your-options/k-5-explore-your-options" target="_blank" rel="noopener">PPS K-5 focus options</a></dt>
         <dd>K-8 focus-option / specialized-curriculum schools: Buckman Arts, Bridger Creative Science, Sunnyside Environmental, Winterhaven STEAM, Odyssey TAG, ACCESS, MLC.</dd>
+      <dt><a href="https://www.pps.net/departments/research-assessment-and-accountability/data-and-reports/enrollment-reports-and-school-profiles" target="_blank" rel="noopener">PPS Language Immersion Enrollment Report (annual)</a></dt>
+        <dd>Per-school DLI-strand vs. non-strand headcounts from the district SIS (Synergy), October 2025 enrollment snapshot. Published annually by PPS Research, Assessment &amp; Accountability. The only source that separates immersion students from neighborhood students inside a shared-building school — ODE Fall Membership reports only the combined total.</dd>
     </dl>
 
     <h3>Housing &amp; neighborhood growth</h3>
@@ -674,7 +701,7 @@
     const r = Math.max(5, Math.min(22, Math.sqrt(s.enrollment_2025_26 || 100) / 2));
     const marker = L.circleMarker([s.latitude, s.longitude], {
       radius: r,
-      color: urm ? "#d63b3b" : "#58a6ff",
+      color: urm ? "#a371f7" : "#58a6ff",
       weight: urm ? 2.5 : 1,
       fillColor: "#58a6ff",
       fillOpacity: 0.72,
@@ -1090,6 +1117,58 @@
     renderTrend();
     let t2;
     window.addEventListener("resize", () => { clearTimeout(t2); t2 = setTimeout(renderTrend, 150); });
+  })();
+
+  // ---------- DLI vs. NEIGHBORHOOD STACKED BARS ----------
+  (function () {
+    const rows = schools.filter(s => s.dli_students_2526 != null);
+    if (!rows.length) return;
+    rows.sort((a, b) => b.pct_dli_2526 - a.pct_dli_2526);  // most DLI-intensive first
+    const COLOR_NEIGH = "#58a6ff";
+    const COLOR_DLI = "#d291ff";
+    function renderDli() {
+      const mobile = window.innerWidth < 700;
+      const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
+      const labels = rows.map(s => mobile ? truncate(s.school_name, 20) : s.school_name);
+      const neigh = {
+        type: "bar", orientation: "h", name: "Neighborhood / mainstream",
+        x: rows.map(s => s.neighborhood_students_2526),
+        y: labels,
+        marker: { color: COLOR_NEIGH, line: { width: 0.5, color: "#0e1115" } },
+        customdata: rows.map(s => [s.dli_languages || "—", s.enrollment_2025_26,
+          Math.round((1 - (s.pct_dli_2526 ?? 0)) * 100)]),
+        hovertemplate: "<b>%{y}</b><br>Neighborhood: %{x} students (%{customdata[2]}%)<br>Total: %{customdata[1]}<extra></extra>",
+      };
+      const dli = {
+        type: "bar", orientation: "h", name: "DLI strand",
+        x: rows.map(s => s.dli_students_2526),
+        y: labels,
+        marker: { color: COLOR_DLI, line: { width: 0.5, color: "#0e1115" } },
+        text: rows.map(s => Math.round(s.pct_dli_2526 * 100) + "%"),
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata: rows.map(s => [s.dli_languages || "—", s.enrollment_2025_26]),
+        hovertemplate: "<b>%{y}</b><br>DLI (%{customdata[0]}): %{x} students<br>Total: %{customdata[1]}<extra></extra>",
+      };
+      Plotly.react("plot-dli", [neigh, dli], Object.assign(baseLayout(), {
+        barmode: "stack",
+        margin: mobile
+          ? { l: 140, r: 60, t: 20, b: 50 }
+          : { l: 220, r: 80, t: 20, b: 50 },
+        xaxis: { title: "Students (Oct 2025)",
+          gridcolor: "#30363d", zerolinecolor: "#7d8590" },
+        yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 },
+          autorange: "reversed" },
+        legend: { orientation: "h", x: 0, y: 1.04, yanchor: "bottom",
+          font: { size: 11 }, bgcolor: "rgba(0,0,0,0)" },
+      }), { displayModeBar: false, responsive: true });
+    }
+    renderDli();
+    let tDli;
+    window.addEventListener("resize", () => {
+      clearTimeout(tDli); tDli = setTimeout(renderDli, 150);
+    });
   })();
 
   // ---------- OUTPERFORMER / UNDERPERFORMER BARS ----------

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Ainsworth",
+    "total_enrollment": 560,
+    "dli_students": 287,
+    "dli_pct": 0.5125
+  },
+  {
+    "name": "Atkinson",
+    "total_enrollment": 366,
+    "dli_students": 178,
+    "dli_pct": 0.4863
+  },
+  {
+    "name": "Beach",
+    "total_enrollment": 288,
+    "dli_students": 155,
+    "dli_pct": 0.5382
+  },
+  {
+    "name": "Beaumont",
+    "total_enrollment": 416,
+    "dli_students": 101,
+    "dli_pct": 0.2428
+  },
+  {
+    "name": "C\u00e9sar Ch\u00e1vez",
+    "total_enrollment": 443,
+    "dli_students": 300,
+    "dli_pct": 0.6772
+  },
+  {
+    "name": "Clark",
+    "total_enrollment": 364,
+    "dli_students": 91,
+    "dli_pct": 0.25
+  },
+  {
+    "name": "Cleveland",
+    "total_enrollment": 1451,
+    "dli_students": 115,
+    "dli_pct": 0.0793
+  },
+  {
+    "name": "Franklin",
+    "total_enrollment": 1780,
+    "dli_students": 202,
+    "dli_pct": 0.1135
+  },
+  {
+    "name": "George",
+    "total_enrollment": 358,
+    "dli_students": 109,
+    "dli_pct": 0.3045
+  },
+  {
+    "name": "Grant",
+    "total_enrollment": 2074,
+    "dli_students": 265,
+    "dli_pct": 0.1278
+  },
+  {
+    "name": "Harriet Tubman",
+    "total_enrollment": 402,
+    "dli_students": 48,
+    "dli_pct": 0.1194
+  },
+  {
+    "name": "Harrison Park",
+    "total_enrollment": 419,
+    "dli_students": 111,
+    "dli_pct": 0.2649
+  },
+  {
+    "name": "James John",
+    "total_enrollment": 365,
+    "dli_students": 133,
+    "dli_pct": 0.3644
+  },
+  {
+    "name": "Jefferson",
+    "total_enrollment": 391,
+    "dli_students": 14,
+    "dli_pct": 0.0358
+  },
+  {
+    "name": "Kellogg",
+    "total_enrollment": 531,
+    "dli_students": 201,
+    "dli_pct": 0.3785
+  },
+  {
+    "name": "Kelly",
+    "total_enrollment": 411,
+    "dli_students": 143,
+    "dli_pct": 0.3479
+  },
+  {
+    "name": "Lane",
+    "total_enrollment": 447,
+    "dli_students": 36,
+    "dli_pct": 0.0805
+  },
+  {
+    "name": "Lent",
+    "total_enrollment": 256,
+    "dli_students": 256,
+    "dli_pct": 1.0
+  },
+  {
+    "name": "Lincoln",
+    "total_enrollment": 1647,
+    "dli_students": 178,
+    "dli_pct": 0.1081
+  },
+  {
+    "name": "McDaniel",
+    "total_enrollment": 1629,
+    "dli_students": 239,
+    "dli_pct": 0.1467
+  },
+  {
+    "name": "MLK Jr",
+    "total_enrollment": 319,
+    "dli_students": 193,
+    "dli_pct": 0.605
+  },
+  {
+    "name": "Mt Tabor",
+    "total_enrollment": 430,
+    "dli_students": 222,
+    "dli_pct": 0.5163
+  },
+  {
+    "name": "Ockley Green",
+    "total_enrollment": 460,
+    "dli_students": 63,
+    "dli_pct": 0.137
+  },
+  {
+    "name": "Richmond",
+    "total_enrollment": 512,
+    "dli_students": 512,
+    "dli_pct": 1.0
+  },
+  {
+    "name": "Rigler",
+    "total_enrollment": 289,
+    "dli_students": 289,
+    "dli_pct": 1.0
+  },
+  {
+    "name": "Roosevelt",
+    "total_enrollment": 1419,
+    "dli_students": 299,
+    "dli_pct": 0.2107
+  },
+  {
+    "name": "Rose City Park",
+    "total_enrollment": 417,
+    "dli_students": 207,
+    "dli_pct": 0.4964
+  },
+  {
+    "name": "Roseway Heights",
+    "total_enrollment": 572,
+    "dli_students": 157,
+    "dli_pct": 0.2745
+  },
+  {
+    "name": "Scott",
+    "total_enrollment": 476,
+    "dli_students": 222,
+    "dli_pct": 0.4664
+  },
+  {
+    "name": "Sitton",
+    "total_enrollment": 345,
+    "dli_students": 138,
+    "dli_pct": 0.4
+  },
+  {
+    "name": "West Sylvan",
+    "total_enrollment": 683,
+    "dli_students": 116,
+    "dli_pct": 0.1698
+  },
+  {
+    "name": "Woodstock",
+    "total_enrollment": 367,
+    "dli_students": 190,
+    "dli_pct": 0.5177
+  }
+]

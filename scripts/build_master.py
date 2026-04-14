@@ -16,6 +16,8 @@ OSAS_ELA_25 = ROOT / "data/raw/pagr_schools_ela_all_2425.xlsx"
 OSAS_MATH_25 = ROOT / "data/raw/pagr_schools_math_all_2425.xlsx"
 OSAS_ELA_24 = ROOT / "data/raw/pagr_schools_ela_all_2324.xlsx"
 OSAS_MATH_24 = ROOT / "data/raw/pagr_schools_math_all_2324.xlsx"
+ODE_AAG = ROOT / "data/raw/ode_aag_schools_2425.csv"
+DLI_REPORT = ROOT / "data/raw/pps_immersion_details_2526.json"
 OUT = ROOT / "data/pps_schools.csv"
 
 # Closure candidates from WW article (3/18/2026). Keys are ODE school names.
@@ -130,6 +132,39 @@ SEISMIC_RETROFIT = {
     "Rose City Park": "planned_full",
 }
 
+# Schools that have had their attendance boundary or grade configuration
+# meaningfully redrawn inside the enrollment-trend window (2018 → 2025). Use
+# this to caveat long-term-trend reads: drops/gains at these schools partly
+# reflect catchment redraws, not pure demand change.
+#   DBRAC = Districtwide Boundary Review Advisory Committee; new middle schools
+#     and NE/N redraws phased in 2018-19.
+#   SEGC  = Southeast Guiding Coalition; boundary + grade-config changes
+#     implemented fall 2023 (Bridger / Harrison Park K-5 conversions, Lent /
+#     Marysville / Clark feeder redraws).
+BOUNDARY_CHANGES = {
+    # DBRAC (2018-19) — new middle-school feeders + K-8 → K-5 conversions
+    "Roseway Heights School": "DBRAC 2018",
+    "Harriet Tubman Middle School": "DBRAC 2018",
+    "Ockley Green Middle School": "DBRAC 2018",
+    "Boise-Eliot Elementary School": "DBRAC 2018",
+    "Dr. Martin Luther King Jr. School": "DBRAC 2018",
+    "Irvington Elementary School": "DBRAC 2018",
+    "Sabin Elementary School": "DBRAC 2018",
+    "Lee Elementary School": "DBRAC 2018",
+    "Scott Elementary School": "DBRAC 2018",
+    "Vestal Elementary School": "DBRAC 2018",
+    "Faubion Elementary School": "DBRAC 2018",
+    # SEGC (implemented fall 2023) — high-impact schools per PPS implementation manuals
+    "Harrison Park School": "SEGC 2023",
+    "Clark Elementary School": "SEGC 2023",
+    "Bridger Creative Science School": "SEGC 2023",
+    "Lent Elementary School": "SEGC 2023",
+    "Marysville Elementary School": "SEGC 2023",
+    "Kellogg Middle School": "SEGC 2023",
+    "Lane Middle School": "SEGC 2023",
+    "Creston Elementary School": "SEGC 2023",
+}
+
 # Specialized programs hosted at each PPS school. Two categories:
 #   1. Dual Language Immersion (DLI) — five languages, district-administered.
 #   2. Focus options — distinctive curricular models (Arts, Environmental,
@@ -227,6 +262,42 @@ CCD_NAME_MAP = {
     "Beverly Cleary School ": "Beverly Cleary School",
     "Bridger Creative Science School": "Bridger Elementary School",
     "César Chávez K-8 School": "Cesar Chavez K-8 School",
+}
+
+# PPS Immersion-report short-name -> master school_name.
+DLI_NAME_MAP = {
+    "Ainsworth": "Ainsworth Elementary School",
+    "Atkinson": "Atkinson Elementary School",
+    "Beach": "Beach Elementary School",
+    "Beaumont": "Beaumont Middle School",
+    "César Chávez": "César Chávez K-8 School",
+    "Clark": "Clark Elementary School",
+    "Cleveland": "Cleveland High School",
+    "Franklin": "Franklin High School",
+    "George": "George Middle School",
+    "Grant": "Grant High School",
+    "Harriet Tubman": "Harriet Tubman Middle School",
+    "Harrison Park": "Harrison Park School",
+    "James John": "James John Elementary School",
+    "Jefferson": "Jefferson High School",
+    "Kellogg": "Kellogg Middle School",
+    "Kelly": "Kelly Elementary School",
+    "Lane": "Lane Middle School",
+    "Lent": "Lent Elementary School",
+    "Lincoln": "Lincoln High School",
+    "McDaniel": "Leodis V. McDaniel High School",
+    "MLK Jr": "Dr. Martin Luther King Jr. School",
+    "Mt Tabor": "Mt Tabor Middle School",
+    "Ockley Green": "Ockley Green Middle School",
+    "Richmond": "Richmond Elementary School",
+    "Rigler": "Rigler Elementary School",
+    "Roosevelt": "Roosevelt High School",
+    "Rose City Park": "Rose City Park",
+    "Roseway Heights": "Roseway Heights School",
+    "Scott": "Scott Elementary School",
+    "Sitton": "Sitton Elementary School",
+    "West Sylvan": "West Sylvan Middle School",
+    "Woodstock": "Woodstock Elementary School",
 }
 
 # Master_name -> facility_2009 school_name_2009. Accounts for renamings,
@@ -406,6 +477,7 @@ def main():
     pps["is_urm_building"] = pps["School Name"].isin(URM_BUILDINGS)
     pps["urm_retrofit_cost_usd"] = pps["School Name"].map(URM_BUILDINGS)
     pps["seismic_retrofit_status"] = pps["School Name"].map(SEISMIC_RETROFIT)
+    pps["recent_boundary_change"] = pps["School Name"].map(BOUNDARY_CHANGES)
     pps["programs"] = pps["School Name"].map(lambda n: "; ".join(PROGRAMS.get(n, [])) or None)
     pps["has_dli"] = pps["School Name"].map(
         lambda n: any("DLI" in p for p in PROGRAMS.get(n, [])))
@@ -554,7 +626,50 @@ def main():
         o = osas_total(path, subj, yr).rename(columns={"ode_school_id": "_ode_int"})
         o["_ode_int"] = pd.to_numeric(o["_ode_int"], errors="coerce")
         pps = pps.merge(o, on="_ode_int", how="left")
+
+    # Merge ODE At-A-Glance 2024-25: regular attenders %, teacher experience %,
+    # teacher retention %, class size. Joined on ODE School ID.
+    aag = pd.read_csv(ODE_AAG, low_memory=False)
+
+    def _pct(v):
+        if pd.isna(v) or v in ("", "*", "--", "-"):
+            return None
+        return pd.to_numeric(str(v).replace("%", "").replace(">", "").replace("<", ""),
+                             errors="coerce")
+
+    aag["_ode_int"] = pd.to_numeric(aag["School ID"], errors="coerce")
+    aag_cols = aag[[
+        "_ode_int", "Regular Attenders", "Experienced Teachers",
+        "Average Teacher Retention Rate", "Class Size",
+    ]].rename(columns={
+        "Regular Attenders": "pct_regular_attenders_2425",
+        "Experienced Teachers": "pct_experienced_teachers_2425",
+        "Average Teacher Retention Rate": "pct_teacher_retention_2425",
+        "Class Size": "class_size_2425",
+    })
+    for col in ["pct_regular_attenders_2425", "pct_experienced_teachers_2425",
+                "pct_teacher_retention_2425"]:
+        aag_cols[col] = aag_cols[col].map(_pct)
+    aag_cols["class_size_2425"] = pd.to_numeric(aag_cols["class_size_2425"], errors="coerce")
+    pps = pps.merge(aag_cols, on="_ode_int", how="left")
     pps = pps.drop(columns=["_ode_int"])
+
+    # Merge PPS annual Language Immersion Enrollment (2025-26): per-school DLI
+    # strand counts that ODE Fall Membership cannot separate. Only schools that
+    # host a DLI program appear in the report (~32 schools incl. HS feeders).
+    with open(DLI_REPORT) as f:
+        dli_raw = json.load(f)
+    dli_map = {DLI_NAME_MAP.get(r["name"], r["name"]): r for r in dli_raw}
+    unmapped = [r["name"] for r in dli_raw if r["name"] not in DLI_NAME_MAP]
+    if unmapped:
+        print(f"  DLI report: unmapped names: {unmapped}")
+    pps["dli_students_2526"] = pps["School Name"].map(
+        lambda n: dli_map.get(n, {}).get("dli_students"))
+    pps["pct_dli_2526"] = pps["School Name"].map(
+        lambda n: dli_map.get(n, {}).get("dli_pct"))
+    pps["neighborhood_students_2526"] = pps.apply(
+        lambda r: (r["2025-26 Total Enrollment"] - r["dli_students_2526"])
+        if pd.notna(r["dli_students_2526"]) else None, axis=1)
 
     # Rename columns to snake_case for easier downstream use.
     rename = {
@@ -586,7 +701,9 @@ def main():
         "street_address", "city", "zip_code", "latitude", "longitude",
         "is_closure_candidate", "closure_rank", "is_title_i",
         "is_urm_building", "urm_retrofit_cost_usd", "seismic_retrofit_status",
+        "recent_boundary_change",
         "programs", "has_dli", "dli_languages", "has_focus_option",
+        "dli_students_2526", "neighborhood_students_2526", "pct_dli_2526",
         "year_built", "square_feet", "construction_type_2009", "students_per_sqft",
         "enrollment_2024_25", "enrollment_2025_26", "enrollment_pct_change",
         "enrollment_2018", "enrollment_2019", "enrollment_2020",
@@ -595,6 +712,8 @@ def main():
         "pct_ela_prof_2425", "pct_math_prof_2425",
         "pct_ela_prof_2324", "pct_math_prof_2324",
         "n_ela_participants_2425", "n_math_participants_2425",
+        "pct_regular_attenders_2425", "pct_experienced_teachers_2425",
+        "pct_teacher_retention_2425", "class_size_2425",
         "crdc_lep_2020", "crdc_idea_2020", "crdc_chronic_absent_2020",
         "pct_lep", "pct_idea",
         "counselors_fte_2021", "social_workers_fte_2021",
