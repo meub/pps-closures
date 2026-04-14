@@ -19,22 +19,68 @@
     --bg: #0e1115; --panel: #161b22; --border: #30363d; --fg: #e6edf3;
     --muted: #7d8590; --candidate: #f97e60; --other: #58a6ff;
     --accent: #2f81f7; --urm: #d63b3b;
+    /* Typographic scale */
+    --fs-h1: 32px;
+    --fs-h2: 22px;
+    --fs-h3: 16px;
+    --fs-body: 15px;
+    --fs-note: 15px;
+    --fs-small: 13px;
+    --fs-micro: 12px;
+    --nav-h: 52px;
+    --max-w: 1600px;
+  }
+  @media (max-width: 700px) {
+    :root { --fs-h1: 24px; --fs-h2: 18px; --fs-h3: 15px; --fs-body: 15px;
+      --fs-note: 14px; --fs-small: 12.5px; --fs-micro: 11.5px; --nav-h: 48px; }
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--fg);
-    font: 16px/1.5 -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif; }
-  header { padding: 24px 32px; border-bottom: 1px solid var(--border);
-    max-width: 1600px; margin: 0 auto; }
-  header h1 { margin: 0 0 6px; font-size: 22px; font-weight: 600; }
-  header p { margin: 0 0 10px; color: var(--muted); max-width: 820px; }
+    font: var(--fs-body)/1.55 -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; }
+
+  /* ---------- Top nav ---------- */
+  .topnav { position: sticky; top: 0; z-index: 1100; background: rgba(14,17,21,0.92);
+    backdrop-filter: saturate(140%) blur(8px); -webkit-backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--border); }
+  .topnav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    height: var(--nav-h); display: flex; align-items: center; gap: 18px; }
+  .topnav .brand { font-weight: 600; font-size: 14px; letter-spacing: 0.2px;
+    color: var(--fg); text-decoration: none; white-space: nowrap; }
+  .topnav .brand .dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px;
+    border-radius: 50%; background: var(--accent); vertical-align: middle; }
+  .topnav nav { margin-left: auto; display: flex; gap: 4px; }
+  .topnav nav a { color: var(--muted); text-decoration: none; font-size: 13px;
+    padding: 6px 10px; border-radius: 6px; white-space: nowrap; transition: color 0.15s, background 0.15s; }
+  .topnav nav a:hover { color: var(--fg); background: rgba(255,255,255,0.04); }
+  .topnav nav a.active { color: var(--fg); background: rgba(47,129,247,0.12); }
+  .nav-toggle { display: none; background: transparent; border: 1px solid var(--border);
+    color: var(--fg); border-radius: 6px; padding: 6px 10px; font: inherit; cursor: pointer;
+    margin-left: auto; }
+  .nav-toggle:hover { border-color: var(--accent); }
+  @media (max-width: 940px) {
+    .topnav-inner { padding: 0 16px; }
+    .nav-toggle { display: inline-flex; align-items: center; gap: 6px; }
+    .topnav nav { display: none; position: absolute; top: var(--nav-h); right: 0; left: 0;
+      background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column;
+      gap: 0; padding: 6px 12px 12px; margin: 0; }
+    .topnav nav.open { display: flex; }
+    .topnav nav a { padding: 10px 12px; border-radius: 6px; font-size: 14px; }
+  }
+
+  header { padding: 28px 32px 24px; border-bottom: 1px solid var(--border);
+    max-width: var(--max-w); margin: 0 auto; }
+  header h1 { margin: 0 0 8px; font-size: var(--fs-h1); font-weight: 600; line-height: 1.2; }
+  header p { margin: 0 0 10px; color: var(--muted); max-width: 820px; font-size: var(--fs-note); }
   header p:last-of-type { margin-bottom: 0; }
   header p a { color: var(--accent); text-decoration: underline; }
   header p a:hover { color: var(--fg); }
   .hero { display: flex; gap: 32px; align-items: flex-start; }
   .hero-text { flex: 1 1 auto; min-width: 0; }
   .hero-timeline { flex: 0 0 260px; background: var(--panel); border: 1px solid var(--border);
-    border-radius: 8px; padding: 16px 18px; font-size: 12.5px; }
-  .hero-timeline h3 { margin: 0 0 12px; font-size: 12px; font-weight: 600;
+    border-radius: 8px; padding: 16px 18px; font-size: var(--fs-small); }
+  .hero-timeline h3 { margin: 0 0 12px; font-size: var(--fs-micro); font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); }
   .hero-timeline ol { list-style: none; margin: 0; padding: 0; position: relative; }
   .hero-timeline ol::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px;
@@ -49,11 +95,11 @@
   .hero-timeline .date { display: block; color: var(--fg); font-weight: 500; }
   .hero-timeline .what { display: block; color: var(--muted); margin-top: 1px; }
   @media (max-width: 900px) { .hero { flex-direction: column; } .hero-timeline { flex-basis: auto; width: 100%; } }
-  main { padding: 24px 32px 80px; max-width: 1600px; margin: 0 auto; }
-  section { margin-bottom: 40px; }
-  section > h2 { margin: 0 0 14px; font-size: 16px; font-weight: 600;
-    border-left: 3px solid var(--accent); padding-left: 10px; }
-  section > p.note { color: var(--muted); margin: 0 0 14px; font-size: 12.5px; }
+  main { padding: 24px 32px 80px; max-width: var(--max-w); margin: 0 auto; }
+  section { margin-bottom: 40px; scroll-margin-top: calc(var(--nav-h) + 12px); }
+  section > h2 { margin: 0 0 12px; font-size: var(--fs-h2); font-weight: 600;
+    border-left: 3px solid var(--accent); padding-left: 10px; line-height: 1.25; }
+  section > p.note { color: var(--muted); margin: 0 0 14px; font-size: var(--fs-note); }
   .panel { background: var(--panel); border: 1px solid var(--border);
     border-radius: 6px; overflow: hidden; }
 
@@ -62,14 +108,40 @@
   .map-popup .meta { color: #57606a; font-size: 11.5px; }
   .map-popup .row { font-size: 12px; margin: 2px 0; }
 
+  /* Trends chart filter */
+  .trends-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    margin-bottom: 8px; font-size: var(--fs-small); }
+  .trends-controls input[type="search"] { background: #0d1117; color: var(--fg);
+    border: 1px solid var(--border); border-radius: 4px; padding: 5px 9px; width: 220px;
+    font: inherit; max-width: 100%; }
+  .trends-controls .trends-count { color: var(--muted); margin-left: auto; }
+  .trends-checkboxes { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 2px 10px; max-height: 140px; overflow-y: auto; padding: 8px 10px;
+    border: 1px solid var(--border); border-radius: 4px; margin-bottom: 12px;
+    background: #0d1117; font-size: var(--fs-small); }
+  .trends-checkboxes label { display: flex; align-items: center; gap: 6px; padding: 2px 2px;
+    color: var(--muted); cursor: pointer; white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; }
+  .trends-checkboxes label:hover { color: var(--fg); }
+  .trends-checkboxes label.checked { color: var(--fg); }
+  .trends-checkboxes label.hidden { display: none; }
+  .trends-checkboxes input { margin: 0; flex-shrink: 0; }
+  .trends-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+    flex-shrink: 0; background: transparent; border: 1px solid transparent; }
+  @media (max-width: 700px) {
+    .trends-checkboxes { grid-template-columns: 1fr 1fr; max-height: 160px; }
+    .trends-controls input[type="search"] { width: 100%; }
+    .trends-controls .trends-count { margin-left: 0; }
+  }
+
   .charts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .chart-card { padding: 14px; }
-  .chart-card h3 { margin: 0 0 4px; font-size: 14px; font-weight: 600; }
-  .chart-card p.subtitle { margin: 0 0 8px; color: var(--muted); font-size: 12px; }
+  .chart-card h3 { margin: 0 0 4px; font-size: var(--fs-h3); font-weight: 600; }
+  .chart-card p.subtitle { margin: 0 0 8px; color: var(--muted); font-size: var(--fs-small); }
   .chart-plot { height: 360px; }
 
   .table-wrap { overflow-x: auto; max-height: 950px; overflow-y: auto; }
-  table.schools { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.schools { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
   table.schools thead { position: sticky; top: 0; background: #1b232c; z-index: 2; }
   table.schools th, table.schools td { padding: 7px 10px; text-align: left;
     border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -79,7 +151,6 @@
   table.schools th .sort-arrow { color: var(--accent); margin-left: 4px; }
   table.schools th .tooltip-trigger { color: var(--muted); margin-left: 4px;
     cursor: help; font-size: 11px; }
-  table.schools tr.candidate td:first-child { border-left: 3px solid var(--candidate); }
   table.schools tr:hover { background: #1b222b; }
   table.schools td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
   /* Freeze first column when scrolling horizontally */
@@ -100,14 +171,15 @@
   .badge.cand { background: #3a2621; color: #f97e60; }
 
   .table-controls { padding: 10px 14px; border-bottom: 1px solid var(--border);
-    display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 12.5px; }
+    display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: var(--fs-small); }
   .table-controls input[type="search"] { background: #0d1117; color: var(--fg);
-    border: 1px solid var(--border); border-radius: 4px; padding: 5px 9px; width: 240px; }
+    border: 1px solid var(--border); border-radius: 4px; padding: 5px 9px; width: 240px;
+    font: inherit; max-width: 100%; }
   .table-controls label { color: var(--muted); cursor: pointer; }
   .table-controls .count { margin-left: auto; color: var(--muted); }
   .table-controls .csv-btn { background: #0d1117; color: var(--fg);
     border: 1px solid var(--border); border-radius: 4px; padding: 5px 11px;
-    font-size: 12.5px; cursor: pointer; font-family: inherit; }
+    font-size: var(--fs-small); cursor: pointer; font-family: inherit; }
   .table-controls .csv-btn:hover { background: #1b222b; border-color: var(--accent); color: var(--accent); }
 
   /* Tooltip */
@@ -120,8 +192,8 @@
     border-top: 1px dashed var(--border); padding-top: 4px; }
 
   /* Methodology */
-  .methodology { font-size: 16px; color: var(--fg); line-height: 1.55; }
-  .methodology h3 { font-size: 17px; margin: 22px 0 8px; color: var(--fg); }
+  .methodology { font-size: var(--fs-body); color: var(--fg); line-height: 1.6; }
+  .methodology h3 { font-size: var(--fs-h3); margin: 22px 0 8px; color: var(--fg); font-weight: 600; }
   .methodology p { color: var(--muted); margin: 0 0 10px; max-width: 820px; }
   .methodology dl { max-width: 820px; margin: 0; }
   .methodology dt { color: var(--fg); font-weight: 500; margin-top: 10px; }
@@ -132,8 +204,8 @@
   .method-body { flex: 1 1 auto; min-width: 0; }
   .method-sidebar { flex: 0 0 300px; position: sticky; top: 16px; }
   .vintage-card { background: var(--panel); border: 1px solid var(--border);
-    border-radius: 8px; padding: 16px 18px; font-size: 13.5px; }
-  .vintage-card h3 { font-size: 12px; font-weight: 600; text-transform: uppercase;
+    border-radius: 8px; padding: 16px 18px; font-size: var(--fs-small); }
+  .vintage-card h3 { font-size: var(--fs-micro); font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.6px; color: var(--muted); margin: 0 0 12px; }
   .vintage-card table { width: 100%; border-collapse: collapse; }
   .vintage-card td { padding: 5px 0; vertical-align: top; }
@@ -142,7 +214,7 @@
     font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 12px; }
   .vintage-card td.year.stale, .vintage-card .stale { color: #e3b341; }
   .vintage-card .legend { margin-top: 14px; padding-top: 12px;
-    border-top: 1px dashed var(--border); color: var(--muted); font-size: 12px; }
+    border-top: 1px dashed var(--border); color: var(--muted); font-size: var(--fs-micro); }
   @media (max-width: 1100px) { .method-layout { flex-direction: column; }
     .method-sidebar { flex-basis: auto; width: 100%; position: static; } }
   .contribute { padding: 28px 32px 40px; border-top: 1px solid var(--border); }
@@ -150,45 +222,67 @@
     grid-template-columns: 1fr 1fr; gap: 16px; }
   .contribute-card { background: var(--panel); border: 1px solid var(--border);
     border-radius: 8px; padding: 18px 20px; }
-  .contribute-card h3 { font-size: 12px; font-weight: 600; text-transform: uppercase;
+  .contribute-card h3 { font-size: var(--fs-micro); font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.6px; color: var(--muted); margin: 0 0 8px; }
-  .contribute-card p { margin: 0 0 10px; color: var(--fg); font-size: 14px; line-height: 1.5; }
+  .contribute-card p { margin: 0 0 10px; color: var(--fg); font-size: var(--fs-note); line-height: 1.5; }
   .contribute-card a { color: var(--accent); text-decoration: underline;
-    font-size: 14px; word-break: break-all; }
+    font-size: var(--fs-note); word-break: break-all; }
   .contribute-card a:hover { color: var(--fg); }
   @media (max-width: 720px) { .contribute-grid { grid-template-columns: 1fr; } }
 
   @media (max-width: 1000px) { .charts { grid-template-columns: 1fr; } }
   @media (max-width: 700px) {
-    main { padding: 16px 10px 60px; }
-    .chart-card { padding: 8px; }
+    header { padding: 20px 16px 18px; }
+    main { padding: 18px 16px 60px; }
+    .chart-card { padding: 10px; }
     #plot-ranking { height: 1700px !important; }
+    .table-controls input[type="search"] { width: 100%; }
+    .table-controls .count { margin-left: 0; }
+    .contribute { padding: 24px 16px 32px; }
   }
 </style>
 </head>
 <body>
 
-<header>
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="brand" href="#top"><span class="dot"></span>PPS Closures</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+      Menu
+    </button>
+    <nav id="primary-nav" aria-label="Sections">
+      <a href="#section-map">Map</a>
+      <a href="#section-trends">Trends</a>
+      <a href="#section-utilization">Utilization</a>
+      <a href="#section-sustainability">Sustainability</a>
+      <a href="#section-transport">Transportation</a>
+      <a href="#section-scatters">Scatters</a>
+      <a href="#section-table">Table</a>
+      <a href="#section-methodology">Methodology</a>
+    </nav>
+  </div>
+</div>
+
+<header id="top">
   <h1>Portland Public School Closures Data Explorer</h1>
   <div class="hero">
     <div class="hero-text">
       <p>
         On <a href="https://www.wweek.com/news/schools/2026/03/10/pps-plans-to-close-several-schools-by-fall-2027/" target="_blank" rel="noopener">March 10, 2026</a>,
-        Superintendent Kimberlee Armstrong announced PPS will close 5–10 of its 74 elementary, K-8,
-        middle, and alternative schools by fall 2027. The driver is a decade of declining enrollment
-        (projected to fall another 13% by 2034-35) and a structural budget gap.
+        Superintendent Kimberlee Armstrong announced that PPS may close some number of its 74
+        elementary, K-8, middle, and alternative schools by fall 2027. The driver is a decade of
+        declining enrollment (projected to fall another 13% by 2034-35) and a structural budget gap.
       </p>
       <p>
-        No formal criteria have been published, but PPS and school board members have pointed to
-        current enrollment, building utilization (students/sq ft), seismic risk and building
-        condition, recent or planned bond investments, and equity considerations such as Title I
-        status and neighborhood demographics. The official shortlist is expected Nov 2026, with a
-        board vote in Dec 2026.
+        No formal criteria have been published for determining which schools might be selected,
+        but PPS and school board members have pointed to the following set of factors: current
+        enrollment, building utilization (students/sq ft), seismic risk and building condition,
+        recent or planned bond investments, equity considerations, student experience, access to
+        programs, transportation, and long-term sustainability.
       </p>
       <p>
-        This explorer gathers data to visualize these factors side-by-side for every PPS school.
-        For reference, the 15 lowest-enrollment schools — <a href="https://www.wweek.com/news/schools/2026/03/18/heres-what-pps-will-consider-as-it-selects-schools-to-close/" target="_blank" rel="noopener">as listed by Willamette Week</a> —
-        are highlighted in several charts as a descriptive subset, not a closure prediction.
+        This explorer gathers data to visualize these factors for every PPS school.
         Academic performance is included for context, though it is notably absent from the
         criteria PPS has discussed publicly.
       </p>
@@ -218,41 +312,54 @@
 </header>
 
 <main>
-  <section>
+  <section id="section-map">
     <h2>Map — all 74 in-scope PPS schools</h2>
     <p class="note">
-      Each marker sized by 2025-26 enrollment. Orange = one of the 15 lowest-enrollment schools
-      (per Willamette Week), blue = other. A red ring indicates an unreinforced masonry (URM) building.
+      Each marker sized by 2025-26 enrollment. A red ring indicates an unreinforced masonry (URM) building.
     </p>
     <div class="panel"><div id="map"></div></div>
   </section>
 
-  <section>
-    <h2>Scatter plots</h2>
-    <p class="note">All 74 in-scope schools, colored uniformly. Click &amp; drag to zoom.</p>
-    <div class="charts" id="charts"></div>
+  <section id="section-trends">
+    <h2>Enrollment trends — every school, 2018 → 2025</h2>
+    <p class="note">
+      Each thin line is one school's enrollment indexed to its 2018 baseline (2018 = 100).
+      A flat line means stable enrollment; lines sloping down are losing students.
+      The bold orange line is the district-wide total. Use the search box below to find
+      schools and check one or more to isolate them on the chart; hover a line to identify
+      it. Shows 70 of the 74 in-scope schools — 4 schools without complete 2018–2025
+      history are omitted. Source: NCES CCD (2018–2023) + Oregon ODE (2024–2025).
+    </p>
+    <div class="panel chart-card">
+      <div class="trends-controls">
+        <input id="trends-search" type="search" placeholder="Search schools…" aria-label="Filter school list">
+        <button id="trends-clear" class="csv-btn" type="button">Clear selection</button>
+        <span class="trends-count" id="trends-count"></span>
+      </div>
+      <div class="trends-checkboxes" id="trends-checkboxes" aria-label="Toggle schools"></div>
+      <div id="plot-trends" style="height: 520px;"></div>
+    </div>
   </section>
 
-  <section>
+  <section id="section-utilization">
     <h2>All schools ranked by building utilization</h2>
     <p class="note">
-      Students per square foot — lower bars mean emptier buildings. The 15 lowest-enrollment
-      schools (orange) cluster near the bottom; if PPS weights utilization in its decision,
-      these are the schools that score worst on it.
+      Students per square foot — lower bars mean emptier buildings.
     </p>
     <div class="panel chart-card"><div id="plot-ranking" style="height: 1400px;"></div></div>
   </section>
 
-  <section>
-    <h2>Building age — low-enrollment schools vs. the rest</h2>
+  <section id="section-sustainability">
+    <h2>Long-term sustainability — 7-year enrollment change (2018 → 2025)</h2>
     <p class="note">
-      Counts of schools by decade built. The 15 lowest-enrollment schools skew newer on average
-      (mean year built 1955) than the rest of the district (mean 1933).
+      Total in-scope enrollment fell 20% over this window (median school -19%). Bars below
+      that baseline are losing students faster than the district overall. Source: NCES CCD fall
+      2018 + ODE fall 2025.
     </p>
-    <div class="panel chart-card"><div id="plot-year-hist" style="height: 360px;"></div></div>
+    <div class="panel chart-card"><div id="plot-trend7yr" style="height: 1400px;"></div></div>
   </section>
 
-  <section>
+  <section id="section-transport">
     <h2>Transportation impact — miles to nearest same-level alternative</h2>
     <p class="note">
       Great-circle distance from each low-enrollment school to the nearest larger school
@@ -263,29 +370,10 @@
     <div class="panel chart-card"><div id="plot-transport" style="height: 460px;"></div></div>
   </section>
 
-  <section>
-    <h2>Access to programs — what closure would displace</h2>
-    <p class="note">
-      Specialized program offerings at each of the 15 lowest-enrollment schools.
-      Closing a school that hosts a Dual Language Immersion (DLI) program or a
-      focus option would sever that pathway in its catchment — families pursuing
-      it would have to transfer farther or lose access entirely. Source: PPS Dual
-      Language and Enrollment &amp; Transfer pages (verified 2026-04).
-    </p>
-    <div class="panel" id="programs-card">
-      <div id="programs-summary" style="margin-bottom: 14px; color: #c9d1d9;"></div>
-      <table class="schools" id="programs-table" style="margin-top: 6px;"><thead></thead><tbody></tbody></table>
-    </div>
-  </section>
-
-  <section>
-    <h2>Long-term sustainability — 7-year enrollment change (2018 → 2025)</h2>
-    <p class="note">
-      Total in-scope enrollment fell 20% over this window (median school -19%). Bars below
-      that baseline are losing students faster than the district overall; the 15 lowest-enrollment
-      schools are highlighted. Source: NCES CCD fall 2018 + ODE fall 2025.
-    </p>
-    <div class="panel chart-card"><div id="plot-trend7yr" style="height: 1400px;"></div></div>
+  <section id="section-scatters">
+    <h2>Scatter plots</h2>
+    <p class="note">All 74 in-scope schools, colored uniformly. Click &amp; drag to zoom.</p>
+    <div class="charts" id="charts"></div>
   </section>
 
   <section style="display:none;">
@@ -309,7 +397,7 @@
     <div class="panel chart-card"><div id="plot-clusters" style="height: 520px;"></div></div>
   </section>
 
-  <section>
+  <section id="section-table">
     <h2>All schools — sortable table</h2>
     <p class="note">Click a column header to sort. Hover the <span style="color: var(--muted);">i</span> next to each header for a definition and source.</p>
     <div class="panel">
@@ -326,7 +414,7 @@
     </div>
   </section>
 
-  <section class="methodology">
+  <section class="methodology" id="section-methodology">
     <h2>Methodology &amp; sources</h2>
     <div class="method-layout">
     <div class="method-body">
@@ -513,6 +601,41 @@
 <div class="tt" id="tt"></div>
 
 <script>
+(function () {
+  const toggle = document.getElementById("nav-toggle");
+  const nav = document.getElementById("primary-nav");
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  const links = Array.from(nav.querySelectorAll("a"));
+  const sections = links
+    .map(a => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
+  const linkFor = (id) => links.find(a => a.getAttribute("href") === "#" + id);
+  if ("IntersectionObserver" in window && sections.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const link = linkFor(entry.target.id);
+        if (!link) return;
+        links.forEach(a => a.classList.remove("active"));
+        link.classList.add("active");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    sections.forEach(s => io.observe(s));
+  }
+})();
+</script>
+
+<script>
 (async function () {
   const data = await fetch("./data.json").then(r => r.json());
   const { schools, meta, table_cols: TABLE_COLS, scatters: SCATTERS, cluster_labels: CLUSTER_LABELS } = data;
@@ -566,9 +689,9 @@
     const r = Math.max(5, Math.min(22, Math.sqrt(s.enrollment_2025_26 || 100) / 2));
     const marker = L.circleMarker([s.latitude, s.longitude], {
       radius: r,
-      color: urm ? "#d63b3b" : (cand ? "#f97e60" : "#58a6ff"),
+      color: urm ? "#d63b3b" : "#58a6ff",
       weight: urm ? 2.5 : 1,
-      fillColor: cand ? "#f97e60" : "#58a6ff",
+      fillColor: "#58a6ff",
       fillOpacity: 0.72,
     }).addTo(map);
     const fields = [
@@ -585,9 +708,8 @@
       ["Pipeline family units (catchment)", fmt(s.pipeline_family_units_within_1mi, "int")],
       ["Permitted units 2022+ (catchment)", fmt(s.permits_units_within_1mi_since_2022, "int")],
     ];
-    const rankBadge = cand ? ` <span class="badge cand">low-enroll #${s.closure_rank}</span>` : "";
     marker.bindPopup(
-      `<div class="map-popup"><b>${s.school_name}${rankBadge}</b>` +
+      `<div class="map-popup"><b>${s.school_name}</b>` +
       `<div class="meta">${s.street_address || ""}</div>` +
       fields.map(([k, v]) => `<div class="row"><b style="display:inline">${k}:</b> ${v}</div>`).join("") +
       `</div>`
@@ -667,17 +789,14 @@
     function renderRanking() {
       const mobile = window.innerWidth < 700;
       const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
-      const labels = withVal.map(s => {
-        const base = mobile ? truncate(s.school_name, 16) : s.school_name;
-        return base + (isCand(s) ? `  (#${s.closure_rank})` : "");
-      });
+      const labels = withVal.map(s => mobile ? truncate(s.school_name, 16) : s.school_name);
       const trace = {
         type: "bar",
         orientation: "h",
         x: withVal.map(s => s.students_per_sqft),
         y: labels,
         marker: {
-          color: withVal.map(s => isCand(s) ? "#f97e60" : "#58a6ff"),
+          color: "#58a6ff",
           line: { width: 0.5, color: "#0e1115" },
         },
         text: withVal.map(s => mobile
@@ -738,49 +857,11 @@
     yaxis: { gridcolor: "#30363d", zerolinecolor: "#30363d" },
   });
 
-  // ---------- YEAR-BUILT HISTOGRAM ----------
-  (function () {
-    const withYear = schools.filter(s => s.year_built != null);
-    const cand = withYear.filter(isCand).map(s => s.year_built);
-    const other = withYear.filter(s => !isCand(s)).map(s => s.year_built);
-    const allYears = withYear.map(s => s.year_built);
-    const minY = Math.floor(Math.min(...allYears) / 10) * 10;
-    const maxY = Math.ceil((Math.max(...allYears) + 1) / 10) * 10;
-    const binsCfg = { start: minY, end: maxY, size: 10 };
-    const candMean = cand.reduce((a, v) => a + v, 0) / cand.length;
-    const otherMean = other.reduce((a, v) => a + v, 0) / other.length;
-    const layout = Object.assign(baseLayout(), {
-      margin: { l: 50, r: 20, t: 10, b: 50 },
-      barmode: "stack",
-      xaxis: { title: "Decade built", gridcolor: "#30363d", zerolinecolor: "#30363d", dtick: 10 },
-      yaxis: { title: "Number of schools", gridcolor: "#30363d", zerolinecolor: "#30363d" },
-      legend: { x: 0.02, y: 0.98, bgcolor: "rgba(22,27,34,0.92)", bordercolor: "#30363d", borderwidth: 1 },
-      shapes: [
-        { type: "line", x0: candMean, x1: candMean, yref: "paper", y0: 0, y1: 1,
-          line: { color: COLOR_CAND, width: 1.5, dash: "dash" } },
-        { type: "line", x0: otherMean, x1: otherMean, yref: "paper", y0: 0, y1: 1,
-          line: { color: COLOR_OTHER, width: 1.5, dash: "dash" } },
-      ],
-      annotations: [
-        { x: candMean, y: 1.02, yref: "paper", text: `low-enroll. mean ${candMean.toFixed(0)}`,
-          showarrow: false, font: { size: 10, color: COLOR_CAND }, xanchor: "left" },
-        { x: otherMean, y: 1.02, yref: "paper", text: `others mean ${otherMean.toFixed(0)}`,
-          showarrow: false, font: { size: 10, color: COLOR_OTHER }, xanchor: "right" },
-      ],
-    });
-    Plotly.newPlot("plot-year-hist", [
-      { x: other, type: "histogram", name: "Other schools", marker: { color: COLOR_OTHER },
-        xbins: binsCfg, hovertemplate: "Decade %{x}<br>%{y} schools<extra></extra>" },
-      { x: cand, type: "histogram", name: "Lowest-enrollment 15", marker: { color: COLOR_CAND },
-        xbins: binsCfg, hovertemplate: "Decade %{x}<br>%{y} schools<extra></extra>" },
-    ], layout, { displayModeBar: false, responsive: true });
-  })();
-
   // ---------- TRANSPORTATION IMPACT BARS ----------
   (function () {
     const cands = schools.filter(s => isCand(s) && s.nearest_alt_school_mi != null);
     cands.sort((a, b) => b.nearest_alt_school_mi - a.nearest_alt_school_mi);
-    const labels = cands.map(s => `${s.school_name}  (#${s.closure_rank})`);
+    const labels = cands.map(s => s.school_name);
     const dists = cands.map(s => s.nearest_alt_school_mi);
     const median = (() => {
       const s = [...dists].sort((x, y) => x - y);
@@ -828,35 +909,151 @@
     window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(renderTransport, 150); });
   })();
 
-  // ---------- ACCESS TO PROGRAMS ----------
+  // ---------- ENROLLMENT TRENDS: line chart 2018 -> 2025 ----------
   (function () {
-    const cands = schools.filter(isCand)
-      .sort((a, b) => (a.closure_rank || 99) - (b.closure_rank || 99));
-    const withProgs = cands.filter(s => s.programs);
-    const summary = document.getElementById("programs-summary");
-    summary.innerHTML = `
-      <strong>${withProgs.length} of ${cands.length}</strong> low-enrollment schools currently
-      host a specialized program. <strong>Lent</strong> hosts Spanish DLI (one of nine PPS Spanish
-      DLI elementaries) and <strong>Odyssey</strong> is a TAG / integrated-curriculum focus
-      option. The other 13 are neighborhood schools without distinctive program offerings —
-      so closing them would not directly cut off DLI or focus-option access.
-    `;
-    const t = document.getElementById("programs-table");
-    t.querySelector("thead").innerHTML = `
-      <tr>
-        <th>Rank</th>
-        <th>School</th>
-        <th>Programs</th>
-      </tr>
-    `;
-    const body = t.querySelector("tbody");
-    body.innerHTML = cands.map(s => `
-      <tr>
-        <td>${s.closure_rank ?? ""}</td>
-        <td>${s.school_name}</td>
-        <td>${s.programs ? `<span style="color:#f97e60;">${s.programs}</span>` : '<span style="color:#7d8590;">— neighborhood school</span>'}</td>
-      </tr>
-    `).join("");
+    const YEAR_FIELDS = [
+      "enrollment_2018", "enrollment_2019", "enrollment_2020", "enrollment_2021",
+      "enrollment_2022", "enrollment_2023", "enrollment_2024_25", "enrollment_2025_26",
+    ];
+    const YEARS = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+    const PALETTE = ["#58a6ff", "#3fb950", "#f97e60", "#bc8cff", "#ffca28",
+                     "#ff6b9d", "#26c6da", "#a1cb5c", "#e3b341", "#79c0ff"];
+    const BASE_COLOR = "rgba(88,166,255,0.22)";
+    const FADE_COLOR = "rgba(88,166,255,0.06)";
+
+    const rows = schools
+      .map(s => {
+        const ys = YEAR_FIELDS.map(f => s[f]);
+        return ys.every(v => v != null) ? { s, ys } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.s.school_name.localeCompare(b.s.school_name));
+
+    // District total (sum across schools with complete series), normalized to 2018.
+    const districtRaw = YEARS.map((_, i) => rows.reduce((a, r) => a + r.ys[i], 0));
+    const districtIdx = districtRaw.map(v => (v / districtRaw[0]) * 100);
+
+    const traces = rows.map(r => ({
+      x: YEARS,
+      y: r.ys.map(v => (v / r.ys[0]) * 100),
+      customdata: r.ys,
+      mode: "lines",
+      type: "scatter",
+      name: r.s.school_name,
+      line: { color: BASE_COLOR, width: 1 },
+      hovertemplate: `<b>${r.s.school_name}</b><br>%{x}: %{y:.1f} (n=%{customdata})<extra></extra>`,
+      showlegend: false,
+    }));
+    traces.push({
+      x: YEARS, y: districtIdx,
+      customdata: districtRaw,
+      mode: "lines+markers", type: "scatter", name: "District total",
+      line: { color: "#f97e60", width: 3 },
+      marker: { color: "#f97e60", size: 6 },
+      hovertemplate: "<b>District total</b><br>%{x}: %{y:.1f} (n=%{customdata})<extra></extra>",
+      showlegend: false,
+    });
+
+    function renderTrends() {
+      Plotly.react("plot-trends", traces, Object.assign(baseLayout(), {
+        margin: { l: 56, r: 20, t: 10, b: 44 },
+        xaxis: { gridcolor: "#30363d", zerolinecolor: "#30363d", dtick: 1 },
+        yaxis: { title: "Enrollment (2018 = 100)", gridcolor: "#30363d", zerolinecolor: "#7d8590" },
+        showlegend: false,
+        hovermode: "closest",
+        shapes: [{
+          type: "line", x0: YEARS[0], x1: YEARS[YEARS.length - 1], y0: 100, y1: 100,
+          line: { color: "#7d8590", width: 1, dash: "dot" },
+        }],
+      }), { displayModeBar: false, responsive: true });
+    }
+
+    // ----- Selection controls -----
+    const selected = new Set();
+    const listEl = document.getElementById("trends-checkboxes");
+    const searchEl = document.getElementById("trends-search");
+    const clearEl = document.getElementById("trends-clear");
+    const countEl = document.getElementById("trends-count");
+
+    const itemEls = rows.map((r, i) => {
+      const label = document.createElement("label");
+      label.dataset.name = r.s.school_name.toLowerCase();
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.value = r.s.school_name;
+      cb.dataset.idx = String(i);
+      const swatch = document.createElement("span");
+      swatch.className = "trends-swatch";
+      const txt = document.createElement("span");
+      txt.textContent = r.s.school_name;
+      txt.style.overflow = "hidden";
+      txt.style.textOverflow = "ellipsis";
+      label.append(cb, swatch, txt);
+      cb.addEventListener("change", () => toggle(r.s.school_name, cb.checked));
+      listEl.appendChild(label);
+      return { label, cb, swatch, name: r.s.school_name };
+    });
+
+    function colorFor(name) {
+      const idx = Array.from(selected).indexOf(name);
+      return idx >= 0 ? PALETTE[idx % PALETTE.length] : null;
+    }
+
+    function applySelection() {
+      const hasSel = selected.size > 0;
+      const colors = [], widths = [];
+      rows.forEach(r => {
+        const c = colorFor(r.s.school_name);
+        if (!hasSel) { colors.push(BASE_COLOR); widths.push(1); }
+        else if (c) { colors.push(c); widths.push(2.5); }
+        else { colors.push(FADE_COLOR); widths.push(1); }
+      });
+      // district trace (last)
+      colors.push("#f97e60"); widths.push(3);
+      Plotly.restyle("plot-trends", { "line.color": colors, "line.width": widths });
+
+      // update list UI
+      itemEls.forEach(it => {
+        const c = colorFor(it.name);
+        it.label.classList.toggle("checked", selected.has(it.name));
+        if (c) {
+          it.swatch.style.background = c;
+          it.swatch.style.borderColor = c;
+        } else {
+          it.swatch.style.background = "transparent";
+          it.swatch.style.borderColor = "transparent";
+        }
+      });
+      countEl.textContent = hasSel
+        ? `${selected.size} selected of ${rows.length}`
+        : `${rows.length} schools`;
+    }
+
+    function toggle(name, on) {
+      if (on) selected.add(name); else selected.delete(name);
+      applySelection();
+    }
+
+    searchEl.addEventListener("input", () => {
+      const q = searchEl.value.trim().toLowerCase();
+      itemEls.forEach(it => {
+        it.label.classList.toggle("hidden", q && !it.label.dataset.name.includes(q));
+      });
+    });
+
+    clearEl.addEventListener("click", () => {
+      selected.clear();
+      itemEls.forEach(it => { it.cb.checked = false; });
+      applySelection();
+    });
+
+    renderTrends();
+    applySelection();
+    let tTr;
+    window.addEventListener("resize", () => {
+      clearTimeout(tTr);
+      tTr = setTimeout(() => { renderTrends(); applySelection(); }, 150);
+    });
   })();
 
   // ---------- LONG-TERM SUSTAINABILITY: 7yr ENROLLMENT TREND ----------
@@ -867,16 +1064,12 @@
     function renderTrend() {
       const mobile = window.innerWidth < 700;
       const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
-      const labels = rows.map(s => {
-        const base = mobile ? truncate(s.school_name, 18) : s.school_name;
-        return base + (isCand(s) ? `  (#${s.closure_rank})` : "");
-      });
-      const colors = rows.map(s => isCand(s) ? COLOR_CAND : COLOR_OTHER);
+      const labels = rows.map(s => mobile ? truncate(s.school_name, 18) : s.school_name);
       const trace = {
         type: "bar", orientation: "h",
         x: rows.map(s => s.enrollment_pct_change_7yr * 100),
         y: labels,
-        marker: { color: colors, line: { width: 0.5, color: "#0e1115" } },
+        marker: { color: COLOR_OTHER, line: { width: 0.5, color: "#0e1115" } },
         text: rows.map(s => (s.enrollment_pct_change_7yr * 100).toFixed(1) + "%"),
         textposition: "outside",
         textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
@@ -1063,8 +1256,7 @@
         const m = meta[col];
         const v = s[col];
         if (col === "school_name") {
-          const rankBadge = cand ? ` <span class="badge cand">#${s.closure_rank}</span>` : "";
-          td.innerHTML = `${v}${rankBadge}`;
+          td.innerHTML = v;
         } else {
           td.innerHTML = fmt(v, m.fmt);
           if (["int", "usd", "ratio", "pct_0_1", "pct_0_100", "year", "miles"].includes(m.fmt)) {
