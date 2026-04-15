@@ -34,7 +34,7 @@ META = {
     "is_title_i": {"label": "Title I?", "desc": "Receives federal Title I-A schoolwide funding (high-poverty designation).", "source": "PPS Funded Programs 2025-26", "fmt": "bool"},
     "pct_regular_attenders_2425": {"label": "% Regular attenders 24-25", "desc": "Share of students who attended more than 90% of their enrolled days in 2024-25. Oregon's core attendance metric (students not chronically absent). Statewide average was 66.5% in 2024-25.", "source": "Oregon ODE At-A-Glance 2024-25", "fmt": "pct_0_100"},
     "pct_experienced_teachers_2425": {"label": "% Experienced teachers 24-25", "desc": "Share of teachers at this school with 3+ years of experience in education (any district). A higher value usually means a more stable, veteran faculty.", "source": "Oregon ODE At-A-Glance 2024-25", "fmt": "pct_0_100"},
-    "pct_teacher_retention_2425": {"label": "% Teacher retention 24-25", "desc": "Share of teachers who returned from the previous school year; a turnover signal. Low retention often reflects instability or chronic understaffing.", "source": "Oregon ODE At-A-Glance 2024-25", "fmt": "pct_0_100"},
+    "pct_teacher_retention_2425": {"label": "% Teacher retention 24-25", "desc": "Share of teachers who returned from the previous school year; a turnover indicator. Low retention often reflects instability or chronic understaffing.", "source": "Oregon ODE At-A-Glance 2024-25", "fmt": "pct_0_100"},
     "class_size_2425": {"label": "Median class size 24-25", "desc": "ODE-reported median class size (all self-contained classes in 2024-25). Oregon statewide median is 24.", "source": "Oregon ODE At-A-Glance 2024-25", "fmt": "int"},
     "pct_ela_prof_2425": {"label": "% ELA prof 24-25", "desc": "Percent of students meeting/exceeding on Oregon ELA state test (all grades, all students).", "source": "Oregon OSAS 2024-25", "fmt": "pct_0_100"},
     "pct_math_prof_2425": {"label": "% Math prof 24-25", "desc": "Percent of students meeting/exceeding on Oregon Math state test (all grades, all students).", "source": "Oregon OSAS 2024-25", "fmt": "pct_0_100"},
@@ -141,7 +141,7 @@ SCATTERS = [
         "title": "Enrollment change vs. nearby residential permits (2022+)",
         "x": "permits_units_within_1mi_since_2022",
         "y": "enrollment_pct_change",
-        "subtitle": "Schools losing students even while their neighborhood is actively being built; a signal worth weighing against current enrollment alone.",
+        "subtitle": "Schools losing students even while their neighborhood is actively being built; an indicator worth weighing against current enrollment alone.",
     },
     {
         "id": "year_vs_students",

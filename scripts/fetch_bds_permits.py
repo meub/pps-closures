@@ -170,7 +170,7 @@ def main() -> None:
         units = to_float(attrs.get("NEW_UNITS"))
         # The layer is already restricted to permits adding residential units,
         # but defensively drop rows where units is missing/zero so the
-        # densification signal isn't biased by zero-unit noise.
+        # densification indicator isn't biased by zero-unit noise.
         if units is None or units <= 0:
             dropped_no_units += 1
             continue

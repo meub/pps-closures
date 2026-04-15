@@ -7814,7 +7814,7 @@
     },
     "pct_teacher_retention_2425": {
       "label": "% Teacher retention 24-25",
-      "desc": "Share of teachers who returned from the previous school year; a turnover signal. Low retention often reflects instability or chronic understaffing.",
+      "desc": "Share of teachers who returned from the previous school year; a turnover indicator. Low retention often reflects instability or chronic understaffing.",
       "source": "Oregon ODE At-A-Glance 2024-25",
       "fmt": "pct_0_100"
     },
@@ -8229,7 +8229,7 @@
       "title": "Enrollment change vs. nearby residential permits (2022+)",
       "x": "permits_units_within_1mi_since_2022",
       "y": "enrollment_pct_change",
-      "subtitle": "Schools losing students even while their neighborhood is actively being built; a signal worth weighing against current enrollment alone."
+      "subtitle": "Schools losing students even while their neighborhood is actively being built; an indicator worth weighing against current enrollment alone."
     },
     {
       "id": "year_vs_students",

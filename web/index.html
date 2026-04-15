@@ -102,9 +102,18 @@
   .hero-timeline .date { display: block; color: var(--fg); font-weight: 500; }
   .hero-timeline .what { display: block; color: var(--muted); margin-top: 1px; }
   @media (max-width: 900px) { .hero { flex-direction: column; } .hero-timeline { flex-basis: auto; width: 100%; } }
+  .hero-details summary { cursor: pointer; color: var(--accent); font-size: 13px;
+    list-style: none; padding: 4px 0; user-select: none; display: inline-flex;
+    align-items: center; gap: 6px; }
+  .hero-details summary::-webkit-details-marker { display: none; }
+  .hero-details summary::before { content: "▸"; display: inline-block;
+    font-size: 11px; transition: transform 150ms ease; }
+  .hero-details[open] summary::before { transform: rotate(90deg); }
+  .hero-details summary:hover { text-decoration: underline; }
+  .hero-details[open] .hero { margin-top: 14px; }
   .hero-disclaimer { margin: 0 0 16px; padding: 10px 14px; border-radius: 6px;
     border: 1px solid rgba(227,179,65,0.35); background: rgba(227,179,65,0.08);
-    color: var(--fg); font-size: var(--fs-small); line-height: 1.5;
+    color: var(--fg); font-size: 16px; line-height: 1.5;
     border-left: 3px solid #e3b341; }
   .hero-disclaimer strong { color: #e3b341; }
   .hero-disclaimer a { color: var(--accent); text-decoration: underline; }
@@ -114,6 +123,18 @@
   section > h2 { margin: 0 0 12px; font-size: var(--fs-h2); font-weight: 600;
     border-left: 3px solid var(--accent); padding-left: 10px; line-height: 1.25; }
   section > p.note { color: var(--muted); margin: 0 0 14px; font-size: var(--fs-note); }
+  section > p.note a { color: var(--accent); text-decoration: underline; }
+  section > details.inline-expand { margin: 0 0 14px; font-size: var(--fs-note); }
+  section > details.inline-expand summary { cursor: pointer; color: var(--accent);
+    list-style: none; padding: 2px 0; user-select: none;
+    display: inline-flex; align-items: center; gap: 6px; }
+  section > details.inline-expand summary::-webkit-details-marker { display: none; }
+  section > details.inline-expand summary::before { content: "▸";
+    display: inline-block; font-size: 11px; transition: transform 150ms ease; }
+  section > details.inline-expand[open] summary::before { transform: rotate(90deg); }
+  section > details.inline-expand summary:hover { text-decoration: underline; }
+  section > details.inline-expand p { color: var(--muted); margin: 8px 0 0; line-height: 1.5; }
+  section > details.inline-expand a { color: var(--accent); text-decoration: underline; }
   .panel { background: var(--panel); border: 1px solid var(--border);
     border-radius: 6px; overflow: hidden; }
 
@@ -136,7 +157,7 @@
     color: #57606a; margin: 9px 0 3px; padding-bottom: 2px;
     border-bottom: 1px solid #d0d7de; font-weight: 600; }
   .map-popup h4:first-of-type { margin-top: 6px; }
-  .leaflet-popup-content { max-height: 55vh; overflow-y: auto; width: 300px !important; }
+  .leaflet-popup-content { max-height: 33vh; overflow-y: auto; width: 300px !important; }
   .leaflet-popup-content, .leaflet-popup-content-wrapper,
   .leaflet-tooltip, .leaflet-container {
     font-family: "Nunito Sans", -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
@@ -314,54 +335,59 @@
 
 <header id="top">
   <div class="hero-disclaimer" role="note">
-    <strong>Unofficial.</strong> This is an independent personal project and is
-    <em>not</em> affiliated with, endorsed by, or produced by Portland Public Schools.
-    All data is compiled from public sources (see
+    <strong>Unofficial.</strong> The PPS Data Explorer compiles data for the
+    74 Portland Public Schools set to be narrowed to a closure shortlist in
+    November 2026. This is an independent personal project and is
+    <em>not</em> affiliated with, endorsed by, or produced by Portland Public
+    Schools. All data is compiled from public sources (see
     <a href="#section-methodology">Methodology</a>).
   </div>
-  <div class="hero">
-    <div class="hero-text">
-      <p>
-        On March 10, 2026,
-        Superintendent Kimberlee Armstrong announced that Portland Public Schools (PPS) may close some number of its 74
-        elementary, K-8, middle, and alternative schools by fall 2027. The driver is a decade of
-        declining enrollment (projected to fall another 13% by 2034-35) and a structural budget gap.
-      </p>
-      <p>
-        No formal criteria have been published for determining which schools might be selected,
-        but PPS and school board members have pointed to the following set of factors: current
-        enrollment, building utilization (students/sq ft), seismic risk and building condition,
-        recent or planned bond investments, equity considerations, student experience, access to
-        programs, transportation, and long-term sustainability.
-      </p>
-      <p>
-        This explorer gathers data to visualize these factors for every in-scope PPS school.
-        Academic performance is included for context, though it is notably absent from the
-        criteria PPS has discussed publicly.
-      </p>
+  <details class="hero-details" id="hero-more-details">
+    <summary>More background and timeline</summary>
+    <div class="hero">
+      <div class="hero-text">
+        <p>
+          On March 10, 2026,
+          Superintendent Kimberlee Armstrong announced that Portland Public Schools (PPS) may close some number of its 74
+          elementary, K-8, middle, and alternative schools by fall 2027. The driver is a decade of
+          declining enrollment (projected to fall another 13% by 2034-35) and a structural budget gap.
+        </p>
+        <p>
+          No formal criteria have been published for determining which schools might be selected,
+          but PPS and school board members have pointed to the following set of factors: current
+          enrollment, building utilization, seismic risk and building condition,
+          recent or planned bond investments, equity considerations, student experience, access to
+          programs, transportation, and long-term sustainability.
+        </p>
+        <p>
+          This explorer gathers data to visualize these factors for every in-scope PPS school.
+          Academic performance is included for context, though it is notably absent from the
+          criteria PPS has discussed publicly.
+        </p>
+      </div>
+      <aside class="hero-timeline" aria-label="Closure-decision timeline">
+        <h3>Timeline</h3>
+        <ol>
+          <li class="past">
+            <span class="date">Mar 10, 2026</span>
+            <span class="what">Armstrong announces possibility of closures</span>
+          </li>
+          <li class="next">
+            <span class="date">Nov 2026</span>
+            <span class="what">PPS releases official shortlist</span>
+          </li>
+          <li>
+            <span class="date">Dec 2026</span>
+            <span class="what">School board votes</span>
+          </li>
+          <li>
+            <span class="date">Fall 2027</span>
+            <span class="what">Closures take effect</span>
+          </li>
+        </ol>
+      </aside>
     </div>
-    <aside class="hero-timeline" aria-label="Closure-decision timeline">
-      <h3>Timeline</h3>
-      <ol>
-        <li class="past">
-          <span class="date">Mar 10, 2026</span>
-          <span class="what">Armstrong announces possibility of closures</span>
-        </li>
-        <li class="next">
-          <span class="date">Nov 2026</span>
-          <span class="what">PPS releases official shortlist</span>
-        </li>
-        <li>
-          <span class="date">Dec 2026</span>
-          <span class="what">School board votes</span>
-        </li>
-        <li>
-          <span class="date">Fall 2027</span>
-          <span class="what">Closures take effect</span>
-        </li>
-      </ol>
-    </aside>
-  </div>
+  </details>
 </header>
 
 <main>
@@ -457,19 +483,22 @@
       (Lent, Rigler, Richmond: 100%). Source: PPS Language Immersion Enrollment
       Report 2025-26.
     </p>
-    <p class="note">
-      <strong>Why this matters for closure decisions:</strong> total enrollment
-      at a shared-building school blends two distinct populations. The DLI strand
-      pulls students district-wide by lottery, so those seats are not
-      representative of neighborhood demand, and the mainstream cohort, which is
-      the actual catchment-based enrollment, can be a fraction of the posted
-      total. Closing one of these buildings affects two different
-      constituencies: the catchment families who lose their neighborhood school,
-      and the lottery families across the district who lose a DLI option. PPS
-      has named "access to programs" as one of its four closure-decision
-      factors; consolidating a DLI host also removes that program from its
-      current neighborhood unless the strand is explicitly relocated.
-    </p>
+    <details class="note inline-expand">
+      <summary>Why this matters for closure decisions</summary>
+      <p>
+        Total enrollment at a shared-building school blends two distinct
+        populations. The DLI strand pulls students district-wide by lottery, so
+        those seats are not representative of neighborhood demand, and the
+        mainstream cohort, which is the actual catchment-based enrollment, can
+        be a fraction of the posted total. Closing one of these buildings
+        affects two different constituencies: the catchment families who lose
+        their neighborhood school, and the lottery families across the district
+        who lose a DLI option. PPS has named "access to programs" as one of its
+        four closure-decision factors; consolidating a DLI host also removes
+        that program from its current neighborhood unless the strand is
+        explicitly relocated.
+      </p>
+    </details>
     <div class="panel chart-card"><div id="plot-dli" style="height: 700px;"></div></div>
   </section>
 
@@ -526,7 +555,7 @@
       the March 10 announcement). Columns are pulled from the sources below
       and joined on a mix of NCES school ID, Oregon ODE School Institution ID, and manual
       name mapping for recent renamings (e.g., Madison → McDaniel, Wilson → Wells-Barnett,
-      Fernwood → Beverly Cleary). Geographic signals (affordable housing, permits) are
+      Fernwood → Beverly Cleary). Geographic indicators (affordable housing, permits) are
       aggregated to each school using its actual PPS attendance boundary, with a
       1-mile haversine radius as a fallback for focus-option / alternative /
       embedded programs that don't have a published catchment.
@@ -709,6 +738,7 @@
       toggle.setAttribute("aria-expanded", "false");
     }
   });
+
 
   const links = Array.from(nav.querySelectorAll("a"));
   const sections = links
@@ -1265,7 +1295,7 @@
         type: "bar", orientation: "h",
         x: rows.map(s => s.enrollment_pct_change_7yr * 100),
         y: labels,
-        marker: { color: COLOR_OTHER, line: { width: 0.5, color: "#0e1115" } },
+        marker: { color: "#3fb950", line: { width: 0.5, color: "#0e1115" } },
         text: rows.map(s => (s.enrollment_pct_change_7yr * 100).toFixed(1) + "%"),
         textposition: "outside",
         textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
@@ -1313,7 +1343,7 @@
         type: "bar", orientation: "h",
         x: rows.map(s => s.students_per_teacher_2023),
         y: labels,
-        marker: { color: COLOR_OTHER, line: { width: 0.5, color: "#0e1115" } },
+        marker: { color: "#a371f7", line: { width: 0.5, color: "#0e1115" } },
         text: rows.map(s => mobile
           ? s.students_per_teacher_2023.toFixed(1)
           : `${s.enrollment_2023} / ${s.teachers_fte_2023} (${s.students_per_teacher_2023.toFixed(1)})`),
@@ -1368,6 +1398,7 @@
         type: "bar", orientation: "h",
         x: rows.map(s => s.airflow_pct_below_3_ach),
         y: labels,
+        showlegend: false,
         marker: { color: colors, line: { width: 0.5, color: "#0e1115" } },
         text: rows.map(s => {
           const pct = (s.airflow_pct_below_3_ach * 100).toFixed(0) + "%";
