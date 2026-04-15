@@ -117,14 +117,37 @@
   .panel { background: var(--panel); border: 1px solid var(--border);
     border-radius: 6px; overflow: hidden; }
 
-  #map { height: 550px; }
+  #map { height: 600px; position: relative; }
+  #map:not(.scroll-enabled)::after {
+    content: "Click map to zoom with scroll wheel";
+    position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%);
+    padding: 6px 10px; border-radius: 4px;
+    background: rgba(13, 17, 23, 0.78); color: #e6edf3;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.2px;
+    pointer-events: none; z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0; transition: opacity 200ms ease;
+  }
+  #map:not(.scroll-enabled):hover::after { opacity: 1; }
   .map-popup b { display: block; font-size: 13px; margin-bottom: 4px; }
   .map-popup .meta { color: #57606a; font-size: 11.5px; }
   .map-popup .row { font-size: 12px; margin: 2px 0; }
+  .map-popup h4 { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: #57606a; margin: 9px 0 3px; padding-bottom: 2px;
+    border-bottom: 1px solid #d0d7de; font-weight: 600; }
+  .map-popup h4:first-of-type { margin-top: 6px; }
+  .leaflet-popup-content { max-height: 55vh; overflow-y: auto; width: 300px !important; }
   .leaflet-popup-content, .leaflet-popup-content-wrapper,
   .leaflet-tooltip, .leaflet-container {
     font-family: "Nunito Sans", -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
   }
+  .leaflet-tooltip.util-label {
+    background: transparent; border: none; box-shadow: none; padding: 0;
+    color: #fff; font-size: 10px; font-weight: 700;
+    text-shadow: 0 0 3px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.9);
+    pointer-events: none;
+  }
+  .leaflet-tooltip.util-label::before { display: none; }
 
   /* Trends chart filter */
   .trends-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
@@ -254,6 +277,8 @@
     main { padding: 18px 16px 60px; }
     .chart-card { padding: 10px; }
     #plot-ranking { height: 1700px !important; }
+    #plot-ratio { height: 1650px !important; }
+    #plot-ventilation { height: 1550px !important; }
     .table-controls input[type="search"] { width: 100%; }
     .table-controls .count { margin-left: 0; }
     .contribute { padding: 24px 16px 32px; }
@@ -277,6 +302,8 @@
       <a href="#section-utilization">Utilization</a>
       <a href="#section-sustainability">Sustainability</a>
       <a href="#section-transport">Transportation</a>
+      <a href="#section-ratios">Ratios</a>
+      <a href="#section-ventilation">Ventilation</a>
       <a href="#section-dli">DLI</a>
       <a href="#section-scatters">Scatters</a>
       <a href="#section-table">Table</a>
@@ -339,9 +366,9 @@
 
 <main>
   <section id="section-map">
-    <h2>Map: all 74 in-scope PPS schools</h2>
+    <h2>Map: All 74 in-scope PPS schools with building utilization</h2>
     <p class="note">
-      Each marker sized by 2025-26 enrollment. A purple ring indicates an unreinforced masonry (URM) building.
+      Each marker sized by 2025-26 enrollment and labeled with building utilization (enrollment ÷ 2021 functional capacity). Red fill marks schools at less than 50% building utilization. A purple ring indicates an unreinforced masonry (URM) building.
     </p>
     <div class="panel"><div id="map"></div></div>
   </section>
@@ -401,6 +428,22 @@
       reassignment may differ. Bars are labeled with the nearest alternative school.
     </p>
     <div class="panel chart-card"><div id="plot-transport" style="height: 460px;"></div></div>
+  </section>
+
+  <section id="section-ratios">
+    <h2>Students per teacher (fall 2023)</h2>
+    <p class="note">
+      Fall 2023 NCES enrollment divided by fall 2023 classroom-teacher FTE &mdash; a same-year snapshot of how many students each full-time teacher is accountable for. Excludes counselors, social workers, nurses, and other non-instructional staff. The dashed line marks the in-scope median. Small alternative and K-8 programs naturally cluster low (fixed teacher-FTE floor spread across fewer students); larger neighborhood elementaries and middle schools cluster high. Source: NCES CCD 2023.
+    </p>
+    <div class="panel chart-card"><div id="plot-ratio" style="height: 1400px;"></div></div>
+  </section>
+
+  <section id="section-ventilation">
+    <h2>Classroom ventilation (2021 airflow survey)</h2>
+    <p class="note">
+      Share of tested rooms below <strong>3 air changes per hour</strong> &mdash; the Lancet COVID-era lower-bound floor for classroom ventilation (recommended target is 6 ACH). Measured in 2021 by Amerseco + Neudorfer Engineers under NEBB-certified protocols; metric is ACH_e (ASHRAE Total Effective ACH) without portable filtration, so it reflects what a building's HVAC does on its own. Bars are colored by whether a MERV-13 filter upgrade had been installed at test time. The dashed line marks the in-scope median; a short bar is good. Source: <a href="https://www.pps.net/departments/risk-management/healthy-schools/indoor-air-quality" target="_blank" rel="noopener">PPS Indoor Air Quality</a>.
+    </p>
+    <div class="panel chart-card"><div id="plot-ventilation" style="height: 1300px;"></div></div>
   </section>
 
   <section id="section-dli">
@@ -463,7 +506,6 @@
     <div class="panel">
       <div class="table-controls">
         <input id="search" type="search" placeholder="Filter by school name…">
-        <label><input id="filter-cand" type="checkbox"> Low-enrollment 15 only</label>
         <label><input id="filter-urm" type="checkbox"> URM buildings only</label>
         <span class="count" id="count"></span>
         <button id="csv-btn" class="csv-btn" type="button" title="Download the currently-filtered rows as CSV">Download CSV</button>
@@ -514,10 +556,27 @@
         <dd>Functional capacity per school (2021). PPS's planning number: gross capacity derived from classroom count and area, minus set-asides (SPED focus, art/music, computer lab, DLI co-location, etc.), with a configuration-specific utilization rate applied (85% at middle/high, higher at K-5/K-8) and further reductions at Title I and TSI/CSI schools.</dd>
       <dt><a href="https://www.pps.net/departments/facilities-asset-management/school-buildings-conditions-and-characteristics/seismic-assessments" target="_blank" rel="noopener">KPFF Seismic Report (2009)</a></dt>
         <dd>Year built, square footage, and construction type for every building in the district. Note: square footage predates recent bond expansions.</dd>
-      <dt>Holmes Engineering URM Assessment (2024)</dt>
+      <dt><a href="https://meetings.boardbook.org/Public/File/915?file=f8bb4ec8-99ca-40d8-a4c9-0b07ad1a3e6e" target="_blank" rel="noopener">Holmes Engineering URM Assessment (2024)</a></dt>
         <dd>Unreinforced masonry classification and retrofit cost estimates for 18 PPS buildings.</dd>
       <dt><a href="https://bond.pps.net/" target="_blank" rel="noopener">PPS Bond: Seismic &amp; modernization</a></dt>
         <dd>Retrofit and modernization status (full, targeted, planned under 2025 bond).</dd>
+    </dl>
+
+    <h3>Ventilation &amp; indoor air</h3>
+    <dl>
+      <dt><a href="https://www.pps.net/departments/risk-management/healthy-schools/indoor-air-quality" target="_blank" rel="noopener">PPS Indoor Air Quality — airflow survey (2021)</a></dt>
+        <dd>
+          NEBB-certified per-room airflow tests (Amerseco + Neudorfer Engineers, 2021) published
+          as one PDF per building. Measured total supply CFM, outside-air CFM, and derived
+          ASHRAE Total Effective Air Changes per Hour (ACH_e) with and without portable
+          filtration. We parse each PDF for room-level readings, then report per-building:
+          rooms tested, median ACH_e without portable filters (the HVAC-only floor), the
+          share of rooms below Lancet's 3 ACH lower bound and 6 ACH recommended classroom
+          target, and whether a MERV-13 filter upgrade had been installed at test time.
+          Coverage: 74 of 83 roster buildings; omitted schools (Benson, McDaniel, Kellogg,
+          Alliance, Odyssey, ACCESS, Bridger Creative Science, Clark) were either
+          newly-modernized after the survey or don't have a standalone building report.
+        </dd>
     </dl>
 
     <h3>Title I &amp; federal programs</h3>
@@ -713,43 +772,135 @@
   function hideTT() { tt.style.display = "none"; }
 
   // ---------- MAP ----------
-  const map = L.map("map").setView([45.535, -122.65], 12);
+  // scrollWheelZoom starts disabled so that scrolling the page past a
+  // full-width map doesn't get hijacked into zooming. Enable on user
+  // interaction (click), disable again when the pointer leaves.
+  const map = L.map("map", { scrollWheelZoom: false }).setView([45.535, -122.65], 12);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19, attribution: "© OpenStreetMap",
   }).addTo(map);
+  const mapEl = map.getContainer();
+  map.on("click", () => {
+    map.scrollWheelZoom.enable();
+    mapEl.classList.add("scroll-enabled");
+  });
+  mapEl.addEventListener("mouseleave", () => {
+    map.scrollWheelZoom.disable();
+    mapEl.classList.remove("scroll-enabled");
+  });
 
   schools.forEach(s => {
     if (s.latitude == null || s.longitude == null) return;
-    const cand = s.is_closure_candidate === true || s.is_closure_candidate === "True";
     const urm = s.is_urm_building === true || s.is_urm_building === "True";
-    const r = Math.max(5, Math.min(22, Math.sqrt(s.enrollment_2025_26 || 100) / 2));
+    const util = s.utilization_pct_2526;
+    const lowUtil = util != null && Math.round(util * 100) <= 49;
+    const fillColor = lowUtil ? "#f85149" : "#58a6ff";
+    const borderColor = urm ? "#a371f7" : fillColor;
+    const r = Math.max(7.5, Math.min(33, Math.sqrt(s.enrollment_2025_26 || 100) * 0.75));
     const marker = L.circleMarker([s.latitude, s.longitude], {
       radius: r,
-      color: urm ? "#a371f7" : "#58a6ff",
+      color: borderColor,
       weight: urm ? 2.5 : 1,
-      fillColor: "#58a6ff",
+      fillColor: fillColor,
       fillOpacity: 0.72,
     }).addTo(map);
-    const fields = [
-      ["Level", s.level],
-      ["Enrollment 25-26", fmt(s.enrollment_2025_26, "int")],
-      ["Enrollment Δ% YoY", fmt(s.enrollment_pct_change, "pct_0_1")],
-      ["Year built", fmt(s.year_built, "year")],
-      ["Square feet", fmt(s.square_feet, "int")],
-      ["% ELA prof 24-25", fmt(s.pct_ela_prof_2425, "pct_0_100")],
-      ["% Math prof 24-25", fmt(s.pct_math_prof_2425, "pct_0_100")],
-      ["Title I", fmt(s.is_title_i, "bool")],
-      ["URM", fmt(s.is_urm_building, "bool")],
-      ["Seismic retrofit", s.seismic_retrofit_status || "—"],
-      ["Pipeline family units (catchment)", fmt(s.pipeline_family_units_within_1mi, "int")],
-      ["Permitted units 2022+ (catchment)", fmt(s.permits_units_within_1mi_since_2022, "int")],
+    if (util != null) {
+      marker.bindTooltip(`${Math.round(util * 100)}%`, {
+        permanent: true, direction: "center", className: "util-label", offset: [0, 0],
+      });
+    }
+    const fmt1 = v => (v == null || v === "" || Number.isNaN(Number(v))) ? "—" : Number(v).toFixed(1);
+    const sections = [
+      ["Overview", [
+        ["Level", s.level || "—"],
+        ["Title I", fmt(s.is_title_i, "bool")],
+      ]],
+      ["Building & capacity", [
+        ["Year built", fmt(s.year_built, "year")],
+        ["Square feet", fmt(s.square_feet, "int")],
+        ["Construction type", s.construction_type_2009 || "—"],
+        ["Functional capacity (2021)", fmt(s.functional_capacity_2021, "int")],
+        ["Utilization 25-26", fmt(s.utilization_pct_2526, "pct_0_1")],
+        ["URM", fmt(s.is_urm_building, "bool")],
+        ["URM retrofit cost", fmt(s.urm_retrofit_cost_usd, "usd")],
+        ["Seismic retrofit", s.seismic_retrofit_status || "—"],
+      ]],
+      ["Enrollment", [
+        ["2025-26", fmt(s.enrollment_2025_26, "int")],
+        ["2024-25", fmt(s.enrollment_2024_25, "int")],
+        ["YoY change", fmt(s.enrollment_pct_change, "pct_0_1")],
+        ["7-yr change (2018→2025)", fmt(s.enrollment_pct_change_7yr, "pct_0_1")],
+        ["2018 / 2019 / 2020", [s.enrollment_2018, s.enrollment_2019, s.enrollment_2020].map(v => v ?? "—").join(" / ")],
+        ["2021 / 2022 / 2023", [s.enrollment_2021, s.enrollment_2022, s.enrollment_2023].map(v => v ?? "—").join(" / ")],
+      ]],
+      ["Programs", [
+        ["Programs", s.programs || "—"],
+        ["DLI languages", s.dli_languages || "—"],
+        ["% DLI strand", fmt(s.pct_dli_2526, "pct_0_1")],
+        ["DLI students 25-26", fmt(s.dli_students_2526, "int")],
+        ["Neighborhood students 25-26", fmt(s.neighborhood_students_2526, "int")],
+        ["Focus-option host", fmt(s.has_focus_option, "bool")],
+        ["Recent boundary change", fmt(s.recent_boundary_change, "bool")],
+      ]],
+      ["Academics", [
+        ["% ELA proficient 24-25", fmt(s.pct_ela_prof_2425, "pct_0_100")],
+        ["% Math proficient 24-25", fmt(s.pct_math_prof_2425, "pct_0_100")],
+        ["% ELA proficient 23-24", fmt(s.pct_ela_prof_2324, "pct_0_100")],
+        ["% Math proficient 23-24", fmt(s.pct_math_prof_2324, "pct_0_100")],
+        ["Class size 24-25", fmt1(s.class_size_2425)],
+        ["% regular attenders 24-25", fmt(s.pct_regular_attenders_2425, "pct_0_100")],
+        ["% experienced teachers 24-25", fmt(s.pct_experienced_teachers_2425, "pct_0_100")],
+        ["% teacher retention 24-25", fmt(s.pct_teacher_retention_2425, "pct_0_100")],
+        ["Students per teacher 2023", fmt1(s.students_per_teacher_2023)],
+        ["Students per teacher 2021", fmt1(s.students_per_teacher_2021)],
+        ["% chronic absent 20-21", fmt(s.pct_chronic_absent_2021, "pct_0_1")],
+      ]],
+      ["Demographics", [
+        ["% BIPOC", fmt(s.pct_bipoc, "pct_0_1")],
+        ["% white", fmt(s.pct_white, "pct_0_1")],
+        ["% Hispanic/Latino", fmt(s.pct_hispanic, "pct_0_1")],
+        ["% Black", fmt(s.pct_black, "pct_0_1")],
+        ["% Asian", fmt(s.pct_asian, "pct_0_1")],
+        ["% AI/AN", fmt(s.pct_ai_an, "pct_0_1")],
+        ["% NHPI", fmt(s.pct_nhpi, "pct_0_1")],
+        ["% multiracial", fmt(s.pct_multiracial, "pct_0_1")],
+        ["% FRL", fmt(s.pct_frl, "pct_0_1")],
+        ["% direct cert (deep poverty)", fmt(s.pct_direct_cert, "pct_0_1")],
+        ["% English learners (2020)", fmt(s.pct_lep, "pct_0_1")],
+        ["% SPED/IDEA (2020)", fmt(s.pct_idea, "pct_0_1")],
+      ]],
+      ["Staff & discipline (2020-21)", [
+        ["Teacher FTE 2023", fmt1(s.teachers_fte_2023)],
+        ["Teacher FTE 2021", fmt1(s.teachers_fte_2021)],
+        ["Counselor FTE", fmt1(s.counselors_fte_2021)],
+        ["Social worker FTE", fmt1(s.social_workers_fte_2021)],
+        ["Psychologist FTE", fmt1(s.psychologists_fte_2021)],
+        ["Nurse FTE", fmt1(s.nurses_fte_2021)],
+        ["Support staff per 100", fmt1(s.support_staff_per_100)],
+        ["OSS instances per 100", fmt1(s.suspensions_per_100_2021)],
+      ]],
+      ["Neighborhood housing & growth", [
+        ["Affordable units (catchment)", fmt(s.affordable_units_within_1mi, "int")],
+        ["Pipeline affordable units", fmt(s.pipeline_affordable_units_within_1mi, "int")],
+        ["Pipeline family (2+BR) units", fmt(s.pipeline_family_units_within_1mi, "int")],
+        ["Pipeline projects", fmt(s.n_pipeline_projects_within_1mi, "int")],
+        ["Permits 2022+", fmt(s.n_permits_within_1mi_since_2022, "int")],
+        ["Permitted units 2022+", fmt(s.permits_units_within_1mi_since_2022, "int")],
+      ]],
+      ["Nearest alternative", [
+        ["Name", s.nearest_alt_school_name || "—"],
+        ["Distance", fmt(s.nearest_alt_school_mi, "miles")],
+      ]],
     ];
-    marker.bindPopup(
+    const popupHtml =
       `<div class="map-popup"><b>${s.school_name}</b>` +
       `<div class="meta">${s.street_address || ""}</div>` +
-      fields.map(([k, v]) => `<div class="row"><b style="display:inline">${k}:</b> ${v}</div>`).join("") +
-      `</div>`
-    );
+      sections.map(([title, rows]) =>
+        `<h4>${title}</h4>` +
+        rows.map(([k, v]) => `<div class="row"><b style="display:inline">${k}:</b> ${v}</div>`).join("")
+      ).join("") +
+      `</div>`;
+    marker.bindPopup(popupHtml, { maxWidth: 340, minWidth: 300 });
   });
 
   // ---------- SCATTERS ----------
@@ -1148,6 +1299,129 @@
     window.addEventListener("resize", () => { clearTimeout(t2); t2 = setTimeout(renderTrend, 150); });
   })();
 
+  // ---------- STUDENT/TEACHER RATIO RANKING ----------
+  (function () {
+    const rows = schools.filter(s => s.students_per_teacher_2023 != null);
+    rows.sort((a, b) => a.students_per_teacher_2023 - b.students_per_teacher_2023);
+    const medianVal = median(rows.map(s => s.students_per_teacher_2023));
+
+    function renderRatio() {
+      const mobile = window.innerWidth < 700;
+      const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
+      const labels = rows.map(s => mobile ? truncate(s.school_name, 18) : s.school_name);
+      const trace = {
+        type: "bar", orientation: "h",
+        x: rows.map(s => s.students_per_teacher_2023),
+        y: labels,
+        marker: { color: COLOR_OTHER, line: { width: 0.5, color: "#0e1115" } },
+        text: rows.map(s => mobile
+          ? s.students_per_teacher_2023.toFixed(1)
+          : `${s.enrollment_2023} / ${s.teachers_fte_2023} (${s.students_per_teacher_2023.toFixed(1)})`),
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata: rows.map(s => [s.enrollment_2023, s.teachers_fte_2023]),
+        hovertemplate: "<b>%{y}</b><br>%{customdata[0]} students / %{customdata[1]} teacher FTE<br>Ratio: %{x:.1f}<extra></extra>",
+      };
+      Plotly.react("plot-ratio", [trace], Object.assign(baseLayout(), {
+        margin: mobile
+          ? { l: 140, r: 60, t: 20, b: 50 }
+          : { l: 240, r: 120, t: 20, b: 50 },
+        xaxis: { title: "Students per teacher FTE (fall 2023)",
+          gridcolor: "#30363d", zerolinecolor: "#30363d" },
+        yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
+        showlegend: false,
+        shapes: [{
+          type: "line", x0: medianVal, x1: medianVal,
+          y0: -0.5, y1: rows.length - 0.5,
+          line: { color: "#7d8590", width: 1, dash: "dash" },
+        }],
+        annotations: [{
+          x: medianVal, y: rows.length - 0.5,
+          text: `median ${medianVal.toFixed(1)}`,
+          showarrow: false, yanchor: "bottom", xanchor: "left",
+          font: { size: 10, color: "#7d8590" },
+        }],
+      }), { displayModeBar: false, responsive: true });
+    }
+    renderRatio();
+    let tR;
+    window.addEventListener("resize", () => { clearTimeout(tR); tR = setTimeout(renderRatio, 150); });
+  })();
+
+  // ---------- VENTILATION RANKING (% rooms below 3 ACH) ----------
+  (function () {
+    const rows = schools.filter(s => s.airflow_pct_below_3_ach != null);
+    if (!rows.length) return;
+    // Shortest bars (best) at top, longest (worst) at bottom.
+    rows.sort((a, b) => b.airflow_pct_below_3_ach - a.airflow_pct_below_3_ach);
+    const medianVal = median(rows.map(s => s.airflow_pct_below_3_ach));
+    const COLOR_UPGRADED = "#3fb950";   // MERV-13 upgraded
+    const COLOR_NOT_UPGRADED = "#f0883e"; // not upgraded
+
+    function renderVent() {
+      const mobile = window.innerWidth < 700;
+      const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
+      const labels = rows.map(s => mobile ? truncate(s.school_name, 18) : s.school_name);
+      const colors = rows.map(s => s.airflow_filter_upgraded ? COLOR_UPGRADED : COLOR_NOT_UPGRADED);
+      const trace = {
+        type: "bar", orientation: "h",
+        x: rows.map(s => s.airflow_pct_below_3_ach),
+        y: labels,
+        marker: { color: colors, line: { width: 0.5, color: "#0e1115" } },
+        text: rows.map(s => {
+          const pct = (s.airflow_pct_below_3_ach * 100).toFixed(0) + "%";
+          return mobile ? pct : `${pct} of ${s.airflow_rooms_tested} rooms`;
+        }),
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata: rows.map(s => [
+          s.airflow_rooms_tested,
+          s.airflow_ach_e_median,
+          s.airflow_filter_upgraded ? "Yes" : "No",
+        ]),
+        hovertemplate: "<b>%{y}</b><br>" +
+          "%{customdata[0]} rooms tested<br>" +
+          "Median ACH_e: %{customdata[1]:.1f}<br>" +
+          "% below 3 ACH: %{x:.1%}<br>" +
+          "MERV-13 upgraded: %{customdata[2]}<extra></extra>",
+      };
+      const legendTraces = [
+        { type: "bar", x: [null], y: [null], name: "MERV-13 upgraded",
+          marker: { color: COLOR_UPGRADED }, showlegend: true, hoverinfo: "skip" },
+        { type: "bar", x: [null], y: [null], name: "Not upgraded",
+          marker: { color: COLOR_NOT_UPGRADED }, showlegend: true, hoverinfo: "skip" },
+      ];
+      Plotly.react("plot-ventilation", [trace, ...legendTraces], Object.assign(baseLayout(), {
+        margin: mobile
+          ? { l: 140, r: 70, t: 40, b: 50 }
+          : { l: 240, r: 140, t: 40, b: 50 },
+        xaxis: { title: "% of tested rooms below 3 ACH_e",
+          tickformat: ".0%", range: [0, 1.08],
+          gridcolor: "#30363d", zerolinecolor: "#30363d" },
+        yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
+        showlegend: true,
+        legend: { x: 1, y: 1, xanchor: "right", yanchor: "bottom",
+          bgcolor: "rgba(0,0,0,0)", font: { size: 10, color: "#e6edf3" } },
+        shapes: [{
+          type: "line", x0: medianVal, x1: medianVal,
+          y0: -0.5, y1: rows.length - 0.5,
+          line: { color: "#7d8590", width: 1, dash: "dash" },
+        }],
+        annotations: [{
+          x: medianVal, y: rows.length - 0.5,
+          text: `median ${(medianVal * 100).toFixed(0)}%`,
+          showarrow: false, yanchor: "bottom", xanchor: "left",
+          font: { size: 10, color: "#7d8590" },
+        }],
+      }), { displayModeBar: false, responsive: true });
+    }
+    renderVent();
+    let tV;
+    window.addEventListener("resize", () => { clearTimeout(tV); tV = setTimeout(renderVent, 150); });
+  })();
+
   // ---------- DLI vs. NEIGHBORHOOD STACKED BARS ----------
   (function () {
     const rows = schools.filter(s => s.dli_students_2526 != null);
@@ -1289,7 +1563,6 @@
   const thead = table.querySelector("thead");
   const tbody = table.querySelector("tbody");
   const searchEl = document.getElementById("search");
-  const filterCandEl = document.getElementById("filter-cand");
   const filterUrmEl = document.getElementById("filter-urm");
   const countEl = document.getElementById("count");
 
@@ -1323,12 +1596,10 @@
 
   function renderRows() {
     const q = searchEl.value.toLowerCase().trim();
-    const onlyCand = filterCandEl.checked;
     const onlyUrm = filterUrmEl.checked;
 
     let rows = schools.filter(s => {
       if (q && !(s.school_name || "").toLowerCase().includes(q)) return false;
-      if (onlyCand && !(s.is_closure_candidate === true || s.is_closure_candidate === "True")) return false;
       if (onlyUrm && !(s.is_urm_building === true || s.is_urm_building === "True")) return false;
       return true;
     });
@@ -1370,7 +1641,6 @@
   function render() { renderHeader(); renderRows(); }
 
   searchEl.addEventListener("input", renderRows);
-  filterCandEl.addEventListener("change", renderRows);
   filterUrmEl.addEventListener("change", renderRows);
 
   function csvCell(v) {

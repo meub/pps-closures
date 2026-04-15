@@ -67,6 +67,11 @@ META = {
     "students_per_teacher_2023": {"label": "Students per teacher (2023)", "desc": "Same-year ratio: fall 2023 NCES enrollment ÷ fall 2023 NCES teacher FTE. PPS in-scope median is ~17; small alternative and K-8 programs skew low, DLI and large elementaries skew high.", "source": "Derived: NCES CCD 2023", "fmt": "ratio"},
     "teachers_fte_2021": {"label": "Teacher FTE (2021)", "desc": "Classroom teacher full-time-equivalents as reported to CRDC for 2020-21. COVID-era snapshot.", "source": "CRDC 2021", "fmt": "ratio"},
     "students_per_teacher_2021": {"label": "Students per teacher (2021)", "desc": "Same-year ratio: 2020-21 CRDC enrollment ÷ 2020-21 CRDC teacher FTE. COVID-era snapshot; shown alongside 2023 for trend context.", "source": "Derived: CRDC 2021", "fmt": "ratio"},
+    "airflow_rooms_tested": {"label": "Rooms airflow-tested", "desc": "Count of classrooms and shared spaces airflow-tested by Amerseco/Neudorfer in the PPS 2021 NEBB-certified survey. Coverage is typically 20-40 rooms per elementary and 80-150 per high school.", "source": "PPS 2021 airflow survey", "fmt": "int"},
+    "airflow_ach_e_median": {"label": "ACH_e median (2021)", "desc": "Median ASHRAE Total Effective Air Changes per Hour without portable filtration — the rate at which a room's air is fully cycled through HVAC filtration and outside air dilution. Lancet COVID-era guidance recommends ≥6 ACH for classrooms; ≥3 ACH is a bare-minimum floor. Measured 2021; includes MERV-13 upgrades done by then.", "source": "PPS 2021 airflow survey", "fmt": "ratio"},
+    "airflow_pct_below_3_ach": {"label": "% rooms < 3 ACH_e", "desc": "Share of tested rooms with effective ACH below 3 — the lower-bound floor in Lancet COVID ventilation guidance. Districtwide median is near 60%; buildings without filter upgrades are much higher.", "source": "PPS 2021 airflow survey", "fmt": "pct_0_1"},
+    "airflow_pct_below_6_ach": {"label": "% rooms < 6 ACH_e", "desc": "Share of tested rooms below the Lancet-recommended 6 ACH benchmark for classrooms. Most PPS rooms fall below this standard.", "source": "PPS 2021 airflow survey", "fmt": "pct_0_1"},
+    "airflow_filter_upgraded": {"label": "MERV-13 upgrade?", "desc": "Whether a MERV-13 filter upgrade had been installed in this building's HVAC as of the 2021 airflow survey. Filter upgrades raise effective ACH even without added outside air.", "source": "PPS 2021 airflow survey", "fmt": "bool"},
     "prof_residual": {"label": "Proficiency residual", "desc": "Each school's avg proficiency minus what a linear fit on % BIPOC would predict. Positive = outperforms demographics; negative = underperforms.", "source": "Derived: OSAS 2024-25 + ODE", "fmt": "ratio"},
     "affordable_units_within_1mi": {"label": "Afford. units in catchment", "desc": "Total existing affordable housing units inside the school's PPS attendance area (or a 1-mile radius for schools without a published catchment).", "source": "OAHI + Metro RLIS", "fmt": "int"},
     "pipeline_affordable_units_within_1mi": {"label": "Pipeline afford. units", "desc": "Affordable units in projects currently in development inside the school's PPS attendance area (2023–2027).", "source": "OAHI", "fmt": "int"},
@@ -101,6 +106,7 @@ TABLE_COLS = [
     "has_dli", "pct_dli_2526", "pct_chronic_absent_2021", "support_staff_per_100",
     "pct_regular_attenders_2425", "pct_experienced_teachers_2425",
     "pct_teacher_retention_2425", "class_size_2425", "students_per_teacher_2023",
+    "airflow_ach_e_median", "airflow_pct_below_3_ach",
     "pipeline_family_units_within_1mi", "affordable_units_within_1mi",
     "permits_units_within_1mi_since_2022",
 ]
@@ -182,6 +188,22 @@ SCATTERS = [
         "x": "enrollment_2025_26",
         "y": "enrollment_pct_change_7yr",
         "subtitle": "Long-term sustainability check. The in-scope set as a whole shrank ~20% over seven years; schools well below that line are losing students faster than the district overall.",
+    },
+    {
+        "id": "ratio_vs_enrollment",
+        "title": "Student/teacher ratio vs. enrollment",
+        "x": "enrollment_2025_26",
+        "y": "students_per_teacher_2023",
+        "subtitle": "Smaller schools sit lower because teacher FTE has a floor (a K-5 still needs one teacher per grade level regardless of section size). Schools well above the trend are stretched thin for their size; schools well below are staffed unusually richly. Ratio uses fall 2023 NCES; enrollment is fall 2025 ODE for consistency with other scatters.",
+        "trendline": True,
+    },
+    {
+        "id": "ach_vs_year_built",
+        "title": "ACH_e median vs. year built",
+        "x": "year_built",
+        "y": "airflow_ach_e_median",
+        "subtitle": "Older buildings ventilate worse. Horizontal line at 3 ACH_e marks the Lancet classroom floor; 6 ACH is the recommended target. Recently-modernized schools cluster in the upper-right (post-bond HVAC replacements); early-20th-century buildings anchor the lower-left — some at functionally zero mechanical ventilation. Source: PPS 2021 airflow survey.",
+        "trendline": True,
     },
 ]
 

@@ -38,6 +38,7 @@ python3 -m http.server -d web 8000
 | [KPFF Seismic Report 2009](https://bond.pps.net/) + Holmes Engineering 2024 | Year built, square footage, construction type, URM retrofit estimates | 2009 / 2024 |
 | [PPS Long-Range Facility Plan 2021 (Vol 1)](https://www.pps.net/cms/lib/OR01913224/Centricity/domain/219/lrfp/PPS-LRFP-Vol1-2021-Adopted.pdf) | Functional capacity per school (classrooms × station size minus set-asides, with PPS-defined utilization rates). Used for the building-utilization metric. | 2021 |
 | [PPS Bond page](https://bond.pps.net/seismic-improvements) | Seismic retrofit status | 2025 |
+| [PPS Indoor Air Quality](https://www.pps.net/departments/risk-management/healthy-schools/indoor-air-quality) | Per-room airflow tests (Amerseco + Neudorfer Engineers, NEBB-certified) — ACH_e medians, % rooms below Lancet 3/6 ACH, MERV-13 filter status | 2021 |
 | [Oregon Affordable Housing Inventory (OAHI)](https://www.oregon.gov/ohcs/) | Existing + in-development subsidized housing | 2024 |
 | [Metro RLIS](https://rlisdiscovery.oregonmetro.gov/) | Supplementary regional housing | 2024 |
 | [Portland BDS / PortlandMaps](https://www.portlandmaps.com/) | Residential building permits (2022+) | 2022 – present |
@@ -50,7 +51,7 @@ python3 -m http.server -d web 8000
 
 ```
 data/
-  pps_schools.csv         master table (83 rows × 54 cols; 74 in-scope + 9 high schools)
+  pps_schools.csv         master table (83 rows × 89 cols; 74 in-scope + 9 high schools)
   raw/                    source CSVs, JSONs, XLSXs, PDFs, GeoJSONs
 scripts/
   fetch_bds_permits.py          → data/raw/portland_bds_permits.csv
@@ -61,6 +62,8 @@ scripts/
   fetch_ode_aag.py              → data/raw/ode_aag_schools_2425.csv
   fetch_dli_report.py           → data/raw/pps_immersion_details_2526.{pdf,json}
   parse_lrfp_capacity.py        → data/raw/pps_functional_capacity_2021.json
+  fetch_pps_airflow.py          → data/raw/pps_airflow_pdfs/*.pdf + pps_airflow_index.json
+  parse_pps_airflow.py          → data/raw/pps_airflow_stats.json
   boundary_join.py              shared BoundaryIndex (point-in-polygon w/ haversine fallback)
   build_master.py               assemble data/pps_schools.csv
   merge_housing.py              + affordable_units / pipeline_* columns
@@ -89,6 +92,8 @@ python scripts/fetch_enrollment_history.py
 python scripts/fetch_ode_aag.py
 python scripts/fetch_dli_report.py
 python scripts/parse_lrfp_capacity.py  # reads data/raw/LRFP_Vol1_2021.pdf (checked in)
+python scripts/fetch_pps_airflow.py    # ~270 MB of per-building airflow PDFs
+python scripts/parse_pps_airflow.py    # ~6 min: pdfplumber table extraction
 
 # 2. Build master CSV:
 python scripts/build_master.py

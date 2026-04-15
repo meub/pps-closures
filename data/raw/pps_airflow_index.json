@@ -1,0 +1,554 @@
+[
+  {
+    "school_name": "Abernethy",
+    "slug": "abernethy",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/0a29d671-140f-4d24-9b59-ea0e96dffab2",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/3f00a9c1-a227-4f37-bbd3-c0006890e1c3"
+  },
+  {
+    "school_name": "Ainsworth",
+    "slug": "ainsworth",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/b42093cc-af9a-475f-9732-3121928da999",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/bcdecc99-47df-441b-80a9-d056dafbe340"
+  },
+  {
+    "school_name": "Alameda",
+    "slug": "alameda",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/99870831-c1f5-4404-aaa8-ee7aac6a3887",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/4d128669-693e-49ee-8461-5da75c74a9f1"
+  },
+  {
+    "school_name": "Applegate",
+    "slug": "applegate",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/46ec8223-1aaf-40ff-a158-398282115047",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/37e723a6-2314-492f-bf1b-f04e74319365"
+  },
+  {
+    "school_name": "Arleta",
+    "slug": "arleta",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/19514d70-15a3-49b5-93bd-b1346f5848f8",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/05cf7823-e692-4774-a6d4-71eaf281f97a"
+  },
+  {
+    "school_name": "Astor",
+    "slug": "astor",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/eb44658c-5349-40e7-bbc9-6de713a5f940",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/08c73efa-849e-44aa-b04a-1a4da692a27b"
+  },
+  {
+    "school_name": "Atkinson",
+    "slug": "atkinson",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/72b2b281-2b8f-41e8-ac3c-c12007dc6529",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/39a4ea47-9c84-4f0b-87b0-733f69248757"
+  },
+  {
+    "school_name": "Beach",
+    "slug": "beach",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/a7f874f6-ed6f-46fd-83eb-bb79348d7338",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/457a334a-6d7a-496f-8314-d4495020c068"
+  },
+  {
+    "school_name": "Beaumont",
+    "slug": "beaumont",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e8b3378d-4f48-402e-a615-6c5be01d48d6",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/a74f26fd-1944-4b01-b757-7b0414db9c5c"
+  },
+  {
+    "school_name": "Beverly Clearly at Hollyrood",
+    "slug": "beverly_clearly_at_hollyrood",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/ce40413c-07ee-471e-95d6-f3587ea79059",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/49b6db68-ec37-483a-83d3-cb0fe737f3c2"
+  },
+  {
+    "school_name": "Beverly Cleary at Fernwood",
+    "slug": "beverly_cleary_at_fernwood",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/a553aa9f-44fe-4bf4-a0f3-cf4dc2ff7982",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/993c5af0-1022-4016-ab9b-b32413208c91"
+  },
+  {
+    "school_name": "Beverly Cleary and ACCESS at Rose City Park",
+    "slug": "beverly_cleary_and_access_at_rose_city_park",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/2fe35f85-c963-4227-b544-816c6737ac51",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/df50dbab-7028-4e5a-96d0-1a675eff802c"
+  },
+  {
+    "school_name": "Prophet Education Center (PEC)",
+    "slug": "prophet_education_center_pec",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/7e9b73f5-85f6-4816-a266-a1e3f92440d7",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/1030062c-d1e2-4ecb-8e01-4de18e081b0b"
+  },
+  {
+    "school_name": "Boise-Eliot",
+    "slug": "boise_eliot",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/dad8863f-10e3-483e-bf51-765a62404060",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/196e6583-29ec-46e1-b088-6d6322e18354"
+  },
+  {
+    "school_name": "Bridger",
+    "slug": "bridger",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/76ef7a97-97c5-4c26-92bd-7f4af4127b4c",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/3628cf2b-419a-4ec7-94e2-c8a135e5660a"
+  },
+  {
+    "school_name": "Bridlemile",
+    "slug": "bridlemile",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/9832ad1f-5c65-4cd7-8c77-8a45123e1ecf",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/8e4e2204-c27b-47db-a560-fb75ba6c7df7"
+  },
+  {
+    "school_name": "Buckman",
+    "slug": "buckman",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/832f7c85-a3d7-4aa2-9252-62415def5e60",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/8c02b76f-98a7-45ea-9c76-b1270d004ceb"
+  },
+  {
+    "school_name": "Capitol Hill",
+    "slug": "capitol_hill",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/a772d8fb-ac93-4781-8095-699c5dfb024f",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/10dc1f81-0516-4374-a1b0-90a20bc63f70"
+  },
+  {
+    "school_name": "C&eacute;sar Ch&aacute;vez",
+    "slug": "c_eacute_sar_ch_aacute_vez",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/7cf8eb49-2a10-451a-be7d-73b16fc3663c",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/ec7f94e2-278a-4099-b5fb-5def6d555e45"
+  },
+  {
+    "school_name": "Chapman",
+    "slug": "chapman",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/3de5f3aa-c7d5-4b77-a1ef-ae2677f9fa2d",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/c9a17ac7-8532-4c60-b111-cf58b9c955d1"
+  },
+  {
+    "school_name": "Chief Joseph",
+    "slug": "chief_joseph",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/67f82d28-dbe9-4762-b546-57f582bd1d4e",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/a10d5594-7b28-40ad-b6c0-18ee64716367"
+  },
+  {
+    "school_name": "Clarendon Regional ELA",
+    "slug": "clarendon_regional_ela",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/acdc5140-7d9b-425c-b06e-f7050bafa438",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/ba78a1c9-7735-45e8-9da0-d84d89e5287c"
+  },
+  {
+    "school_name": "Cleveland",
+    "slug": "cleveland",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/a4d6b990-25a1-478e-a5e3-b1c7823324a3",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/778a3d8b-460b-49d0-949b-98751de545fd"
+  },
+  {
+    "school_name": "Columbia",
+    "slug": "columbia",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e64bfa5b-5b11-41a7-ad94-ad572f8ba487",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/3aa4e022-db80-4aaf-8505-c24b7cf1198a"
+  },
+  {
+    "school_name": "Creative Science at Clark",
+    "slug": "creative_science_at_clark",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/9f50908c-2e4e-4745-84d2-a97e3f42e0fa",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/16e0cf9b-9eac-452a-8d03-2383afe7bd56"
+  },
+  {
+    "school_name": "Creston and Creston Annex",
+    "slug": "creston_and_creston_annex",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/3ab9dda7-b2df-4d5d-b5c1-1557e6f74687",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/3c3d4e92-a7d1-42c5-919c-3774fcd7d8b8"
+  },
+  {
+    "school_name": "Da Vinci",
+    "slug": "da_vinci",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/30ca5b5a-1cb4-4c2b-8845-3330b9a297ed",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/5880d7bb-9179-4097-89c5-b5d4da57b66f"
+  },
+  {
+    "school_name": "Duniway",
+    "slug": "duniway",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/2e347507-fef4-42db-9673-2b10becff5d2",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/205e7a2b-0513-4a2c-a48c-eeb16edfe959"
+  },
+  {
+    "school_name": "East Sylvan",
+    "slug": "east_sylvan",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/55fd7220-5e1f-497b-ac71-581a41acd58e",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/2f305afa-c1ba-42ce-a6bb-4f2662e41c86"
+  },
+  {
+    "school_name": "Edwards (Former: Jefferson)",
+    "slug": "edwards_former_jefferson",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/5f14d427-52b9-4da5-b486-bff4d94217c8",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/32994087-5ff9-4454-94f5-4954326d55d5"
+  },
+  {
+    "school_name": "Faubion",
+    "slug": "faubion",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/675e60ac-c91c-4099-b656-59fd57759df1",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/34d88d6e-9bb0-4a51-a865-ff9541419081"
+  },
+  {
+    "school_name": "Forest Park",
+    "slug": "forest_park",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e16d69e0-4fb8-4383-a347-90965d89da68",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/31c2eca5-31a9-49f8-ab29-fcb1a92d127b"
+  },
+  {
+    "school_name": "Franklin",
+    "slug": "franklin",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/32c0e844-f754-4f73-a40d-50bf3fb1d542",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/50145e09-4a9c-42bf-8cdf-7f8608778de0"
+  },
+  {
+    "school_name": "George",
+    "slug": "george",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/98863ef7-aaff-4f34-8e02-512f62702756",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/d71aa01a-6a2c-4ab4-aa6f-24959971921f"
+  },
+  {
+    "school_name": "Glencoe",
+    "slug": "glencoe",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/5fdb3372-8052-4862-889f-30876caa9ba4",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/80f1d957-5461-475e-bd6f-167863ce7222"
+  },
+  {
+    "school_name": "Grant",
+    "slug": "grant",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/a9bdd60d-4f9c-4f82-874f-e2f7f68db19f",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/945cd0ac-996a-432b-aa5e-5685005ce0dd"
+  },
+  {
+    "school_name": "Gray",
+    "slug": "gray",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/64631c90-af13-481c-9164-b9812ded962d",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/190868ef-1a63-4574-bc97-6a0ac2c4de19"
+  },
+  {
+    "school_name": "Green Thumb - Community Transition Program (CTP)",
+    "slug": "green_thumb_community_transition_program_ctp",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/5262ca6e-d97c-470b-825c-4db1af9f42dd",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/c44fcf42-c494-4d89-b190-afc6b1c85a4f"
+  },
+  {
+    "school_name": "Grout",
+    "slug": "grout",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/44a0e23d-6b79-4521-96bc-af9d63747b53",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/25e6284f-b0af-4bb1-88d9-4759f446dd21"
+  },
+  {
+    "school_name": "Harrison Park",
+    "slug": "harrison_park",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/35d4fc50-86d7-4d1b-88f9-938ffee090b4",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/68e3200e-2231-4463-89ca-5869216bf16a"
+  },
+  {
+    "school_name": "Hayhurst",
+    "slug": "hayhurst",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/a1d51282-d0cb-42ee-965e-09140e1c15fb",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/f498edc8-ee00-42d9-b9be-bdbf33172b32"
+  },
+  {
+    "school_name": "Hosford",
+    "slug": "hosford",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/f12bf246-7fe2-49ac-8455-bdf408bfaa97",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/30b4feff-9b49-45ca-b53a-fc9c50d3f7e4"
+  },
+  {
+    "school_name": "Irvington",
+    "slug": "irvington",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/ed1abc75-d1b4-4bd8-acba-91dd914a4199",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/a4f67da5-475c-4a2e-afe0-0b1d7a85bdf8"
+  },
+  {
+    "school_name": "Jackson",
+    "slug": "jackson",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/5f4af30f-d8b7-4201-be6f-ca41a287c3da",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/a59cce61-128c-40fd-86ce-1c26dc9e713d"
+  },
+  {
+    "school_name": "James John",
+    "slug": "james_john",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/ee1e883b-aba7-487b-849f-f09cbf57f332",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/4103039a-61ee-4716-9b1d-44b29b2ec789"
+  },
+  {
+    "school_name": "Kelly",
+    "slug": "kelly",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/dca847db-f2a7-4f68-a0ff-c7c96360114e",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/ec52e446-b6c4-4174-878c-ce9b4b2e4977"
+  },
+  {
+    "school_name": "Kenton",
+    "slug": "kenton",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/bc77ea8a-0c62-4aa4-a3e8-ed7f0ff3bcdd",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/bcff3899-2e47-4a03-b247-2ccdbb4483ea"
+  },
+  {
+    "school_name": "King",
+    "slug": "king",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/4340c7e8-eafa-4205-a6b0-7fe03f63cf01",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/84a6d815-100f-4182-8aae-c8db4e3901a2"
+  },
+  {
+    "school_name": "Lane",
+    "slug": "lane",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/ca0ecdf8-3d4f-41bf-a1c4-4653c3854489",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/78aaf098-80a3-473a-bca6-1e86af6b778b"
+  },
+  {
+    "school_name": "Laurelhurst",
+    "slug": "laurelhurst",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/6e164eb6-ba96-4324-8f13-4f6565027283",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/da3931cc-1963-4696-88a7-519c45c6edbf"
+  },
+  {
+    "school_name": "Lee",
+    "slug": "lee",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/3dc9e3c9-1014-4945-84a2-66bfe4c98d93",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/3b7b1e6f-1953-467b-99df-b289a0f01a2d"
+  },
+  {
+    "school_name": "Lent",
+    "slug": "lent",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/4dd64aa3-5870-4c69-b683-ed1f0f72287f",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/b64f943f-a8bf-4b17-951b-b6c8153ddcc9"
+  },
+  {
+    "school_name": "Lewis",
+    "slug": "lewis",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e2b3cefb-f712-4d7c-8e86-6c43b3634c22",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/0853f93c-d8f9-4cb8-95ba-d0b1beff6636"
+  },
+  {
+    "school_name": "Lincoln",
+    "slug": "lincoln",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/2d224d48-3c6c-48b1-b3b7-6b66201244b1",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/9e749f17-a9a9-42e8-84bb-f545c270941a"
+  },
+  {
+    "school_name": "Llewellyn",
+    "slug": "llewellyn",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/5035e7be-b7d5-4e6c-a145-19b534c2078a",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/d5c7b9d1-781d-4c50-8ef1-a281aa10ad50"
+  },
+  {
+    "school_name": "Maplewood",
+    "slug": "maplewood",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/b7a47ff8-9b6b-4623-9c91-9dc403638381",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/c84e39aa-888b-49ea-bc46-e50bb3b973cc"
+  },
+  {
+    "school_name": "Markham",
+    "slug": "markham",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/43383993-3b07-4a6f-aacd-e1d757a53832",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/0b80017d-02a6-4cc7-9110-ab0b24055050"
+  },
+  {
+    "school_name": "Marshall",
+    "slug": "marshall",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/2889a339-79ed-48d3-b746-5073ae95ad8e",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/5778cb42-81ac-4ca5-9497-adc73b40f382"
+  },
+  {
+    "school_name": "Marysville",
+    "slug": "marysville",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/0909bcad-b856-46f6-9d96-fb37ded40af0",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/dfc17e19-f42e-423f-a235-87c564d50563"
+  },
+  {
+    "school_name": "Meek",
+    "slug": "meek",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/7a81366e-653d-4092-b10f-1710806e8a93",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/6592c35a-d508-4ca8-852f-c1a0ae288b8e"
+  },
+  {
+    "school_name": "Metropolitan Learning Center (MLC)",
+    "slug": "metropolitan_learning_center_mlc",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/57545c6f-47ce-42e2-a679-8ea00147be79",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/07bcf033-cfdf-4ab7-aaa6-352a64b6d1d6"
+  },
+  {
+    "school_name": "Mt. Tabor",
+    "slug": "mt_tabor",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/10dd6993-5b48-4b48-b51b-579a1c3d933c",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/03e0ed01-852b-46e2-98be-4fa369bfa7c6"
+  },
+  {
+    "school_name": "Ockley Green",
+    "slug": "ockley_green",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/8e61016b-9269-411d-985b-a9fde37e545d",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/995d66e3-f48c-4abe-afe3-ea1a8e4a177b"
+  },
+  {
+    "school_name": "Peninsula",
+    "slug": "peninsula",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e158c6a8-68e1-422a-ac1d-361b3d613ba6",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/5aff4da0-0db9-4c79-8306-b8fd36200b99"
+  },
+  {
+    "school_name": "Pioneer at Holladay (including Annex)",
+    "slug": "pioneer_at_holladay_including_annex",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/218836c1-373d-4806-b5fd-c46460688e35",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/5a8fdb40-7b92-47e4-87aa-af4556c390ef"
+  },
+  {
+    "school_name": "Pioneer at Youngson",
+    "slug": "pioneer_at_youngson",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/218836c1-373d-4806-b5fd-c46460688e35",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/af132daf-efee-413c-9a9c-116b95b4b451"
+  },
+  {
+    "school_name": "Rice",
+    "slug": "rice",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/69044564-7265-4b80-8018-819a8a731c4b",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/aee3875e-023f-499b-9813-002039eb822e"
+  },
+  {
+    "school_name": "Richmond",
+    "slug": "richmond",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/2ed4fec5-d781-4fba-bd1c-deab6927d503",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/f9eb459d-2963-4206-bca2-fa786f0008dc"
+  },
+  {
+    "school_name": "Rieke",
+    "slug": "rieke",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/b5627722-b36b-478a-9de4-373b62efcb28",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/20847202-1174-4819-bfe2-c4d8476d84bb"
+  },
+  {
+    "school_name": "Rigler",
+    "slug": "rigler",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/97ec5ded-d5c8-42dd-a84b-5464b1119e4d",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/a839e26c-0bd3-48dd-95ba-834054328731"
+  },
+  {
+    "school_name": "Roosevelt",
+    "slug": "roosevelt",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/4d66c8e2-1591-4b25-add7-af82d4bede51",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/5083060b-c0a5-4f87-a38e-7bc4474f082b"
+  },
+  {
+    "school_name": "Rosa Parks",
+    "slug": "rosa_parks",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/fb6d67b9-d836-49ee-b427-bf44a1a2bd3c",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/afe72514-68fd-4cf2-b98b-a1d10e2d3f2c"
+  },
+  {
+    "school_name": "Roseway Heights",
+    "slug": "roseway_heights",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/93d1bb44-80ee-4fd9-85a9-c2884f101a16",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/16915219-ff86-4758-910f-8892b3cad40f"
+  },
+  {
+    "school_name": "Sabin",
+    "slug": "sabin",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/eba8a9d5-a168-45ee-9634-fb1c9a73ac48",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/14abde0e-a482-4f83-9d65-7041ee268683"
+  },
+  {
+    "school_name": "Sacajawea",
+    "slug": "sacajawea",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/9fb3915e-f3a0-4f94-98e0-94bdb0b7c734",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/8e008951-b1ed-4523-962c-9a4da98d9bcf"
+  },
+  {
+    "school_name": "Scott",
+    "slug": "scott",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/469de74d-988a-4f51-a959-861680a3b889",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/015ea12e-8386-43cc-8686-6225b93f5a08"
+  },
+  {
+    "school_name": "Sellwood",
+    "slug": "sellwood",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/6e2ca169-e1c4-4251-bd07-8a70d75d2dc7",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/4d5eb574-2348-456a-8e46-388c4a7de9e1"
+  },
+  {
+    "school_name": "Sitton",
+    "slug": "sitton",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/c0e4d1f5-b2bd-4660-bdbc-ae6e36ae2f8f",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/b4ee8565-e69e-419b-886e-a4bb693276f9"
+  },
+  {
+    "school_name": "Skyline",
+    "slug": "skyline",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/3ba1ff42-68d7-4240-8576-be99cb58394f",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/4ae3f34d-34e7-479b-a6a2-823f3152cdf4"
+  },
+  {
+    "school_name": "Stephenson",
+    "slug": "stephenson",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/fb02593b-f34b-47f7-a1c9-e3ef22c2d8b8",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/9ba70959-84a7-4386-b972-bd4e4eb0760f"
+  },
+  {
+    "school_name": "Sunnyside",
+    "slug": "sunnyside",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/618dfca4-169c-4aad-a9b7-5ee6699fb495",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/63e4720b-1630-4bbf-99e2-a29d72e4da1a"
+  },
+  {
+    "school_name": "Tubman",
+    "slug": "tubman",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/febf4232-6335-4d3a-ae35-163329d27e91",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/0efbe42d-501d-441e-af7c-bc4aa24f8a6b"
+  },
+  {
+    "school_name": "Vernon",
+    "slug": "vernon",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e03644d4-4f53-4f61-9d67-d44b5f4abc8e",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/f3e41011-92ce-4190-b9fc-d0ee1c069309"
+  },
+  {
+    "school_name": "Vestal",
+    "slug": "vestal",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/6b608821-1205-47bc-83ca-486d1ac03d2d",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/c825268b-cf57-462d-934b-0cb4cd74ba09"
+  },
+  {
+    "school_name": "Wells (Former: Wilson)",
+    "slug": "wells_former_wilson",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/1ec29139-7d8e-4b6b-b2ec-57978256da33",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/8de16fc8-ba47-4a04-b638-e4c5bf0fa241"
+  },
+  {
+    "school_name": "West Sylvan",
+    "slug": "west_sylvan",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/3b523d27-4de8-4a92-b84a-62436c35c450",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/e61a9353-6270-48dc-85f7-1554d73a9180"
+  },
+  {
+    "school_name": "Whitman",
+    "slug": "whitman",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/b4438e74-d8a7-4a1e-abb5-11d046160907",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/36b03ea9-c562-4aab-a2ac-d0fae3b29b8e"
+  },
+  {
+    "school_name": "Wilcox",
+    "slug": "wilcox",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/eecdc0a1-46c4-4ae0-8122-664e3a07f080",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/5a6e2eaa-2c6a-4be0-983f-985115829908"
+  },
+  {
+    "school_name": "Winterhaven",
+    "slug": "winterhaven",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/fcb97ad3-a52c-410e-8ce1-3b3ba9f77074",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/2ffce917-066f-43e6-97d9-80af1b824c4e"
+  },
+  {
+    "school_name": "Woodlawn",
+    "slug": "woodlawn",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/dbff8d85-555c-4650-81d7-69f8067ab433",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/88b5a647-7f90-48ed-b49d-a10fcf7ba0cd"
+  },
+  {
+    "school_name": "Woodmere",
+    "slug": "woodmere",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/fb49cebf-4d14-4c6a-8da1-03fb0a386b96",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/f82bbd2c-0f89-4d4c-a47b-2adad7dbdaa7"
+  },
+  {
+    "school_name": "Woodstock",
+    "slug": "woodstock",
+    "iaq_pdf_url": "https://www.pps.net/fs/resource-manager/view/e64e589c-49b6-42e5-a9c4-ff23f7d550a1",
+    "airflow_pdf_url": "https://www.pps.net/fs/resource-manager/view/8aa1e40f-92e5-41b6-ac5a-e3b872496173"
+  }
+]

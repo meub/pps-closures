@@ -1,0 +1,922 @@
+{
+  "abernethy": {
+    "rooms_tested": 40,
+    "ach_supply_median": 4.5,
+    "ach_oa_median": 0.8,
+    "ach_e_hvac_only_median": 3.45,
+    "pct_rooms_below_3_ach_e": 0.475,
+    "pct_rooms_below_6_ach_e": 0.95,
+    "filter_status_upgraded": true,
+    "school_name": "Abernethy"
+  },
+  "ainsworth": {
+    "rooms_tested": 42,
+    "ach_supply_median": 3.1,
+    "ach_oa_median": 0.35,
+    "ach_e_hvac_only_median": 2.25,
+    "pct_rooms_below_3_ach_e": 0.619,
+    "pct_rooms_below_6_ach_e": 0.9286,
+    "filter_status_upgraded": true,
+    "school_name": "Ainsworth"
+  },
+  "alameda": {
+    "rooms_tested": 54,
+    "ach_supply_median": 3.8,
+    "ach_oa_median": 1.05,
+    "ach_e_hvac_only_median": 2.05,
+    "pct_rooms_below_3_ach_e": 0.7037,
+    "pct_rooms_below_6_ach_e": 0.9815,
+    "filter_status_upgraded": false,
+    "school_name": "Alameda"
+  },
+  "applegate": {
+    "rooms_tested": 25,
+    "ach_supply_median": 2.9,
+    "ach_oa_median": 0.9,
+    "ach_e_hvac_only_median": 2.2,
+    "pct_rooms_below_3_ach_e": 0.68,
+    "pct_rooms_below_6_ach_e": 0.92,
+    "filter_status_upgraded": true,
+    "school_name": "Applegate"
+  },
+  "arleta": {
+    "rooms_tested": 51,
+    "ach_supply_median": 3.8,
+    "ach_oa_median": 0.8,
+    "ach_e_hvac_only_median": null,
+    "pct_rooms_below_3_ach_e": null,
+    "pct_rooms_below_6_ach_e": null,
+    "filter_status_upgraded": false,
+    "school_name": "Arleta"
+  },
+  "astor": {
+    "rooms_tested": 42,
+    "ach_supply_median": 2.0,
+    "ach_oa_median": 0.2,
+    "ach_e_hvac_only_median": 1.45,
+    "pct_rooms_below_3_ach_e": 0.7381,
+    "pct_rooms_below_6_ach_e": 0.9048,
+    "filter_status_upgraded": true,
+    "school_name": "Astor"
+  },
+  "atkinson": {
+    "rooms_tested": 43,
+    "ach_supply_median": 2.1,
+    "ach_oa_median": 2.0,
+    "ach_e_hvac_only_median": 1.6,
+    "pct_rooms_below_3_ach_e": 0.9302,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": false,
+    "school_name": "Atkinson"
+  },
+  "beach": {
+    "rooms_tested": 52,
+    "ach_supply_median": 3.35,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 1.75,
+    "pct_rooms_below_3_ach_e": 0.7692,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": false,
+    "school_name": "Beach"
+  },
+  "beaumont": {
+    "rooms_tested": 72,
+    "ach_supply_median": 4.5,
+    "ach_oa_median": 1.0,
+    "ach_e_hvac_only_median": 3.35,
+    "pct_rooms_below_3_ach_e": 0.4028,
+    "pct_rooms_below_6_ach_e": 0.875,
+    "filter_status_upgraded": true,
+    "school_name": "Beaumont"
+  },
+  "beverly_clearly_at_hollyrood": {
+    "rooms_tested": 15,
+    "ach_supply_median": 1.6,
+    "ach_oa_median": 0.9,
+    "ach_e_hvac_only_median": 1.1,
+    "pct_rooms_below_3_ach_e": 0.7333,
+    "pct_rooms_below_6_ach_e": 0.8667,
+    "filter_status_upgraded": false,
+    "school_name": "Beverly Clearly at Hollyrood"
+  },
+  "beverly_cleary_at_fernwood": {
+    "rooms_tested": 51,
+    "ach_supply_median": 3.6,
+    "ach_oa_median": 3.6,
+    "ach_e_hvac_only_median": 2.95,
+    "pct_rooms_below_3_ach_e": 0.5,
+    "pct_rooms_below_6_ach_e": 0.94,
+    "filter_status_upgraded": true,
+    "school_name": "Beverly Cleary at Fernwood"
+  },
+  "beverly_cleary_and_access_at_rose_city_park": {
+    "rooms_tested": 44,
+    "ach_supply_median": 4.2,
+    "ach_oa_median": 2.1,
+    "ach_e_hvac_only_median": 3.15,
+    "pct_rooms_below_3_ach_e": 0.4318,
+    "pct_rooms_below_6_ach_e": 0.9091,
+    "filter_status_upgraded": true,
+    "school_name": "Beverly Cleary and ACCESS at Rose City Park"
+  },
+  "prophet_education_center_pec": {
+    "rooms_tested": 257,
+    "ach_supply_median": 4.9,
+    "ach_oa_median": 0.7,
+    "ach_e_hvac_only_median": 3.6,
+    "pct_rooms_below_3_ach_e": 0.3852,
+    "pct_rooms_below_6_ach_e": 0.8016,
+    "filter_status_upgraded": true,
+    "school_name": "Prophet Education Center (PEC)"
+  },
+  "boise_eliot": {
+    "rooms_tested": 70,
+    "ach_supply_median": 5.7,
+    "ach_oa_median": 1.25,
+    "ach_e_hvac_only_median": 3.05,
+    "pct_rooms_below_3_ach_e": 0.4857,
+    "pct_rooms_below_6_ach_e": 0.9571,
+    "filter_status_upgraded": false,
+    "school_name": "Boise-Eliot"
+  },
+  "bridger": {
+    "rooms_tested": 46,
+    "ach_supply_median": 2.15,
+    "ach_oa_median": 0.25,
+    "ach_e_hvac_only_median": 1.55,
+    "pct_rooms_below_3_ach_e": 0.7826,
+    "pct_rooms_below_6_ach_e": 0.9348,
+    "filter_status_upgraded": true,
+    "school_name": "Bridger"
+  },
+  "bridlemile": {
+    "rooms_tested": 61,
+    "ach_supply_median": 2.1,
+    "ach_oa_median": 0.5,
+    "ach_e_hvac_only_median": 1.5,
+    "pct_rooms_below_3_ach_e": 0.7705,
+    "pct_rooms_below_6_ach_e": 0.918,
+    "filter_status_upgraded": true,
+    "school_name": "Bridlemile"
+  },
+  "buckman": {
+    "rooms_tested": 52,
+    "ach_supply_median": 2.3,
+    "ach_oa_median": 0.3,
+    "ach_e_hvac_only_median": 1.1,
+    "pct_rooms_below_3_ach_e": 0.9423,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": false,
+    "school_name": "Buckman"
+  },
+  "capitol_hill": {
+    "rooms_tested": 64,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.875,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": false,
+    "school_name": "Capitol Hill"
+  },
+  "c_eacute_sar_ch_aacute_vez": {
+    "rooms_tested": 79,
+    "ach_supply_median": 4.0,
+    "ach_oa_median": 0.5,
+    "ach_e_hvac_only_median": 2.1,
+    "pct_rooms_below_3_ach_e": 0.6456,
+    "pct_rooms_below_6_ach_e": 0.9114,
+    "filter_status_upgraded": false,
+    "school_name": "C&eacute;sar Ch&aacute;vez"
+  },
+  "chapman": {
+    "rooms_tested": 44,
+    "ach_supply_median": 1.2,
+    "ach_oa_median": 0.7,
+    "ach_e_hvac_only_median": 1.0,
+    "pct_rooms_below_3_ach_e": 0.8409,
+    "pct_rooms_below_6_ach_e": 0.9773,
+    "filter_status_upgraded": true,
+    "school_name": "Chapman"
+  },
+  "chief_joseph": {
+    "rooms_tested": 38,
+    "ach_supply_median": 1.85,
+    "ach_oa_median": 0.5,
+    "ach_e_hvac_only_median": 1.85,
+    "pct_rooms_below_3_ach_e": 0.6316,
+    "pct_rooms_below_6_ach_e": 0.7632,
+    "filter_status_upgraded": true,
+    "school_name": "Chief Joseph"
+  },
+  "clarendon_regional_ela": {
+    "rooms_tested": 27,
+    "ach_supply_median": 2.3,
+    "ach_oa_median": 0.7,
+    "ach_e_hvac_only_median": 1.75,
+    "pct_rooms_below_3_ach_e": 0.6538,
+    "pct_rooms_below_6_ach_e": 0.7692,
+    "filter_status_upgraded": true,
+    "school_name": "Clarendon Regional ELA"
+  },
+  "cleveland": {
+    "rooms_tested": 200,
+    "ach_supply_median": 4.4,
+    "ach_oa_median": 2.25,
+    "ach_e_hvac_only_median": 3.4,
+    "pct_rooms_below_3_ach_e": 0.44,
+    "pct_rooms_below_6_ach_e": 0.86,
+    "filter_status_upgraded": true,
+    "school_name": "Cleveland"
+  },
+  "columbia": {
+    "rooms_tested": 44,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.9091,
+    "pct_rooms_below_6_ach_e": 0.9773,
+    "filter_status_upgraded": true,
+    "school_name": "Columbia"
+  },
+  "creative_science_at_clark": {
+    "rooms_tested": 43,
+    "ach_supply_median": 3.2,
+    "ach_oa_median": 3.1,
+    "ach_e_hvac_only_median": 2.5,
+    "pct_rooms_below_3_ach_e": 0.7209,
+    "pct_rooms_below_6_ach_e": 0.9302,
+    "filter_status_upgraded": true,
+    "school_name": "Creative Science at Clark"
+  },
+  "creston_and_creston_annex": {
+    "rooms_tested": 54,
+    "ach_supply_median": 2.65,
+    "ach_oa_median": 2.5,
+    "ach_e_hvac_only_median": 2.1,
+    "pct_rooms_below_3_ach_e": 0.7778,
+    "pct_rooms_below_6_ach_e": 0.9259,
+    "filter_status_upgraded": true,
+    "school_name": "Creston and Creston Annex"
+  },
+  "da_vinci": {
+    "rooms_tested": 68,
+    "ach_supply_median": 3.4,
+    "ach_oa_median": 0.2,
+    "ach_e_hvac_only_median": 2.5,
+    "pct_rooms_below_3_ach_e": 0.5294,
+    "pct_rooms_below_6_ach_e": 0.8824,
+    "filter_status_upgraded": true,
+    "school_name": "Da Vinci"
+  },
+  "duniway": {
+    "rooms_tested": 47,
+    "ach_supply_median": 2.9,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 2.1,
+    "pct_rooms_below_3_ach_e": 0.7234,
+    "pct_rooms_below_6_ach_e": 0.9787,
+    "filter_status_upgraded": true,
+    "school_name": "Duniway"
+  },
+  "east_sylvan": {
+    "rooms_tested": 21,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.6667,
+    "pct_rooms_below_6_ach_e": 0.9524,
+    "filter_status_upgraded": true,
+    "school_name": "East Sylvan"
+  },
+  "edwards_former_jefferson": {
+    "rooms_tested": 233,
+    "ach_supply_median": 2.0,
+    "ach_oa_median": 1.5,
+    "ach_e_hvac_only_median": 1.6,
+    "pct_rooms_below_3_ach_e": 0.7725,
+    "pct_rooms_below_6_ach_e": 0.9571,
+    "filter_status_upgraded": true,
+    "school_name": "Edwards (Former: Jefferson)"
+  },
+  "faubion": {
+    "rooms_tested": 153,
+    "ach_supply_median": 3.6,
+    "ach_oa_median": 3.0,
+    "ach_e_hvac_only_median": 2.8,
+    "pct_rooms_below_3_ach_e": 0.5229,
+    "pct_rooms_below_6_ach_e": 0.8366,
+    "filter_status_upgraded": true,
+    "school_name": "Faubion"
+  },
+  "forest_park": {
+    "rooms_tested": 47,
+    "ach_supply_median": 6.4,
+    "ach_oa_median": 1.3,
+    "ach_e_hvac_only_median": 4.7,
+    "pct_rooms_below_3_ach_e": 0.3404,
+    "pct_rooms_below_6_ach_e": 0.6809,
+    "filter_status_upgraded": true,
+    "school_name": "Forest Park"
+  },
+  "franklin": {
+    "rooms_tested": 185,
+    "ach_supply_median": 8.4,
+    "ach_oa_median": 2.7,
+    "ach_e_hvac_only_median": 6.25,
+    "pct_rooms_below_3_ach_e": 0.2283,
+    "pct_rooms_below_6_ach_e": 0.4674,
+    "filter_status_upgraded": true,
+    "school_name": "Franklin"
+  },
+  "george": {
+    "rooms_tested": 68,
+    "ach_supply_median": 4.7,
+    "ach_oa_median": 1.75,
+    "ach_e_hvac_only_median": 3.5,
+    "pct_rooms_below_3_ach_e": 0.3676,
+    "pct_rooms_below_6_ach_e": 0.8529,
+    "filter_status_upgraded": true,
+    "school_name": "George"
+  },
+  "glencoe": {
+    "rooms_tested": 57,
+    "ach_supply_median": 1.3,
+    "ach_oa_median": 1.1,
+    "ach_e_hvac_only_median": 1.0,
+    "pct_rooms_below_3_ach_e": 0.9474,
+    "pct_rooms_below_6_ach_e": 0.9649,
+    "filter_status_upgraded": true,
+    "school_name": "Glencoe"
+  },
+  "grant": {
+    "rooms_tested": 183,
+    "ach_supply_median": 7.7,
+    "ach_oa_median": 2.5,
+    "ach_e_hvac_only_median": 5.8,
+    "pct_rooms_below_3_ach_e": 0.0601,
+    "pct_rooms_below_6_ach_e": 0.5082,
+    "filter_status_upgraded": true,
+    "school_name": "Grant"
+  },
+  "gray": {
+    "rooms_tested": 61,
+    "ach_supply_median": 2.7,
+    "ach_oa_median": 0.8,
+    "ach_e_hvac_only_median": 2.1,
+    "pct_rooms_below_3_ach_e": 0.6721,
+    "pct_rooms_below_6_ach_e": 0.9344,
+    "filter_status_upgraded": true,
+    "school_name": "Gray"
+  },
+  "green_thumb_community_transition_program_ctp": {
+    "rooms_tested": 15,
+    "ach_supply_median": 3.1,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 2.3,
+    "pct_rooms_below_3_ach_e": 0.6,
+    "pct_rooms_below_6_ach_e": 0.9333,
+    "filter_status_upgraded": true,
+    "school_name": "Green Thumb - Community Transition Program (CTP)"
+  },
+  "grout": {
+    "rooms_tested": 45,
+    "ach_supply_median": 4.5,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 3.3,
+    "pct_rooms_below_3_ach_e": 0.3556,
+    "pct_rooms_below_6_ach_e": 0.9556,
+    "filter_status_upgraded": true,
+    "school_name": "Grout"
+  },
+  "harrison_park": {
+    "rooms_tested": 82,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 1.0,
+    "ach_e_hvac_only_median": null,
+    "pct_rooms_below_3_ach_e": null,
+    "pct_rooms_below_6_ach_e": null,
+    "filter_status_upgraded": true,
+    "school_name": "Harrison Park"
+  },
+  "hayhurst": {
+    "rooms_tested": 40,
+    "ach_supply_median": 1.2,
+    "ach_oa_median": 1.2,
+    "ach_e_hvac_only_median": 0.95,
+    "pct_rooms_below_3_ach_e": 0.725,
+    "pct_rooms_below_6_ach_e": 0.95,
+    "filter_status_upgraded": true,
+    "school_name": "Hayhurst"
+  },
+  "hosford": {
+    "rooms_tested": 67,
+    "ach_supply_median": 3.3,
+    "ach_oa_median": 0.8,
+    "ach_e_hvac_only_median": 2.6,
+    "pct_rooms_below_3_ach_e": 0.6866,
+    "pct_rooms_below_6_ach_e": 0.9552,
+    "filter_status_upgraded": true,
+    "school_name": "Hosford"
+  },
+  "irvington": {
+    "rooms_tested": 54,
+    "ach_supply_median": 3.7,
+    "ach_oa_median": 3.4,
+    "ach_e_hvac_only_median": 2.85,
+    "pct_rooms_below_3_ach_e": 0.5185,
+    "pct_rooms_below_6_ach_e": 0.963,
+    "filter_status_upgraded": true,
+    "school_name": "Irvington"
+  },
+  "jackson": {
+    "rooms_tested": 145,
+    "ach_supply_median": 3.4,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 2.5,
+    "pct_rooms_below_3_ach_e": 0.5862,
+    "pct_rooms_below_6_ach_e": 0.8759,
+    "filter_status_upgraded": true,
+    "school_name": "Jackson"
+  },
+  "james_john": {
+    "rooms_tested": 49,
+    "ach_supply_median": 2.0,
+    "ach_oa_median": 0.1,
+    "ach_e_hvac_only_median": 1.4,
+    "pct_rooms_below_3_ach_e": 0.6939,
+    "pct_rooms_below_6_ach_e": 0.9592,
+    "filter_status_upgraded": true,
+    "school_name": "James John"
+  },
+  "kelly": {
+    "rooms_tested": 71,
+    "ach_supply_median": 4.1,
+    "ach_oa_median": 1.8,
+    "ach_e_hvac_only_median": 3.0,
+    "pct_rooms_below_3_ach_e": 0.4648,
+    "pct_rooms_below_6_ach_e": 0.8169,
+    "filter_status_upgraded": true,
+    "school_name": "Kelly"
+  },
+  "kenton": {
+    "rooms_tested": 49,
+    "ach_supply_median": 4.1,
+    "ach_oa_median": 3.1,
+    "ach_e_hvac_only_median": 3.2,
+    "pct_rooms_below_3_ach_e": 0.449,
+    "pct_rooms_below_6_ach_e": 0.9796,
+    "filter_status_upgraded": true,
+    "school_name": "Kenton"
+  },
+  "king": {
+    "rooms_tested": 91,
+    "ach_supply_median": 2.9,
+    "ach_oa_median": 0.2,
+    "ach_e_hvac_only_median": 1.4,
+    "pct_rooms_below_3_ach_e": 0.8242,
+    "pct_rooms_below_6_ach_e": 0.978,
+    "filter_status_upgraded": false,
+    "school_name": "King"
+  },
+  "lane": {
+    "rooms_tested": 85,
+    "ach_supply_median": 5.2,
+    "ach_oa_median": 2.3,
+    "ach_e_hvac_only_median": 4.1,
+    "pct_rooms_below_3_ach_e": 0.4235,
+    "pct_rooms_below_6_ach_e": 0.8706,
+    "filter_status_upgraded": true,
+    "school_name": "Lane"
+  },
+  "laurelhurst": {
+    "rooms_tested": 52,
+    "ach_supply_median": 3.65,
+    "ach_oa_median": 2.45,
+    "ach_e_hvac_only_median": 2.8,
+    "pct_rooms_below_3_ach_e": 0.5192,
+    "pct_rooms_below_6_ach_e": 0.9423,
+    "filter_status_upgraded": false,
+    "school_name": "Laurelhurst"
+  },
+  "lee": {
+    "rooms_tested": 45,
+    "ach_supply_median": 2.4,
+    "ach_oa_median": 2.3,
+    "ach_e_hvac_only_median": 2.0,
+    "pct_rooms_below_3_ach_e": 0.8222,
+    "pct_rooms_below_6_ach_e": 0.9556,
+    "filter_status_upgraded": true,
+    "school_name": "Lee"
+  },
+  "lent": {
+    "rooms_tested": 65,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.8615,
+    "pct_rooms_below_6_ach_e": 0.9692,
+    "filter_status_upgraded": false,
+    "school_name": "Lent"
+  },
+  "lewis": {
+    "rooms_tested": 37,
+    "ach_supply_median": 4.8,
+    "ach_oa_median": 2.9,
+    "ach_e_hvac_only_median": 2.9,
+    "pct_rooms_below_3_ach_e": 0.5135,
+    "pct_rooms_below_6_ach_e": 0.973,
+    "filter_status_upgraded": false,
+    "school_name": "Lewis"
+  },
+  "lincoln": {
+    "rooms_tested": 151,
+    "ach_supply_median": 4.0,
+    "ach_oa_median": 3.6,
+    "ach_e_hvac_only_median": 3.6,
+    "pct_rooms_below_3_ach_e": 0.3226,
+    "pct_rooms_below_6_ach_e": 0.8065,
+    "filter_status_upgraded": true,
+    "school_name": "Lincoln"
+  },
+  "llewellyn": {
+    "rooms_tested": 42,
+    "ach_supply_median": 5.05,
+    "ach_oa_median": 1.0,
+    "ach_e_hvac_only_median": 3.05,
+    "pct_rooms_below_3_ach_e": 0.4524,
+    "pct_rooms_below_6_ach_e": 0.881,
+    "filter_status_upgraded": false,
+    "school_name": "Llewellyn"
+  },
+  "maplewood": {
+    "rooms_tested": 35,
+    "ach_supply_median": 3.1,
+    "ach_oa_median": 1.8,
+    "ach_e_hvac_only_median": 2.0,
+    "pct_rooms_below_3_ach_e": 0.6765,
+    "pct_rooms_below_6_ach_e": 0.7941,
+    "filter_status_upgraded": false,
+    "school_name": "Maplewood"
+  },
+  "markham": {
+    "rooms_tested": 66,
+    "ach_supply_median": 2.4,
+    "ach_oa_median": 0.4,
+    "ach_e_hvac_only_median": 1.6,
+    "pct_rooms_below_3_ach_e": 0.8485,
+    "pct_rooms_below_6_ach_e": 0.9848,
+    "filter_status_upgraded": false,
+    "school_name": "Markham"
+  },
+  "marshall": {
+    "rooms_tested": 183,
+    "ach_supply_median": 4.8,
+    "ach_oa_median": 1.7,
+    "ach_e_hvac_only_median": 3.8,
+    "pct_rooms_below_3_ach_e": 0.3315,
+    "pct_rooms_below_6_ach_e": 0.7528,
+    "filter_status_upgraded": true,
+    "school_name": "Marshall"
+  },
+  "marysville": {
+    "rooms_tested": 50,
+    "ach_supply_median": 4.25,
+    "ach_oa_median": 2.25,
+    "ach_e_hvac_only_median": 2.75,
+    "pct_rooms_below_3_ach_e": 0.58,
+    "pct_rooms_below_6_ach_e": 0.96,
+    "filter_status_upgraded": false,
+    "school_name": "Marysville"
+  },
+  "meek": {
+    "rooms_tested": 30,
+    "ach_supply_median": 3.3,
+    "ach_oa_median": 3.05,
+    "ach_e_hvac_only_median": 2.65,
+    "pct_rooms_below_3_ach_e": 0.5333,
+    "pct_rooms_below_6_ach_e": 0.8667,
+    "filter_status_upgraded": true,
+    "school_name": "Meek"
+  },
+  "metropolitan_learning_center_mlc": {
+    "rooms_tested": 49,
+    "ach_supply_median": 6.4,
+    "ach_oa_median": 6.4,
+    "ach_e_hvac_only_median": 5.1,
+    "pct_rooms_below_3_ach_e": 0.3469,
+    "pct_rooms_below_6_ach_e": 0.5714,
+    "filter_status_upgraded": true,
+    "school_name": "Metropolitan Learning Center (MLC)"
+  },
+  "mt_tabor": {
+    "rooms_tested": 64,
+    "ach_supply_median": 3.45,
+    "ach_oa_median": 2.95,
+    "ach_e_hvac_only_median": 2.75,
+    "pct_rooms_below_3_ach_e": 0.5938,
+    "pct_rooms_below_6_ach_e": 0.9531,
+    "filter_status_upgraded": true,
+    "school_name": "Mt. Tabor"
+  },
+  "ockley_green": {
+    "rooms_tested": 59,
+    "ach_supply_median": 4.8,
+    "ach_oa_median": 1.1,
+    "ach_e_hvac_only_median": 3.5,
+    "pct_rooms_below_3_ach_e": 0.322,
+    "pct_rooms_below_6_ach_e": 0.8983,
+    "filter_status_upgraded": true,
+    "school_name": "Ockley Green"
+  },
+  "peninsula": {
+    "rooms_tested": 48,
+    "ach_supply_median": 3.85,
+    "ach_oa_median": 1.95,
+    "ach_e_hvac_only_median": 2.95,
+    "pct_rooms_below_3_ach_e": 0.5,
+    "pct_rooms_below_6_ach_e": 0.9167,
+    "filter_status_upgraded": false,
+    "school_name": "Peninsula"
+  },
+  "pioneer_at_holladay_including_annex": {
+    "rooms_tested": 50,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.96,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": true,
+    "school_name": "Pioneer at Holladay (including Annex)"
+  },
+  "pioneer_at_youngson": {
+    "rooms_tested": 64,
+    "ach_supply_median": 4.1,
+    "ach_oa_median": 2.05,
+    "ach_e_hvac_only_median": 3.2,
+    "pct_rooms_below_3_ach_e": 0.4688,
+    "pct_rooms_below_6_ach_e": 0.8594,
+    "filter_status_upgraded": true,
+    "school_name": "Pioneer at Youngson"
+  },
+  "rice": {
+    "rooms_tested": 16,
+    "ach_supply_median": 3.5,
+    "ach_oa_median": 3.4,
+    "ach_e_hvac_only_median": 2.8,
+    "pct_rooms_below_3_ach_e": 0.5,
+    "pct_rooms_below_6_ach_e": 0.875,
+    "filter_status_upgraded": true,
+    "school_name": "Rice"
+  },
+  "richmond": {
+    "rooms_tested": 46,
+    "ach_supply_median": 1.1,
+    "ach_oa_median": 0.8,
+    "ach_e_hvac_only_median": 0.9,
+    "pct_rooms_below_3_ach_e": 0.913,
+    "pct_rooms_below_6_ach_e": 0.9565,
+    "filter_status_upgraded": true,
+    "school_name": "Richmond"
+  },
+  "rieke": {
+    "rooms_tested": 29,
+    "ach_supply_median": 2.7,
+    "ach_oa_median": 1.1,
+    "ach_e_hvac_only_median": 1.7,
+    "pct_rooms_below_3_ach_e": 0.5862,
+    "pct_rooms_below_6_ach_e": 0.8966,
+    "filter_status_upgraded": false,
+    "school_name": "Rieke"
+  },
+  "rigler": {
+    "rooms_tested": 50,
+    "ach_supply_median": 2.3,
+    "ach_oa_median": 0.45,
+    "ach_e_hvac_only_median": 1.7,
+    "pct_rooms_below_3_ach_e": 0.7,
+    "pct_rooms_below_6_ach_e": 0.94,
+    "filter_status_upgraded": true,
+    "school_name": "Rigler"
+  },
+  "roosevelt": {
+    "rooms_tested": 181,
+    "ach_supply_median": 2.6,
+    "ach_oa_median": 2.6,
+    "ach_e_hvac_only_median": 2.1,
+    "pct_rooms_below_3_ach_e": 0.7017,
+    "pct_rooms_below_6_ach_e": 0.9613,
+    "filter_status_upgraded": true,
+    "school_name": "Roosevelt"
+  },
+  "rosa_parks": {
+    "rooms_tested": 66,
+    "ach_supply_median": 3.1,
+    "ach_oa_median": 1.5,
+    "ach_e_hvac_only_median": 2.4,
+    "pct_rooms_below_3_ach_e": 0.6667,
+    "pct_rooms_below_6_ach_e": 0.8636,
+    "filter_status_upgraded": true,
+    "school_name": "Rosa Parks"
+  },
+  "roseway_heights": {
+    "rooms_tested": 93,
+    "ach_supply_median": 5.6,
+    "ach_oa_median": 0.9,
+    "ach_e_hvac_only_median": 4.1,
+    "pct_rooms_below_3_ach_e": 0.3763,
+    "pct_rooms_below_6_ach_e": 0.7419,
+    "filter_status_upgraded": true,
+    "school_name": "Roseway Heights"
+  },
+  "sabin": {
+    "rooms_tested": 47,
+    "ach_supply_median": 2.7,
+    "ach_oa_median": 0.9,
+    "ach_e_hvac_only_median": 2.0,
+    "pct_rooms_below_3_ach_e": 0.5957,
+    "pct_rooms_below_6_ach_e": 0.9574,
+    "filter_status_upgraded": true,
+    "school_name": "Sabin"
+  },
+  "sacajawea": {
+    "rooms_tested": 16,
+    "ach_supply_median": 4.2,
+    "ach_oa_median": 4.2,
+    "ach_e_hvac_only_median": 3.8,
+    "pct_rooms_below_3_ach_e": 0.4667,
+    "pct_rooms_below_6_ach_e": 0.8667,
+    "filter_status_upgraded": true,
+    "school_name": "Sacajawea"
+  },
+  "scott": {
+    "rooms_tested": 51,
+    "ach_supply_median": 5.0,
+    "ach_oa_median": 4.7,
+    "ach_e_hvac_only_median": 3.8,
+    "pct_rooms_below_3_ach_e": 0.3333,
+    "pct_rooms_below_6_ach_e": 0.902,
+    "filter_status_upgraded": false,
+    "school_name": "Scott"
+  },
+  "sellwood": {
+    "rooms_tested": 66,
+    "ach_supply_median": 3.05,
+    "ach_oa_median": 1.15,
+    "ach_e_hvac_only_median": 2.3,
+    "pct_rooms_below_3_ach_e": 0.6615,
+    "pct_rooms_below_6_ach_e": 0.9692,
+    "filter_status_upgraded": true,
+    "school_name": "Sellwood"
+  },
+  "sitton": {
+    "rooms_tested": 53,
+    "ach_supply_median": 4.1,
+    "ach_oa_median": 2.0,
+    "ach_e_hvac_only_median": 2.7,
+    "pct_rooms_below_3_ach_e": 0.6226,
+    "pct_rooms_below_6_ach_e": 0.9434,
+    "filter_status_upgraded": false,
+    "school_name": "Sitton"
+  },
+  "skyline": {
+    "rooms_tested": 26,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.9231,
+    "pct_rooms_below_6_ach_e": 0.9615,
+    "filter_status_upgraded": false,
+    "school_name": "Skyline"
+  },
+  "stephenson": {
+    "rooms_tested": 31,
+    "ach_supply_median": 3.6,
+    "ach_oa_median": 0.8,
+    "ach_e_hvac_only_median": 2.6,
+    "pct_rooms_below_3_ach_e": 0.6129,
+    "pct_rooms_below_6_ach_e": 0.9677,
+    "filter_status_upgraded": true,
+    "school_name": "Stephenson"
+  },
+  "sunnyside": {
+    "rooms_tested": 47,
+    "ach_supply_median": 5.3,
+    "ach_oa_median": 0.3,
+    "ach_e_hvac_only_median": 2.3,
+    "pct_rooms_below_3_ach_e": 0.5957,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": false,
+    "school_name": "Sunnyside"
+  },
+  "tubman": {
+    "rooms_tested": 78,
+    "ach_supply_median": 3.4,
+    "ach_oa_median": 1.1,
+    "ach_e_hvac_only_median": 2.6,
+    "pct_rooms_below_3_ach_e": 0.5974,
+    "pct_rooms_below_6_ach_e": 0.961,
+    "filter_status_upgraded": true,
+    "school_name": "Tubman"
+  },
+  "vernon": {
+    "rooms_tested": 58,
+    "ach_supply_median": 1.05,
+    "ach_oa_median": 0.4,
+    "ach_e_hvac_only_median": 0.6,
+    "pct_rooms_below_3_ach_e": 0.931,
+    "pct_rooms_below_6_ach_e": 0.9655,
+    "filter_status_upgraded": false,
+    "school_name": "Vernon"
+  },
+  "vestal": {
+    "rooms_tested": 41,
+    "ach_supply_median": 5.3,
+    "ach_oa_median": 0.9,
+    "ach_e_hvac_only_median": 3.9,
+    "pct_rooms_below_3_ach_e": 0.4146,
+    "pct_rooms_below_6_ach_e": 0.9756,
+    "filter_status_upgraded": true,
+    "school_name": "Vestal"
+  },
+  "wells_former_wilson": {
+    "rooms_tested": 190,
+    "ach_supply_median": 3.7,
+    "ach_oa_median": 0.6,
+    "ach_e_hvac_only_median": 2.8,
+    "pct_rooms_below_3_ach_e": 0.5211,
+    "pct_rooms_below_6_ach_e": 0.8526,
+    "filter_status_upgraded": true,
+    "school_name": "Wells (Former: Wilson)"
+  },
+  "west_sylvan": {
+    "rooms_tested": 80,
+    "ach_supply_median": 2.3,
+    "ach_oa_median": 0.5,
+    "ach_e_hvac_only_median": 1.7,
+    "pct_rooms_below_3_ach_e": 0.725,
+    "pct_rooms_below_6_ach_e": 0.95,
+    "filter_status_upgraded": true,
+    "school_name": "West Sylvan"
+  },
+  "whitman": {
+    "rooms_tested": 43,
+    "ach_supply_median": 4.0,
+    "ach_oa_median": 4.0,
+    "ach_e_hvac_only_median": 3.2,
+    "pct_rooms_below_3_ach_e": 0.3953,
+    "pct_rooms_below_6_ach_e": 0.8837,
+    "filter_status_upgraded": true,
+    "school_name": "Whitman"
+  },
+  "wilcox": {
+    "rooms_tested": 25,
+    "ach_supply_median": 4.1,
+    "ach_oa_median": 0.4,
+    "ach_e_hvac_only_median": 3.0,
+    "pct_rooms_below_3_ach_e": 0.44,
+    "pct_rooms_below_6_ach_e": 0.84,
+    "filter_status_upgraded": true,
+    "school_name": "Wilcox"
+  },
+  "winterhaven": {
+    "rooms_tested": 32,
+    "ach_supply_median": 0.0,
+    "ach_oa_median": 0.0,
+    "ach_e_hvac_only_median": 0.0,
+    "pct_rooms_below_3_ach_e": 0.9688,
+    "pct_rooms_below_6_ach_e": 1.0,
+    "filter_status_upgraded": true,
+    "school_name": "Winterhaven"
+  },
+  "woodlawn": {
+    "rooms_tested": 59,
+    "ach_supply_median": 2.3,
+    "ach_oa_median": 0.2,
+    "ach_e_hvac_only_median": 1.8,
+    "pct_rooms_below_3_ach_e": 0.7288,
+    "pct_rooms_below_6_ach_e": 0.9831,
+    "filter_status_upgraded": true,
+    "school_name": "Woodlawn"
+  },
+  "woodmere": {
+    "rooms_tested": 42,
+    "ach_supply_median": 2.05,
+    "ach_oa_median": 1.6,
+    "ach_e_hvac_only_median": 1.6,
+    "pct_rooms_below_3_ach_e": 0.7619,
+    "pct_rooms_below_6_ach_e": 0.9524,
+    "filter_status_upgraded": true,
+    "school_name": "Woodmere"
+  },
+  "woodstock": {
+    "rooms_tested": 51,
+    "ach_supply_median": 2.6,
+    "ach_oa_median": 1.4,
+    "ach_e_hvac_only_median": 2.1,
+    "pct_rooms_below_3_ach_e": 0.8039,
+    "pct_rooms_below_6_ach_e": 0.9804,
+    "filter_status_upgraded": true,
+    "school_name": "Woodstock"
+  }
+}

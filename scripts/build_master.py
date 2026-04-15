@@ -13,6 +13,7 @@ CRDC = ROOT / "data/raw/pps_crdc_agg.json"
 CRDC_2021 = ROOT / "data/raw/pps_crdc_2021_agg.json"
 CCD_HISTORY = ROOT / "data/raw/pps_ccd_enrollment_history.json"
 CCD_TEACHERS = ROOT / "data/raw/pps_ccd_teachers_2023.json"
+AIRFLOW_STATS = ROOT / "data/raw/pps_airflow_stats.json"
 OSAS_ELA_25 = ROOT / "data/raw/pagr_schools_ela_all_2425.xlsx"
 OSAS_MATH_25 = ROOT / "data/raw/pagr_schools_math_all_2425.xlsx"
 OSAS_ELA_24 = ROOT / "data/raw/pagr_schools_ela_all_2324.xlsx"
@@ -300,6 +301,94 @@ DLI_NAME_MAP = {
     "Sitton": "Sitton Elementary School",
     "West Sylvan": "West Sylvan Middle School",
     "Woodstock": "Woodstock Elementary School",
+}
+
+# Master_name -> PPS airflow index slug (data/raw/pps_airflow_index.json).
+# PPS publishes one 2021 NEBB-certified airflow report per building. Maps each
+# current school program to the airflow slug for the building it occupies.
+# Schools without entries (Alliance, Benson, Kellogg, McDaniel, Odyssey) either
+# weren't tested (new/modernized post-2021) or don't have a standalone report.
+# ACCESS + Rose City Park share the same RCP-building report. Beverly Cleary
+# picks Fernwood (its primary building); Hollyrood data is dropped here.
+AIRFLOW_NAME_MAP = {
+    "Abernethy Elementary School": "abernethy",
+    "Ainsworth Elementary School": "ainsworth",
+    "Alameda Elementary School": "alameda",
+    "Arleta Elementary School": "arleta",
+    "Astor Elementary School": "astor",
+    "Atkinson Elementary School": "atkinson",
+    "Beach Elementary School": "beach",
+    "Beaumont Middle School": "beaumont",
+    "Beverly Cleary School ": "beverly_cleary_at_fernwood",
+    "Boise-Eliot Elementary School": "boise_eliot",
+    "Bridlemile Elementary School": "bridlemile",
+    "Buckman Elementary School": "buckman",
+    "Capitol Hill Elementary School": "capitol_hill",
+    "César Chávez K-8 School": "c_eacute_sar_ch_aacute_vez",
+    "Chapman Elementary School": "chapman",
+    "Chief Joseph Elementary School": "chief_joseph",
+    "Cleveland High School": "cleveland",
+    "Creston Elementary School": "creston_and_creston_annex",
+    "Dr. Martin Luther King Jr. School": "king",
+    "Duniway Elementary School": "duniway",
+    "Faubion Elementary School": "faubion",
+    "Forest Park Elementary School": "forest_park",
+    "Franklin High School": "franklin",
+    "George Middle School": "george",
+    "Glencoe Elementary School": "glencoe",
+    "Grant High School": "grant",
+    "Gray Middle School": "gray",
+    "Grout Elementary School": "grout",
+    "Harriet Tubman Middle School": "tubman",
+    "Harrison Park School": "harrison_park",
+    "Hayhurst Elementary School": "hayhurst",
+    "Hosford Middle School": "hosford",
+    "Irvington Elementary School": "irvington",
+    "Jackson Middle School": "jackson",
+    "James John Elementary School": "james_john",
+    "Jefferson High School": "edwards_former_jefferson",
+    "Kelly Elementary School": "kelly",
+    "Lane Middle School": "lane",
+    "Laurelhurst Elementary School": "laurelhurst",
+    "Lee Elementary School": "lee",
+    "Lent Elementary School": "lent",
+    "Lewis Elementary School": "lewis",
+    "Lincoln High School": "lincoln",
+    "Llewellyn Elementary School": "llewellyn",
+    "Maplewood Elementary School": "maplewood",
+    "Markham Elementary School": "markham",
+    "Marysville Elementary School": "marysville",
+    "Metropolitan Learning Center": "metropolitan_learning_center_mlc",
+    "Mt Tabor Middle School": "mt_tabor",
+    "Ockley Green Middle School": "ockley_green",
+    "Peninsula Elementary School": "peninsula",
+    "Richmond Elementary School": "richmond",
+    "Rieke Elementary School": "rieke",
+    "Rigler Elementary School": "rigler",
+    "Roosevelt High School": "roosevelt",
+    "Rosa Parks Elementary School": "rosa_parks",
+    "Rose City Park": "beverly_cleary_and_access_at_rose_city_park",
+    "ACCESS Academy": "beverly_cleary_and_access_at_rose_city_park",
+    "Roseway Heights School": "roseway_heights",
+    "Sabin Elementary School": "sabin",
+    "Scott Elementary School": "scott",
+    "Sellwood Middle School": "sellwood",
+    "Sitton Elementary School": "sitton",
+    "Skyline Elementary School": "skyline",
+    "Stephenson Elementary School": "stephenson",
+    "Sunnyside Environmental School": "sunnyside",
+    "Vernon Elementary School": "vernon",
+    "Vestal Elementary School": "vestal",
+    "West Sylvan Middle School": "west_sylvan",
+    "Whitman Elementary School": "whitman",
+    "Winterhaven School": "winterhaven",
+    "Woodlawn Elementary School": "woodlawn",
+    "Woodmere Elementary School": "woodmere",
+    "Woodstock Elementary School": "woodstock",
+    "da Vinci Middle School": "da_vinci",
+    # Creative Science program moved between Clark/Bridger — airflow slug is
+    # ambiguous, so Bridger Creative Science + Clark Elementary left unmapped.
+    "Ida B. Wells-Barnett High School": "wells_former_wilson",
 }
 
 # Master_name -> facility_2009 school_name_2009. Accounts for renamings,
@@ -714,6 +803,25 @@ def main():
         pps["enrollment_2023"] / pps["teachers_fte_2023"]
     ).round(2)
 
+    # PPS 2021 airflow/ventilation survey (Amerseco + Neudorfer Engineers,
+    # NEBB-certified). One report per building; we surface per-school ACH_e
+    # medians and the fraction of rooms below the Lancet 3/6 ACH benchmarks.
+    with open(AIRFLOW_STATS) as f:
+        airflow = json.load(f)
+    unmatched = [slug for slug in AIRFLOW_NAME_MAP.values() if slug not in airflow]
+    if unmatched:
+        print(f"  Airflow: slugs in name map missing from stats: {unmatched}")
+    pps["airflow_rooms_tested"] = pps["School Name"].map(
+        lambda n: (airflow.get(AIRFLOW_NAME_MAP.get(n, ""), {}) or {}).get("rooms_tested"))
+    pps["airflow_ach_e_median"] = pps["School Name"].map(
+        lambda n: (airflow.get(AIRFLOW_NAME_MAP.get(n, ""), {}) or {}).get("ach_e_hvac_only_median"))
+    pps["airflow_pct_below_3_ach"] = pps["School Name"].map(
+        lambda n: (airflow.get(AIRFLOW_NAME_MAP.get(n, ""), {}) or {}).get("pct_rooms_below_3_ach_e"))
+    pps["airflow_pct_below_6_ach"] = pps["School Name"].map(
+        lambda n: (airflow.get(AIRFLOW_NAME_MAP.get(n, ""), {}) or {}).get("pct_rooms_below_6_ach_e"))
+    pps["airflow_filter_upgraded"] = pps["School Name"].map(
+        lambda n: (airflow.get(AIRFLOW_NAME_MAP.get(n, ""), {}) or {}).get("filter_status_upgraded"))
+
     # Derived FRL rates. CCD 2022 enrollment is closer in time to FRL counts
     # than 2025-26 enrollment, so use it when available.
     base_enroll = pps["ccd_enrollment_2022"].fillna(pps["2025-26 Total Enrollment"])
@@ -838,6 +946,9 @@ def main():
         "pct_lep", "pct_idea",
         "teachers_fte_2021", "students_per_teacher_2021",
         "teachers_fte_2023", "students_per_teacher_2023",
+        "airflow_rooms_tested", "airflow_ach_e_median",
+        "airflow_pct_below_3_ach", "airflow_pct_below_6_ach",
+        "airflow_filter_upgraded",
         "counselors_fte_2021", "social_workers_fte_2021",
         "psychologists_fte_2021", "nurses_fte_2021",
         "suspensions_2021", "chronic_absent_2021", "enrollment_crdc_2021",
