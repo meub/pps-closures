@@ -25,9 +25,10 @@ python3 -m http.server -d web 8000
 - **Sustainability** ranking (pipeline family units + recent residential permits within each school's catchment).
 - **Transportation** ranking (bussed-students share) and safe-routes context.
 - **Ratios** ranking (students per teacher FTE, 2023 CCD).
+- **Seismic** ranking (remaining retrofit cost per campus from Holmes 2024, colored by funding status: done / partial / planned / uncommitted; URM buildings flagged).
 - **Ventilation** ranking (% of rooms below Lancet 3 ACH_e floor, colored by MERV-13 upgrade status).
 - **DLI & focus-option** section with strand-vs-non-strand headcounts and a collapsible "why this matters" note.
-- **Scatter plots**: enrollment vs. utilization, math proficiency vs. poverty, 7-yr enrollment change vs. nearby permits, year-built vs. enrollment, URM retrofit cost vs. enrollment, chronic absenteeism vs. poverty, support-staff FTE equity, students-per-teacher vs. enrollment, ACH_e median vs. year built.
+- **Scatter plots**: enrollment vs. utilization, math proficiency vs. poverty, chronic absenteeism vs. poverty, support-staff FTE equity, students-per-teacher vs. enrollment.
 - **Sortable table** of all 74 schools with column descriptions and source citations.
 - **Methodology** section documenting every source with vintage.
 
@@ -40,7 +41,8 @@ python3 -m http.server -d web 8000
 | [Oregon ODE At-A-Glance source file](https://www.oregon.gov/ode/schools-and-districts/reportcards/reportcards/Pages/default.aspx) | Regular attenders %, experienced-teacher %, teacher retention %, class size | 2024-25 |
 | [NCES Common Core of Data](https://nces.ed.gov/ccd/) | Free/reduced lunch counts, geocoded addresses, 2018-2023 enrollment history, 2023 teacher FTE (for students-per-teacher ratios) | 2018-2023 |
 | [US Dept of Ed CRDC](https://ocrdata.ed.gov/) | English learners, IDEA/SPED, chronic absenteeism (2020); counselor / social worker / psychologist / nurse FTE, OSS suspension instances, post-COVID chronic absenteeism (2021) | 2020, 2021 (both COVID-era) |
-| [KPFF Seismic Report 2009](https://bond.pps.net/) + Holmes Engineering 2024 | Year built, square footage, construction type, URM retrofit estimates | 2009 / 2024 |
+| [KPFF Seismic Report 2009](https://bond.pps.net/) | Year built, square footage, construction type | 2009 |
+| [Holmes Engineering 2024 PPS Seismic Assessment](https://bond.pps.net/) | Per-campus ROM retrofit cost (all ~80 sites), URM-only partial-retrofit cost, URM classification | 2024 |
 | [PPS Long-Range Facility Plan 2021 (Vol 1)](https://www.pps.net/cms/lib/OR01913224/Centricity/domain/219/lrfp/PPS-LRFP-Vol1-2021-Adopted.pdf) | Functional capacity per school (classrooms × station size minus set-asides, with PPS-defined utilization rates). Used for the building-utilization metric. | 2021 |
 | [PPS Bond page](https://bond.pps.net/seismic-improvements) | Seismic retrofit status | 2025 |
 | [PPS Indoor Air Quality](https://www.pps.net/departments/risk-management/healthy-schools/indoor-air-quality) | Per-room airflow tests (Amerseco + Neudorfer Engineers, NEBB-certified) — ACH_e medians, % rooms below Lancet 3/6 ACH, MERV-13 filter status | 2021 |
@@ -69,6 +71,7 @@ scripts/
   parse_lrfp_capacity.py        → data/raw/pps_functional_capacity_2021.json
   fetch_pps_airflow.py          → data/raw/pps_airflow_pdfs/*.pdf + pps_airflow_index.json
   parse_pps_airflow.py          → data/raw/pps_airflow_stats.json
+  parse_holmes_costs.py         → data/raw/pps_holmes_2024_costs.json
   boundary_join.py              shared BoundaryIndex (point-in-polygon w/ haversine fallback)
   build_master.py               assemble data/pps_schools.csv
   merge_housing.py              + affordable_units / pipeline_* columns
@@ -99,6 +102,7 @@ python scripts/fetch_dli_report.py
 python scripts/parse_lrfp_capacity.py  # reads data/raw/LRFP_Vol1_2021.pdf (checked in)
 python scripts/fetch_pps_airflow.py    # ~270 MB of per-building airflow PDFs
 python scripts/parse_pps_airflow.py    # ~6 min: pdfplumber table extraction
+python scripts/parse_holmes_costs.py   # reads data/raw/holmes_2024_seismic.pdf (checked in)
 
 # 2. Build master CSV:
 python scripts/build_master.py

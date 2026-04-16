@@ -14,6 +14,7 @@ CRDC_2021 = ROOT / "data/raw/pps_crdc_2021_agg.json"
 CCD_HISTORY = ROOT / "data/raw/pps_ccd_enrollment_history.json"
 CCD_TEACHERS = ROOT / "data/raw/pps_ccd_teachers_2023.json"
 AIRFLOW_STATS = ROOT / "data/raw/pps_airflow_stats.json"
+HOLMES_COSTS = ROOT / "data/raw/pps_holmes_2024_costs.json"
 OSAS_ELA_25 = ROOT / "data/raw/pagr_schools_ela_all_2425.xlsx"
 OSAS_MATH_25 = ROOT / "data/raw/pagr_schools_math_all_2425.xlsx"
 OSAS_ELA_24 = ROOT / "data/raw/pagr_schools_ela_all_2324.xlsx"
@@ -389,6 +390,93 @@ AIRFLOW_NAME_MAP = {
     # Creative Science program moved between Clark/Bridger — airflow slug is
     # ambiguous, so Bridger Creative Science + Clark Elementary left unmapped.
     "Ida B. Wells-Barnett High School": "wells_former_wilson",
+}
+
+# Master_name -> Holmes 2024 PDF cover-page name. Schools not in Holmes
+# (ACCESS is at Vestal, Odyssey at Hayhurst, Forest Park recently rebuilt,
+# Alliance admin-only) are left unmapped and get None for retrofit cost.
+# Beverly Cleary has two Holmes entries (Fernwood + Hollyrood) — handled below.
+# Clark + Bridger share the Creative Science / Clark campus in Holmes.
+HOLMES_NAME_MAP = {
+    "Abernethy Elementary School": "Abernethy",
+    "Ainsworth Elementary School": "Ainsworth",
+    "Alameda Elementary School": "Alameda",
+    "Arleta Elementary School": "Arleta",
+    "Astor Elementary School": "Astor",
+    "Atkinson Elementary School": "Atkinson",
+    "Beach Elementary School": "Beach",
+    "Beaumont Middle School": "Beaumont",
+    "Benson Polytechnic High School": "Benson",
+    "Beverly Cleary School ": ["Fernwood (Beverly Cleary)", "Hollyrood (Beverly Cleary)"],
+    "Boise-Eliot Elementary School": "Boise-Eliot",
+    "Bridger Creative Science School": "Creative Science / Clark",
+    "Bridlemile Elementary School": "Bridlemile",
+    "Buckman Elementary School": "Buckman",
+    "Capitol Hill Elementary School": "Capitol Hill",
+    "César Chávez K-8 School": "Chavez",
+    "Chapman Elementary School": "Chapman",
+    "Chief Joseph Elementary School": "Chief Joseph",
+    "Clark Elementary School": "Creative Science / Clark",
+    "Cleveland High School": "Cleveland",
+    "Creston Elementary School": "Creston",
+    "Duniway Elementary School": "Duniway",
+    "Faubion Elementary School": "Faubion",
+    "Franklin High School": "Franklin",
+    "George Middle School": "George",
+    "Glencoe Elementary School": "Glencoe",
+    "Grant High School": "Grant",
+    "Gray Middle School": "Gray",
+    "Grout Elementary School": "Grout",
+    "Harriet Tubman Middle School": "Tubman",
+    "Harrison Park School": "Harrison Park",
+    "Lane Middle School": "Lane",
+    "Hayhurst Elementary School": "Hayhurst",
+    "Hosford Middle School": "Hosford",
+    "Ida B. Wells-Barnett High School": "Ida B Wells",
+    "Irvington Elementary School": "Irvington",
+    "Jackson Middle School": "Jackson",
+    "James John Elementary School": "James John",
+    "Jefferson High School": "Jefferson",
+    "Kellogg Middle School": "Kellogg",
+    "Kelly Elementary School": "Kelly",
+    "Laurelhurst Elementary School": "Laurelhurst",
+    "Lee Elementary School": "Lee",
+    "Lent Elementary School": "Lent",
+    "Lewis Elementary School": "Lewis",
+    "Lincoln High School": "Lincoln",
+    "Llewellyn Elementary School": "Llewellyn",
+    "Maplewood Elementary School": "Maplewood",
+    "Markham Elementary School": "Markham",
+    "Marysville Elementary School": "Marysville",
+    "Metropolitan Learning Center": "MLC",
+    "Dr. Martin Luther King Jr. School": "King",
+    "Leodis V. McDaniel High School": "McDaniel",
+    "Mt Tabor Middle School": "Mt Tabor",
+    "Ockley Green Middle School": "Ockley Green",
+    "Peninsula Elementary School": "Peninsula",
+    "Richmond Elementary School": "Richmond",
+    "Rieke Elementary School": "Rieke",
+    "Rigler Elementary School": "Rigler",
+    "Roosevelt High School": "Roosevelt",
+    "Rosa Parks Elementary School": "Rosa Parks",
+    "Rose City Park": "Rose City Park",
+    "Roseway Heights School": "Roseway Heights",
+    "Sabin Elementary School": "Sabin",
+    "Scott Elementary School": "Scott",
+    "Sellwood Middle School": "Sellwood",
+    "Sitton Elementary School": "Sitton",
+    "Skyline Elementary School": "Skyline",
+    "Stephenson Elementary School": "Stephenson",
+    "Sunnyside Environmental School": "Sunnyside",
+    "Vernon Elementary School": "Vernon",
+    "Vestal Elementary School": "Vestal",
+    "West Sylvan Middle School": "West Sylvan",
+    "Whitman Elementary School": "Whitman",
+    "Winterhaven School": "Winterhaven",
+    "Woodlawn Elementary School": "Woodlawn",
+    "Woodmere Elementary School": "Woodmere",
+    "Woodstock Elementary School": "Woodstock",
+    "da Vinci Middle School": "Davinci",
 }
 
 # Master_name -> facility_2009 school_name_2009. Accounts for renamings,
@@ -822,6 +910,41 @@ def main():
     pps["airflow_filter_upgraded"] = pps["School Name"].map(
         lambda n: (airflow.get(AIRFLOW_NAME_MAP.get(n, ""), {}) or {}).get("filter_status_upgraded"))
 
+    # Holmes 2024 per-campus ROM retrofit cost estimates. complete_cost_usd is
+    # the total remaining seismic-retrofit exposure; urm_only_cost_usd is the
+    # partial-retrofit option for just URM areas. Holmes reports $0 for schools
+    # with recent/near-complete modernizations (Benson, Cleveland, etc).
+    with open(HOLMES_COSTS) as f:
+        holmes = json.load(f)
+
+    def holmes_lookup(master_name, field):
+        target = HOLMES_NAME_MAP.get(master_name)
+        if target is None:
+            return None
+        if isinstance(target, list):
+            # Multi-campus (Beverly Cleary Fernwood + Hollyrood): sum costs.
+            total = 0
+            any_present = False
+            for t in target:
+                rec = holmes.get(t)
+                if rec and rec.get(field) is not None:
+                    total += rec[field]
+                    any_present = True
+            return total if any_present else None
+        rec = holmes.get(target)
+        return rec.get(field) if rec else None
+
+    pps["retrofit_cost_remaining_usd"] = pps["School Name"].map(
+        lambda n: holmes_lookup(n, "complete_cost_usd"))
+    # Prefer Holmes's precise URM-only number when available (the hardcoded
+    # URM_BUILDINGS values came from a rounded WW summary).
+    pps["urm_retrofit_cost_usd"] = pps.apply(
+        lambda r: holmes_lookup(r["School Name"], "urm_only_cost_usd")
+                  if holmes_lookup(r["School Name"], "urm_only_cost_usd") not in (None, 0)
+                  else r["urm_retrofit_cost_usd"],
+        axis=1,
+    )
+
     # Derived FRL rates. CCD 2022 enrollment is closer in time to FRL counts
     # than 2025-26 enrollment, so use it when available.
     base_enroll = pps["ccd_enrollment_2022"].fillna(pps["2025-26 Total Enrollment"])
@@ -927,7 +1050,8 @@ def main():
         "school_name", "level", "school_type", "ode_school_id", "nces_school_id",
         "street_address", "city", "zip_code", "latitude", "longitude",
         "is_closure_candidate", "closure_rank", "is_title_i",
-        "is_urm_building", "urm_retrofit_cost_usd", "seismic_retrofit_status",
+        "is_urm_building", "urm_retrofit_cost_usd", "retrofit_cost_remaining_usd",
+        "seismic_retrofit_status",
         "recent_boundary_change",
         "programs", "has_dli", "dli_languages", "has_focus_option",
         "dli_students_2526", "neighborhood_students_2526", "pct_dli_2526",

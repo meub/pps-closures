@@ -299,6 +299,7 @@
     .chart-card { padding: 10px; }
     #plot-ranking { height: 1700px !important; }
     #plot-ratio { height: 1650px !important; }
+    #plot-seismic { height: 1700px !important; }
     #plot-ventilation { height: 1550px !important; }
     .table-controls input[type="search"] { width: 100%; }
     .table-controls .count { margin-left: 0; }
@@ -322,6 +323,7 @@
       <a href="#section-trends">Trends</a>
       <a href="#section-utilization">Utilization</a>
       <a href="#section-sustainability">Sustainability</a>
+      <a href="#section-seismic">Seismic</a>
       <a href="#section-transport">Transportation</a>
       <a href="#section-ratios">Ratios</a>
       <a href="#section-ventilation">Ventilation</a>
@@ -407,7 +409,7 @@
       The bold orange line is the district-wide total. Use the search box below to find
       schools and check one or more to isolate them on the chart; hover a line to identify
       it. Shows 70 of the 74 in-scope schools (4 schools without complete 2018–2025
-      history are omitted. Source: NCES CCD (2018–2023) + Oregon ODE (2024–2025).
+      history are omitted. Source: <a href="https://nces.ed.gov/ccd/" target="_blank" rel="noopener">NCES CCD</a> (2018–2023) + <a href="https://www.oregon.gov/ode/reports-and-data/students/Pages/Student-Enrollment-Reports.aspx" target="_blank" rel="noopener">Oregon ODE</a> (2024–2025).
     </p>
     <p class="note" style="margin-top: -6px;">
       <strong>Caveat:</strong> 19 schools had their attendance boundary or grade
@@ -430,7 +432,7 @@
   <section id="section-utilization">
     <h2>All schools ranked by building utilization</h2>
     <p class="note">
-      Current enrollment as a percentage of PPS's own functional capacity from the 2021 Long-Range Facility Plan. Functional capacity accounts for classroom count, modular rooms, and set-asides (SPED, art/music, DLI co-location), so it is a planning number PPS actually uses, not a raw square-footage estimate. The dashed line marks 100% capacity; schools under 50% are substantially underused.
+      Current enrollment as a percentage of PPS's own functional capacity from the 2021 Long-Range Facility Plan. Functional capacity accounts for classroom count, modular rooms, and set-asides (SPED, art/music, DLI co-location). This is a planning number from PPS, not a raw square-footage estimate.
     </p>
     <div class="panel chart-card"><div id="plot-ranking" style="height: 1400px;"></div></div>
   </section>
@@ -439,10 +441,58 @@
     <h2>Long-term sustainability: 7-year enrollment change (2018 → 2025)</h2>
     <p class="note">
       Total in-scope enrollment fell 20% over this window (median school -19%). Bars below
-      that baseline are losing students faster than the district overall. Source: NCES CCD fall
-      2018 + ODE fall 2025.
+      that baseline are losing students faster than the district overall. Source: <a href="https://nces.ed.gov/ccd/" target="_blank" rel="noopener">NCES CCD</a> fall
+      2018 + <a href="https://www.oregon.gov/ode/reports-and-data/students/Pages/Student-Enrollment-Reports.aspx" target="_blank" rel="noopener">ODE</a> fall 2025.
     </p>
     <div class="panel chart-card"><div id="plot-trend7yr" style="height: 1400px;"></div></div>
+  </section>
+
+  <section id="section-seismic">
+    <h2>Seismic retrofit exposure (Holmes 2024)</h2>
+    <p class="note">
+      Rough-order-of-magnitude cost to fully retrofit every building at each school, from the <a href="https://drive.google.com/file/d/1vN48MAzNDz1GvZ4pkSXRyAuiuNTWcnt7/view" target="_blank" rel="noopener">Holmes Engineering 2024 PPS Seismic Assessment</a>. Bar color shows <strong>whether the remaining cost is funded</strong>: <span style="color:#58a6ff">blue</span> = covered by the 2025 bond, <span style="color:rgb(249, 126, 96)">red</span> = remaining cost not in any current bond. A purple-outlined bar prefixed with <strong>⚠</strong> flags unreinforced-masonry (URM) buildings &mdash; the highest seismic-risk category. A <strong>•</strong> prefix indicates schools that had prior targeted or full retrofit work from earlier bonds (2012/2017/2020); that history doesn't change whether the Holmes-estimated remaining cost is funded. Portfolio remaining exposure across the 74 in-scope schools: <strong>~$800M</strong>.
+    </p>
+    <details class="note inline-expand">
+      <summary>More info on this dataset</summary>
+      <p>
+        Holmes Engineering was engaged by PPS in 2023 to update the district's
+        seismic assessment for each school. Field walkthroughs in 2023-2024
+        produced two rough-order-of-magnitude (ROM) cost estimates per school:
+        a <strong>URM-only</strong> partial retrofit (scoped to just the
+        unreinforced-masonry areas) and a <strong>complete</strong> retrofit
+        covering every building on the campus. Costs use representative $/SF
+        from recent schematic-design pricing and are engineer's estimates for
+        initial budgeting only.
+      </p>
+      <p>
+        Fifteen schools appear with <strong>$0 remaining</strong>. Holmes
+        excluded them because they had recently completed modernizations, had
+        in-progress bond-funded retrofits, or were newly constructed to modern
+        benchmark codes. For eight additional schools &mdash; all URM &mdash;
+        the 2025 bond voters approved in Nov 2025 funds the remaining cost
+        ("Funded" blue bars).
+      </p>
+      <p>
+        For the remaining <strong>~60 schools ("Unfunded" red bars),</strong>
+        Holmes's 2024 complete-retrofit estimate represents work that is
+        <em>not</em> in any current or approved bond. The <strong>•</strong>
+        marker indicates that some earlier bond money was spent on targeted
+        scope (typically roofs, URM bracing, or partial structural upgrades);
+        that past work reduces seismic risk but does not fund the remaining
+        Holmes estimate. A school without the <strong>•</strong> marker has
+        <em>no</em> recorded bond retrofit history at all.
+      </p>
+      <p>
+        Caveats: Holmes's estimates are ROM and should be treated as
+        order-of-magnitude. URM classification is from Holmes's 2024 URM
+        database; the chart uses the complete-retrofit total (not URM-only)
+        so URM schools are ranked alongside non-URM ones by total exposure.
+        The "funded vs. unfunded" classification derives from the <a href="https://bond.pps.net/seismic-improvements" target="_blank" rel="noopener">PPS bond
+        page</a> and reflects publicly
+        announced 2025 bond scope as of 2026-04.
+      </p>
+    </details>
+    <div class="panel chart-card"><div id="plot-seismic" style="height: 1400px;"></div></div>
   </section>
 
   <section id="section-transport">
@@ -459,7 +509,7 @@
   <section id="section-ratios">
     <h2>Students per teacher (fall 2023)</h2>
     <p class="note">
-      Fall 2023 NCES enrollment divided by fall 2023 classroom-teacher FTE &mdash; a same-year snapshot of how many students each full-time teacher is accountable for. Excludes counselors, social workers, nurses, and other non-instructional staff. The dashed line marks the in-scope median. Small alternative and K-8 programs naturally cluster low (fixed teacher-FTE floor spread across fewer students); larger neighborhood elementaries and middle schools cluster high. Source: NCES CCD 2023.
+      Fall 2023 NCES enrollment divided by fall 2023 classroom-teacher FTE &mdash; a same-year snapshot of how many students each full-time teacher is accountable for. Excludes counselors, social workers, nurses, and other non-instructional staff. The dashed line marks the in-scope median. Small alternative and K-8 programs naturally cluster low (fixed teacher-FTE floor spread across fewer students); larger neighborhood elementaries and middle schools cluster high. Source: <a href="https://nces.ed.gov/ccd/" target="_blank" rel="noopener">NCES CCD</a> 2023.
     </p>
     <div class="panel chart-card"><div id="plot-ratio" style="height: 1400px;"></div></div>
   </section>
@@ -480,8 +530,7 @@
       the catchment. This chart splits each host school's October 2025 headcount
       into mainstream/neighborhood (left) and DLI strand (right). Schools range
       from single-strand hosts (Lane 8% DLI) to whole-school immersion programs
-      (Lent, Rigler, Richmond: 100%). Source: PPS Language Immersion Enrollment
-      Report 2025-26.
+      (Lent, Rigler, Richmond: 100%). Source: <a href="https://www.pps.net/departments/research-assessment-and-accountability/data-and-reports/enrollment-reports-and-school-profiles" target="_blank" rel="noopener">PPS Language Immersion Enrollment Report</a> 2025-26.
     </p>
     <details class="note inline-expand">
       <summary>Why this matters for closure decisions</summary>
@@ -585,8 +634,8 @@
         <dd>Functional capacity per school (2021). PPS's planning number: gross capacity derived from classroom count and area, minus set-asides (SPED focus, art/music, computer lab, DLI co-location, etc.), with a configuration-specific utilization rate applied (85% at middle/high, higher at K-5/K-8) and further reductions at Title I and TSI/CSI schools.</dd>
       <dt><a href="https://www.pps.net/departments/facilities-asset-management/school-buildings-conditions-and-characteristics/seismic-assessments" target="_blank" rel="noopener">KPFF Seismic Report (2009)</a></dt>
         <dd>Year built, square footage, and construction type for every building in the district. Note: square footage predates recent bond expansions.</dd>
-      <dt><a href="https://meetings.boardbook.org/Public/File/915?file=f8bb4ec8-99ca-40d8-a4c9-0b07ad1a3e6e" target="_blank" rel="noopener">Holmes Engineering URM Assessment (2024)</a></dt>
-        <dd>Unreinforced masonry classification and retrofit cost estimates for 18 PPS buildings.</dd>
+      <dt><a href="https://drive.google.com/file/d/1vN48MAzNDz1GvZ4pkSXRyAuiuNTWcnt7/view" target="_blank" rel="noopener">Holmes Engineering Seismic Assessment (2024)</a></dt>
+        <dd>Per-campus rough-order-of-magnitude (ROM) retrofit cost estimates for all ~80 PPS sites, plus URM classification and URM-only partial-retrofit cost. We parse the per-school "Complete Retrofit" ROM totals into <code>retrofit_cost_remaining_usd</code>. Holmes excludes schools recently or near-completely modernized (shown at $0 in the chart).</dd>
       <dt><a href="https://bond.pps.net/" target="_blank" rel="noopener">PPS Bond: Seismic &amp; modernization</a></dt>
         <dd>Retrofit and modernization status (full, targeted, planned under 2025 bond).</dd>
     </dl>
@@ -693,7 +742,6 @@
             <tr><td class="src">Counselors / SW / suspensions (CRDC)</td><td class="year stale">2020-21</td></tr>
             <tr><td class="src">URM assessment (Holmes)</td><td class="year">2024</td></tr>
             <tr><td class="src">Functional capacity (PPS LRFP)</td><td class="year">2021</td></tr>
-            <tr><td class="src">Building square footage (KPFF)</td><td class="year stale">2009</td></tr>
             <tr><td class="src">Residential permits (BDS)</td><td class="year">2022 – 2026-04</td></tr>
             <tr><td class="src">Affordable housing (OAHI)</td><td class="year">2025</td></tr>
             <tr><td class="src">Metro pop. forecast</td><td class="year stale">2021</td></tr>
@@ -1034,12 +1082,12 @@
         font: { color: "#e6edf3", size: 11, family: '"Nunito Sans", -apple-system, Helvetica, Arial, sans-serif' },
         hoverlabel: { font: { family: '"Nunito Sans", -apple-system, Helvetica, Arial, sans-serif' } },
         margin: mobile
-          ? { l: 130, r: 50, t: 20, b: 40 }
-          : { l: 280, r: 140, t: 20, b: 40 },
+          ? { l: 130, r: 50, t: 80, b: 20 }
+          : { l: 280, r: 140, t: 80, b: 20 },
         xaxis: {
           title: mobile ? "Utilization %" : "Utilization % (2025-26 enrollment ÷ 2021 functional capacity)",
           gridcolor: "#30363d", zerolinecolor: "#30363d",
-          ticksuffix: "%",
+          ticksuffix: "%", side: "top",
         },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
         showlegend: false,
@@ -1051,7 +1099,7 @@
         }],
         annotations: [{
           x: 100, y: withVal.length - 0.5,
-          text: "100% capacity", showarrow: false, yanchor: "bottom",
+          text: "100% capacity", showarrow: false, yanchor: "top",
           font: { size: 10, color: "#7d8590" },
         }],
       }, { displayModeBar: false, responsive: true });
@@ -1111,23 +1159,12 @@
       };
       Plotly.react("plot-transport", [trace], Object.assign(baseLayout(), {
         margin: mobile
-          ? { l: 130, r: 80, t: 20, b: 40 }
-          : { l: 220, r: 320, t: 20, b: 40 },
+          ? { l: 130, r: 80, t: 80, b: 20 }
+          : { l: 220, r: 320, t: 80, b: 20 },
         xaxis: { title: "Miles to nearest same-level larger school",
-          gridcolor: "#30363d", zerolinecolor: "#30363d" },
+          gridcolor: "#30363d", zerolinecolor: "#30363d", side: "top" },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
         showlegend: false,
-        shapes: [{
-          type: "line", x0: median, x1: median,
-          y0: -0.5, y1: cands.length - 0.5,
-          line: { color: "#7d8590", width: 1, dash: "dash" },
-        }],
-        annotations: [{
-          x: median, y: cands.length - 0.5,
-          text: `median ${median.toFixed(2)} mi`,
-          showarrow: false, yanchor: "bottom",
-          font: { size: 10, color: "#7d8590" },
-        }],
       }), { displayModeBar: false, responsive: true });
     }
     renderTransport();
@@ -1305,10 +1342,10 @@
       };
       Plotly.react("plot-trend7yr", [trace], Object.assign(baseLayout(), {
         margin: mobile
-          ? { l: 140, r: 60, t: 20, b: 50 }
-          : { l: 240, r: 80, t: 20, b: 50 },
+          ? { l: 140, r: 60, t: 80, b: 20 }
+          : { l: 240, r: 80, t: 80, b: 20 },
         xaxis: { title: "Enrollment change 2018 → 2025 (%)",
-          gridcolor: "#30363d", zerolinecolor: "#7d8590" },
+          gridcolor: "#30363d", zerolinecolor: "#7d8590", side: "top" },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
         showlegend: false,
         shapes: [{
@@ -1319,7 +1356,7 @@
         annotations: [{
           x: districtPct * 100, y: rows.length - 0.5,
           text: `in-scope total ${(districtPct * 100).toFixed(1)}%`,
-          showarrow: false, yanchor: "bottom", xanchor: "left",
+          showarrow: false, yanchor: "top", xanchor: "left",
           font: { size: 10, color: "#7d8590" },
         }],
       }), { displayModeBar: false, responsive: true });
@@ -1355,10 +1392,10 @@
       };
       Plotly.react("plot-ratio", [trace], Object.assign(baseLayout(), {
         margin: mobile
-          ? { l: 140, r: 60, t: 20, b: 50 }
-          : { l: 240, r: 120, t: 20, b: 50 },
+          ? { l: 140, r: 60, t: 80, b: 20 }
+          : { l: 240, r: 120, t: 80, b: 20 },
         xaxis: { title: "Students per teacher FTE (fall 2023)",
-          gridcolor: "#30363d", zerolinecolor: "#30363d" },
+          gridcolor: "#30363d", zerolinecolor: "#30363d", side: "top" },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
         showlegend: false,
         shapes: [{
@@ -1369,7 +1406,7 @@
         annotations: [{
           x: medianVal, y: rows.length - 0.5,
           text: `median ${medianVal.toFixed(1)}`,
-          showarrow: false, yanchor: "bottom", xanchor: "left",
+          showarrow: false, yanchor: "top", xanchor: "left",
           font: { size: 10, color: "#7d8590" },
         }],
       }), { displayModeBar: false, responsive: true });
@@ -1377,6 +1414,107 @@
     renderRatio();
     let tR;
     window.addEventListener("resize", () => { clearTimeout(tR); tR = setTimeout(renderRatio, 150); });
+  })();
+
+  // ---------- SEISMIC RETROFIT EXPOSURE RANKING ----------
+  (function () {
+    const rows = schools.filter(s => s.retrofit_cost_remaining_usd != null);
+    if (!rows.length) return;
+    // Ascending so Plotly renders the highest-cost school at the TOP of the
+    // y-axis (horizontal bar: first element goes to the bottom).
+    rows.sort((a, b) => a.retrofit_cost_remaining_usd - b.retrofit_cost_remaining_usd);
+
+    const COLOR_DONE = "#58a6ff";       // $0 remaining
+    const COLOR_FUNDED = "#58a6ff";     // 2025 bond covers the remaining cost
+    const COLOR_UNFUNDED = "rgb(249, 126, 96)";   // remaining cost not in any current bond
+    const URM_BORDER = "#a371f7";       // purple outline for URM buildings
+
+    function statusClass(s) {
+      // Only funding status. Past retrofit history is shown separately via a
+      // "•" marker — it doesn't change whether the *remaining* cost is funded.
+      if (!s.retrofit_cost_remaining_usd) return "done";
+      const st = s.seismic_retrofit_status;
+      if (st === "planned_full" || st === "planned_targeted") return "funded";
+      return "unfunded";
+    }
+    function hasPriorRetrofit(s) {
+      const st = s.seismic_retrofit_status;
+      return st === "full" || st === "targeted";
+    }
+    function colorFor(cls) {
+      return cls === "done" ? COLOR_DONE
+           : cls === "funded" ? COLOR_FUNDED
+           : COLOR_UNFUNDED;
+    }
+    function fmtUSD(v) {
+      if (v == null) return "—";
+      if (v === 0) return "✓ done";
+      if (v >= 1e6) return "$" + (v / 1e6).toFixed(1) + "M";
+      return "$" + (v / 1e3).toFixed(0) + "K";
+    }
+
+    function renderSeismic() {
+      const mobile = window.innerWidth < 700;
+      const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
+      const labels = rows.map(s => {
+        const nm = mobile ? truncate(s.school_name, 18) : s.school_name;
+        const urm = s.is_urm_building ? "⚠" : "";
+        const prior = hasPriorRetrofit(s) ? "•" : "";
+        const prefix = (urm || prior) ? `${urm}${prior} ` : "";
+        return `${prefix}${nm}`;
+      });
+      const colors = rows.map(s => colorFor(statusClass(s)));
+      const borders = rows.map(s => s.is_urm_building ? URM_BORDER : "#0e1115");
+      const borderWidths = rows.map(s => s.is_urm_building ? 1.5 : 0.5);
+
+      const trace = {
+        type: "bar", orientation: "h",
+        x: rows.map(s => s.retrofit_cost_remaining_usd),
+        y: labels,
+        showlegend: false,
+        marker: { color: colors, line: { color: borders, width: borderWidths } },
+        text: rows.map(s => fmtUSD(s.retrofit_cost_remaining_usd)),
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata: rows.map(s => [
+          s.is_urm_building ? "Yes" : "No",
+          s.urm_retrofit_cost_usd,
+          s.seismic_retrofit_status || "none",
+          hasPriorRetrofit(s) ? "Yes" : "No",
+        ]),
+        hovertemplate: "<b>%{y}</b><br>" +
+          "Remaining retrofit cost: %{x:$,.0f}<br>" +
+          "URM building: %{customdata[0]}<br>" +
+          "URM-only retrofit option: %{customdata[1]:$,.0f}<br>" +
+          "Prior retrofit work done: %{customdata[3]}<br>" +
+          "Status: %{customdata[2]}<extra></extra>",
+      };
+      const legendTraces = [
+        { type: "bar", x: [null], y: [null], name: "Unfunded",
+          marker: { color: COLOR_UNFUNDED }, showlegend: true, hoverinfo: "skip" },
+        { type: "bar", x: [null], y: [null], name: "Funded (2025 bond)",
+          marker: { color: COLOR_FUNDED }, showlegend: true, hoverinfo: "skip" },
+        { type: "bar", x: [null], y: [null], name: "⚠ URM building",
+          marker: { color: "#161b22", line: { color: URM_BORDER, width: 1.5 } },
+          showlegend: true, hoverinfo: "skip" },
+      ];
+      Plotly.react("plot-seismic", [trace, ...legendTraces], Object.assign(baseLayout(), {
+        margin: mobile
+          ? { l: 150, r: 70, t: 80, b: 20 }
+          : { l: 240, r: 120, t: 80, b: 20 },
+        xaxis: { title: "Remaining retrofit cost (ROM, Holmes 2024)",
+          tickprefix: "$", tickformat: ".2s",
+          gridcolor: "#30363d", zerolinecolor: "#30363d", side: "top" },
+        yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
+        showlegend: true,
+        legend: { orientation: "h", x: 1, y: 1, xref: "paper", yref: "container", xanchor: "right", yanchor: "top",
+          bgcolor: "rgba(0,0,0,0)", font: { size: 10, color: "#e6edf3" } },
+      }), { displayModeBar: false, responsive: true });
+    }
+    renderSeismic();
+    let tS;
+    window.addEventListener("resize", () => { clearTimeout(tS); tS = setTimeout(renderSeismic, 150); });
   })();
 
   // ---------- VENTILATION RANKING (% rooms below 3 ACH) ----------
@@ -1426,14 +1564,14 @@
       ];
       Plotly.react("plot-ventilation", [trace, ...legendTraces], Object.assign(baseLayout(), {
         margin: mobile
-          ? { l: 140, r: 70, t: 40, b: 50 }
-          : { l: 240, r: 140, t: 40, b: 50 },
+          ? { l: 140, r: 70, t: 80, b: 20 }
+          : { l: 240, r: 140, t: 80, b: 20 },
         xaxis: { title: "% of tested rooms below 3 ACH_e",
           tickformat: ".0%", range: [0, 1.08],
-          gridcolor: "#30363d", zerolinecolor: "#30363d" },
+          gridcolor: "#30363d", zerolinecolor: "#30363d", side: "top" },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
         showlegend: true,
-        legend: { x: 1, y: 1, xanchor: "right", yanchor: "bottom",
+        legend: { orientation: "h", x: 1, y: 1, xref: "paper", yref: "container", xanchor: "right", yanchor: "top",
           bgcolor: "rgba(0,0,0,0)", font: { size: 10, color: "#e6edf3" } },
         shapes: [{
           type: "line", x0: medianVal, x1: medianVal,
@@ -1443,7 +1581,7 @@
         annotations: [{
           x: medianVal, y: rows.length - 0.5,
           text: `median ${(medianVal * 100).toFixed(0)}%`,
-          showarrow: false, yanchor: "bottom", xanchor: "left",
+          showarrow: false, yanchor: "top", xanchor: "left",
           font: { size: 10, color: "#7d8590" },
         }],
       }), { displayModeBar: false, responsive: true });
@@ -1488,13 +1626,13 @@
       Plotly.react("plot-dli", [neigh, dli], Object.assign(baseLayout(), {
         barmode: "stack",
         margin: mobile
-          ? { l: 140, r: 60, t: 20, b: 50 }
-          : { l: 220, r: 80, t: 20, b: 50 },
+          ? { l: 140, r: 60, t: 80, b: 20 }
+          : { l: 220, r: 80, t: 80, b: 20 },
         xaxis: { title: "Students (Oct 2025)",
-          gridcolor: "#30363d", zerolinecolor: "#7d8590" },
+          gridcolor: "#30363d", zerolinecolor: "#7d8590", side: "top" },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 },
           autorange: "reversed" },
-        legend: { orientation: "h", x: 0, y: 1.04, yanchor: "bottom",
+        legend: { orientation: "h", x: 1, y: 1, xref: "paper", yref: "container", xanchor: "right", yanchor: "top",
           font: { size: 11 }, bgcolor: "rgba(0,0,0,0)" },
       }), { displayModeBar: false, responsive: true });
     }

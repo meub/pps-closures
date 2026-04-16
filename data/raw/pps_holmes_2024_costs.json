@@ -1,0 +1,667 @@
+{
+  "Abernethy": {
+    "complete_cost_usd": 12367500,
+    "notes": null,
+    "page": 4,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 450000
+  },
+  "Ainsworth": {
+    "complete_cost_usd": 10120000,
+    "notes": null,
+    "page": 7,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 7865000
+  },
+  "Alameda": {
+    "complete_cost_usd": 9437500,
+    "notes": null,
+    "page": 11,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 1400000
+  },
+  "Applegate": {
+    "complete_cost_usd": 2346500,
+    "notes": null,
+    "page": 15,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Arleta": {
+    "complete_cost_usd": 12355000,
+    "notes": null,
+    "page": 17,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Astor": {
+    "complete_cost_usd": 5060000,
+    "notes": null,
+    "page": 19,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Atkinson": {
+    "complete_cost_usd": 3870000,
+    "notes": null,
+    "page": 23,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Beach": {
+    "complete_cost_usd": 14977500,
+    "notes": null,
+    "page": 26,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 1350000
+  },
+  "Beaumont": {
+    "complete_cost_usd": 19252500,
+    "notes": null,
+    "page": 29,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Benson": {
+    "complete_cost_usd": 0,
+    "notes": "Retrofit and Rebuild Completed",
+    "page": 31,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Boise-Eliot": {
+    "complete_cost_usd": 16885000,
+    "notes": null,
+    "page": 35,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Bridger": {
+    "complete_cost_usd": 4930000,
+    "notes": null,
+    "page": 38,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Bridlemile": {
+    "complete_cost_usd": 11450000,
+    "notes": null,
+    "page": 41,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 25000
+  },
+  "Buckman": {
+    "complete_cost_usd": 21350000,
+    "notes": null,
+    "page": 43,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 19750000
+  },
+  "Capitol Hill": {
+    "complete_cost_usd": 10570000,
+    "notes": null,
+    "page": 45,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 3430000
+  },
+  "Chapman": {
+    "complete_cost_usd": 14320000,
+    "notes": null,
+    "page": 49,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Chavez": {
+    "complete_cost_usd": 18499250,
+    "notes": null,
+    "page": 53,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Chief Joseph": {
+    "complete_cost_usd": 4635000,
+    "notes": null,
+    "page": 57,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Clarendon": {
+    "complete_cost_usd": 5442500,
+    "notes": null,
+    "page": 61,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Cleveland": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 65,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Creative Science / Clark": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 69,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Creston": {
+    "complete_cost_usd": 14613750,
+    "notes": null,
+    "page": 73,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 10970000
+  },
+  "Davinci": {
+    "complete_cost_usd": 20742500,
+    "notes": null,
+    "page": 77,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Duniway": {
+    "complete_cost_usd": 14610000,
+    "notes": null,
+    "page": 81,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 420000
+  },
+  "East Sylvan": {
+    "complete_cost_usd": 3220000,
+    "notes": null,
+    "page": 85,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Edwards": {
+    "complete_cost_usd": 1905000,
+    "notes": null,
+    "page": 89,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Faubion": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 93,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Fernwood (Beverly Cleary)": {
+    "complete_cost_usd": 18625000,
+    "notes": null,
+    "page": 32,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 14400000
+  },
+  "Franklin": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 97,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "George": {
+    "complete_cost_usd": 13512500,
+    "notes": null,
+    "page": 101,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 11175000
+  },
+  "Glencoe": {
+    "complete_cost_usd": 12533500,
+    "notes": null,
+    "page": 105,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 241000
+  },
+  "Grant": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 109,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Gray": {
+    "complete_cost_usd": 10187500,
+    "notes": null,
+    "page": 113,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Grout": {
+    "complete_cost_usd": 18444500,
+    "notes": null,
+    "page": 117,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Harrison Park": {
+    "complete_cost_usd": 13182500,
+    "notes": null,
+    "page": 121,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Hayhurst": {
+    "complete_cost_usd": 5147500,
+    "notes": null,
+    "page": 125,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 520000
+  },
+  "Holladay Center": {
+    "complete_cost_usd": 5610000,
+    "notes": null,
+    "page": 129,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Hollyrood (Beverly Cleary)": {
+    "complete_cost_usd": 1695000,
+    "notes": null,
+    "page": 133,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Hosford": {
+    "complete_cost_usd": 18620000,
+    "notes": null,
+    "page": 137,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Humboldt": {
+    "complete_cost_usd": 5780000,
+    "notes": null,
+    "page": 141,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Ida B Wells": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 145,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Irvington": {
+    "complete_cost_usd": 16255000,
+    "notes": null,
+    "page": 149,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Jackson": {
+    "complete_cost_usd": 30170000,
+    "notes": null,
+    "page": 156,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "James John": {
+    "complete_cost_usd": 18000000,
+    "notes": null,
+    "page": 158,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 1020000
+  },
+  "Jefferson": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 162,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Kellogg": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 166,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Kelly": {
+    "complete_cost_usd": 8745000,
+    "notes": null,
+    "page": 170,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 1925000
+  },
+  "Kenton": {
+    "complete_cost_usd": 12183750,
+    "notes": null,
+    "page": 174,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "King": {
+    "complete_cost_usd": 21200000,
+    "notes": null,
+    "page": 178,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Lane": {
+    "complete_cost_usd": 17940000,
+    "notes": null,
+    "page": 182,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Laurelhurst": {
+    "complete_cost_usd": 13332500,
+    "notes": null,
+    "page": 186,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Lee": {
+    "complete_cost_usd": 6881125,
+    "notes": null,
+    "page": 190,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 1905000
+  },
+  "Lent": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 194,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Lewis": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 198,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Lincoln": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 202,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Llewellyn": {
+    "complete_cost_usd": 12867500,
+    "notes": null,
+    "page": 206,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "MLC": {
+    "complete_cost_usd": 19005000,
+    "notes": null,
+    "page": 234,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Maplewood": {
+    "complete_cost_usd": 3435000,
+    "notes": null,
+    "page": 210,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Markham": {
+    "complete_cost_usd": 9367500,
+    "notes": null,
+    "page": 214,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 2200000
+  },
+  "Marshall": {
+    "complete_cost_usd": 47515000,
+    "notes": null,
+    "page": 218,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Marysville": {
+    "complete_cost_usd": 7325000,
+    "notes": null,
+    "page": 222,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 1400000
+  },
+  "McDaniel": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 226,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Meek": {
+    "complete_cost_usd": 3187500,
+    "notes": null,
+    "page": 230,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Mt Tabor": {
+    "complete_cost_usd": 11707500,
+    "notes": null,
+    "page": 238,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 4900000
+  },
+  "Ockley Green": {
+    "complete_cost_usd": 9820000,
+    "notes": null,
+    "page": 242,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Peninsula": {
+    "complete_cost_usd": 6520000,
+    "notes": null,
+    "page": 246,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Rice": {
+    "complete_cost_usd": 1645000,
+    "notes": null,
+    "page": 250,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Richmond": {
+    "complete_cost_usd": 13477500,
+    "notes": null,
+    "page": 254,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 1720000
+  },
+  "Rieke": {
+    "complete_cost_usd": 6040000,
+    "notes": null,
+    "page": 258,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 4160000
+  },
+  "Rigler": {
+    "complete_cost_usd": 15615000,
+    "notes": null,
+    "page": 262,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 2845000
+  },
+  "Roosevelt": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 266,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 0
+  },
+  "Rosa Parks": {
+    "complete_cost_usd": 0,
+    "notes": null,
+    "page": 270,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Rose City Park": {
+    "complete_cost_usd": 21100000,
+    "notes": null,
+    "page": 274,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 20910000
+  },
+  "Roseway Heights": {
+    "complete_cost_usd": 15680750,
+    "notes": null,
+    "page": 278,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Sabin": {
+    "complete_cost_usd": 19320000,
+    "notes": null,
+    "page": 282,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 2600000
+  },
+  "Sacajawea": {
+    "complete_cost_usd": 1920000,
+    "notes": null,
+    "page": 286,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Scott": {
+    "complete_cost_usd": 11520000,
+    "notes": null,
+    "page": 290,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Sellwood": {
+    "complete_cost_usd": 20170000,
+    "notes": null,
+    "page": 294,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Sitton": {
+    "complete_cost_usd": 5685000,
+    "notes": null,
+    "page": 298,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Skyline": {
+    "complete_cost_usd": 6077500,
+    "notes": null,
+    "page": 302,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Smith": {
+    "complete_cost_usd": 8225000,
+    "notes": null,
+    "page": 306,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 7700000
+  },
+  "Stephenson": {
+    "complete_cost_usd": 7347500,
+    "notes": null,
+    "page": 310,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Sunnyside": {
+    "complete_cost_usd": 12490000,
+    "notes": null,
+    "page": 314,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Terwilliger": {
+    "complete_cost_usd": 2720000,
+    "notes": null,
+    "page": 318,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Tubman": {
+    "complete_cost_usd": 11317500,
+    "notes": null,
+    "page": 322,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Vernon": {
+    "complete_cost_usd": 6265000,
+    "notes": null,
+    "page": 326,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 2450000
+  },
+  "Vestal": {
+    "complete_cost_usd": 17450000,
+    "notes": null,
+    "page": 330,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "West Sylvan": {
+    "complete_cost_usd": 12552500,
+    "notes": null,
+    "page": 334,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Whitman": {
+    "complete_cost_usd": 6755000,
+    "notes": null,
+    "page": 338,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Wilcox": {
+    "complete_cost_usd": 1782500,
+    "notes": null,
+    "page": 342,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 455000
+  },
+  "Winterhaven": {
+    "complete_cost_usd": 8632500,
+    "notes": null,
+    "page": 346,
+    "urm_on_database": true,
+    "urm_only_cost_usd": 810000
+  },
+  "Woodlawn": {
+    "complete_cost_usd": 14932500,
+    "notes": null,
+    "page": 350,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Woodmere": {
+    "complete_cost_usd": 13690000,
+    "notes": null,
+    "page": 354,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  },
+  "Woodstock": {
+    "complete_cost_usd": 8252500,
+    "notes": null,
+    "page": 358,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 255000
+  },
+  "Youngson (Pioneer)": {
+    "complete_cost_usd": 3130000,
+    "notes": null,
+    "page": 362,
+    "urm_on_database": false,
+    "urm_only_cost_usd": 0
+  }
+}
