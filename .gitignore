@@ -16,6 +16,7 @@ data/raw/LRFP_Vol2_2021.pdf
 data/raw/holmes_2024_seismic.pdf
 data/raw/metro/
 data/raw/pps_airflow_pdfs/
+data/raw/metro_bli_housing_allocation.geojson
 
 # Unrelated files that live in this directory
 plotpdx-s2-b.png

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PPS Feeder Trees — Portland Public Schools Data Explorer</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+<style>
+  :root {
+    --bg: #0e1115; --panel: #161b22; --border: #30363d; --fg: #e6edf3;
+    --muted: #7d8590; --accent: #2f81f7;
+    --fs-h1: 32px; --fs-h2: 22px; --fs-h3: 16px;
+    --fs-body: 15px; --fs-note: 15px; --fs-small: 13px; --fs-micro: 12px;
+    --nav-h: 52px; --max-w: 1600px;
+  }
+  @media (max-width: 700px) {
+    :root { --fs-h1: 24px; --fs-h2: 18px; --fs-h3: 15px; --fs-body: 15px;
+      --fs-note: 14px; --fs-small: 12.5px; --fs-micro: 11.5px; --nav-h: 48px; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg);
+    font: var(--fs-body)/1.55 "Nunito Sans", -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; }
+
+  .topnav { position: sticky; top: 0; z-index: 1100; background: rgba(14,17,21,0.92);
+    backdrop-filter: saturate(140%) blur(8px); -webkit-backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--border); }
+  .topnav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    height: var(--nav-h); display: flex; align-items: center; gap: 18px; }
+  .topnav .brand { font-weight: 600; font-size: 14px; letter-spacing: 0.2px;
+    color: var(--fg); text-decoration: none; white-space: nowrap;
+    display: inline-flex; align-items: center; }
+  .topnav .brand .dot { width: 8px; height: 8px; margin-right: 8px;
+    border-radius: 50%; background: var(--accent); flex-shrink: 0;
+    transform: translateY(-2px); }
+  .topnav .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 13px;
+    padding: 6px 10px; border-radius: 6px; transition: color 0.15s, background 0.15s; }
+  .topnav .back:hover { color: var(--fg); background: rgba(255,255,255,0.04); }
+  @media (max-width: 1000px) { .topnav-inner { padding: 0 16px; } }
+
+  header { padding: 28px 32px 24px; border-bottom: 1px solid var(--border);
+    max-width: var(--max-w); margin: 0 auto; }
+  header h1 { margin: 0 0 8px; font-size: var(--fs-h1); font-weight: 600; line-height: 1.2; }
+  header p { margin: 0 0 10px; color: var(--muted); max-width: 820px; font-size: var(--fs-note); }
+  header p:last-of-type { margin-bottom: 0; }
+  header p a { color: var(--accent); text-decoration: underline; }
+  header p a:hover { color: var(--fg); }
+
+  main { padding: 24px 32px 80px; max-width: var(--max-w); margin: 0 auto; }
+  section { margin-bottom: 40px; }
+  section > h2 { margin: 0 0 12px; font-size: var(--fs-h2); font-weight: 600;
+    border-left: 3px solid var(--accent); padding-left: 10px; line-height: 1.25; }
+  section > p.note { color: var(--muted); margin: 0 0 14px; font-size: var(--fs-note); }
+
+  .panel { background: var(--panel); border: 1px solid var(--border);
+    border-radius: 6px; overflow: hidden; }
+  .chart-card { padding: 14px; }
+
+  .feeder-trees { display: flex; flex-direction: column; gap: 14px; }
+  .feeder-tree { overflow-x: auto; padding: 14px 16px 18px; }
+  .feeder-tree h3 { margin: 2px 0 10px; font-size: 15px; color: var(--fg); }
+  .feeder-tree .mermaid { text-align: center; }
+  .feeder-tree .mermaid svg { max-width: 100%; height: auto; }
+
+  @media (max-width: 700px) {
+    header { padding: 20px 16px 18px; }
+    main { padding: 18px 16px 60px; }
+    .chart-card { padding: 10px; }
+  }
+</style>
+<script data-goatcounter="https://a9n27kisdf.execute-api.us-east-1.amazonaws.com/count/ppsdata"
+        async src="count.js"></script>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="brand" href="/"><span class="dot"></span>PPS Data Explorer</a>
+    <a class="back" href="/">← Back to dashboard</a>
+  </div>
+</div>
+
+<header>
+  <h1>Elementary → middle → high feeder trees</h1>
+  <p>
+    Which elementaries feed which middle schools, and which middles feed which high schools. Each arrow reads "feeds into". Derived from the 2024-25 PPS attendance polygons by area-of-intersection. K-8s appear once in their natural position. Jefferson High is an overlay on Grant / McDaniel / Roosevelt — its feeders (Tubman, Vernon, Ockley Green, Faubion) are also reachable from their base high schools.
+  </p>
+</header>
+
+<main>
+  <section>
+    <div class="feeder-trees">
+      <div class="panel chart-card feeder-tree">
+        <h3>Cleveland HS</h3>
+        <div class="mermaid">
+flowchart BT
+  Abernethy & Buckman & Creston & Grout --> Hosford
+  Duniway & Lewis & Llewellyn --> Sellwood
+  Hosford & Sellwood --> Cleveland
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Cleveland hs; class Hosford,Sellwood ms;
+  class Abernethy,Buckman,Creston,Grout,Duniway,Lewis,Llewellyn elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>Franklin HS</h3>
+        <div class="mermaid">
+flowchart BT
+  BridgerElem[Bridger K-8] --> BridgerMS[Bridger]
+  Arleta & Lent & Marysville --> Kellogg
+  Kelly & Whitman & Woodmere & Woodstock --> Lane
+  Glencoe --> MtTabor[Mt Tabor]
+  SunnysideElem[Sunnyside K-8] --> SunnysideMS[Sunnyside]
+  BridgerMS & Kellogg & Lane & MtTabor & SunnysideMS --> Franklin
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Franklin hs; class BridgerMS,Kellogg,Lane,MtTabor,SunnysideMS ms;
+  class BridgerElem,Arleta,Lent,Marysville,Kelly,Whitman,Woodmere,Woodstock,Glencoe,SunnysideElem elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>Grant HS</h3>
+        <div class="mermaid">
+flowchart BT
+  BevCleary[Beverly Cleary K-8] & LaurelhurstK8[Laurelhurst K-8] --> Grant
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Grant hs; class BevCleary,LaurelhurstK8 elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>Ida B. Wells HS</h3>
+        <div class="mermaid">
+flowchart BT
+  Hayhurst & Rieke --> Gray
+  CapitolHill[Capitol Hill] & Maplewood & Markham & Stephenson --> Jackson
+  Gray & Jackson --> Wells[Ida B. Wells]
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Wells hs; class Gray,Jackson ms;
+  class Hayhurst,Rieke,CapitolHill,Maplewood,Markham,Stephenson elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>Jefferson HS <span style="font-size:11px;color:var(--muted);">(overlay on Grant / McDaniel / Roosevelt)</span></h3>
+        <div class="mermaid">
+flowchart BT
+  BoiseEliot[Boise-Eliot/Humboldt] & Irvington & MLKJr[MLK Jr] & Sabin --> Tubman
+  Beach & ChiefJoseph[Chief Joseph] & Peninsula & Woodlawn --> OckleyGreen[Ockley Green]
+  Tubman & VernonK8[Vernon K-8] & OckleyGreen & FaubionK8[Faubion K-8] --> Jefferson
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Jefferson hs; class Tubman,OckleyGreen ms;
+  class BoiseEliot,Irvington,MLKJr,Sabin,Beach,ChiefJoseph,Peninsula,Woodlawn,VernonK8,FaubionK8 elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>Lincoln HS</h3>
+        <div class="mermaid">
+flowchart BT
+  Ainsworth & Bridlemile & Chapman & ForestPark[Forest Park] --> WestSylvan[West Sylvan]
+  SkylineK8[Skyline K-8] & WestSylvan --> Lincoln
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Lincoln hs; class WestSylvan ms;
+  class Ainsworth,Bridlemile,Chapman,ForestPark,SkylineK8 elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>McDaniel HS</h3>
+        <div class="mermaid">
+flowchart BT
+  Alameda & Rigler --> Beaumont
+  Atkinson & Clark & Vestal --> HarrisonPark[Harrison Park]
+  Lee & RoseCityPark[Rose City Park] & Scott --> RosewayHeights[Roseway Heights]
+  Beaumont & HarrisonPark & RosewayHeights --> McDaniel
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class McDaniel hs; class Beaumont,HarrisonPark,RosewayHeights ms;
+  class Alameda,Rigler,Atkinson,Clark,Vestal,Lee,RoseCityPark,Scott elem;
+        </div>
+      </div>
+
+      <div class="panel chart-card feeder-tree">
+        <h3>Roosevelt HS</h3>
+        <div class="mermaid">
+flowchart BT
+  JamesJohn[James John] & RosaParks[Rosa Parks] & Sitton --> George
+  AstorK8[Astor K-8] & CesarChavez[César Chávez K-8] & George --> Roosevelt
+  classDef hs fill:#1f2a3a,stroke:#58a6ff,stroke-width:1.5px,color:#e6edf3;
+  classDef ms fill:#1f2a3a,stroke:#a371f7,stroke-width:1.2px,color:#e6edf3;
+  classDef elem fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+  class Roosevelt hs; class George ms;
+  class JamesJohn,RosaParks,Sitton,AstorK8,CesarChavez elem;
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+if (window.mermaid) {
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "base",
+    securityLevel: "loose",
+    themeVariables: {
+      background: "#161b22",
+      primaryColor: "#1f2a3a",
+      primaryTextColor: "#e6edf3",
+      primaryBorderColor: "#30363d",
+      secondaryColor: "#161b22",
+      tertiaryColor: "#161b22",
+      lineColor: "#7d8590",
+      textColor: "#e6edf3",
+      fontFamily: '"Nunito Sans", -apple-system, Helvetica, Arial, sans-serif',
+      fontSize: "13px",
+    },
+    flowchart: { curve: "basis", nodeSpacing: 24, rankSpacing: 50, htmlLabels: true },
+  });
+}
+</script>
+</body>
+</html>

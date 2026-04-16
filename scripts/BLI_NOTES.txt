@@ -1,0 +1,70 @@
+Metro BLI Housing-Employment Allocation — integration notes
+=============================================================
+
+Source
+------
+City of Portland open-data ArcGIS service, layer 88:
+  https://www.portlandmaps.com/od/rest/services/COP_OpenData_PlanningDevelopment/MapServer/88
+Discoverable via Metro/Portland opendata portal:
+  https://arcg.is/19Suab0
+Fetch: scripts/fetch_metro_bli.py
+Merge: scripts/merge_bli_forecast.py
+
+What the layer is
+-----------------
+A grid-cell polygon layer that assigns a share of Metro's 2045 BLI
+(Building Land Inventory) housing + employment allocation to each cell.
+Field of interest: Forecast_Units_Prop — projected new residential units
+by grid cell by ~2035.
+
+Assumptions baked into merge_bli_forecast.py (verify before trusting numbers)
+-----------------------------------------------------------------------------
+1. Forecast_Units_Prop is a per-cell *absolute* unit count (not a fraction
+   of some district-wide total). If it turns out to be a proportion, the
+   area-weighting semantics change and totals need to be re-interpreted.
+   Observed at fetch time (2026-04-16): 68,703 cells, sum = 389,558 units.
+   That's plausible as a tri-county (~2035) forecast but much higher than
+   a Multnomah-only number — which confirms absolute units, not a
+   proportion, and also means cells cover all of Metro's UGB, not just
+   Portland. The spatial join will naturally ignore cells that don't
+   intersect a PPS catchment.
+
+2. Area weighting is computed in WGS84 degree-space (no equal-area
+   projection). Cells are small and roughly uniform across Portland, so
+   relative weights within a catchment are fine. Absolute area-weighted
+   totals will be slightly distorted by latitude but the distortion is
+   uniform across schools — use the column for ranking, not as a precise
+   unit count.
+
+3. 1-mile fallback buffer for catchment-less schools uses a lat/lon
+   degree-scaling approximation:
+     dy = 1/69 deg/mile
+     dx = 1/53 deg/mile (at ~45°N)
+   This builds an ellipse in degree-space that is ~1 mile in ground
+   distance along both axes. Good enough for this use case; would need a
+   projected CRS if we cared about sub-tenth-mile precision.
+
+4. Grid cells with geometry validity issues are repaired with buffer(0).
+   If a cell is still malformed after that, it will fail silently during
+   intersection; add a try/except or log if dataset is updated and this
+   matters.
+
+5. Uses shapely.strtree.STRtree for candidate pruning. Requires
+   shapely>=2.0 (the .query() API returns integer indices, not geometries,
+   in shapely 2.x — the script depends on that behavior).
+
+Column added to data/pps_schools.csv
+------------------------------------
+bli_forecast_units_within_catchment
+  = sum over intersecting BLI cells of:
+    Forecast_Units_Prop * (intersection_area / cell_area)
+  If no catchment: area-weighted sum over cells intersecting a 1-mile
+  elliptical buffer around the school's point location.
+
+When to re-run
+--------------
+Only when Metro or Portland BDS updates the BLI allocation dataset
+(infrequent — allocation is a multi-year forecast product, not refreshed
+monthly). Existing BDS permits layer (MapServer/89) is still the right
+source for near-term densification; BLI is the longer-horizon forecast
+complement.
