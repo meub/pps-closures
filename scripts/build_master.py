@@ -51,7 +51,7 @@ CANDIDATES = {
 URM_BUILDINGS = {
     "Ainsworth Elementary School": 7_870_000,
     "Beach Elementary School": 1_350_000,
-    "Beverly Cleary School": 14_400_000,
+    "Beverly Cleary School ": 14_400_000,
     "Buckman Elementary School": 19_750_000,
     "Capitol Hill Elementary School": 3_430_000,
     "Creston Elementary School": 10_970_000,
@@ -132,7 +132,7 @@ SEISMIC_RETROFIT = {
     "Capitol Hill Elementary School": "planned_targeted",
     "Kelly Elementary School": "planned_targeted",
     "Richmond Elementary School": "planned_targeted",
-    "Beverly Cleary School": "planned_full",
+    "Beverly Cleary School ": "planned_full",
     "Rose City Park": "planned_full",
 }
 

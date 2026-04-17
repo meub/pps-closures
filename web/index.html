@@ -468,7 +468,7 @@
   <section id="section-seismic">
     <h2>Seismic retrofit exposure (Holmes 2024)</h2>
     <p class="note">
-      Rough-order-of-magnitude cost to fully retrofit every building at each school, from the <a href="https://drive.google.com/file/d/1vN48MAzNDz1GvZ4pkSXRyAuiuNTWcnt7/view" target="_blank" rel="noopener">Holmes Engineering 2024 PPS Seismic Assessment</a>. Bar color shows <strong>whether the remaining cost is funded</strong>: <span style="color:#58a6ff">blue</span> = covered by the 2025 bond, <span style="color:rgb(249, 126, 96)">red</span> = remaining cost not in any current bond. A purple-outlined bar indicates unreinforced-masonry (URM) buildings which is the highest seismic-risk category. A <strong>•</strong> prefix indicates schools that had prior targeted or full retrofit work from earlier bonds (2012/2017/2020). That history doesn't change whether the Holmes-estimated remaining cost is funded. Portfolio remaining exposure across the 74 in-scope schools: <strong>~$800M</strong>.
+      Rough-order-of-magnitude cost to fully retrofit every building at each school, from the <a href="https://drive.google.com/file/d/1vN48MAzNDz1GvZ4pkSXRyAuiuNTWcnt7/view" target="_blank" rel="noopener">Holmes Engineering 2024 PPS Seismic Assessment</a>. Bar color shows <strong>funding</strong>: <span style="color:#58a6ff">blue</span> = covered by the 2025 bond, <span style="color:rgb(249, 126, 96)">red</span> = not in any current bond. Seven schools have a bond-funded URM-only partial retrofit but no funding for a complete retrofit — those bars are <strong>split</strong>: blue for the funded URM-only portion, red for the remaining gap. A purple-outlined bar indicates unreinforced-masonry (URM) buildings, the highest seismic-risk category. A <strong>•</strong> prefix indicates schools that had prior targeted or full retrofit work from earlier bonds (2012/2017/2020). That history doesn't change whether the Holmes-estimated remaining cost is funded. Portfolio remaining exposure across the 74 in-scope schools: <strong>~$800M</strong>.
     </p>
     <details class="note inline-expand">
       <summary>More info on this dataset</summary>
@@ -486,24 +486,30 @@
         Fifteen schools appear with <strong>$0 remaining</strong>. Holmes
         excluded them because they had recently completed modernizations,
         had in-progress bond-funded retrofits, or were newly constructed
-        to modern benchmark codes. For eight additional schools (all URM),
-        the 2025 bond voters approved the remaining cost ("Funded" blue
-        bars).
+        to modern benchmark codes. Nine additional schools have 2025 bond
+        funding. Two — Beverly Cleary and Rose City Park — have full
+        modernizations scheduled and show as <strong>solid blue bars</strong>.
+        The other seven (Vernon, Winterhaven, Ainsworth, Beach, Capitol Hill,
+        Kelly, Richmond) have a <strong>URM-only partial retrofit</strong>
+        scheduled — the bond covers the unreinforced-masonry scope but not
+        a complete retrofit. Those bars are <strong>split</strong>: blue for
+        the funded URM-only portion, red for the remaining gap to a complete
+        retrofit.
       </p>
       <p>
-        For the remaining <strong>~60 schools ("Unfunded" red bars),</strong>
-        Holmes's 2024 complete-retrofit estimate represents work that is
-        <em>not</em> in any current or approved bond. The <strong>•</strong>
-        marker indicates that some earlier bond money was spent on targeted
-        scope (typically roofs, URM bracing, or partial structural upgrades).
-        That past work reduces seismic risk but does not fund the remaining
-        Holmes estimate. A school without the <strong>•</strong> marker has
-        <em>no</em> recorded bond retrofit history at all.
+        For the remaining <strong>~60 schools with fully-red bars,</strong>
+        Holmes's 2024 complete-retrofit estimate is <em>not</em> in any
+        current or approved bond. The <strong>•</strong> marker indicates
+        that some earlier bond money was spent on targeted scope (typically
+        roofs, URM bracing, or partial structural upgrades). That past work
+        reduces seismic risk but does not fund the remaining Holmes estimate.
+        A school without the <strong>•</strong> marker has <em>no</em>
+        recorded bond retrofit history at all.
       </p>
       <p>
         Caveats: treat the Holmes numbers as order-of-magnitude. URM
-        classification comes from Holmes's 2024 URM database. The chart
-        ranks by the complete-retrofit total (not URM-only), so URM and
+        classification comes from Holmes's 2024 URM database. Bars rank by
+        the complete-retrofit total (blue + red for split bars), so URM and
         non-URM schools share one axis. Funded vs. unfunded is derived
         from the <a href="https://bond.pps.net/seismic-improvements" target="_blank" rel="noopener">PPS bond page</a> and reflects the publicly announced
         2025 bond scope as of 2026-04.
@@ -1652,14 +1658,11 @@
     // y-axis (horizontal bar: first element goes to the bottom).
     rows.sort((a, b) => a.retrofit_cost_remaining_usd - b.retrofit_cost_remaining_usd);
 
-    const COLOR_DONE = "#58a6ff";       // $0 remaining
     const COLOR_FUNDED = "#58a6ff";     // 2025 bond covers the remaining cost
     const COLOR_UNFUNDED = "rgb(249, 126, 96)";   // remaining cost not in any current bond
     const URM_BORDER = "#a371f7";       // purple outline for URM buildings
 
     function statusClass(s) {
-      // Only funding status. Past retrofit history is shown separately via a
-      // "•" marker — it doesn't change whether the *remaining* cost is funded.
       if (!s.retrofit_cost_remaining_usd) return "done";
       const st = s.seismic_retrofit_status;
       if (st === "planned_full" || st === "planned_targeted") return "funded";
@@ -1668,11 +1671,6 @@
     function hasPriorRetrofit(s) {
       const st = s.seismic_retrofit_status;
       return st === "full" || st === "targeted";
-    }
-    function colorFor(cls) {
-      return cls === "done" ? COLOR_DONE
-           : cls === "funded" ? COLOR_FUNDED
-           : COLOR_UNFUNDED;
     }
     function fmtUSD(v) {
       if (v == null) return "—";
@@ -1691,31 +1689,89 @@
         const prefix = (urm || prior) ? `${urm}${prior} ` : "";
         return `${prefix}${nm}`;
       });
-      const colors = rows.map(s => colorFor(statusClass(s)));
       const borders = rows.map(s => s.is_urm_building ? URM_BORDER : "#0e1115");
       const borderWidths = rows.map(s => s.is_urm_building ? 1.5 : 0.5);
 
-      const trace = {
-        type: "bar", orientation: "h",
-        x: rows.map(s => s.retrofit_cost_remaining_usd),
-        y: labels,
+      // Most schools are wholly funded or wholly unfunded. planned_targeted
+      // schools split: the 2025 bond covers the URM-only scope; the gap to a
+      // complete retrofit stays unfunded.
+      const funded = [];
+      const unfunded = [];
+      rows.forEach(s => {
+        const total = s.retrofit_cost_remaining_usd;
+        const cls = statusClass(s);
+        let f = 0, u = null;
+        if (cls === "done") {
+          f = 0; u = null;
+        } else if (cls === "funded") {
+          if (s.seismic_retrofit_status === "planned_targeted" &&
+              s.urm_retrofit_cost_usd && s.urm_retrofit_cost_usd < total) {
+            f = s.urm_retrofit_cost_usd;
+            u = total - f;
+          } else {
+            f = total; u = null;
+          }
+        } else {
+          f = null; u = total;
+        }
+        funded.push(f);
+        unfunded.push(u);
+      });
+
+      // Text on the "tail" segment only, so the label sits outside the
+      // whole stacked bar rather than between the two segments.
+      const fundedText = funded.map((v, i) => {
+        if (v == null) return "";
+        if (unfunded[i] != null && unfunded[i] > 0) return "";
+        return fmtUSD(rows[i].retrofit_cost_remaining_usd);
+      });
+      const unfundedText = unfunded.map((v, i) => {
+        if (v == null) return "";
+        return fmtUSD(rows[i].retrofit_cost_remaining_usd);
+      });
+
+      const customdata = rows.map(s => [
+        s.is_urm_building ? "Yes" : "No",
+        s.urm_retrofit_cost_usd,
+        s.seismic_retrofit_status || "none",
+        hasPriorRetrofit(s) ? "Yes" : "No",
+        s.retrofit_cost_remaining_usd,
+      ]);
+
+      const fundedTrace = {
+        type: "bar", orientation: "h", name: "Funded (2025 bond)",
+        x: funded, y: labels,
         showlegend: false,
-        marker: { color: colors, line: { color: borders, width: borderWidths } },
-        text: rows.map(s => fmtUSD(s.retrofit_cost_remaining_usd)),
+        marker: { color: COLOR_FUNDED, line: { color: borders, width: borderWidths } },
+        text: fundedText,
         textposition: "outside",
         textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
         cliponaxis: false,
-        customdata: rows.map(s => [
-          s.is_urm_building ? "Yes" : "No",
-          s.urm_retrofit_cost_usd,
-          s.seismic_retrofit_status || "none",
-          hasPriorRetrofit(s) ? "Yes" : "No",
-        ]),
+        customdata,
         hovertemplate: "<b>%{y}</b><br>" +
-          "Remaining retrofit cost: %{x:$,.0f}<br>" +
+          "Funded (2025 bond): %{x:$,.0f}<br>" +
+          "Complete retrofit ROM: %{customdata[4]:$,.0f}<br>" +
+          "URM-only scope: %{customdata[1]:$,.0f}<br>" +
           "URM building: %{customdata[0]}<br>" +
-          "URM-only retrofit option: %{customdata[1]:$,.0f}<br>" +
-          "Prior retrofit work done: %{customdata[3]}<br>" +
+          "Prior retrofit work: %{customdata[3]}<br>" +
+          "Status: %{customdata[2]}<extra></extra>",
+      };
+      const unfundedTrace = {
+        type: "bar", orientation: "h", name: "Unfunded",
+        x: unfunded, y: labels,
+        showlegend: false,
+        marker: { color: COLOR_UNFUNDED, line: { color: borders, width: borderWidths } },
+        text: unfundedText,
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata,
+        hovertemplate: "<b>%{y}</b><br>" +
+          "Unfunded gap: %{x:$,.0f}<br>" +
+          "Complete retrofit ROM: %{customdata[4]:$,.0f}<br>" +
+          "URM-only scope: %{customdata[1]:$,.0f}<br>" +
+          "URM building: %{customdata[0]}<br>" +
+          "Prior retrofit work: %{customdata[3]}<br>" +
           "Status: %{customdata[2]}<extra></extra>",
       };
       const legendTraces = [
@@ -1727,7 +1783,8 @@
           marker: { color: "#161b22", line: { color: URM_BORDER, width: 1.5 } },
           showlegend: true, hoverinfo: "skip" },
       ];
-      Plotly.react("plot-seismic", [trace, ...legendTraces], Object.assign(baseLayout(), {
+      Plotly.react("plot-seismic", [fundedTrace, unfundedTrace, ...legendTraces], Object.assign(baseLayout(), {
+        barmode: "stack",
         margin: mobile
           ? { l: 150, r: 70, t: 110, b: 20 }
           : { l: 240, r: 120, t: 80, b: 20 },
