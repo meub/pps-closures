@@ -234,6 +234,11 @@
 
   .table-controls { padding: 10px 14px; border-bottom: 1px solid var(--border);
     display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: var(--fs-small); }
+  .map-filters { margin: 0 0 10px 0;
+    display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: var(--fs-small); color: var(--muted);
+    user-select: none; -webkit-user-select: none; }
+  .map-filters label { color: var(--muted); cursor: pointer; }
+  .map-filters .sep { border-left: 1px solid var(--border); padding-left: 14px; }
   .table-controls input[type="search"] { background: #0d1117; color: var(--fg);
     border: 1px solid var(--border); border-radius: 4px; padding: 5px 9px; width: 240px;
     font: inherit; max-width: 100%; }
@@ -323,6 +328,7 @@
       <a href="#section-sustainability">Sustainability</a>
       <a href="#section-forecast">Forecast</a>
       <a href="#section-seismic">Seismic</a>
+      <a href="#section-urm-retrofit">URM</a>
       <a href="#section-transport">Transportation</a>
       <a href="#section-ratios">Ratios</a>
       <a href="#section-dli">DLI</a>
@@ -396,6 +402,14 @@
     <p class="note">
       Each marker sized by 2025-26 enrollment and labeled with building utilization (enrollment ÷ 2021 functional capacity). Red fill marks schools at less than 50% building utilization. A purple ring indicates an unreinforced masonry (URM) building.
     </p>
+    <div class="map-filters">
+      <span>Show:</span>
+      <label><input id="map-filter-elementary" type="checkbox" checked> Elementary</label>
+      <label><input id="map-filter-k8" type="checkbox" checked> K-8</label>
+      <label><input id="map-filter-middle" type="checkbox" checked> Middle</label>
+      <label><input id="map-filter-alternative" type="checkbox" checked> Alternative</label>
+      <label class="sep"><input id="map-filter-non-neighborhood" type="checkbox"> Hide focus-option &amp; alternative programs</label>
+    </div>
     <div class="panel"><div id="map"></div></div>
   </section>
 
@@ -516,6 +530,14 @@
       </p>
     </details>
     <div class="panel chart-card"><div id="plot-seismic" style="height: 1400px;"></div></div>
+  </section>
+
+  <section id="section-urm-retrofit">
+    <h2>URM-only retrofit cost (URM buildings only)</h2>
+    <p class="note">
+      Subset of the <strong>18 URM (unreinforced-masonry) schools</strong> with a non-zero Holmes 2024 URM-only partial-retrofit ROM, ranked by that cost. <span style="color:#58a6ff">Blue</span> = 2025 bond covers the URM-only scope (either through a planned URM-only retrofit or a planned full modernization); <span style="color:rgb(249, 126, 96)">red</span> = not in any current bond. A URM-only retrofit targets the highest life-safety risk (wall collapse, falling masonry) without bringing the rest of the school to modern benchmark codes.
+    </p>
+    <div class="panel chart-card"><div id="plot-urm-retrofit" style="height: 620px;"></div></div>
   </section>
 
   <section id="section-transport">
@@ -882,6 +904,7 @@
     mapEl.classList.remove("scroll-enabled");
   });
 
+  const mapMarkers = [];
   schools.forEach(s => {
     if (s.latitude == null || s.longitude == null) return;
     const urm = s.is_urm_building === true || s.is_urm_building === "True";
@@ -994,6 +1017,32 @@
       ).join("") +
       `</div>`;
     marker.bindPopup(popupHtml, { maxWidth: 340, minWidth: 300 });
+    mapMarkers.push({ marker, school: s });
+  });
+
+  function isNonNeighborhood(s) {
+    return s.has_focus_option === true || s.level === "alternative";
+  }
+  function applyMapFilters() {
+    const show = {
+      elementary: document.getElementById("map-filter-elementary").checked,
+      k8: document.getElementById("map-filter-k8").checked,
+      middle: document.getElementById("map-filter-middle").checked,
+      alternative: document.getElementById("map-filter-alternative").checked,
+    };
+    const hideNonNeigh = document.getElementById("map-filter-non-neighborhood").checked;
+    mapMarkers.forEach(({ marker, school }) => {
+      const lvl = school.level === "other" ? "k8" : school.level;
+      let visible = !!show[lvl];
+      if (hideNonNeigh && isNonNeighborhood(school)) visible = false;
+      if (visible && !map.hasLayer(marker)) marker.addTo(map);
+      else if (!visible && map.hasLayer(marker)) map.removeLayer(marker);
+    });
+  }
+  ["map-filter-elementary", "map-filter-k8", "map-filter-middle",
+   "map-filter-alternative", "map-filter-non-neighborhood"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", applyMapFilters);
   });
 
   // ---------- SCATTERS ----------
@@ -1803,6 +1852,78 @@
     renderSeismic();
     let tS;
     window.addEventListener("resize", () => { clearTimeout(tS); tS = setTimeout(renderSeismic, 150); });
+  })();
+
+  // ---------- URM-ONLY RETROFIT COST (URM schools only) ----------
+  (function () {
+    const rows = schools.filter(s =>
+      s.is_urm_building && s.urm_retrofit_cost_usd && s.urm_retrofit_cost_usd > 0);
+    if (!rows.length) return;
+    rows.sort((a, b) => a.urm_retrofit_cost_usd - b.urm_retrofit_cost_usd);
+
+    const COLOR_FUNDED = "#58a6ff";
+    const COLOR_UNFUNDED = "rgb(249, 126, 96)";
+
+    function isFunded(s) {
+      const st = s.seismic_retrofit_status;
+      return st === "planned_full" || st === "planned_targeted";
+    }
+    function fmtUSD(v) {
+      if (v == null) return "—";
+      if (v >= 1e6) return "$" + (v / 1e6).toFixed(1) + "M";
+      return "$" + (v / 1e3).toFixed(0) + "K";
+    }
+
+    function renderUrm() {
+      const mobile = window.innerWidth < 700;
+      const truncate = (name, n) => name.length > n ? name.slice(0, n - 1) + "…" : name;
+      const labels = rows.map(s => mobile ? truncate(s.school_name, 18) : s.school_name);
+      const colors = rows.map(s => isFunded(s) ? COLOR_FUNDED : COLOR_UNFUNDED);
+
+      const trace = {
+        type: "bar", orientation: "h",
+        x: rows.map(s => s.urm_retrofit_cost_usd),
+        y: labels,
+        showlegend: false,
+        marker: { color: colors, line: { width: 0.5, color: "#0e1115" } },
+        text: rows.map(s => fmtUSD(s.urm_retrofit_cost_usd)),
+        textposition: "outside",
+        textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
+        cliponaxis: false,
+        customdata: rows.map(s => [
+          s.retrofit_cost_remaining_usd != null ? fmtUSD(s.retrofit_cost_remaining_usd) : "—",
+          s.seismic_retrofit_status || "none",
+        ]),
+        hovertemplate: "<b>%{y}</b><br>" +
+          "URM-only ROM: %{x:$,.0f}<br>" +
+          "Complete retrofit ROM: %{customdata[0]}<br>" +
+          "Status: %{customdata[1]}<extra></extra>",
+      };
+      const legendTraces = [
+        { type: "bar", x: [null], y: [null], name: "Unfunded",
+          marker: { color: COLOR_UNFUNDED }, showlegend: true, hoverinfo: "skip" },
+        { type: "bar", x: [null], y: [null], name: "Funded (2025 bond)",
+          marker: { color: COLOR_FUNDED }, showlegend: true, hoverinfo: "skip" },
+      ];
+      Plotly.react("plot-urm-retrofit", [trace, ...legendTraces], Object.assign(baseLayout(), {
+        margin: mobile
+          ? { l: 150, r: 70, t: 110, b: 20 }
+          : { l: 240, r: 120, t: 80, b: 20 },
+        xaxis: { title: "URM-only retrofit cost (ROM, Holmes 2024)",
+          tickprefix: "$", tickformat: ".2s",
+          gridcolor: "#30363d", zerolinecolor: "#30363d", side: "top" },
+        yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
+        showlegend: true,
+        legend: mobile
+          ? { orientation: "h", x: 0.5, y: 1, xref: "paper", yref: "container", xanchor: "center", yanchor: "top",
+              bgcolor: "rgba(0,0,0,0)", font: { size: 10, color: "#e6edf3" } }
+          : { orientation: "h", x: 1, y: 1, xref: "paper", yref: "container", xanchor: "right", yanchor: "top",
+              bgcolor: "rgba(0,0,0,0)", font: { size: 10, color: "#e6edf3" } },
+      }), { displayModeBar: false, responsive: true });
+    }
+    renderUrm();
+    let tU;
+    window.addEventListener("resize", () => { clearTimeout(tU); tU = setTimeout(renderUrm, 150); });
   })();
 
   // ---------- VENTILATION RANKING (% rooms below 3 ACH) ----------
