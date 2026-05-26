@@ -118,8 +118,10 @@
       "pca_y": -0.774,
       "enrollment_pct_change_7yr": -0.4182,
       "utilization_pct_2034_35": 0.3047,
-      "nearest_alt_school_mi": 1.91,
-      "nearest_alt_school_name": "James John Elementary School"
+      "nearest_alt_school_mi": 1.06,
+      "nearest_alt_school_name": "Peninsula Elementary School",
+      "nearest_alt_drive_min": 4.2,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Whitman Elementary School",
@@ -239,8 +241,10 @@
       "pca_y": -0.56,
       "enrollment_pct_change_7yr": -0.1891,
       "utilization_pct_2034_35": 0.4787,
-      "nearest_alt_school_mi": 0.88,
-      "nearest_alt_school_name": "Kelly Elementary School"
+      "nearest_alt_school_mi": 0.76,
+      "nearest_alt_school_name": "Woodmere Elementary School",
+      "nearest_alt_drive_min": 3.2,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Skyline Elementary School",
@@ -360,8 +364,10 @@
       "pca_y": -1.985,
       "enrollment_pct_change_7yr": -0.2445,
       "utilization_pct_2034_35": 0.7447,
-      "nearest_alt_school_mi": 6.45,
-      "nearest_alt_school_name": "Astor Elementary School"
+      "nearest_alt_school_mi": 8.99,
+      "nearest_alt_school_name": "Astor Elementary School",
+      "nearest_alt_drive_min": 21.3,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Creston Elementary School",
@@ -481,8 +487,10 @@
       "pca_y": -3.051,
       "enrollment_pct_change_7yr": -0.3934,
       "utilization_pct_2034_35": 0.3674,
-      "nearest_alt_school_mi": 0.8,
-      "nearest_alt_school_name": "Richmond Elementary School"
+      "nearest_alt_school_mi": 1.19,
+      "nearest_alt_school_name": "Richmond Elementary School",
+      "nearest_alt_drive_min": 5.1,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Odyssey Program (K-8)",
@@ -602,8 +610,10 @@
       "pca_y": null,
       "enrollment_pct_change_7yr": null,
       "utilization_pct_2034_35": null,
-      "nearest_alt_school_mi": 3.91,
-      "nearest_alt_school_name": "Winterhaven School"
+      "nearest_alt_school_mi": null,
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Woodmere Elementary School",
@@ -723,8 +733,10 @@
       "pca_y": -0.837,
       "enrollment_pct_change_7yr": -0.2492,
       "utilization_pct_2034_35": 0.463,
-      "nearest_alt_school_mi": 0.6,
-      "nearest_alt_school_name": "Kelly Elementary School"
+      "nearest_alt_school_mi": 0.76,
+      "nearest_alt_school_name": "Whitman Elementary School",
+      "nearest_alt_drive_min": 3.2,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Arleta Elementary School",
@@ -844,8 +856,10 @@
       "pca_y": -2.593,
       "enrollment_pct_change_7yr": -0.5306,
       "utilization_pct_2034_35": 0.3204,
-      "nearest_alt_school_mi": 0.82,
-      "nearest_alt_school_name": "Woodstock Elementary School"
+      "nearest_alt_school_mi": 1.04,
+      "nearest_alt_school_name": "Woodstock Elementary School",
+      "nearest_alt_drive_min": 3.3,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Peninsula Elementary School",
@@ -965,8 +979,10 @@
       "pca_y": -0.5,
       "enrollment_pct_change_7yr": -0.0981,
       "utilization_pct_2034_35": 0.3703,
-      "nearest_alt_school_mi": 1.79,
-      "nearest_alt_school_name": "Beach Elementary School"
+      "nearest_alt_school_mi": 1.09,
+      "nearest_alt_school_name": "Rosa Parks Elementary School",
+      "nearest_alt_drive_min": 4.6,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Chief Joseph Elementary School",
@@ -1086,8 +1102,10 @@
       "pca_y": -1.984,
       "enrollment_pct_change_7yr": -0.3101,
       "utilization_pct_2034_35": 0.501,
-      "nearest_alt_school_mi": 1.06,
-      "nearest_alt_school_name": "Beach Elementary School"
+      "nearest_alt_school_mi": 1.19,
+      "nearest_alt_school_name": "Peninsula Elementary School",
+      "nearest_alt_drive_min": 4.3,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Lee Elementary School",
@@ -1207,8 +1225,10 @@
       "pca_y": -0.633,
       "enrollment_pct_change_7yr": -0.0906,
       "utilization_pct_2034_35": 0.5102,
-      "nearest_alt_school_mi": 1.1,
-      "nearest_alt_school_name": "Vestal Elementary School"
+      "nearest_alt_school_mi": 1.59,
+      "nearest_alt_school_name": "Vestal Elementary School",
+      "nearest_alt_drive_min": 4.9,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Lent Elementary School",
@@ -1328,8 +1348,10 @@
       "pca_y": -0.556,
       "enrollment_pct_change_7yr": -0.4941,
       "utilization_pct_2034_35": 0.3989,
-      "nearest_alt_school_mi": 0.93,
-      "nearest_alt_school_name": "Kelly Elementary School"
+      "nearest_alt_school_mi": 1.27,
+      "nearest_alt_school_name": "Kelly Elementary School",
+      "nearest_alt_drive_min": 4.5,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Irvington Elementary School",
@@ -1449,8 +1471,10 @@
       "pca_y": -0.42,
       "enrollment_pct_change_7yr": -0.236,
       "utilization_pct_2034_35": 0.4059,
-      "nearest_alt_school_mi": 0.85,
-      "nearest_alt_school_name": "Sabin Elementary School"
+      "nearest_alt_school_mi": 0.97,
+      "nearest_alt_school_name": "Sabin Elementary School",
+      "nearest_alt_drive_min": 3.4,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Lewis Elementary School",
@@ -1570,8 +1594,10 @@
       "pca_y": -1.335,
       "enrollment_pct_change_7yr": -0.3282,
       "utilization_pct_2034_35": 0.4437,
-      "nearest_alt_school_mi": 0.63,
-      "nearest_alt_school_name": "Woodstock Elementary School"
+      "nearest_alt_school_mi": 0.98,
+      "nearest_alt_school_name": "Woodstock Elementary School",
+      "nearest_alt_drive_min": 3.7,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Forest Park Elementary School",
@@ -1691,8 +1717,10 @@
       "pca_y": -2.791,
       "enrollment_pct_change_7yr": -0.3684,
       "utilization_pct_2034_35": 0.4982,
-      "nearest_alt_school_mi": 3.53,
-      "nearest_alt_school_name": "James John Elementary School"
+      "nearest_alt_school_mi": 5.5,
+      "nearest_alt_school_name": "Chapman Elementary School",
+      "nearest_alt_drive_min": 14.1,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Rieke Elementary School",
@@ -1812,8 +1840,10 @@
       "pca_y": -2.197,
       "enrollment_pct_change_7yr": -0.2982,
       "utilization_pct_2034_35": 0.5,
-      "nearest_alt_school_mi": 0.84,
-      "nearest_alt_school_name": "Capitol Hill Elementary School"
+      "nearest_alt_school_mi": 1.5,
+      "nearest_alt_school_name": "Capitol Hill Elementary School",
+      "nearest_alt_drive_min": 5.4,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Abernethy Elementary School",
@@ -1933,8 +1963,10 @@
       "pca_y": -2.184,
       "enrollment_pct_change_7yr": -0.4827,
       "utilization_pct_2034_35": 0.4195,
-      "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_mi": 1.65,
+      "nearest_alt_school_name": "Richmond Elementary School",
+      "nearest_alt_drive_min": 5.6,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Ainsworth Elementary School",
@@ -2055,7 +2087,9 @@
       "enrollment_pct_change_7yr": -0.096,
       "utilization_pct_2034_35": 0.8884,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Alameda Elementary School",
@@ -2176,7 +2210,9 @@
       "enrollment_pct_change_7yr": -0.2945,
       "utilization_pct_2034_35": 0.5909,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Alliance High School",
@@ -2297,7 +2333,9 @@
       "enrollment_pct_change_7yr": 0.0914,
       "utilization_pct_2034_35": null,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Astor Elementary School",
@@ -2418,7 +2456,9 @@
       "enrollment_pct_change_7yr": -0.076,
       "utilization_pct_2034_35": 0.6834,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Atkinson Elementary School",
@@ -2539,7 +2579,9 @@
       "enrollment_pct_change_7yr": -0.1265,
       "utilization_pct_2034_35": 0.6667,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Beach Elementary School",
@@ -2659,8 +2701,10 @@
       "pca_y": -0.189,
       "enrollment_pct_change_7yr": -0.3333,
       "utilization_pct_2034_35": 0.3187,
-      "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_mi": 1.38,
+      "nearest_alt_school_name": "Boise-Eliot Elementary School",
+      "nearest_alt_drive_min": 5.4,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Beaumont Middle School",
@@ -2781,7 +2825,9 @@
       "enrollment_pct_change_7yr": -0.2715,
       "utilization_pct_2034_35": 0.572,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Beverly Cleary School ",
@@ -2902,7 +2948,9 @@
       "enrollment_pct_change_7yr": -0.3862,
       "utilization_pct_2034_35": 0.4764,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Boise-Eliot Elementary School",
@@ -3023,7 +3071,9 @@
       "enrollment_pct_change_7yr": -0.0484,
       "utilization_pct_2034_35": 0.4117,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Bridger Creative Science School",
@@ -3144,7 +3194,9 @@
       "enrollment_pct_change_7yr": -0.1151,
       "utilization_pct_2034_35": 0.8039,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Bridlemile Elementary School",
@@ -3265,7 +3317,9 @@
       "enrollment_pct_change_7yr": -0.1834,
       "utilization_pct_2034_35": 0.5876,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Buckman Elementary School",
@@ -3386,7 +3440,9 @@
       "enrollment_pct_change_7yr": -0.3711,
       "utilization_pct_2034_35": 0.3486,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Capitol Hill Elementary School",
@@ -3507,7 +3563,9 @@
       "enrollment_pct_change_7yr": -0.2573,
       "utilization_pct_2034_35": 0.6162,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Chapman Elementary School",
@@ -3628,7 +3686,9 @@
       "enrollment_pct_change_7yr": -0.312,
       "utilization_pct_2034_35": 0.5502,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Clark Elementary School",
@@ -3749,7 +3809,9 @@
       "enrollment_pct_change_7yr": null,
       "utilization_pct_2034_35": 0.5071,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "C\u00e9sar Ch\u00e1vez K-8 School",
@@ -3870,7 +3932,9 @@
       "enrollment_pct_change_7yr": -0.1945,
       "utilization_pct_2034_35": 0.6503,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Dr. Martin Luther King Jr. School",
@@ -3991,7 +4055,9 @@
       "enrollment_pct_change_7yr": 0.0257,
       "utilization_pct_2034_35": 0.4598,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Duniway Elementary School",
@@ -4112,7 +4178,9 @@
       "enrollment_pct_change_7yr": -0.2817,
       "utilization_pct_2034_35": 0.5815,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Faubion Elementary School",
@@ -4233,7 +4301,9 @@
       "enrollment_pct_change_7yr": -0.115,
       "utilization_pct_2034_35": 0.8127,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "George Middle School",
@@ -4354,7 +4424,9 @@
       "enrollment_pct_change_7yr": -0.1544,
       "utilization_pct_2034_35": 0.5867,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Glencoe Elementary School",
@@ -4475,7 +4547,9 @@
       "enrollment_pct_change_7yr": -0.2439,
       "utilization_pct_2034_35": 0.475,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Gray Middle School",
@@ -4596,7 +4670,9 @@
       "enrollment_pct_change_7yr": -0.203,
       "utilization_pct_2034_35": 0.5627,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Grout Elementary School",
@@ -4717,7 +4793,9 @@
       "enrollment_pct_change_7yr": -0.144,
       "utilization_pct_2034_35": 0.4922,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Harriet Tubman Middle School",
@@ -4838,7 +4916,9 @@
       "enrollment_pct_change_7yr": -0.1792,
       "utilization_pct_2034_35": 0.3716,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Harrison Park School",
@@ -4959,7 +5039,9 @@
       "enrollment_pct_change_7yr": -0.3627,
       "utilization_pct_2034_35": 0.3658,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Hayhurst Elementary School",
@@ -5080,7 +5162,9 @@
       "enrollment_pct_change_7yr": -0.1911,
       "utilization_pct_2034_35": 0.5092,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Hosford Middle School",
@@ -5201,7 +5285,9 @@
       "enrollment_pct_change_7yr": -0.102,
       "utilization_pct_2034_35": 0.4555,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Jackson Middle School",
@@ -5322,7 +5408,9 @@
       "enrollment_pct_change_7yr": -0.079,
       "utilization_pct_2034_35": 0.598,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "James John Elementary School",
@@ -5443,7 +5531,9 @@
       "enrollment_pct_change_7yr": 0.049,
       "utilization_pct_2034_35": 0.6452,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Kellogg Middle School",
@@ -5564,7 +5654,9 @@
       "enrollment_pct_change_7yr": null,
       "utilization_pct_2034_35": 0.5604,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Kelly Elementary School",
@@ -5685,7 +5777,9 @@
       "enrollment_pct_change_7yr": -0.1747,
       "utilization_pct_2034_35": 0.5134,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Lane Middle School",
@@ -5806,7 +5900,9 @@
       "enrollment_pct_change_7yr": 0.0393,
       "utilization_pct_2034_35": 0.4442,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Laurelhurst Elementary School",
@@ -5927,7 +6023,9 @@
       "enrollment_pct_change_7yr": -0.1127,
       "utilization_pct_2034_35": 0.8447,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Llewellyn Elementary School",
@@ -6048,7 +6146,9 @@
       "enrollment_pct_change_7yr": -0.2887,
       "utilization_pct_2034_35": 0.6345,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Maplewood Elementary School",
@@ -6169,7 +6269,9 @@
       "enrollment_pct_change_7yr": -0.248,
       "utilization_pct_2034_35": 0.5824,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Markham Elementary School",
@@ -6290,7 +6392,9 @@
       "enrollment_pct_change_7yr": -0.2399,
       "utilization_pct_2034_35": 0.5289,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Marysville Elementary School",
@@ -6411,7 +6515,9 @@
       "enrollment_pct_change_7yr": -0.2185,
       "utilization_pct_2034_35": 0.4465,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Metropolitan Learning Center",
@@ -6532,7 +6638,9 @@
       "enrollment_pct_change_7yr": -0.3227,
       "utilization_pct_2034_35": null,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Mt Tabor Middle School",
@@ -6653,7 +6761,9 @@
       "enrollment_pct_change_7yr": -0.4197,
       "utilization_pct_2034_35": 0.5117,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Ockley Green Middle School",
@@ -6774,7 +6884,9 @@
       "enrollment_pct_change_7yr": -0.0891,
       "utilization_pct_2034_35": 0.5501,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Richmond Elementary School",
@@ -6895,7 +7007,9 @@
       "enrollment_pct_change_7yr": -0.1899,
       "utilization_pct_2034_35": 0.7552,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Rigler Elementary School",
@@ -7016,7 +7130,9 @@
       "enrollment_pct_change_7yr": -0.1128,
       "utilization_pct_2034_35": 0.5076,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Rose City Park",
@@ -7137,7 +7253,9 @@
       "enrollment_pct_change_7yr": -0.2147,
       "utilization_pct_2034_35": 0.6572,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Roseway Heights School",
@@ -7258,7 +7376,9 @@
       "enrollment_pct_change_7yr": -0.0256,
       "utilization_pct_2034_35": 0.675,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Sabin Elementary School",
@@ -7378,8 +7498,10 @@
       "pca_y": -1.833,
       "enrollment_pct_change_7yr": -0.4027,
       "utilization_pct_2034_35": 0.4114,
-      "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_mi": 0.86,
+      "nearest_alt_school_name": "Alameda Elementary School",
+      "nearest_alt_drive_min": 3.1,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Scott Elementary School",
@@ -7500,7 +7622,9 @@
       "enrollment_pct_change_7yr": 0.0415,
       "utilization_pct_2034_35": 0.6936,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Sellwood Middle School",
@@ -7621,7 +7745,9 @@
       "enrollment_pct_change_7yr": -0.0767,
       "utilization_pct_2034_35": 0.5534,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Sitton Elementary School",
@@ -7742,7 +7868,9 @@
       "enrollment_pct_change_7yr": -0.0572,
       "utilization_pct_2034_35": 0.666,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Stephenson Elementary School",
@@ -7862,8 +7990,10 @@
       "pca_y": -0.86,
       "enrollment_pct_change_7yr": -0.1902,
       "utilization_pct_2034_35": 0.4438,
-      "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_mi": 2.02,
+      "nearest_alt_school_name": "Markham Elementary School",
+      "nearest_alt_drive_min": 7.2,
+      "is_transport_candidate": true
     },
     {
       "school_name": "Sunnyside Environmental School",
@@ -7984,7 +8114,9 @@
       "enrollment_pct_change_7yr": -0.1652,
       "utilization_pct_2034_35": 0.8168,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Vernon Elementary School",
@@ -8105,7 +8237,9 @@
       "enrollment_pct_change_7yr": -0.0128,
       "utilization_pct_2034_35": 0.8117,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Vestal Elementary School",
@@ -8225,8 +8359,10 @@
       "pca_y": 1.374,
       "enrollment_pct_change_7yr": 0.0515,
       "utilization_pct_2034_35": 0.4693,
-      "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_mi": 1.24,
+      "nearest_alt_school_name": "Clark Elementary School",
+      "nearest_alt_drive_min": 3.8,
+      "is_transport_candidate": true
     },
     {
       "school_name": "West Sylvan Middle School",
@@ -8347,7 +8483,9 @@
       "enrollment_pct_change_7yr": -0.1667,
       "utilization_pct_2034_35": 0.613,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Winterhaven School",
@@ -8468,7 +8606,9 @@
       "enrollment_pct_change_7yr": -0.0156,
       "utilization_pct_2034_35": 1.092,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Woodlawn Elementary School",
@@ -8589,7 +8729,9 @@
       "enrollment_pct_change_7yr": -0.0358,
       "utilization_pct_2034_35": 0.4348,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "Woodstock Elementary School",
@@ -8710,7 +8852,9 @@
       "enrollment_pct_change_7yr": -0.3321,
       "utilization_pct_2034_35": 0.4799,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "da Vinci Middle School",
@@ -8831,7 +8975,9 @@
       "enrollment_pct_change_7yr": -0.0592,
       "utilization_pct_2034_35": 0.4958,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     },
     {
       "school_name": "ACCESS Academy",
@@ -8952,7 +9098,9 @@
       "enrollment_pct_change_7yr": null,
       "utilization_pct_2034_35": null,
       "nearest_alt_school_mi": null,
-      "nearest_alt_school_name": null
+      "nearest_alt_school_name": null,
+      "nearest_alt_drive_min": null,
+      "is_transport_candidate": false
     }
   ],
   "meta": {
@@ -9353,16 +9501,28 @@
       "fmt": "int"
     },
     "nearest_alt_school_mi": {
-      "label": "Miles to nearest alt.",
-      "desc": "Great-circle distance from this low-enrollment school to the nearest larger same-grade-band school (elementary, k8, middle, or alternative). A rough proxy for transportation impact if this school were closed; actual PPS reassignment may differ.",
-      "source": "Derived from NCES CCD coordinates",
+      "label": "Drive miles to nearest alt.",
+      "desc": "Road-network driving distance (via OSRM) from this low-enrollment school to the nearest same-grade-band neighborhood school (elementary, k8, middle, or alternative). Focus-option / lottery schools are excluded as destinations since they admit district-wide, not by catchment. A rough proxy for transportation impact if this school were closed; actual PPS reassignment may differ.",
+      "source": "Derived: OSRM driving routes over NCES CCD coordinates",
       "fmt": "miles"
     },
     "nearest_alt_school_name": {
       "label": "Nearest alt. school",
-      "desc": "Name of the closest larger school of the same grade band.",
-      "source": "Derived from NCES CCD coordinates",
+      "desc": "Name of the closest same-grade-band neighborhood school by driving distance.",
+      "source": "Derived: OSRM driving routes over NCES CCD coordinates",
       "fmt": "text"
+    },
+    "nearest_alt_drive_min": {
+      "label": "Drive time to nearest alt.",
+      "desc": "Estimated free-flow driving time (via OSRM) to the nearest same-grade-band neighborhood school. Excludes traffic and pickup/dropoff time.",
+      "source": "Derived: OSRM driving routes over NCES CCD coordinates",
+      "fmt": "minutes"
+    },
+    "is_transport_candidate": {
+      "label": "Low-enroll. (transport set)",
+      "desc": "One of the 20 lowest-enrollment in-scope schools by 2025-26 enrollment, excluding focus-option / lottery schools. Defines the schools analyzed in the transportation-impact section.",
+      "source": "Derived from ODE 2025-26 enrollment",
+      "fmt": "bool"
     },
     "enrollment_2018": {
       "label": "Enrollment 2018",

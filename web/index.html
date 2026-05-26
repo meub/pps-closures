@@ -558,14 +558,16 @@
   </section>
 
   <section id="section-transport">
-    <h2>Transportation impact: miles to nearest same-level alternative</h2>
+    <h2>Transportation impact: driving distance to nearest same-level alternative</h2>
     <p class="note">
-      Great-circle distance from each low-enrollment school to the nearest larger school
-      of the same grade band (elementary, K-8, middle, alternative). A rough lower bound on
-      how far families would have to travel if their school were closed; actual PPS
-      reassignment may differ. Bars are labeled with the nearest alternative school.
+      The <strong>20 lowest-enrollment</strong> schools, by road-network <strong>driving distance</strong>
+      (via <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>) to the nearest
+      <strong>neighborhood</strong> school of the same grade band (elementary, K-8, middle, alternative). Each bar is an
+      independent &ldquo;if <em>this</em> school closed&rdquo; estimate. Every other neighborhood school stays a possible destination as this is not an attempt to guess which other schools may or may not close. Focus-option / lottery schools (Buckman, Winterhaven, Odyssey, etc.) are excluded as destinations because they admit
+      district-wide by lottery, not by catchment. This is intended to be a rough proxy for how far families would have to travel if
+      their school were closed; actual PPS reassignment may differ. Bars are labeled with the nearest alternative school and, where available, the estimated free-flow drive time is included in the tooltip.
     </p>
-    <div class="panel chart-card"><div id="plot-transport" style="height: 460px;"></div></div>
+    <div class="panel chart-card"><div id="plot-transport" style="height: 560px;"></div></div>
   </section>
 
   <section id="section-ratios">
@@ -803,6 +805,29 @@
           Caveat: 2020-21 was the second pandemic year; chronic-absence rates were
           unusually high district-wide and should be read as a floor on current rates.
         </dd>
+      <dt>Transportation impact (nearest same-level alternative)</dt>
+        <dd>
+          For the <strong>20 lowest-enrollment</strong> in-scope schools by 2025-26
+          enrollment, we estimate how far families would have to travel if their
+          school closed. Each school is measured to the nearest <em>neighborhood</em>
+          school of the same grade band (elementary, K-8, middle, alternative) using
+          <strong>road-network driving distance</strong> from the
+          <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>
+          routing engine, not straight-line distance: we rank candidate destinations by
+          great-circle distance over NCES CCD coordinates, request driving distance and
+          free-flow drive time for the closest five, and keep the minimum (falling back
+          to great-circle distance if a route request fails). Each bar is an
+          <strong>independent &ldquo;if this one school closed&rdquo;</strong> estimate —
+          every other neighborhood school stays a valid destination, since PPS would
+          realistically close only a handful, not all 20, so we do not assume the others
+          close. <strong>Focus-option / lottery schools</strong> (Buckman, Winterhaven,
+          Odyssey, Bridger, Sunnyside Environmental, MLC, ACCESS) are excluded both as
+          candidates and as destinations: they admit district-wide by lottery, not by
+          catchment, so a nearest-neighborhood distance is not a meaningful reassignment.
+          Caveats: drive time is free-flow (excludes traffic and pickup/dropoff), schools
+          with no same-level non-lottery peer (e.g. Alliance) are omitted, and actual PPS
+          reassignment would follow redrawn boundaries that may differ.
+        </dd>
     </dl>
 
     <h3>Caveats</h3>
@@ -910,6 +935,7 @@
       case "usd": return "$" + Number(val).toLocaleString();
       case "ratio": return Number(val).toFixed(4);
       case "miles": return Number(val).toFixed(2) + " mi";
+      case "minutes": return Number(val).toFixed(0) + " min";
       case "year": return Number(val).toFixed(0);
       case "bool": return val === true || val === "True" || val === 1
         ? '<span class="badge yes">yes</span>'
@@ -1055,7 +1081,8 @@
       ]],
       ["Nearest alternative", [
         ["Name", s.nearest_alt_school_name || "—"],
-        ["Distance", fmt(s.nearest_alt_school_mi, "miles")],
+        ["Driving distance", fmt(s.nearest_alt_school_mi, "miles")],
+        ["Driving time", fmt(s.nearest_alt_drive_min, "minutes")],
       ]],
     ];
     const popupHtml =
@@ -1295,7 +1322,8 @@
 
   // ---------- TRANSPORTATION IMPACT BARS ----------
   (function () {
-    const cands = schools.filter(s => isCand(s) && s.nearest_alt_school_mi != null);
+    const isTransport = s => s.is_transport_candidate === true || s.is_transport_candidate === "True";
+    const cands = schools.filter(s => isTransport(s) && s.nearest_alt_school_mi != null);
     cands.sort((a, b) => b.nearest_alt_school_mi - a.nearest_alt_school_mi);
     const labels = cands.map(s => s.school_name);
     const dists = cands.map(s => s.nearest_alt_school_mi);
@@ -1316,14 +1344,17 @@
         textposition: "outside",
         textfont: { size: mobile ? 9 : 10, color: "#e6edf3" },
         cliponaxis: false,
-        customdata: cands.map(s => [s.nearest_alt_school_name, s.level]),
-        hovertemplate: "<b>%{y}</b><br>%{x:.2f} mi to %{customdata[0]}<br>Level: %{customdata[1]}<extra></extra>",
+        customdata: cands.map(s => [
+          s.nearest_alt_school_name, s.level,
+          s.nearest_alt_drive_min != null ? `${Math.round(s.nearest_alt_drive_min)} min drive` : "drive time n/a",
+        ]),
+        hovertemplate: "<b>%{y}</b><br>%{x:.2f} mi to %{customdata[0]}<br>%{customdata[2]}<br>Level: %{customdata[1]}<extra></extra>",
       };
       Plotly.react("plot-transport", [trace], Object.assign(baseLayout(), {
         margin: mobile
           ? { l: 130, r: 80, t: 80, b: 20 }
           : { l: 220, r: 320, t: 80, b: 20 },
-        xaxis: { title: "Miles to nearest same-level larger school",
+        xaxis: { title: "Driving miles to nearest same-level neighborhood school",
           gridcolor: "#30363d", zerolinecolor: "#30363d", side: "top" },
         yaxis: { automargin: false, tickfont: { size: mobile ? 9 : 10 } },
         showlegend: false,
@@ -2383,7 +2414,7 @@
           td.innerHTML = v;
         } else {
           td.innerHTML = fmt(v, m.fmt);
-          if (["int", "usd", "ratio", "pct_0_1", "pct_0_100", "year", "miles"].includes(m.fmt)) {
+          if (["int", "usd", "ratio", "pct_0_1", "pct_0_100", "year", "miles", "minutes"].includes(m.fmt)) {
             td.classList.add("numeric");
           }
         }

@@ -1,6 +1,8 @@
 """Export master CSV and column metadata to web/data.json for the static site."""
 import json
 import math
+import time
+import urllib.request
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -11,6 +13,56 @@ from sklearn.preprocessing import StandardScaler
 ROOT = Path(__file__).resolve().parent.parent
 MASTER = ROOT / "data/pps_schools.csv"
 OUT_DATA = ROOT / "web/data.json"
+
+# OSRM road-network routing for the transportation-impact section. The public
+# demo server is rate-limited and occasionally flaky, so every lookup is cached
+# to disk (keyed by rounded coordinate pair) and we fall back to great-circle
+# distance if a request fails. Delete the cache file to force a refresh.
+OSRM_BASE = "http://router.project-osrm.org/route/v1/driving"
+OSRM_CACHE = ROOT / "data/raw/osrm_drive_cache.json"
+_osrm_cache = None
+
+
+def _load_osrm_cache():
+    global _osrm_cache
+    if _osrm_cache is None:
+        if OSRM_CACHE.exists():
+            _osrm_cache = json.loads(OSRM_CACHE.read_text())
+        else:
+            _osrm_cache = {}
+    return _osrm_cache
+
+
+def _save_osrm_cache():
+    if _osrm_cache is not None:
+        OSRM_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        OSRM_CACHE.write_text(json.dumps(_osrm_cache, indent=0))
+
+
+def osrm_drive(lon1, lat1, lon2, lat2):
+    """Return (driving_miles, driving_minutes) between two points, or (None, None)
+    if the OSRM request fails. Results are cached on disk by coordinate pair."""
+    cache = _load_osrm_cache()
+    key = f"{lon1:.6f},{lat1:.6f};{lon2:.6f},{lat2:.6f}"
+    if key in cache:
+        v = cache[key]
+        return (v[0], v[1]) if v else (None, None)
+    url = f"{OSRM_BASE}/{lon1:.6f},{lat1:.6f};{lon2:.6f},{lat2:.6f}?overview=false"
+    try:
+        with urllib.request.urlopen(url, timeout=20) as resp:
+            data = json.loads(resp.read())
+        if data.get("code") == "Ok" and data.get("routes"):
+            route = data["routes"][0]
+            miles = route["distance"] / 1609.344
+            minutes = route["duration"] / 60.0
+            cache[key] = [round(miles, 2), round(minutes, 1)]
+            return cache[key][0], cache[key][1]
+        cache[key] = None
+    except Exception as e:
+        print(f"  OSRM lookup failed ({key}): {e}")
+        cache[key] = None
+    time.sleep(0.1)  # be polite to the public demo server
+    return None, None
 
 # Column metadata: label, description, source, format.
 # Format values: int, pct_0_100, pct_0_1, usd, text, bool, year, ratio.
@@ -81,8 +133,10 @@ META = {
     "permits_units_within_1mi_since_2022": {"label": "Permitted units (2022+)", "desc": "New residential units on building permits issued since 2022-01-01 inside the school's PPS attendance area (single-family, ADUs, and multifamily) (all tenures). Schools without a published catchment fall back to a 1-mile radius.", "source": "Portland BDS via PortlandMaps", "fmt": "int"},
     "n_permits_within_1mi_since_2022": {"label": "Permits (2022+)", "desc": "Number of residential building permits issued since 2022-01-01 inside the school's PPS attendance area. Permits = approved to build; not all reach completion.", "source": "Portland BDS via PortlandMaps", "fmt": "int"},
     "bli_forecast_units_within_catchment": {"label": "BLI forecast units (~2035)", "desc": "Projected new residential units by ~2035 inside the school's PPS attendance area, from Metro's 2045 Building Land Inventory (BLI) Housing-Employment Allocation grid. Area-weighted sum over intersecting BLI grid cells; schools without a catchment fall back to a 1-mile buffer around the school's point location. A forward-looking counterpart to the (backwards-looking) permits metric.", "source": "Metro 2045 BLI (Portland open data)", "fmt": "int"},
-    "nearest_alt_school_mi": {"label": "Miles to nearest alt.", "desc": "Great-circle distance from this low-enrollment school to the nearest larger same-grade-band school (elementary, k8, middle, or alternative). A rough proxy for transportation impact if this school were closed; actual PPS reassignment may differ.", "source": "Derived from NCES CCD coordinates", "fmt": "miles"},
-    "nearest_alt_school_name": {"label": "Nearest alt. school", "desc": "Name of the closest larger school of the same grade band.", "source": "Derived from NCES CCD coordinates", "fmt": "text"},
+    "nearest_alt_school_mi": {"label": "Drive miles to nearest alt.", "desc": "Road-network driving distance (via OSRM) from this low-enrollment school to the nearest same-grade-band neighborhood school (elementary, k8, middle, or alternative). Focus-option / lottery schools are excluded as destinations since they admit district-wide, not by catchment. A rough proxy for transportation impact if this school were closed; actual PPS reassignment may differ.", "source": "Derived: OSRM driving routes over NCES CCD coordinates", "fmt": "miles"},
+    "nearest_alt_school_name": {"label": "Nearest alt. school", "desc": "Name of the closest same-grade-band neighborhood school by driving distance.", "source": "Derived: OSRM driving routes over NCES CCD coordinates", "fmt": "text"},
+    "nearest_alt_drive_min": {"label": "Drive time to nearest alt.", "desc": "Estimated free-flow driving time (via OSRM) to the nearest same-grade-band neighborhood school. Excludes traffic and pickup/dropoff time.", "source": "Derived: OSRM driving routes over NCES CCD coordinates", "fmt": "minutes"},
+    "is_transport_candidate": {"label": "Low-enroll. (transport set)", "desc": "One of the 20 lowest-enrollment in-scope schools by 2025-26 enrollment, excluding focus-option / lottery schools. Defines the schools analyzed in the transportation-impact section.", "source": "Derived from ODE 2025-26 enrollment", "fmt": "bool"},
     "enrollment_2018": {"label": "Enrollment 2018", "desc": "Fall 2018 enrollment (NCES CCD directory).", "source": "NCES CCD 2018", "fmt": "int"},
     "programs": {"label": "Programs", "desc": "Specialized programs hosted at this school. Captures Dual Language Immersion (DLI) language tracks plus K-8 focus options (Arts, Environmental, STEAM, Creative Science, TAG, Alternative). 'Access to programs' is one of the four PPS-announced closure-decision factors; closing a DLI host school would cut off that language pathway in its catchment.", "source": "PPS Dual Language + Enrollment & Transfer pages", "fmt": "text"},
     "has_dli": {"label": "Hosts DLI?", "desc": "School hosts a Dual Language Immersion program in any language.", "source": "Derived from PPS DLI program list", "fmt": "bool"},
@@ -306,21 +360,44 @@ def derive_columns(df):
             fut[uvalid] / cap[uvalid]
         ).round(4)
 
-    # Transportation impact: haversine miles from each closure candidate to the
-    # nearest non-candidate school of the same grade band.
-    R_MI = 3958.7613  # earth radius in miles
-    df["nearest_alt_school_mi"] = pd.NA
+    # Transportation impact: road-network driving distance from each
+    # low-enrollment candidate to the nearest *neighborhood* school of the same
+    # grade band. The candidate set is the 20 lowest-enrollment in-scope schools
+    # by 2025-26 enrollment, excluding focus-option / lottery schools — those
+    # admit district-wide by lottery, not by catchment, so a nearest-neighborhood
+    # distance is meaningless for them, whether as a candidate or a destination.
+    # We rank candidate peers by great-circle distance, then ask OSRM for the
+    # driving distance of the closest few and keep the minimum, since the
+    # nearest-by-road is essentially always among the nearest-by-line.
+    R_MI = 3958.7613   # earth radius in miles
+    N_ROUTE = 5        # how many great-circle-nearest peers to road-route
+    N_CANDIDATES = 20  # how many lowest-enrollment schools to analyze
+    df["nearest_alt_school_mi"] = pd.NA       # driving miles
     df["nearest_alt_school_name"] = pd.NA
-    cand_idx = df.index[df["is_closure_candidate"].astype(bool)]
+    df["nearest_alt_drive_min"] = pd.NA       # driving minutes
+    focus = df["has_focus_option"].astype(bool)
+    # Candidate set: the 20 lowest-enrollment non-lottery in-scope schools.
+    enroll = pd.to_numeric(df["enrollment_2025_26"], errors="coerce")
+    eligible = df.index[(~focus) & enroll.notna()]
+    low_idx = enroll.loc[eligible].nsmallest(N_CANDIDATES).index
+    df["is_transport_candidate"] = False
+    df.loc[low_idx, "is_transport_candidate"] = True
+    cand_idx = df.index[df["is_transport_candidate"]]
     for i in cand_idx:
         cand_lat = df.at[i, "latitude"]
         cand_lon = df.at[i, "longitude"]
         cand_level = df.at[i, "level"]
         if pd.isna(cand_lat) or pd.isna(cand_lon):
             continue
+        # Each bar answers an independent "if *this one* school closed" question:
+        # every other same-level neighborhood school stays a valid destination,
+        # including the other low-enrollment schools (PPS would realistically
+        # close only a handful, not all 20, so we don't assume the others close).
+        # Lottery schools are still excluded — they admit district-wide, not by
+        # catchment, so they aren't a neighborhood reassignment.
         peers = df[
             (df["level"] == cand_level)
-            & (~df["is_closure_candidate"].astype(bool))
+            & (~focus)
             & df["latitude"].notna()
             & df["longitude"].notna()
             & (df.index != i)
@@ -334,11 +411,26 @@ def derive_columns(df):
         dlat = lat2 - lat1
         dlon = lon2 - lon1
         a = np.sin(dlat / 2) ** 2 + math.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2) ** 2
-        c = 2 * np.arcsin(np.sqrt(a))
-        d_mi = R_MI * c
-        nearest = int(np.argmin(d_mi))
-        df.at[i, "nearest_alt_school_mi"] = round(float(d_mi[nearest]), 2)
-        df.at[i, "nearest_alt_school_name"] = peers.iloc[nearest]["school_name"]
+        gc_mi = R_MI * 2 * np.arcsin(np.sqrt(a))
+        order = np.argsort(gc_mi)[:N_ROUTE]
+
+        best = None  # (drive_mi, drive_min, name, gc_fallback_mi)
+        for j in order:
+            peer = peers.iloc[int(j)]
+            d_mi, d_min = osrm_drive(
+                float(cand_lon), float(cand_lat),
+                float(peer["longitude"]), float(peer["latitude"]),
+            )
+            if d_mi is None:
+                # OSRM failed for this peer; fall back to its great-circle dist.
+                d_mi, d_min = round(float(gc_mi[int(j)]), 2), None
+            if best is None or d_mi < best[0]:
+                best = (d_mi, d_min, peer["school_name"])
+        if best is not None:
+            df.at[i, "nearest_alt_school_mi"] = best[0]
+            df.at[i, "nearest_alt_drive_min"] = best[1] if best[1] is not None else pd.NA
+            df.at[i, "nearest_alt_school_name"] = best[2]
+    _save_osrm_cache()
     return df
 
 
