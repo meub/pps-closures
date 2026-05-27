@@ -26,6 +26,7 @@ PlotPDX-season-2.png
 transcript.txt
 framework-analysis.md
 scripts/analyze_title_i_history.py
+CLAUDE.md
 
 # Deploy script (contains S3 bucket + CloudFront distribution ID)
 deploy.sh
