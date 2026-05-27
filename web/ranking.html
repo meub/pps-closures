@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PPS School Ranking — Portland Public Schools Data Explorer</title>
+<title>PPS School Ranking | Portland Public Schools Data Explorer</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -166,8 +166,8 @@
   <h1>Weighted ranking explorer</h1>
   <p>
     A configurable, relative ranking of the 74 in-scope PPS schools across ten
-    factors. Each school gets a 0–100 score per factor, and the final score is a
-    weighted blend — 100 means "tops on all factors you weighted," 0 means
+    factors. Each school gets a 0 to 100 score per factor, and the final score is a
+    weighted blend: 100 means "tops on all factors you weighted," 0 means
     "bottom on all of them." The bottom 8 are highlighted as illustrative
     closure candidates. Weights below the inputs are normalized, so they don't
     need to sum to 100.
@@ -185,8 +185,8 @@
     <p class="note">
       Higher weight = bigger influence on the final ranking. Adjust any factor
       between 0 and 100. Direction is pre-set per factor so a higher rank always
-      means "more likely to stay open" — e.g., <em>Seismic</em> ranks lower-cost
-      schools higher; <em>BIPOC</em> and <em>Title I</em> rank higher-share and
+      means "more likely to stay open." For example, <em>Seismic</em> ranks lower-cost
+      schools higher, while <em>BIPOC</em> and <em>Title I</em> rank higher-share and
       designated schools higher (equity protection).
     </p>
     <div class="panel panel-pad">
@@ -217,9 +217,9 @@
   <section>
     <h2>Methodology</h2>
     <p class="note">
-      <strong>Per-factor scoring.</strong> Each factor is mapped to a 0–100 score via
+      <strong>Per-factor scoring.</strong> Each factor is mapped to a 0 to 100 score via
       one of two methods. <em>Percentile rank</em> (most factors) sorts schools by
-      value, assigns a 0–100 percentile, and averages ties — this compresses
+      value, assigns a 0 to 100 percentile, and averages ties. This compresses
       outliers and treats the distribution as ordinal. <em>Min-max linear</em>
       (utilization) uses <code>(v − min) / (max − min) × 100</code>, so a school
       at 30% utilization scores categorically lower than one at 60%, matching

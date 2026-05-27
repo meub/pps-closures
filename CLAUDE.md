@@ -85,3 +85,22 @@ behind a `getElementById` existence check (Ventilation — the ranking
 and scatter were removed from the DOM, but the `airflow_*` columns
 still live in the master CSV and the table). Don't wire them back up
 without asking.
+
+## Framework analysis (advocacy doc review)
+
+`framework-analysis.md` (repo root) reviews the community-authored "PPS
+Framework / Rightsizing+" document (source: `~/Downloads/PPS Framework _
+Rightsizing+.docx`, reviewed 2026-05-27). It holds the extracted document
+text, a strengths/weaknesses assessment, and a data check against three
+of the doc's claims using `data/pps_schools.csv` (small-school
+utilization, DLI strand-vs-neighborhood splits, the 180-day cost proxy).
+
+Key takeaway for any follow-up: the doc's central ask — per-pupil
+*operating* cost per specialized program (overhead, transportation,
+facilities) — is **not answerable from the current data**. The only
+dollar columns in the master CSV are the two seismic capital-cost fields;
+there is no expenditure, budget, transportation, or facilities-operating
+data. Answering it means adding a finance layer (e.g. parsing the PPS
+adopted budget / ACFR and joining program/location spend to the
+enrollment denominators we already have). Don't claim the dashboard can
+produce program cost-per-pupil without that new source.

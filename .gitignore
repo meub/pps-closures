@@ -22,5 +22,10 @@ data/raw/metro_bli_housing_allocation.geojson
 plotpdx-s2-b.png
 PlotPDX-season-2.png
 
+# Local scratch / analysis notes (not part of the published pipeline)
+transcript.txt
+framework-analysis.md
+scripts/analyze_title_i_history.py
+
 # Deploy script (contains S3 bucket + CloudFront distribution ID)
 deploy.sh
