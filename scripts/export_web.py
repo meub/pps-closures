@@ -186,6 +186,20 @@ TABLE_COLS = [
     "permits_units_within_1mi_since_2022",
 ]
 
+# Columns surfaced in the separate charter reference table. Restricted to the
+# state/federal measures that actually cover charters; every PPS-building /
+# PPS-planning metric (capacity, utilization, seismic, ventilation, PRC
+# forecast, DLI strands) is intentionally omitted because it is null for them.
+CHARTER_TABLE_COLS = [
+    "school_name", "level",
+    "enrollment_2025_26", "enrollment_pct_change",
+    "pct_ela_prof_2425", "pct_math_prof_2425",
+    "pct_bipoc", "pct_frl", "pct_lep", "pct_idea",
+    "pct_regular_attenders_2425", "pct_experienced_teachers_2425",
+    "pct_teacher_retention_2425", "class_size_2425",
+    "students_per_teacher_2023", "is_title_i",
+]
+
 # Pre-defined scatter plots.
 SCATTERS = [
     {
@@ -434,6 +448,37 @@ def derive_columns(df):
     return df
 
 
+def derive_charter_columns(df):
+    """Row-wise demographic/academic fields for the charter reference layer.
+
+    Charters skip every in-scope-only derivation (k-means clustering, the
+    proficiency residual fit, transportation routing) and carry null for all
+    PPS-building / PPS-planning metrics. This computes only the handful of
+    fields the charter table surfaces."""
+    df = df.copy()
+    df["pct_bipoc"] = 1 - df["pct_white"]
+    df["avg_prof_2425"] = (df["pct_ela_prof_2425"] + df["pct_math_prof_2425"]) / 2
+
+    # 7-year enrollment trend where CCD history exists for the charter.
+    base = df["enrollment_2018"]
+    cur = df["enrollment_2025_26"]
+    valid = base.notna() & cur.notna() & (base > 0)
+    df["enrollment_pct_change_7yr"] = pd.NA
+    df.loc[valid, "enrollment_pct_change_7yr"] = (
+        (cur[valid] - base[valid]) / base[valid]
+    ).round(4)
+
+    # FRL is 0.0 in the master whenever CCD reports no meal counts (the
+    # fillna(0) in build_master). For a couple of charters that don't report
+    # meals at all, null those rates so the table renders "—" rather than a
+    # misleading 0%.
+    no_frl = df[["frl_free_lunch", "frl_reduced_lunch",
+                 "frl_direct_certification"]].isna().all(axis=1)
+    for c in ["pct_free_lunch", "pct_frl", "pct_direct_cert"]:
+        df.loc[no_frl, c] = pd.NA
+    return df
+
+
 def clean_val(v):
     if isinstance(v, float):
         if math.isnan(v) or math.isinf(v):
@@ -445,27 +490,44 @@ def clean_val(v):
 
 
 def main():
-    df = pd.read_csv(MASTER)
+    df_all = pd.read_csv(MASTER)
+
+    # PPS-sponsored charters are a separate reference layer: PPS can't close
+    # them through its consolidation process, and they lack every building /
+    # planning metric the in-scope analysis turns on. Pull them out before the
+    # in-scope pipeline so they never enter the rankings, clustering, or the
+    # transportation routing.
+    charter_df = df_all[df_all["school_type"] == "Charter School"].copy()
+
     # PPS's closure announcement covers only elementary, K-8, middle, and
-    # alternative schools (not high schools). Drop high schools from the
-    # dashboard so every view reflects the in-scope set.
-    df = df[df["level"] != "high"].reset_index(drop=True)
+    # alternative schools (not high schools). Drop high schools and charters
+    # from the in-scope set so every ranking reflects the 74.
+    df = df_all[(df_all["school_type"] != "Charter School")
+                & (df_all["level"] != "high")].reset_index(drop=True)
     df = derive_columns(df)
     schools = []
     for _, row in df.iterrows():
         schools.append({c: clean_val(row[c]) for c in df.columns})
 
+    charter_df = derive_charter_columns(charter_df)
+    charters = []
+    for _, row in charter_df.iterrows():
+        charters.append({c: clean_val(row[c]) for c in charter_df.columns})
+
     payload = {
         "schools": schools,
+        "charters": charters,
         "meta": META,
         "table_cols": TABLE_COLS,
+        "charter_table_cols": CHARTER_TABLE_COLS,
         "scatters": SCATTERS,
         "cluster_labels": CLUSTER_LABELS,
         "n_schools": len(schools),
         "n_candidates": int(df["is_closure_candidate"].sum()),
+        "n_charters": len(charters),
     }
     OUT_DATA.write_text(json.dumps(payload, indent=2, default=str))
-    print(f"Wrote {len(schools)} schools to {OUT_DATA}")
+    print(f"Wrote {len(schools)} schools + {len(charters)} charters to {OUT_DATA}")
 
 
 if __name__ == "__main__":

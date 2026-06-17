@@ -222,9 +222,13 @@ PROGRAMS = {
 
 
 # Title I schoolwide schools, 2025-26 (from pps.net/departments/funded-programs/title-ia).
-# All PPS Title I designations are schoolwide model. Charter Title I schools
-# (Arthur Academy, Kairos) are excluded from our master (not PPS-operated).
+# All PPS Title I designations are schoolwide model. The two PPS-sponsored
+# charters with Title I designations (Arthur Academy, Kairos PDX) are included
+# now that charters are carried as a reference layer.
 TITLE_I = {
+    # PPS-sponsored charters with Title I designation
+    "Kairos PDX",
+    "Portland Arthur Academy Charter School",
     "Arleta Elementary School",
     "Atkinson Elementary School",
     "Boise-Eliot Elementary School",
@@ -709,6 +713,12 @@ LEVEL_OVERRIDES = {
     "da Vinci Middle School": "middle",
     "Gray Middle School": "middle",
     "Dr. Martin Luther King Jr. School": "elementary",
+    # PPS-sponsored charters (grade ranges from ODE Fall Membership 2025-26).
+    "Emerson School": "elementary",                                  # K-5
+    "Kairos PDX": "elementary",                                      # K-5
+    "Portland Arthur Academy Charter School": "elementary",          # K-5
+    "Le Monde French Immersion Public Charter School": "k8",         # K-8
+    "Portland Village School": "k8",                                 # K-8
 }
 
 
@@ -732,9 +742,16 @@ def main():
     df = pd.read_excel(ODE, sheet_name="School 20252026")
     pps = df[df["District Name"] == "Portland SD 1J"].copy()
 
-    # Keep only PPS-operated schools: Regular + Alternative.
-    # Excludes charters, private, LTC, community college, district-level row.
-    pps = pps[pps["School Type"].isin(["Regular School", "Alternative School"])].copy()
+    # Keep PPS-operated schools (Regular + Alternative) plus the five
+    # PPS-sponsored charters. Charters are a reference layer only: they carry
+    # the state/federal data that covers them (enrollment, demographics,
+    # OSAS proficiency, At-A-Glance, FRL, CRDC) and get None for every
+    # PPS-building / PPS-planning column (capacity, seismic, ventilation,
+    # PRC forecast, DLI strands). export_web.py keeps them out of the in-scope
+    # 74 and emits them as a separate `charters` array. Still excludes private,
+    # LTC, community college, and the district-level row.
+    pps = pps[pps["School Type"].isin(
+        ["Regular School", "Alternative School", "Charter School"])].copy()
 
     pps["level"] = pps.apply(infer_level, axis=1)
     pps["is_closure_candidate"] = pps["School Name"].isin(CANDIDATES)

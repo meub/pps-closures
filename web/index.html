@@ -333,6 +333,7 @@
       <a href="#section-dli">DLI</a>
       <a href="#section-scatters">Scatters</a>
       <a href="#section-table">Table</a>
+      <a href="#section-charters">Charters</a>
       <a href="#section-methodology">Methodology</a>
     </nav>
   </div>
@@ -650,6 +651,28 @@
     </div>
   </section>
 
+  <section id="section-charters">
+    <h2>PPS-sponsored charter schools (reference)</h2>
+    <p class="note">
+      These five charters are sponsored by Portland Public Schools but operate
+      independently, so they sit outside the closure analysis above. PPS can't
+      consolidate a charter the way it closes its own buildings, and the
+      district's building-and-forecast factors have no charter equivalent. The
+      table shows only what public state and federal sources report for them
+      (enrollment, demographics, OSAS proficiency, attendance, Title&nbsp;I).
+      Capacity and utilization, seismic cost, ventilation, the 10-year PRC
+      enrollment forecast, and DLI-strand counts are left out because no source
+      publishes them for charter schools. Hover the
+      <span style="color: var(--muted);">ⓘ</span> by each column for a
+      definition and source.
+    </p>
+    <div class="panel">
+      <div class="table-wrap">
+        <table class="schools" id="charters-table"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
   <section class="methodology" id="section-methodology">
     <h2>Methodology &amp; sources</h2>
     <div class="method-layout">
@@ -924,6 +947,8 @@
 (async function () {
   const data = await fetch("./data.json").then(r => r.json());
   const { schools, meta, table_cols: TABLE_COLS, scatters: SCATTERS, cluster_labels: CLUSTER_LABELS } = data;
+  const charters = data.charters || [];
+  const CHARTER_TABLE_COLS = data.charter_table_cols || [];
 
   // ---------- formatters ----------
   function fmt(val, type) {
@@ -2454,6 +2479,52 @@
 
   document.getElementById("csv-btn").addEventListener("click", downloadCsv);
   render();
+
+  // ---------- CHARTER REFERENCE TABLE ----------
+  // Static read-only table for the five PPS-sponsored charters. Reuses the
+  // schools-table styling and the shared fmt()/tooltip helpers, but only the
+  // columns in CHARTER_TABLE_COLS (the state/federal measures that cover
+  // charters). No sorting or filtering — five rows, ordered by enrollment.
+  (function renderCharters() {
+    const ctable = document.getElementById("charters-table");
+    if (!ctable || !charters.length) return;
+    const cthead = ctable.querySelector("thead");
+    const ctbody = ctable.querySelector("tbody");
+
+    const trh = document.createElement("tr");
+    CHARTER_TABLE_COLS.forEach(col => {
+      const th = document.createElement("th");
+      const m = meta[col];
+      th.innerHTML = `${m.label}<span class="tooltip-trigger">ⓘ</span>`;
+      const tip = `<b>${m.label}</b>${m.desc}<div class="src">Source: ${m.source}</div>`;
+      const trigger = th.querySelector(".tooltip-trigger");
+      trigger.onmouseenter = (e) => showTT(e, tip);
+      trigger.onmousemove = (e) => showTT(e, tip);
+      trigger.onmouseleave = hideTT;
+      trh.appendChild(th);
+    });
+    cthead.appendChild(trh);
+
+    const rows = charters.slice().sort(
+      (a, b) => (raw(b.enrollment_2025_26) || 0) - (raw(a.enrollment_2025_26) || 0));
+    rows.forEach(s => {
+      const tr = document.createElement("tr");
+      CHARTER_TABLE_COLS.forEach(col => {
+        const td = document.createElement("td");
+        const m = meta[col];
+        if (col === "school_name") {
+          td.innerHTML = s[col];
+        } else {
+          td.innerHTML = fmt(s[col], m.fmt);
+          if (["int", "usd", "ratio", "pct_0_1", "pct_0_100", "year", "miles", "minutes"].includes(m.fmt)) {
+            td.classList.add("numeric");
+          }
+        }
+        tr.appendChild(td);
+      });
+      ctbody.appendChild(tr);
+    });
+  })();
 })();
 </script>
 </body>

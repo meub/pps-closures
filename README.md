@@ -31,6 +31,7 @@ python3 -m http.server -d web 8000
 - **DLI & focus-option** section with strand-vs-non-strand headcounts and a collapsible "why this matters" note.
 - **Scatter plots**: enrollment vs. utilization, math/avg proficiency vs. poverty, enrollment vs. % BIPOC, chronic absenteeism vs. proficiency, support-staff FTE equity, 7-year change vs. current size, students-per-teacher vs. enrollment.
 - **Sortable table** of all 74 schools with column descriptions and source citations; CSV export of the filtered rows.
+- **Charter reference table** of the 5 PPS-sponsored charters (Emerson, Kairos PDX, Le Monde, Portland Arthur Academy, Portland Village). Kept separate from the in-scope 74 since PPS can't close a charter through its consolidation process. Shows only the state/federal measures that cover charters (enrollment, demographics, OSAS proficiency, attendance, Title I); building, seismic, capacity, ventilation, and forecast columns are omitted because no source publishes them for charters.
 - **Methodology** section documenting every source with vintage.
 - **Feeder trees** on a standalone page at [`/feeders.html`](https://ppsdata.info/feeders.html) — elementary → middle → high school feeder chains, one tree per high school (Mermaid diagrams).
 
@@ -64,7 +65,7 @@ Ranking charts render vertically on desktop and swap to horizontal bars on narro
 
 ```
 data/
-  pps_schools.csv         master table (83 rows × 89 cols; 74 in-scope + 9 high schools)
+  pps_schools.csv         master table (88 rows; 74 in-scope + 9 high schools + 5 PPS-sponsored charters)
   raw/                    source CSVs, JSONs, XLSXs, PDFs, GeoJSONs
 scripts/
   fetch_bds_permits.py          → data/raw/portland_bds_permits.csv
