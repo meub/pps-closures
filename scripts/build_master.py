@@ -22,7 +22,13 @@ OSAS_MATH_24 = ROOT / "data/raw/pagr_schools_math_all_2324.xlsx"
 ODE_AAG = ROOT / "data/raw/ode_aag_schools_2425.csv"
 DLI_REPORT = ROOT / "data/raw/pps_immersion_details_2526.json"
 LRFP_CAPACITY = ROOT / "data/raw/pps_functional_capacity_2021.json"
+UTIL_MODEL = ROOT / "data/raw/pps_utilization_model_recovered.json"
 OUT = ROOT / "data/pps_schools.csv"
+
+# Above this relative gap, the 2021 LRFP and the operational utilization model
+# disagree enough on a school's capacity to flag it in the UI (see
+# parse_utilization_model.py). 5% keeps rounding noise out.
+CAPACITY_CONFLICT_THRESHOLD = 0.05
 
 # Closure candidates from WW article (3/18/2026). Keys are ODE school names.
 CANDIDATES = {
@@ -856,6 +862,43 @@ def main():
         pps["2025-26 Total Enrollment"] / pps["functional_capacity_2021"]
     ).round(4)
 
+    # Merge the functional capacity recovered from PPS's operational School
+    # Utilization Model workbook (2025 records request). This is a second PPS
+    # source for the same measure, ~2021 vintage. Where it disagrees with the
+    # LRFP-2021 number by more than CAPACITY_CONFLICT_THRESHOLD we flag the
+    # school so the dashboard can show both rather than a false-precise single
+    # value. The LRFP figure stays the primary displayed capacity.
+    with open(UTIL_MODEL) as f:
+        model_raw = json.load(f)
+    model_fc = {r["school_name"]: r["functional_capacity_model"] for r in model_raw}
+    model_approx = {r["school_name"]: r["fc_approx"] for r in model_raw}
+    model_note = {r["school_name"]: r["conflict_note"] for r in model_raw}
+    pps["functional_capacity_model"] = pps["School Name"].map(model_fc)
+    pps["utilization_model_2526"] = (
+        pps["2025-26 Total Enrollment"] / pps["functional_capacity_model"]
+    ).round(4)
+
+    def _capacity_conflict(row):
+        lrfp, model = row["functional_capacity_2021"], row["functional_capacity_model"]
+        if pd.isna(lrfp) or pd.isna(model) or not lrfp:
+            return False
+        return abs(model - lrfp) / lrfp >= CAPACITY_CONFLICT_THRESHOLD
+
+    pps["capacity_source_conflict"] = pps.apply(_capacity_conflict, axis=1)
+    pps["fc_model_approx"] = pps["School Name"].map(model_approx).fillna(False)
+
+    def _conflict_note(row):
+        if not row["capacity_source_conflict"]:
+            return None
+        name = row["School Name"].strip()
+        if model_note.get(name):
+            return model_note[name]
+        return ("PPS's 2021 Long-Range Facility Plan and its operational "
+                "utilization model report different capacities for this "
+                "building. Both figures are PPS's own.")
+
+    pps["capacity_conflict_note"] = pps.apply(_conflict_note, axis=1)
+
     # Merge CRDC 2020: LEP, IDEA, chronic absenteeism counts.
     with open(CRDC) as f:
         crdc = json.load(f)
@@ -1073,6 +1116,8 @@ def main():
         "dli_students_2526", "neighborhood_students_2526", "pct_dli_2526",
         "year_built", "square_feet", "construction_type_2009",
         "functional_capacity_2021", "utilization_pct_2526",
+        "functional_capacity_model", "utilization_model_2526",
+        "capacity_source_conflict", "fc_model_approx", "capacity_conflict_note",
         "enrollment_2024_25", "enrollment_2025_26", "enrollment_pct_change",
         "enrollment_2018", "enrollment_2019", "enrollment_2020",
         "enrollment_2021", "enrollment_2022", "enrollment_2023",

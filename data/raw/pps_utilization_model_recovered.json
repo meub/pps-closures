@@ -1,0 +1,702 @@
+[
+  {
+    "school_name": "Abernethy Elementary School",
+    "wb_name": "ABERNETHY",
+    "config": "K-5",
+    "gross_capacity_model": 549,
+    "functional_capacity_model": 522.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Ainsworth Elementary School",
+    "wb_name": "AINSWORTH",
+    "config": "K-5",
+    "gross_capacity_model": 771,
+    "functional_capacity_model": 636.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Alameda Elementary School",
+    "wb_name": "ALAMEDA",
+    "config": "K-5",
+    "gross_capacity_model": 930,
+    "functional_capacity_model": 792.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Arleta Elementary School",
+    "wb_name": "ARLETA",
+    "config": "K-5",
+    "gross_capacity_model": 780,
+    "functional_capacity_model": 696.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Astor Elementary School",
+    "wb_name": "ASTOR",
+    "config": "K-8",
+    "gross_capacity_model": 711,
+    "functional_capacity_model": 558.6,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Atkinson Elementary School",
+    "wb_name": "ATKINSON",
+    "config": "K-5",
+    "gross_capacity_model": 705,
+    "functional_capacity_model": 567.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Beach Elementary School",
+    "wb_name": "BEACH",
+    "config": "K-5",
+    "gross_capacity_model": 774,
+    "functional_capacity_model": 750.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Beaumont Middle School",
+    "wb_name": "BEAUMONT",
+    "config": "MS",
+    "gross_capacity_model": 891,
+    "functional_capacity_model": 700.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Bridger Creative Science School",
+    "wb_name": "BRIDGER CREATIVE SCIENCE",
+    "config": "K-8",
+    "gross_capacity_model": 699,
+    "functional_capacity_model": 561.4,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Bridlemile Elementary School",
+    "wb_name": "BRIDLEMILE",
+    "config": "K-5",
+    "gross_capacity_model": 741,
+    "functional_capacity_model": 618.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Buckman Elementary School",
+    "wb_name": "BUCKMAN",
+    "config": "K-5",
+    "gross_capacity_model": 771,
+    "functional_capacity_model": 654.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Capitol Hill Elementary School",
+    "wb_name": "CAPITOL HILL",
+    "config": "K-5",
+    "gross_capacity_model": 537,
+    "functional_capacity_model": 456.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Chapman Elementary School",
+    "wb_name": "CHAPMAN",
+    "config": "K-5",
+    "gross_capacity_model": 705,
+    "functional_capacity_model": 585.9,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Chief Joseph Elementary School",
+    "wb_name": "CHIEF JOSEPH",
+    "config": "K-5",
+    "gross_capacity_model": 579,
+    "functional_capacity_model": 498.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Clark Elementary School",
+    "wb_name": "CLARK",
+    "config": "K-5",
+    "gross_capacity_model": 630,
+    "functional_capacity_model": 468.0,
+    "fc_approx": true,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Cleveland High School",
+    "wb_name": "CLEVELAND",
+    "config": "HS",
+    "gross_capacity_model": 2232,
+    "functional_capacity_model": 1859.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Creston Elementary School",
+    "wb_name": "CRESTON",
+    "config": "K-5",
+    "gross_capacity_model": 609,
+    "functional_capacity_model": 282.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": "The utilization model's classroom count excludes the Creston annex building; the 2021 LRFP counted those rooms, so its capacity is roughly double."
+  },
+  {
+    "school_name": "da Vinci Middle School",
+    "wb_name": "DAVINCI",
+    "config": "MS",
+    "gross_capacity_model": 855,
+    "functional_capacity_model": 714.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Duniway Elementary School",
+    "wb_name": "DUNIWAY",
+    "config": "K-5",
+    "gross_capacity_model": 714,
+    "functional_capacity_model": 552.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Faubion Elementary School",
+    "wb_name": "FAUBION",
+    "config": "K-8",
+    "gross_capacity_model": 1194,
+    "functional_capacity_model": 685.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Forest Park Elementary School",
+    "wb_name": "FOREST PARK",
+    "config": "K-5",
+    "gross_capacity_model": 627,
+    "functional_capacity_model": 546.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Franklin High School",
+    "wb_name": "FRANKLIN",
+    "config": "HS",
+    "gross_capacity_model": 2151,
+    "functional_capacity_model": 1744.2,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "George Middle School",
+    "wb_name": "GEORGE",
+    "config": "MS",
+    "gross_capacity_model": 867,
+    "functional_capacity_model": 616.5,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Glencoe Elementary School",
+    "wb_name": "GLENCOE",
+    "config": "K-5",
+    "gross_capacity_model": 681,
+    "functional_capacity_model": 600.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Grant High School",
+    "wb_name": "GRANT",
+    "config": "HS",
+    "gross_capacity_model": 2352,
+    "functional_capacity_model": 1685.5,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Gray Middle School",
+    "wb_name": "GRAY",
+    "config": "MS",
+    "gross_capacity_model": 747,
+    "functional_capacity_model": 622.2,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Grout Elementary School",
+    "wb_name": "GROUT",
+    "config": "K-5",
+    "gross_capacity_model": 702,
+    "functional_capacity_model": 510.1,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Harrison Park School",
+    "wb_name": "HARRISON PARK",
+    "config": "MS",
+    "gross_capacity_model": 1128,
+    "functional_capacity_model": 890.4,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Hayhurst Elementary School",
+    "wb_name": "HAYHURST",
+    "config": "K-5",
+    "gross_capacity_model": 630,
+    "functional_capacity_model": 546.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Hosford Middle School",
+    "wb_name": "HOSFORD",
+    "config": "MS",
+    "gross_capacity_model": 849,
+    "functional_capacity_model": 696.1,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Irvington Elementary School",
+    "wb_name": "IRVINGTON",
+    "config": "K-5",
+    "gross_capacity_model": 780,
+    "functional_capacity_model": 547.2,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Jackson Middle School",
+    "wb_name": "JACKSON",
+    "config": "MS",
+    "gross_capacity_model": 1125,
+    "functional_capacity_model": 930.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "James John Elementary School",
+    "wb_name": "JAMES JOHN",
+    "config": "K-5",
+    "gross_capacity_model": 681,
+    "functional_capacity_model": 513.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Jefferson High School",
+    "wb_name": "JEFFERSON",
+    "config": "HS",
+    "gross_capacity_model": 2352,
+    "functional_capacity_model": 1816.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Kellogg Middle School",
+    "wb_name": "KELLOGG",
+    "config": "MS",
+    "gross_capacity_model": 945,
+    "functional_capacity_model": 732.0,
+    "fc_approx": false,
+    "n_years": 1,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Kelly Elementary School",
+    "wb_name": "KELLY",
+    "config": "K-5",
+    "gross_capacity_model": 822,
+    "functional_capacity_model": 669.6,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Lane Middle School",
+    "wb_name": "LANE",
+    "config": "MS",
+    "gross_capacity_model": 1041,
+    "functional_capacity_model": 769.5,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Laurelhurst Elementary School",
+    "wb_name": "LAURELHURST",
+    "config": "K-8",
+    "gross_capacity_model": 792,
+    "functional_capacity_model": 657.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Lee Elementary School",
+    "wb_name": "LEE",
+    "config": "K-5",
+    "gross_capacity_model": 684,
+    "functional_capacity_model": 442.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Lent Elementary School",
+    "wb_name": "LENT",
+    "config": "K-5",
+    "gross_capacity_model": 1002,
+    "functional_capacity_model": 658.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Lewis Elementary School",
+    "wb_name": "LEWIS",
+    "config": "K-5",
+    "gross_capacity_model": 540,
+    "functional_capacity_model": 444.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Lincoln High School",
+    "wb_name": "LINCOLN",
+    "config": "HS",
+    "gross_capacity_model": 2358,
+    "functional_capacity_model": 1866.6,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Llewellyn Elementary School",
+    "wb_name": "LLEWELLYN",
+    "config": "K-5",
+    "gross_capacity_model": 612,
+    "functional_capacity_model": 528.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Maplewood Elementary School",
+    "wb_name": "MAPLEWOOD",
+    "config": "K-5",
+    "gross_capacity_model": 573,
+    "functional_capacity_model": 467.4,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Markham Elementary School",
+    "wb_name": "MARKHAM",
+    "config": "K-5",
+    "gross_capacity_model": 738,
+    "functional_capacity_model": 561.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Marysville Elementary School",
+    "wb_name": "MARYSVILLE",
+    "config": "K-5",
+    "gross_capacity_model": 672,
+    "functional_capacity_model": 481.7,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Mt Tabor Middle School",
+    "wb_name": "MT. TABOR",
+    "config": "MS",
+    "gross_capacity_model": 909,
+    "functional_capacity_model": 681.6,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Ockley Green Middle School",
+    "wb_name": "OCKLEY GREEN",
+    "config": "MS",
+    "gross_capacity_model": 876,
+    "functional_capacity_model": 688.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Peninsula Elementary School",
+    "wb_name": "PENINSULA",
+    "config": "K-5",
+    "gross_capacity_model": 783,
+    "functional_capacity_model": 612.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Richmond Elementary School",
+    "wb_name": "RICHMOND",
+    "config": "K-5",
+    "gross_capacity_model": 858,
+    "functional_capacity_model": 723.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Rieke Elementary School",
+    "wb_name": "RIEKE",
+    "config": "K-5",
+    "gross_capacity_model": 546,
+    "functional_capacity_model": 492.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Rigler Elementary School",
+    "wb_name": "RIGLER",
+    "config": "K-5",
+    "gross_capacity_model": 789,
+    "functional_capacity_model": 588.6,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Roosevelt High School",
+    "wb_name": "ROOSEVELT",
+    "config": "HS",
+    "gross_capacity_model": 1974,
+    "functional_capacity_model": 1320.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Rosa Parks Elementary School",
+    "wb_name": "ROSA PARKS",
+    "config": "K-5",
+    "gross_capacity_model": 741,
+    "functional_capacity_model": 594.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Rose City Park",
+    "wb_name": "ROSE CITY PARK",
+    "config": "K-5",
+    "gross_capacity_model": 744,
+    "functional_capacity_model": 636.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Roseway Heights School",
+    "wb_name": "ROSEWAY HEIGHTS",
+    "config": "MS",
+    "gross_capacity_model": 1086,
+    "functional_capacity_model": 803.2,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Sabin Elementary School",
+    "wb_name": "SABIN",
+    "config": "K-5",
+    "gross_capacity_model": 780,
+    "functional_capacity_model": 635.5,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Scott Elementary School",
+    "wb_name": "SCOTT",
+    "config": "K-5",
+    "gross_capacity_model": 813,
+    "functional_capacity_model": 642.6,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Sellwood Middle School",
+    "wb_name": "SELLWOOD",
+    "config": "MS",
+    "gross_capacity_model": 804,
+    "functional_capacity_model": 683.4,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Sitton Elementary School",
+    "wb_name": "SITTON",
+    "config": "K-5",
+    "gross_capacity_model": 684,
+    "functional_capacity_model": 467.1,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Skyline Elementary School",
+    "wb_name": "SKYLINE",
+    "config": "K-8",
+    "gross_capacity_model": 393,
+    "functional_capacity_model": 282.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Stephenson Elementary School",
+    "wb_name": "STEPHENSON",
+    "config": "K-5",
+    "gross_capacity_model": 579,
+    "functional_capacity_model": 552.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Vernon Elementary School",
+    "wb_name": "VERNON",
+    "config": "K-8",
+    "gross_capacity_model": 768,
+    "functional_capacity_model": 579.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Vestal Elementary School",
+    "wb_name": "VESTAL",
+    "config": "K-5",
+    "gross_capacity_model": 702,
+    "functional_capacity_model": 430.2,
+    "fc_approx": true,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "West Sylvan Middle School",
+    "wb_name": "WEST SYLVAN",
+    "config": "MS",
+    "gross_capacity_model": 1161,
+    "functional_capacity_model": 986.9,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Whitman Elementary School",
+    "wb_name": "WHITMAN",
+    "config": "K-5",
+    "gross_capacity_model": 681,
+    "functional_capacity_model": 493.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Winterhaven School",
+    "wb_name": "WINTERHAVEN",
+    "config": "K-8",
+    "gross_capacity_model": 396,
+    "functional_capacity_model": 261.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Woodlawn Elementary School",
+    "wb_name": "WOODLAWN",
+    "config": "K-5",
+    "gross_capacity_model": 816,
+    "functional_capacity_model": 669.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Woodmere Elementary School",
+    "wb_name": "WOODMERE",
+    "config": "K-5",
+    "gross_capacity_model": 648,
+    "functional_capacity_model": 496.8,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  },
+  {
+    "school_name": "Woodstock Elementary School",
+    "wb_name": "WOODSTOCK",
+    "config": "K-5",
+    "gross_capacity_model": 756,
+    "functional_capacity_model": 648.0,
+    "fc_approx": false,
+    "n_years": 3,
+    "conflict_note": null
+  }
+]

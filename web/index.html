@@ -215,6 +215,8 @@
     cursor: help; font-size: 11px; }
   table.schools tr:hover { background: #1b222b; }
   table.schools td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+  .conflict-flag { color: #e0a83a; cursor: help; font-size: 11px;
+    margin-left: 3px; white-space: nowrap; }
   /* Freeze first column when scrolling horizontally */
   table.schools th:first-child, table.schools td:first-child {
     position: sticky; left: 0; background: var(--panel); z-index: 1; }
@@ -710,7 +712,9 @@
     <h3>Buildings &amp; seismic</h3>
     <dl>
       <dt><a href="https://www.pps.net/cms/lib/OR01913224/Centricity/domain/219/lrfp/PPS-LRFP-Vol1-2021-Adopted.pdf" target="_blank" rel="noopener">PPS Long-Range Facility Plan (2021, Vol 1)</a></dt>
-        <dd>Functional capacity per school (2021). PPS's planning number: gross capacity derived from classroom count and area, minus set-asides (SPED focus, art/music, computer lab, DLI co-location, etc.), with a configuration-specific utilization rate applied (85% at middle/high, higher at K-5/K-8) and further reductions at Title I and TSI/CSI schools.</dd>
+        <dd>Functional capacity per school (2021). PPS's planning number: gross capacity derived from classroom count and area, minus set-asides (SPED focus, art/music, computer lab, DLI co-location, etc.), with a configuration-specific utilization rate applied (85% at middle/high, higher at K-5/K-8) and further reductions at Title I and TSI/CSI schools. This is the primary functional-capacity number shown in the table and utilization charts.</dd>
+      <dt>PPS School Utilization Model workbook (2025 public-records request)</dt>
+        <dd>PPS's operational spreadsheet behind the utilization number, obtained through a records request filed by a Sunrise Elementary parent. It is a second PPS source for the same functional-capacity measure. For 10 schools it disagrees with the 2021 LRFP by 5% or more; those rows are flagged in the table (see below).</dd>
       <dt><a href="https://www.pps.net/departments/facilities-asset-management/school-buildings-conditions-and-characteristics/seismic-assessments" target="_blank" rel="noopener">KPFF Seismic Report (2009)</a></dt>
         <dd>Year built, square footage, and construction type for every building in the district. Note: square footage predates recent bond expansions.</dd>
       <dt><a href="https://drive.google.com/file/d/1vN48MAzNDz1GvZ4pkSXRyAuiuNTWcnt7/view" target="_blank" rel="noopener">Holmes Engineering Seismic Assessment (2024)</a></dt>
@@ -718,6 +722,47 @@
       <dt><a href="https://bond.pps.net/" target="_blank" rel="noopener">PPS Bond: Seismic &amp; modernization</a></dt>
         <dd>Retrofit and modernization status (full, targeted, planned under 2025 bond).</dd>
     </dl>
+
+    <h3>How PPS computes utilization (and why two numbers can differ)</h3>
+    <p>
+      Utilization is enrollment divided by a building's <em>functional capacity</em>.
+      PPS builds that capacity in three steps. First, <b>gross capacity</b>: every
+      classroom of 500 sq ft or more is bracketed by size and assigned a student
+      count (under 800 sq ft &rarr; 24 students, 800&ndash;1000 &rarr; 27, over
+      1000 &rarr; 30), then summed. Second, <b>room set-asides</b> are subtracted as
+      student stations, not as a rate change: each SPED or deaf/hard-of-hearing
+      focus room removes 12 stations, and each Early Childhood room, Learning
+      Center, gym, computer lab, co-located program, art/music room, and
+      <em>leased</em> space removes 27. Third, a <b>utilization rate</b> multiplies
+      what remains: 100% at K-5 and K-8, 85% at middle and high schools, minus five
+      percentage points each for Title I, TSI, and CSI status. So the Special Ed
+      Learning Center, Early Childhood, and leased spaces in the records request
+      lower capacity by removing rooms up front; they do not change the percentage
+      rate.
+    </p>
+    <p>
+      The workbook PPS released has its reduction inputs (SPED and Early Childhood
+      room counts, Title I / TSI / CSI flags) pulled from an external linked file
+      that was not included, so those cells and the final functional-capacity column
+      read <code>#REF!</code>. The number still can't be reproduced from the file
+      alone. We recovered PPS's actual functional-capacity denominator a different
+      way: the workbook cached each school's enrollment and utilization for the years
+      when the model was intact, and since utilization is just enrollment divided by
+      that fixed denominator, <code>enrollment &divide; utilization</code> returns it
+      exactly. The back-out agrees across three years for nearly every school.
+    </p>
+    <p>
+      This recovered figure and the 2021 LRFP number are both PPS's own, and for 64
+      of the 74 schools they match. For <b>10 schools they differ by 5% or more</b>,
+      usually because of a scoping choice rather than an error. Creston is the
+      starkest: the operational model excludes its annex building, roughly halving
+      its capacity and moving its utilization from about 39% to about 78%. Those 10
+      rows carry a <span class="conflict-flag" style="cursor:default">&#9888;</span>
+      marker next to their utilization in the table, with both PPS figures on hover.
+      The table and charts keep the LRFP number as the displayed value so nothing
+      re-ranks on the contested figure; the flag is there so a reader can see where
+      PPS's own sources disagree.
+    </p>
 
     <h3>Ventilation &amp; indoor air</h3>
     <dl>
@@ -2406,6 +2451,27 @@
     thead.appendChild(trh);
   }
 
+  function addConflictFlag(td, s, lrfpUtil) {
+    const approx = (s.fc_model_approx === true || s.fc_model_approx === "True");
+    const note = s.capacity_conflict_note || "";
+    const html =
+      `<b>PPS sources disagree on capacity</b>`
+      + `LRFP 2021: ${fmt(s.functional_capacity_2021, "int")} capacity `
+      + `&rarr; ${fmt(lrfpUtil, "pct_0_1")} utilization<br>`
+      + `Utilization model: ${fmt(s.functional_capacity_model, "int")}`
+      + `${approx ? " (approx.)" : ""} capacity `
+      + `&rarr; ${fmt(s.utilization_model_2526, "pct_0_1")} utilization`
+      + `<div class="src">${note} Table shows the LRFP figure.</div>`;
+    const flag = document.createElement("span");
+    flag.className = "conflict-flag";
+    flag.textContent = "⚠";
+    flag.onmouseenter = (e) => showTT(e, html);
+    flag.onmousemove = (e) => showTT(e, html);
+    flag.onmouseleave = hideTT;
+    td.appendChild(document.createTextNode(" "));
+    td.appendChild(flag);
+  }
+
   function renderRows() {
     const q = searchEl.value.toLowerCase().trim();
     const onlyUrm = filterUrmEl.checked;
@@ -2441,6 +2507,10 @@
           td.innerHTML = fmt(v, m.fmt);
           if (["int", "usd", "ratio", "pct_0_1", "pct_0_100", "year", "miles", "minutes"].includes(m.fmt)) {
             td.classList.add("numeric");
+          }
+          if (col === "utilization_pct_2526"
+              && (s.capacity_source_conflict === true || s.capacity_source_conflict === "True")) {
+            addConflictFlag(td, s, v);
           }
         }
         tr.appendChild(td);
