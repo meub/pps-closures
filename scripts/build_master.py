@@ -874,6 +874,20 @@ def main():
     model_approx = {r["school_name"]: r["fc_approx"] for r in model_raw}
     model_note = {r["school_name"]: r["conflict_note"] for r in model_raw}
     pps["functional_capacity_model"] = pps["School Name"].map(model_fc)
+
+    # Building inventory, leases, and sprinkler status recovered from the same
+    # workbook (CLASSROOM LIST, LEASES, K-2 Enrolled tabs). Gross capacity here
+    # is 2026-current (reflects portable removals and the Benson re-measure),
+    # unlike the ~2021 functional-capacity figures.
+    MODEL_COLS = [
+        "gross_capacity", "classrooms_total", "avg_classroom_sqft",
+        "science_rooms", "art_music_rooms", "computer_rooms", "gym_rooms",
+        "leased_classrooms", "lease_tenants",
+        "fully_sprinklered", "k2_program", "k2_program_expires", "sprinkler_notes",
+    ]
+    for col in MODEL_COLS:
+        colmap = {r["school_name"]: r.get(col) for r in model_raw}
+        pps[col] = pps["School Name"].map(colmap)
     pps["utilization_model_2526"] = (
         pps["2025-26 Total Enrollment"] / pps["functional_capacity_model"]
     ).round(4)
@@ -1118,6 +1132,10 @@ def main():
         "functional_capacity_2021", "utilization_pct_2526",
         "functional_capacity_model", "utilization_model_2526",
         "capacity_source_conflict", "fc_model_approx", "capacity_conflict_note",
+        "gross_capacity", "classrooms_total", "avg_classroom_sqft",
+        "science_rooms", "art_music_rooms", "computer_rooms", "gym_rooms",
+        "leased_classrooms", "lease_tenants",
+        "fully_sprinklered", "k2_program", "k2_program_expires", "sprinkler_notes",
         "enrollment_2024_25", "enrollment_2025_26", "enrollment_pct_change",
         "enrollment_2018", "enrollment_2019", "enrollment_2020",
         "enrollment_2021", "enrollment_2022", "enrollment_2023",

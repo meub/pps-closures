@@ -217,6 +217,8 @@
   table.schools td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
   .conflict-flag { color: #e0a83a; cursor: help; font-size: 11px;
     margin-left: 3px; white-space: nowrap; }
+  table.schools td.tip-cell { cursor: help;
+    text-decoration: underline dotted var(--border); text-underline-offset: 3px; }
   /* Freeze first column when scrolling horizontally */
   table.schools th:first-child, table.schools td:first-child {
     position: sticky; left: 0; background: var(--panel); z-index: 1; }
@@ -763,6 +765,32 @@
       re-ranks on the contested figure; the flag is there so a reader can see where
       PPS's own sources disagree.
     </p>
+
+    <h3>Building inventory, leases &amp; sprinklers</h3>
+    <p>
+      The same workbook carries three other things the dashboard now surfaces,
+      all recovered per building and shown in the table:
+    </p>
+    <ul>
+      <li><b>Gross capacity and room inventory.</b> Summed from the workbook's
+        room-level classroom list (every space of 500+ sq ft, with its square
+        footage and use type). Gross capacity is the physical ceiling before any
+        set-asides; the gap between it and functional capacity is exactly the
+        SPED, Early Childhood, art/music, computer, gym, co-located, and leased
+        rooms PPS holds back, plus the utilization rate. These counts are
+        2026-current, so they reflect building changes (portable removals, the
+        Benson re-measure) that never reached the older functional-capacity
+        figures. Hover the gross-capacity cell for the room-type breakdown and
+        average classroom size.</li>
+      <li><b>Leased classrooms.</b> Rooms rented to outside tenants (Head Start,
+        preschool programs, health clinics, county and regional programs). They
+        are subtracted from usable capacity, so a school can read as underused
+        while renting space out. Hover for the tenant list.</li>
+      <li><b>Fire-sprinkler status.</b> Most older PPS buildings are not fully
+        sprinklered; many run under a K-2 program that grants a phased sprinkler
+        exception with an expiration year. This is a building-safety axis
+        alongside the seismic data above. Hover for the K-2 status and notes.</li>
+    </ul>
 
     <h3>Ventilation &amp; indoor air</h3>
     <dl>
@@ -2472,6 +2500,46 @@
     td.appendChild(flag);
   }
 
+  function attachCellTip(td, html) {
+    td.classList.add("tip-cell");
+    td.onmouseenter = (e) => showTT(e, html);
+    td.onmousemove = (e) => showTT(e, html);
+    td.onmouseleave = hideTT;
+  }
+  function grossTip(s) {
+    const parts = [];
+    if (s.science_rooms) parts.push(`${s.science_rooms} science`);
+    if (s.art_music_rooms) parts.push(`${s.art_music_rooms} art/music`);
+    if (s.computer_rooms) parts.push(`${s.computer_rooms} computer`);
+    if (s.gym_rooms) parts.push(`${s.gym_rooms} gym`);
+    const spec = parts.length ? `Specialized: ${parts.join(", ")}.<br>` : "";
+    const avg = s.avg_classroom_sqft ? `, avg ${fmt(s.avg_classroom_sqft, "int")} sq ft` : "";
+    const func = s.functional_capacity_2021 != null
+      ? `<div class="src">PPS discounts this to ${fmt(s.functional_capacity_2021, "int")} usable `
+        + `(functional capacity) after room set-asides and the utilization rate.</div>`
+      : "";
+    return `<b>Building inventory</b>`
+      + `Gross: ${fmt(s.gross_capacity, "int")} student stations across `
+      + `${fmt(s.classrooms_total, "int")} rooms${avg}.<br>${spec}${func}`;
+  }
+  function leaseTip(s) {
+    const n = s.leased_classrooms || 0;
+    const count = n > 0
+      ? `${n} classroom${n === 1 ? "" : "s"} leased out.`
+      : `Outside tenant on site; no classrooms leased.`;
+    return `<b>Leased to outside tenants</b>${s.lease_tenants}`
+      + `<div class="src">${count}</div>`;
+  }
+  function sprinklerTip(s) {
+    const head = s.fully_sprinklered === true || s.fully_sprinklered === "True"
+      ? "Fully sprinklered." : "Not fully sprinklered.";
+    const k2 = (s.k2_program === true || s.k2_program === "True")
+      ? `In the K-2 sprinkler-exception program${s.k2_program_expires ? `, expires ${s.k2_program_expires}` : ""}.`
+      : "Not in the K-2 program.";
+    const notes = s.sprinkler_notes ? `<div class="src">${s.sprinkler_notes}</div>` : "";
+    return `<b>Fire-sprinkler status</b>${head}<br>${k2}${notes}`;
+  }
+
   function renderRows() {
     const q = searchEl.value.toLowerCase().trim();
     const onlyUrm = filterUrmEl.checked;
@@ -2512,6 +2580,9 @@
               && (s.capacity_source_conflict === true || s.capacity_source_conflict === "True")) {
             addConflictFlag(td, s, v);
           }
+          if (col === "gross_capacity" && v != null) attachCellTip(td, grossTip(s));
+          if (col === "leased_classrooms" && s.lease_tenants) attachCellTip(td, leaseTip(s));
+          if (col === "fully_sprinklered" && s.fully_sprinklered != null) attachCellTip(td, sprinklerTip(s));
         }
         tr.appendChild(td);
       });
